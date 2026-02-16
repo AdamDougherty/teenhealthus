@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#231F20"/>
+  <circle cx="640" cy="180" r="220" fill="#2E9DF7" opacity="0.35"/>
+  <circle cx="170" cy="820" r="260" fill="#FFC907" opacity="0.30"/>
+  <text x="60" y="150" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" opacity="0.9">Replace with photography</text>
+  <text x="60" y="190" font-family="Georgia, serif" font-size="20" fill="#FFFFFF" opacity="0.75">/public/placeholder-photo.svg</text>
+</svg>

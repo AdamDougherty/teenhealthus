@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <rect width="1200" height="630" fill="#231F20"/>
+  <circle cx="1000" cy="120" r="240" fill="#2E9DF7" opacity="0.35"/>
+  <circle cx="180" cy="520" r="300" fill="#FFC907" opacity="0.30"/>
+  <text x="80" y="260" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#FFFFFF">Teen Health</text>
+  <text x="80" y="340" font-family="Georgia, serif" font-size="40" fill="#FFFFFF" opacity="0.85">We break the loop.</text>
+  <text x="80" y="420" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" opacity="0.75">Healthy essentials. Delivered with dignity.</text>
+</svg>
