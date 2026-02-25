@@ -38,7 +38,7 @@ export default function AboutPage() {
             {
               title: "Transparency",
               body: "Teen Health is a 501(c)(3) nonprofit organization. EIN: 87-4628884.",
-              foot: "Add your annual reports, financials, and impact reporting here.",
+              foot: "View our 990 and annual reports at teenhealth.org.",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
@@ -60,7 +60,7 @@ export default function AboutPage() {
             <Reveal>
               <section className="space-y-4">
                 <h2 className="text-2xl font-normal tracking-tight text-ink">
-                  Story (starter)
+                  Our story
                 </h2>
                 <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
                   <Image
@@ -72,13 +72,17 @@ export default function AboutPage() {
                   />
                 </div>
                 <p className="text-base leading-relaxed text-ink/80">
-                  Since launching in 2022, Teen Health has focused on delivering healthy
-                  essentials — not just one-time help, but consistent support that makes a
-                  next step possible.
+                  We started in 2022 with a simple question: what happens when a young person
+                  doesn't have access to the basics — clean food, water, hygiene products,
+                  personal care? The answer wasn't hard to find, but the solution required
+                  a new approach.
                 </p>
                 <p className="text-base leading-relaxed text-ink/80">
-                  Replace this section with your founder story, geographic footprint, and the
-                  partners you work with.
+                  Today Teen Health rescues surplus product from brands and
+                  distributors, assembles essentials kits, and delivers them through a
+                  growing network of local agencies that already have trust in the
+                  community. Based in Southern California, our reach extends nationally
+                  through strategic logistics partnerships.
                 </p>
               </section>
             </Reveal>
@@ -89,8 +93,9 @@ export default function AboutPage() {
                   Team & partners
                 </h2>
                 <p className="text-base leading-relaxed text-ink/80">
-                  Keep team bios lightweight. If you have a long “team” page today, consider
-                  a short section here plus a downloadable PDF for detail.
+                  Teen Health is powered by a small, dedicated team and a network of
+                  volunteers, brand partners, and local agencies. Here are a few of the
+                  people making it happen.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
@@ -116,7 +121,7 @@ export default function AboutPage() {
                               {item.role}
                             </div>
                             <p className="mt-2 text-sm text-ink/70">
-                              Name • short bio • link (optional)
+                              {item.role}
                             </p>
                           </div>
                         </Card>

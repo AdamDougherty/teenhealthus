@@ -32,8 +32,9 @@ export default function GetInvolvedPage() {
                 Fund essentials that move fast
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
-                Use this section to connect to your real donation flow (Stripe, Donorbox,
-                Classy, etc.). The CTA stays bold and simple.
+                Every dollar goes toward packing and shipping essentials kits to youth
+                through our partner agencies. Donate once or set up a monthly gift to keep
+                kits moving.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">

@@ -18,7 +18,7 @@ export default function ProgramsPage() {
           <SectionHeading
             eyebrow="Programs"
             title="Built around what youth actually need"
-            description="A smaller set of clear programs is easier to understand, easier to fund, and easier to scale."
+            description="Three programs, one goal: get healthy essentials into the hands of youth who need them most — through partners who already have trust in the community."
           />
         </Reveal>
 
@@ -66,19 +66,19 @@ export default function ProgramsPage() {
         <Reveal delay={0.1}>
           <div className="mt-12 rounded-3xl bg-ink p-8 text-white sm:p-10">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
-              A note on scope
+              Go deeper
             </p>
             <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl">
-              Less pages. More clarity.
+              Every kit starts with a conversation.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
-              If your current site has dozens of pages that overlap, you can consolidate
-              them into a single “Learn” hub and keep the public navigation focused on:
-              Programs, Learn, Get involved, About.
+              Our programs are built on relationships — with the brands that donate, the
+              volunteers that pack, and the agencies that distribute. Learn more about the
+              issues youth face or find a way to help.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="/learn" variant="primary">
-                Go to Learn hub
+                Learn more
               </Button>
               <Button
                 href="/get-involved"

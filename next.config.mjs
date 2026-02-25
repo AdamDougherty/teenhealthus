@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // ── Image optimization ──
-  // Disabled on-the-fly optimization — the 2GB droplet can't handle
-  // AVIF/WebP conversion for large images at request time.
-  // Images serve as static files directly from /public.
+  // ── Images ──
+  // Serve original images directly (no server-side conversion).
+  // The 2GB droplet doesn't have enough RAM to resize/convert images
+  // per request. Add Cloudflare for automatic optimization if needed.
   images: {
     unoptimized: true,
   },
