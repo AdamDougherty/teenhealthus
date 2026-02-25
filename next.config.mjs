@@ -3,9 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
 
   // ── Image optimization ──
+  // Disabled on-the-fly optimization — the 2GB droplet can't handle
+  // AVIF/WebP conversion for large images at request time.
+  // Images serve as static files directly from /public.
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    unoptimized: true,
   },
 
   // ── Compression ──
