@@ -37,8 +37,8 @@ export default function GetInvolvedPage() {
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button href="#" variant="primary">
-                  Donate now (wire up)
+                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+                  Donate now
                 </Button>
                 <Button href="#partner" variant="ghost" className="text-white hover:bg-white/10">
                   Partner with us
@@ -128,8 +128,8 @@ export default function GetInvolvedPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="#" variant="secondary">
-              Volunteer interest form (wire up)
+            <Button href="/volunteer#volunteer-form" variant="secondary">
+              Volunteer interest form
             </Button>
           </div>
         </section>
@@ -169,8 +169,8 @@ export default function GetInvolvedPage() {
                   <div>• Natural personal care</div>
                 </div>
                 <div className="mt-6">
-                  <Button href="#" variant="primary">
-                    Start a product donation (wire up)
+                  <Button href="/donate-product#donate-product-form" variant="primary">
+                    Start a product donation
                   </Button>
                 </div>
                 </div>
@@ -197,33 +197,41 @@ export default function GetInvolvedPage() {
                   intake path: location, population served, distribution plan, and reporting.
                 </p>
                 <div className="mt-6">
-                  <Button href="#" variant="secondary">
-                    Become a distribution partner (wire up)
+                  <Button href="/distribute#distribution-form" variant="secondary">
+                    Become a distribution partner
                   </Button>
                 </div>
                 </div>
               </Card>
             </Reveal>
           </div>
-        </section>
 
-        {/* FAQ-ish */}
-        <section className="mt-14">
-          <Reveal>
-            <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                Keep it clear
-              </p>
-              <h2 className="mt-4 text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                One page. Three paths. No confusion.
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
-                This layout replaces multiple “Donate”, “Volunteer”, “Partners”, and “Get
-                involved” pages. You can still add detail — but keep the navigation slim.
-              </p>
+          <Reveal delay={0.12}>
+            <div className="mt-6 rounded-3xl border border-border bg-ink p-8 text-white shadow-soft sm:p-10">
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                    Corporate partnerships
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl">
+                    Become a corporate partner
+                  </h3>
+                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/70">
+                    250+ companies in the natural products industry already partner with Teen Health.
+                    Donate product, fund operations, or lend strategic expertise — and help essentials
+                    reach the youth who need them most.
+                  </p>
+                </div>
+                <div className="shrink-0">
+                  <Button href="/partner#become-a-partner" variant="primary">
+                    Learn more &amp; apply
+                  </Button>
+                </div>
+              </div>
             </div>
           </Reveal>
         </section>
+
       </Container>
     </div>
   );

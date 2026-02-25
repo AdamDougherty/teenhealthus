@@ -8,17 +8,12 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <span
-            aria-hidden
-            className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-sun text-ink font-black"
-          >
-            TH
-          </span>
-          <span className="text-sm font-black tracking-tight text-ink">
-            {site.name}
-            <span className="ml-2 hidden text-ink/60 sm:inline">{site.tagline}</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/teenhealthlogohoriz.png"
+            alt={site.name}
+            className="h-7 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-semibold text-ink/80 md:flex">

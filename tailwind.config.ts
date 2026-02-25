@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         ink: "#231F20",
         sky: "#2E9DF7",
-        sun: "#FFC907",
+        sun: "#F3AA32",
         mint: "#8BD1CB",
         border: "rgba(35,31,32,0.12)"
       },

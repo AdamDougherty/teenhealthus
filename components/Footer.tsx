@@ -57,10 +57,10 @@ export function Footer() {
                 Legal
               </div>
               <div className="space-y-2">
-                <a href="#" className="block hover:text-ink">
+                <a href="/privacy" className="block hover:text-ink">
                   Privacy
                 </a>
-                <a href="#" className="block hover:text-ink">
+                <a href="/terms" className="block hover:text-ink">
                   Terms
                 </a>
               </div>
@@ -71,8 +71,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Teen Health. All rights reserved.</div>
           <div>
-            Built with Next.js • Replace placeholders with your real donation, contact, and
-            legal pages.
+            Built with care by <a href="mailto:adam@blizzfull.com" className="underline hover:text-ink">Adam Dougherty</a>
           </div>
         </div>
       </Container>

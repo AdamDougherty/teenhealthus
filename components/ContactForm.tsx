@@ -89,9 +89,7 @@ export function ContactForm() {
 
       {message ? <p className="text-sm text-ink/70">{message}</p> : null}
 
-      <p className="text-xs text-ink/60">
-        This is a starter form. Wire <code>/api/contact</code> to a real email provider.
-      </p>
+
     </form>
   );
 }

@@ -130,34 +130,32 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Impact (placeholders) */}
+      {/* Impact */}
       <section className="bg-ink py-16 text-white sm:py-20">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="Impact"
               title="Make it easy to trust the work"
-              description="Add your real, current numbers here — and keep them updated."
+              description="Real numbers. Real results. Real lives changed."
               className="text-white [&_h2]:text-white [&_p]:text-white/80"
             />
           </Reveal>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <Reveal delay={0.05}>
-              <Stat label="kits distributed" value="—" note="Replace with current totals." />
+              <Stat label="kits distributed" value="—" />
             </Reveal>
             <Reveal delay={0.13}>
               <Stat
                 label="partner agencies"
                 value="—"
-                note="How many agencies distribute locally."
               />
             </Reveal>
             <Reveal delay={0.21}>
               <Stat
                 label="products rescued"
                 value="—"
-                note="Estimated weight/units rescued from waste."
               />
             </Reveal>
           </div>
@@ -206,7 +204,7 @@ export default function HomePage() {
                     your support helps youth stabilize today and plan for tomorrow.
                   </p>
 
-                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
                     <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
                       Give today
                     </Button>
