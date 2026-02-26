@@ -26,7 +26,85 @@ A modern, donation-forward website for Teen Health — supporting vulnerable you
 | `/volunteer` | Volunteer interest + form |
 | `/contact` | General contact |
 
-## Local development
+## Repository
+
+**GitHub:** [github.com/AdamDougherty/teenhealthus](https://github.com/AdamDougherty/teenhealthus)
+
+## Getting started (for non-technical users)
+
+These steps will get the site running on your computer so you can make changes. You'll use **Antigravity** (or another AI coding assistant) to do the actual editing.
+
+### Prerequisites
+
+You need two things installed on your Mac:
+
+1. **Node.js** (version 20 or newer) — [download here](https://nodejs.org/)
+2. **Git** — usually pre-installed on Mac. To check, open Terminal and type `git --version`. If it's not installed, you'll be prompted to install it.
+
+### Step 1: Clone the repository
+
+Open Terminal and run these commands one at a time:
+
+```bash
+cd ~/Dev
+git clone https://github.com/AdamDougherty/teenhealthus.git
+cd teenhealthus
+```
+
+> **What this does:** Downloads the entire website project into a folder called `teenhealthus` inside your `Dev` folder. If you don't have a `Dev` folder, run `mkdir ~/Dev` first.
+
+### Step 2: Install dependencies
+
+```bash
+npm install
+```
+
+> **What this does:** Downloads all the software libraries the site needs to run. This only needs to be done once (or when dependencies change).
+
+### Step 3: Start the local server
+
+```bash
+npm run dev
+```
+
+> **What this does:** Starts the website on your computer. Open your browser and go to **http://localhost:3000** to see it.
+
+### Step 4: Make changes with Antigravity
+
+1. Open the `teenhealthus` folder in your code editor (VS Code, Cursor, etc.)
+2. Open Antigravity / Opus in the sidebar
+3. Ask it to make changes in plain English, for example:
+   - *"Change the hero headline to 'Supporting youth in Orange County'"*
+   - *"Update the Executive Director team photo to use the image I just added to public/images/team/"*
+   - *"Add a new article about food insecurity in content/articles.ts"*
+4. Antigravity will edit the files for you — you'll see the changes live at `localhost:3000`
+
+### Step 5: Save and push your changes
+
+When you're happy with changes, ask Antigravity:
+
+> *"Commit my changes and push to GitHub"*
+
+Or run manually:
+```bash
+git add -A
+git commit -m "Describe what you changed"
+git push
+```
+
+### Step 6: Deploy to production
+
+Ask Antigravity:
+
+> *"Deploy to production"*
+
+Or run manually:
+```bash
+rsync -avz --delete --exclude='node_modules' --exclude='.next' --exclude='.git' ./ root@159.65.75.30:/var/www/teenhealth-starter/
+ssh root@159.65.75.30 "cd /var/www/teenhealth-starter && npm install && npm run build && pm2 restart teenhealth"
+```
+
+## Local development (quick reference)
 
 ```bash
 npm install
