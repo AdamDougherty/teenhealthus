@@ -13,10 +13,10 @@ export function HeroSection() {
     reduceMotion
       ? {}
       : {
-          initial: { opacity: 0, y: 30, filter: "blur(8px)" },
-          animate: { opacity: 1, y: 0, filter: "blur(0px)" },
-          transition: { duration: 1.1, ease, delay },
-        };
+        initial: { opacity: 0, y: 30, filter: "blur(8px)" },
+        animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+        transition: { duration: 1.1, ease, delay },
+      };
 
   return (
     <section className="hero-section relative flex min-h-[90vh] items-center overflow-hidden">
@@ -64,7 +64,7 @@ export function HeroSection() {
         >
           Healthy essentials.
           <br />
-          <span className="hero-highlight">Delivered with Love.</span>
+          <span className="hero-highlight">Delivered with Dignity.</span>
         </motion.h1>
 
         <motion.p
