@@ -28,7 +28,7 @@ export function Nav() {
             <div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
               <div className="min-w-[200px] rounded-xl border border-border bg-white p-2 shadow-lg">
                 <Link href="/give-monthly" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
-                  Give monthly
+                  Give Monthly
                 </Link>
                 <Link href="/partner" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Become a Program Sponsor
