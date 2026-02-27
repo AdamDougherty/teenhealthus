@@ -36,12 +36,6 @@ export function Nav() {
                 <Link href="/partner" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Partner with us
                 </Link>
-                <Link href="/donate-product" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
-                  Donate products
-                </Link>
-                <Link href="/distribute" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
-                  Distribute
-                </Link>
               </div>
             </div>
           </div>
