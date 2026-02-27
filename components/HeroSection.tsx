@@ -19,14 +19,14 @@ export function HeroSection() {
       };
 
   return (
-    <section className="hero-section relative flex min-h-[90vh] items-center overflow-hidden">
+    <section className="hero-section relative flex min-h-[90vh] items-end overflow-hidden">
       {/* Full-width background image */}
       <Image
         src="/hero.jpg"
         alt="Young person supported by Teen Health"
         fill
         priority
-        className="object-cover object-[center_15%]"
+        className="object-cover object-[center_35%]"
         sizes="100vw"
         quality={90}
       />
