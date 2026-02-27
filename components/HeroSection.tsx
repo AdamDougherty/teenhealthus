@@ -64,7 +64,7 @@ export function HeroSection() {
         >
           Healthy essentials.
           <br />
-          <span className="hero-highlight">Delivered with dignity.</span>
+          <span className="hero-highlight">Delivered with Love.</span>
         </motion.h1>
 
         <motion.p
