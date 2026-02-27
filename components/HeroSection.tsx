@@ -60,7 +60,7 @@ export function HeroSection() {
 
         <motion.h1
           {...anim(0.4)}
-          className="mt-5 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
         >
           Healthy essentials.
           <br />
@@ -69,7 +69,7 @@ export function HeroSection() {
 
         <motion.p
           {...anim(0.65)}
-          className="mt-6 max-w-lg text-base leading-relaxed text-white/75 sm:text-lg"
+          className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base"
         >
           Teen Health supports vulnerable youth and young adults with nourishing
           food, hydration, and personal care — plus a next step through trusted
