@@ -97,31 +97,31 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="p-6">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                    {p.eyebrow}
-                  </div>
-                  <h3 className="mt-3 text-xl font-normal tracking-tight text-ink">
-                    {p.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                    {p.description}
-                  </p>
-                  <ul className="mt-5 space-y-2 text-sm text-ink/70">
-                    {p.bullets.slice(0, 3).map((b) => (
-                      <li key={b} className="flex gap-2">
-                        <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-6">
-                    <Link
-                      href="/programs"
-                      className="text-sm font-semibold text-sky hover:underline"
-                    >
-                      Learn more →
-                    </Link>
-                  </div>
+                    <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                      {p.eyebrow}
+                    </div>
+                    <h3 className="mt-3 text-xl font-normal tracking-tight text-ink">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                      {p.description}
+                    </p>
+                    <ul className="mt-5 space-y-2 text-sm text-ink/70">
+                      {p.bullets.slice(0, 3).map((b) => (
+                        <li key={b} className="flex gap-2">
+                          <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-6">
+                      <Link
+                        href="/programs"
+                        className="text-sm font-semibold text-sky hover:underline"
+                      >
+                        Learn more →
+                      </Link>
+                    </div>
                   </div>
                 </Card>
               </Reveal>
@@ -144,7 +144,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <Reveal delay={0.05}>
-              <Stat label="kits distributed" value="—" />
+              <Stat label="kits distributed" value="800" />
             </Reveal>
             <Reveal delay={0.13}>
               <Stat
@@ -191,59 +191,59 @@ export default function HomePage() {
               </div>
 
               <div className="p-8 sm:p-10">
-              <Reveal>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                    Ready to take action?
-                  </p>
-                  <h2 className="mt-4 text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                    Give essentials. Reduce waste. Help youth take the next step.
-                  </h2>
-                  <p className="mt-4 text-base leading-relaxed text-ink/70">
-                    Whether you’re donating funds, donating product, or volunteering time,
-                    your support helps youth stabilize today and plan for tomorrow.
-                  </p>
+                <Reveal>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                      Ready to take action?
+                    </p>
+                    <h2 className="mt-4 text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                      Give essentials. Reduce waste. Help youth take the next step.
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-ink/70">
+                      Whether you’re donating funds, donating product, or volunteering time,
+                      your support helps youth stabilize today and plan for tomorrow.
+                    </p>
 
-                  <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
-                    <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
-                      Give today
-                    </Button>
-                    <Button href="/get-involved#volunteer" variant="secondary">
-                      Volunteer
-                    </Button>
+                    <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
+                      <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+                        Give today
+                      </Button>
+                      <Button href="/get-involved#volunteer" variant="secondary">
+                        Volunteer
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
+                </Reveal>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  {
-                    title: "Donate funds",
-                    desc: "Support shipping, packing, and kits where they’re needed most.",
-                  },
-                  {
-                    title: "Donate product",
-                    desc: "Partner with us to rescue high-quality surplus.",
-                  },
-                  {
-                    title: "Partner locally",
-                    desc: "Agencies distribute kits directly to youth they serve.",
-                  },
-                  {
-                    title: "Share the story",
-                    desc: "Bring awareness and help connect more partners.",
-                  },
-                ].map((item, index) => (
-                  <Reveal key={item.title} delay={index * 0.06}>
-                    <Card>
-                      <div className="text-sm font-normal tracking-tight text-ink">
-                        {item.title}
-                      </div>
-                      <p className="mt-2 text-sm text-ink/70">{item.desc}</p>
-                    </Card>
-                  </Reveal>
-                ))}
-              </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {[
+                    {
+                      title: "Donate funds",
+                      desc: "Support shipping, packing, and kits where they’re needed most.",
+                    },
+                    {
+                      title: "Donate product",
+                      desc: "Partner with us to rescue high-quality surplus.",
+                    },
+                    {
+                      title: "Partner locally",
+                      desc: "Agencies distribute kits directly to youth they serve.",
+                    },
+                    {
+                      title: "Share the story",
+                      desc: "Bring awareness and help connect more partners.",
+                    },
+                  ].map((item, index) => (
+                    <Reveal key={item.title} delay={index * 0.06}>
+                      <Card>
+                        <div className="text-sm font-normal tracking-tight text-ink">
+                          {item.title}
+                        </div>
+                        <p className="mt-2 text-sm text-ink/70">{item.desc}</p>
+                      </Card>
+                    </Reveal>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
