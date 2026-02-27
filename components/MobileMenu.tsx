@@ -57,7 +57,7 @@ export function MobileMenu() {
 
         <nav className="mt-6 space-y-2 text-sm font-semibold">
           {[
-            ["/get-involved", "Get involved"],
+            ["/get-involved", "Get Involved"],
             ["/programs", "Programs"],
             ["/about", "About"],
             ["/learn", "Our Why"],
