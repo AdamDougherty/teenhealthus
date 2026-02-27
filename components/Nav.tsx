@@ -17,14 +17,14 @@ export function Nav() {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-semibold text-ink/80 md:flex">
+          <Link href="/get-involved" className="hover:text-ink">
+            Get involved
+          </Link>
           <Link href="/programs" className="hover:text-ink">
             Programs
           </Link>
           <Link href="/learn" className="hover:text-ink">
-            Learn
-          </Link>
-          <Link href="/get-involved" className="hover:text-ink">
-            Get involved
+            Our Why
           </Link>
           <Link href="/about" className="hover:text-ink">
             About

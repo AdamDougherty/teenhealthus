@@ -57,9 +57,9 @@ export function MobileMenu() {
 
         <nav className="mt-6 space-y-2 text-sm font-semibold">
           {[
-            ["/programs", "Programs"],
-            ["/learn", "Learn"],
             ["/get-involved", "Get involved"],
+            ["/programs", "Programs"],
+            ["/learn", "Our Why"],
             ["/about", "About"],
           ].map(([href, label]) => (
             <Link
