@@ -30,11 +30,14 @@ export function Nav() {
                 <Link href="/give-monthly" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Give monthly
                 </Link>
+                <Link href="/partner" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
+                  Become a Program Sponsor
+                </Link>
+                <Link href="/donate-product" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
+                  Become a Brand Partner
+                </Link>
                 <Link href="/volunteer" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Volunteer
-                </Link>
-                <Link href="/partner" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
-                  Partner with us
                 </Link>
               </div>
             </div>
