@@ -59,8 +59,8 @@ export function MobileMenu() {
           {[
             ["/get-involved", "Get involved"],
             ["/programs", "Programs"],
-            ["/learn", "Our Why"],
             ["/about", "About"],
+            ["/learn", "Our Why"],
           ].map(([href, label]) => (
             <Link
               key={href}
