@@ -20,6 +20,39 @@ export default function LearnPage() {
 
   return (
     <div className="bg-transparent">
+      {/* Hero banner */}
+      <section className="relative overflow-hidden bg-ink">
+        {/* Decorative gradient accent */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 50% 120%, rgba(243,196,41,0.15) 0%, transparent 70%)",
+          }}
+        />
+        <Container className="relative z-10 py-20 text-center sm:py-28">
+          <Reveal>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+              Our Why
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              Survive{" "}
+              <span className="mx-2 inline-block text-sun sm:mx-4">→</span>{" "}
+              <span className="hero-highlight">Thrive</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+              Every young person deserves more than survival. We exist to close
+              the gap between getting by and growing up with dignity.
+            </p>
+          </Reveal>
+        </Container>
+      </section>
+
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
@@ -51,21 +84,21 @@ export default function LearnPage() {
                         />
                       </div>
                       <div className="p-6">
-                      <h3 className="text-lg font-normal tracking-tight text-ink">
-                        {a.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-ink/70">{a.deck}</p>
-                      <div className="mt-5 flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                          Updated {new Date(a.updated).getFullYear()}
-                        </span>
-                        <Link
-                          href={`/learn/${a.slug}`}
-                          className="text-sm font-semibold text-sky hover:underline"
-                        >
-                          Read →
-                        </Link>
-                      </div>
+                        <h3 className="text-lg font-normal tracking-tight text-ink">
+                          {a.title}
+                        </h3>
+                        <p className="mt-3 text-sm leading-relaxed text-ink/70">{a.deck}</p>
+                        <div className="mt-5 flex items-center justify-between">
+                          <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                            Updated {new Date(a.updated).getFullYear()}
+                          </span>
+                          <Link
+                            href={`/learn/${a.slug}`}
+                            className="text-sm font-semibold text-sky hover:underline"
+                          >
+                            Read →
+                          </Link>
+                        </div>
                       </div>
                     </Card>
                   </Reveal>
