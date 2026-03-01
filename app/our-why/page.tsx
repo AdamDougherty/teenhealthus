@@ -113,6 +113,13 @@ export default function LearnPage() {
               >
                 <span className="text-sm text-ink/30">Photo 2</span>
               </div>
+              <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
+                Housing &amp; Foster Care
+              </h3>
+              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                Over 44,000 youth are in foster care, and 40% face homelessness
+                or incarceration within 3 years of aging out.
+              </p>
             </div>
             {/* Photo 3 */}
             <div>
