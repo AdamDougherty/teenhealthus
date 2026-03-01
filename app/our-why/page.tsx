@@ -62,7 +62,7 @@ export default function LearnPage() {
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-sun/30 bg-sun/10 px-8 py-6 sm:px-10 sm:py-8">
+          <div className="mx-auto mt-8 max-w-5xl rounded-2xl border border-sun/30 bg-sun/10 px-8 py-6 sm:px-10 sm:py-8">
             <p className="text-base leading-relaxed text-ink sm:text-lg">
               Each day, thousands of youth go without reliable meals, putting
               their bodies, minds, and futures in jeopardy. Many are living with
