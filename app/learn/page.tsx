@@ -54,15 +54,15 @@ export default function LearnPage() {
       </section>
 
       {/* Mission statement */}
-      <Container className="py-14 sm:py-16">
+      <Container className="py-14 text-center sm:py-16">
         <Reveal>
-          <h2 className="max-w-3xl font-serif text-3xl font-normal leading-snug tracking-tight text-ink sm:text-4xl">
+          <h2 className="mx-auto max-w-5xl font-serif text-3xl font-normal leading-snug tracking-tight text-ink sm:text-4xl">
             We rethink and repurpose resources to overcome the toughest
             challenges.
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/70 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
             Each day, thousands of youth go without reliable meals, putting
             their bodies, minds, and futures in jeopardy. Many are living with
             food insecurity, poverty, homelessness, and the instability of the
