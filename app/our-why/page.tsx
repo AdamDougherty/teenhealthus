@@ -85,6 +85,19 @@ export default function LearnPage() {
             vulnerable young people are seeing a sharp reversal in progress.
           </p>
         </Reveal>
+        <Reveal delay={0.2}>
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
+            {[1, 2, 3, 4].map((n) => (
+              <div
+                key={n}
+                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                style={{ aspectRatio: "4/3" }}
+              >
+                <span className="text-sm text-ink/30">Photo {n}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Container>
 
       <Container className="py-14 sm:py-16">
