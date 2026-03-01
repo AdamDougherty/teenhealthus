@@ -100,7 +100,7 @@ export default function LearnPage() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Persistent Poverty
               </h3>
-              <p className="mt-1 max-w-[17rem] text-sm leading-relaxed text-ink/70">
+              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
                 18.6% of California&rsquo;s children&mdash;1.6 million&mdash;now
                 live in poverty, more than double the 2021 rate.
               </p>
