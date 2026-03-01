@@ -81,7 +81,7 @@ export default function LearnPage() {
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-ink/70 sm:text-lg">
             California is facing a &ldquo;post-pandemic cliff&rdquo; in youth
             stability as federal and state relief programs have expired. The most
             vulnerable young people are seeing a sharp reversal in progress.
