@@ -74,7 +74,7 @@ export default function LearnPage() {
       {/* The Systemic Gap */}
       <Container className="py-14 text-center sm:py-16">
         <Reveal>
-          <h2 className="mx-auto max-w-5xl font-serif text-3xl font-normal leading-snug tracking-tight text-ink sm:text-4xl">
+          <h2 className="mx-auto max-w-5xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink sm:text-3xl">
             The Systemic Gap
           </h2>
         </Reveal>
