@@ -71,6 +71,22 @@ export default function LearnPage() {
         </Reveal>
       </Container>
 
+      {/* The Systemic Gap */}
+      <Container className="py-14 text-center sm:py-16">
+        <Reveal>
+          <h2 className="mx-auto max-w-5xl font-serif text-3xl font-normal leading-snug tracking-tight text-ink sm:text-4xl">
+            The Systemic Gap
+          </h2>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
+            California is facing a &ldquo;post-pandemic cliff&rdquo; in youth
+            stability as federal and state relief programs have expired. The most
+            vulnerable young people are seeing a sharp reversal in progress.
+          </p>
+        </Reveal>
+      </Container>
+
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
