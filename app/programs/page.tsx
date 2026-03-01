@@ -36,27 +36,27 @@ export default function ProgramsPage() {
                   />
                 </div>
                 <div className="p-6">
-                <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                  {p.eyebrow}
-                </div>
-                <h3 className="mt-3 text-2xl font-normal tracking-tight text-ink">
-                  {p.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">{p.description}</p>
-
-                <div className="mt-6">
                   <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                    What this includes
+                    {p.eyebrow}
                   </div>
-                  <ul className="mt-4 space-y-2 text-sm text-ink/70">
-                    {p.bullets.map((b) => (
-                      <li key={b} className="flex gap-2">
-                        <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  <h3 className="mt-3 text-2xl font-normal tracking-tight text-ink">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{p.description}</p>
+
+                  <div className="mt-6">
+                    <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                      What this includes
+                    </div>
+                    <ul className="mt-4 space-y-2 text-sm text-ink/70">
+                      {p.bullets.map((b) => (
+                        <li key={b} className="flex gap-2">
+                          <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </Card>
             </Reveal>
@@ -77,7 +77,7 @@ export default function ProgramsPage() {
               issues youth face or find a way to help.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/learn" variant="primary">
+              <Button href="/our-why" variant="primary">
                 Learn more
               </Button>
               <Button

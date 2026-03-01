@@ -13,7 +13,7 @@ export default function NotFound() {
         <Button href="/" variant="primary">
           Home
         </Button>
-        <Button href="/learn" variant="secondary">
+        <Button href="/our-why" variant="secondary">
           Learn
         </Button>
         <Link href="https://www.classy.org/give/665776/#!/donation/checkout" className="text-sm font-semibold text-sky hover:underline">

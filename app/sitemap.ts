@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/programs",
-    "/learn",
+    "/our-why",
     "/get-involved",
     "/about",
     "/give-monthly",
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const articleRoutes = articles.map((a) => ({
-    url: `${base}/learn/${a.slug}`,
+    url: `${base}/our-why/${a.slug}`,
     lastModified: new Date(a.updated),
   }));
 

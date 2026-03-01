@@ -68,7 +68,7 @@ export function Nav() {
               </div>
             </div>
           </div>
-          <Link href="/learn" className="hover:text-ink">
+          <Link href="/our-why" className="hover:text-ink">
             Our Why
           </Link>
         </nav>

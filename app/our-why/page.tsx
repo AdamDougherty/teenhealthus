@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { articles } from "@/content/articles";
 
 export const metadata = {
-  title: "Learn",
+  title: "Our Why",
 };
 
 const categoryOrder = ["Context", "Programs", "Partnerships"] as const;
@@ -111,7 +111,7 @@ export default function LearnPage() {
                             Updated {new Date(a.updated).getFullYear()}
                           </span>
                           <Link
-                            href={`/learn/${a.slug}`}
+                            href={`/our-why/${a.slug}`}
                             className="text-sm font-semibold text-sky hover:underline"
                           >
                             Read →

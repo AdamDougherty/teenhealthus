@@ -107,7 +107,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                     .map((a) => (
                       <Link
                         key={a.slug}
-                        href={`/learn/${a.slug}`}
+                        href={`/our-why/${a.slug}`}
                         className="block text-sm font-semibold text-sky hover:underline"
                       >
                         {a.title}
@@ -121,7 +121,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <Card>
                 <div className="text-sm font-normal tracking-tight text-ink">Navigation</div>
                 <div className="mt-4 space-y-2 text-sm">
-                  <Link href="/learn" className="block hover:text-ink">
+                  <Link href="/our-why" className="block hover:text-ink">
                     ← Back to Learn hub
                   </Link>
                   <Link href="/programs" className="block hover:text-ink">

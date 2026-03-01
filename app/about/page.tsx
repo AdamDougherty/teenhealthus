@@ -156,7 +156,7 @@ export default function AboutPage() {
                   <a href="/get-involved#volunteer" className="block hover:text-ink">
                     Volunteer
                   </a>
-                  <a href="/learn" className="block hover:text-ink">
+                  <a href="/our-why" className="block hover:text-ink">
                     Learn hub
                   </a>
                 </div>
