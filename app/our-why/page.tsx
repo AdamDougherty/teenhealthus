@@ -89,15 +89,49 @@ export default function LearnPage() {
         </Reveal>
         <Reveal delay={0.2}>
           <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
-            {[1, 2, 3, 4].map((n) => (
+            {/* Photo 1 */}
+            <div>
               <div
-                key={n}
                 className="flex items-center justify-center rounded-2xl border border-border bg-surface"
                 style={{ aspectRatio: "4/3" }}
               >
-                <span className="text-sm text-ink/30">Photo {n}</span>
+                <span className="text-sm text-ink/30">Photo 1</span>
               </div>
-            ))}
+              <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
+                Persistent Poverty
+              </h3>
+              <p className="mt-1 text-sm leading-relaxed text-ink/70">
+                18.6% of California&rsquo;s children&mdash;1.6 million&mdash;now
+                live in poverty, more than double the 2021 rate.
+              </p>
+            </div>
+            {/* Photo 2 */}
+            <div>
+              <div
+                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                style={{ aspectRatio: "4/3" }}
+              >
+                <span className="text-sm text-ink/30">Photo 2</span>
+              </div>
+            </div>
+            {/* Photo 3 */}
+            <div>
+              <div
+                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                style={{ aspectRatio: "4/3" }}
+              >
+                <span className="text-sm text-ink/30">Photo 3</span>
+              </div>
+            </div>
+            {/* Photo 4 */}
+            <div>
+              <div
+                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                style={{ aspectRatio: "4/3" }}
+              >
+                <span className="text-sm text-ink/30">Photo 4</span>
+              </div>
+            </div>
           </div>
         </Reveal>
       </Container>
