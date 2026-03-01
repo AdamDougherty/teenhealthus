@@ -129,6 +129,13 @@ export default function LearnPage() {
               >
                 <span className="text-sm text-ink/30">Photo 3</span>
               </div>
+              <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
+                Mental Health
+              </h3>
+              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                Transition-age youth (TAY) suffer higher rates of untreated
+                anxiety and depression, often worsened by system involvement.
+              </p>
             </div>
             {/* Photo 4 */}
             <div>
@@ -138,6 +145,13 @@ export default function LearnPage() {
               >
                 <span className="text-sm text-ink/30">Photo 4</span>
               </div>
+              <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
+                Food Insecurity
+              </h3>
+              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                Over 1 in 4 California households with children (27%) are food
+                insecure, hindering educational and developmental outcomes.
+              </p>
             </div>
           </div>
         </Reveal>
