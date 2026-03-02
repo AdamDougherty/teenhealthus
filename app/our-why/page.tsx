@@ -189,7 +189,7 @@ export default function LearnPage() {
         </Reveal>
         <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+            <div className="h-full rounded-2xl border border-border bg-surface px-6 py-8">
               <p className="text-sm leading-relaxed text-ink/80">
                 Chronic stress puts the body in survival mode, elevating
                 cortisol levels and disrupting metabolism. Over time, this raises
@@ -199,7 +199,7 @@ export default function LearnPage() {
             </div>
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+            <div className="h-full rounded-2xl border border-border bg-surface px-6 py-8">
               <p className="text-sm leading-relaxed text-ink/80">
                 Food insecurity weakens immune function. Deficiencies in key
                 nutrients like vitamins C, D, and protein lower the
@@ -209,7 +209,7 @@ export default function LearnPage() {
             </div>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+            <div className="h-full rounded-2xl border border-border bg-surface px-6 py-8">
               <p className="text-sm leading-relaxed text-ink/80">
                 Poor nutrition impacts brain health. Diets high in
                 ultra-processed foods fuel inflammation and oxidative stress,
