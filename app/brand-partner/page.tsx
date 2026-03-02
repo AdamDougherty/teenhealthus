@@ -17,7 +17,7 @@ export default function DonateProductPage() {
   const partners = Array.from({ length: 10 }, (_, i) => `Partner ${i + 1}`);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
-  const CARD_W = 200; // px width of each card + gap
+  const CARD_W = 540; // px width of each card + gap (shows ~2 at a time)
 
   const updateActiveIndex = useCallback(() => {
     if (!scrollRef.current) return;
@@ -34,7 +34,7 @@ export default function DonateProductPage() {
 
   const scrollTo = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
-    const amount = CARD_W * 3;
+    const amount = CARD_W * 2;
     scrollRef.current.scrollBy({
       left: dir === "left" ? -amount : amount,
       behavior: "smooth",
@@ -49,7 +49,7 @@ export default function DonateProductPage() {
     });
   };
 
-  const totalDots = Math.max(1, partners.length - 3);
+  const totalDots = Math.max(1, partners.length - 1);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -181,9 +181,9 @@ export default function DonateProductPage() {
               {partners.map((name, i) => (
                 <div
                   key={i}
-                  className="flex h-28 w-44 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
+                  className="flex h-48 w-[520px] shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
                 >
-                  <span className="text-sm font-medium text-white/40">{name}</span>
+                  <span className="text-base font-medium text-white/40">{name}</span>
                 </div>
               ))}
             </div>
