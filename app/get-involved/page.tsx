@@ -158,22 +158,22 @@ export default function GetInvolvedPage() {
                   />
                 </div>
                 <div className="p-6">
-                <h3 className="text-xl font-normal tracking-tight text-ink">Donate product</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  If you're a brand or distributor, we can accept eligible products and
-                  coordinate logistics. This is where you'd outline product criteria,
-                  packaging rules, and intake process.
-                </p>
-                <div className="mt-5 space-y-2 text-sm text-ink/70">
-                  <div>• Healthy food & beverage</div>
-                  <div>• Hydration products</div>
-                  <div>• Natural personal care</div>
-                </div>
-                <div className="mt-6">
-                  <Button href="/donate-product#donate-product-form" variant="primary">
-                    Start a product donation
-                  </Button>
-                </div>
+                  <h3 className="text-xl font-normal tracking-tight text-ink">Donate product</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                    If you're a brand or distributor, we can accept eligible products and
+                    coordinate logistics. This is where you'd outline product criteria,
+                    packaging rules, and intake process.
+                  </p>
+                  <div className="mt-5 space-y-2 text-sm text-ink/70">
+                    <div>• Healthy food & beverage</div>
+                    <div>• Hydration products</div>
+                    <div>• Natural personal care</div>
+                  </div>
+                  <div className="mt-6">
+                    <Button href="/brand-partner#donate-product-form" variant="primary">
+                      Start a product donation
+                    </Button>
+                  </div>
                 </div>
               </Card>
             </Reveal>
@@ -190,18 +190,18 @@ export default function GetInvolvedPage() {
                   />
                 </div>
                 <div className="p-6">
-                <h3 className="text-xl font-normal tracking-tight text-ink">
-                  Agency distribution
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  If you serve vulnerable youth and want to distribute kits, this is the
-                  intake path: location, population served, distribution plan, and reporting.
-                </p>
-                <div className="mt-6">
-                  <Button href="/distribute#distribution-form" variant="secondary">
-                    Become a distribution partner
-                  </Button>
-                </div>
+                  <h3 className="text-xl font-normal tracking-tight text-ink">
+                    Agency distribution
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                    If you serve vulnerable youth and want to distribute kits, this is the
+                    intake path: location, population served, distribution plan, and reporting.
+                  </p>
+                  <div className="mt-6">
+                    <Button href="/distribute#distribution-form" variant="secondary">
+                      Become a distribution partner
+                    </Button>
+                  </div>
                 </div>
               </Card>
             </Reveal>

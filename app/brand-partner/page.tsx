@@ -45,53 +45,53 @@ export default function DonateProductPage() {
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden bg-ink" style={{ minHeight: "85vh" }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/images/programs/food-rescue/IMG_0889.jpeg"
-            alt="Food rescue products ready for distribution"
-            fill
-            className="object-cover opacity-30"
-            sizes="100vw"
-            priority
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(160deg, rgba(35,31,32,0.92) 0%, rgba(35,31,32,0.7) 50%, rgba(35,31,32,0.4) 100%)",
-            }}
-          />
-        </div>
-
-        <Container className="relative z-10 flex min-h-[85vh] items-center">
-          <div className="max-w-2xl py-20">
+        <Container className="relative z-10 grid min-h-[85vh] items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Left — Text */}
+          <div className="py-20 lg:py-28">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
-                Donate product
+                Partner with Teen Health
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Give product a{" "}
-                <span className="hero-highlight">second life.</span>
+                Corporate Partnerships
               </h1>
             </Reveal>
+            <Reveal delay={0.15}>
+              <p className="mt-5 text-xl font-medium leading-snug tracking-tight text-white/85 sm:text-2xl">
+                Partner With Us to Transform Youth Health and Wellness
+              </p>
+            </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
-                Instead of disposing of surplus, short-dated, or discontinued
-                inventory, partner with Teen Health to get quality products into
-                the hands of youth who need them.
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
+                Since 2022, we&apos;ve teamed up with 250+ companies to turn
+                donations into life-changing impact&mdash;across every aisle,
+                from nutrition to wellness and beyond.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
               <div className="mt-10">
                 <Button href="#donate-product-form" variant="primary">
-                  Start a product donation
+                  Partner With Us
                 </Button>
               </div>
             </Reveal>
           </div>
+
+          {/* Right — Image Placeholder */}
+          <Reveal delay={0.2}>
+            <div className="relative hidden overflow-hidden rounded-2xl lg:block" style={{ aspectRatio: "4/3" }}>
+              <div className="absolute inset-0 bg-white/[0.06] backdrop-blur-sm" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/30">
+                <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Zm16.5-13.5h.008v.008h-.008V7.5Zm0 0a1.125 1.125 0 1 0-2.25 0 1.125 1.125 0 0 0 2.25 0Z" />
+                </svg>
+                <span className="text-sm font-medium tracking-wide">Partner Image</span>
+              </div>
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
+            </div>
+          </Reveal>
         </Container>
       </section>
 
