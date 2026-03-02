@@ -291,60 +291,6 @@ export default function LearnPage() {
         </Reveal>
       </Container>
       <Container className="py-14 sm:py-16">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Learn"
-            title="The essentials, simplified"
-            description="Instead of dozens of small pages, keep a single Learn hub with a handful of high-signal articles."
-          />
-        </Reveal>
-
-        <div className="mt-10 space-y-12">
-          {byCategory.map(({ cat, items }) => (
-            <div key={cat}>
-              <Reveal>
-                <div className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                  {cat}
-                </div>
-              </Reveal>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {items.map((a, index) => (
-                  <Reveal key={a.slug} delay={index * 0.07}>
-                    <Card className="flex flex-col overflow-hidden p-0">
-                      <div className="relative" style={{ aspectRatio: "3/2" }}>
-                        <Image
-                          src={a.image.src}
-                          alt={a.image.alt}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-lg font-normal tracking-tight text-ink">
-                          {a.title}
-                        </h3>
-                        <p className="mt-3 text-sm leading-relaxed text-ink/70">{a.deck}</p>
-                        <div className="mt-5 flex items-center justify-between">
-                          <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                            Updated {new Date(a.updated).getFullYear()}
-                          </span>
-                          <Link
-                            href={`/our-why/${a.slug}`}
-                            className="text-sm font-semibold text-sky hover:underline"
-                          >
-                            Read →
-                          </Link>
-                        </div>
-                      </div>
-                    </Card>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
         <Reveal delay={0.08}>
           <div className="mt-14 rounded-3xl border border-border bg-sun p-8 text-ink shadow-soft sm:p-10">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/70">
