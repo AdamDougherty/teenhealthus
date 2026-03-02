@@ -260,6 +260,26 @@ export default function LearnPage() {
         </Container>
       </div>
 
+      {/* Why This Matters to Society */}
+      <Container className="py-16 text-center sm:py-20">
+        <Reveal>
+          <h2 className="mx-auto max-w-3xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
+            Why This Matters to Society
+          </h2>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/80 sm:text-lg sm:leading-relaxed">
+            Youth homelessness isn&rsquo;t just a personal crisis&mdash;it&rsquo;s
+            a public health, safety, and economic issue. When basic needs like
+            nutrition and mental stability go unmet, communities bear the costs
+            through emergency care, justice involvement, and lost potential. But
+            when young people are stabilized early&mdash;with food, mental health
+            support, and consistent care&mdash;outcomes improve. Preventing
+            homelessness and violence starts by meeting foundational needs and
+            investing in youth before crisis leads to lifelong consequences.
+          </p>
+        </Reveal>
+      </Container>
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
