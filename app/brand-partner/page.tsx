@@ -312,6 +312,39 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── EMPLOYEE ENGAGEMENT ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            {/* Text */}
+            <div>
+              <Reveal>
+                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                  Employee Engagement
+                </h2>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <p className="mt-6 text-lg leading-relaxed text-ink/60">
+                  Host professional &ldquo;Product Kitting&rdquo; events where
+                  corporate teams can assemble dignity kits for foster youth.
+                  These events boost employee morale while making a tangible
+                  difference.
+                </p>
+              </Reveal>
+            </div>
+
+            {/* Image placeholder */}
+            <Reveal delay={0.16}>
+              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl border-2 border-dashed border-ink/20 bg-mist">
+                <span className="text-sm font-medium text-ink/30">
+                  Image Placeholder
+                </span>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
