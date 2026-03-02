@@ -29,7 +29,7 @@ export default function HomePage() {
           <Reveal delay={0.05}>
             <div className="relative mt-10 mb-10 overflow-hidden rounded-3xl" style={{ aspectRatio: "21/9" }}>
               <Image
-                src="/images/youth/IMG_6160.jpeg"
+                src="/images/youth/N.jpg"
                 alt="Youth supported by Teen Health"
                 fill
                 className="object-cover"
