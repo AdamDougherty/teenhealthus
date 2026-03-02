@@ -251,7 +251,7 @@ export default function LearnPage() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <div>
+              <div className="border-t border-border pt-8 sm:border-l sm:border-t-0 sm:pl-8 sm:pt-0">
                 <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
                   The Pull of the Streets
                 </h3>
