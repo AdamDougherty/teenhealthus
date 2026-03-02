@@ -144,7 +144,7 @@ export default function DonateProductPage() {
 
           <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-3">
             {[
-              { stat: "X number", label: "Units/lbs of products rescued to date" },
+              { stat: "X", label: "Units/lbs of products rescued to date" },
               { stat: "5,000", label: "Youth reached per year" },
               { stat: "$25", label: "Delivers a gift bag or kit worth $50" },
             ].map((item, i) => (
