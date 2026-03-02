@@ -474,6 +474,41 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── DONATION REASONS ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+                Common donation scenarios
+              </p>
+              <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                Think of us as your go-to partner for excess inventory.
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink/60">
+                Products go to the most vulnerable instead of being disposed of.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: "Discontinued items", desc: "Products you're no longer selling but are still high quality." },
+              { title: "Packaging changes", desc: "Old packaging that's perfectly good but being replaced." },
+              { title: "Short-dated inventory", desc: "Products approaching best-by dates with shelf life remaining." },
+              { title: "Seasonal closeouts", desc: "Seasonal products that didn't sell through but are still great." },
+            ].map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.06}>
+                <Card>
+                  <div className="text-sm font-semibold tracking-tight text-ink">{item.title}</div>
+                  <p className="mt-2 text-xs leading-relaxed text-ink/60">{item.desc}</p>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* ─── CORPORATE GIVING ─── */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -785,40 +820,6 @@ export default function DonateProductPage() {
       </section>
 
 
-      {/* ─── DONATION REASONS ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <Reveal>
-            <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                Common donation scenarios
-              </p>
-              <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Think of us as your go-to partner for excess inventory.
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink/60">
-                Products go to the most vulnerable instead of being disposed of.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Discontinued items", desc: "Products you're no longer selling but are still high quality." },
-              { title: "Packaging changes", desc: "Old packaging that's perfectly good but being replaced." },
-              { title: "Short-dated inventory", desc: "Products approaching best-by dates with shelf life remaining." },
-              { title: "Seasonal closeouts", desc: "Seasonal products that didn't sell through but are still great." },
-            ].map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.06}>
-                <Card>
-                  <div className="text-sm font-semibold tracking-tight text-ink">{item.title}</div>
-                  <p className="mt-2 text-xs leading-relaxed text-ink/60">{item.desc}</p>
-                </Card>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* ─── PRODUCT DONATION FORM ─── */}
       <section id="donate-product-form" className="scroll-mt-24 bg-ink py-20 text-white sm:py-28">
