@@ -97,12 +97,12 @@ export default function DonateProductPage() {
 
   /* ── FAQ accordion state ── */
   const faqs = [
-    { q: "What types of products can I donate?", a: "We accept a wide range of health-focused products including food, beverages, hydration products, supplements, and personal care items. Products can be closeout, short-dated, mislabeled, or discontinued." },
-    { q: "Is my donation tax-deductible?", a: "Yes. Teen Health is a registered 501(c)(3) nonprofit organization. You will receive a tax receipt for the fair market value of all donated products." },
-    { q: "How does the logistics process work?", a: "We coordinate pickup or delivery of your products at no cost to you. Our team handles all transportation, warehousing, and distribution logistics using our tech-driven inventory management system." },
-    { q: "What is the minimum donation size?", a: "We are flexible and can accommodate donations of various sizes. Whether you have a single pallet or multiple truckloads, we can work with you to find the best solution." },
-    { q: "How will I know where my products end up?", a: "We provide detailed impact reports showing exactly how your donations were distributed, how many youth were served, and the measurable outcomes of your contribution." },
-    { q: "How quickly can you take receipt of products?", a: "In most cases, we can arrange pickup or receive shipments within 48-72 hours. For time-sensitive inventory like short-dated products, we prioritize rapid turnaround." },
+    { q: "Question", a: "Answer" },
+    { q: "Question", a: "Answer" },
+    { q: "Question", a: "Answer" },
+    { q: "Question", a: "Answer" },
+    { q: "Question", a: "Answer" },
+    { q: "Question", a: "Answer" },
   ];
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
