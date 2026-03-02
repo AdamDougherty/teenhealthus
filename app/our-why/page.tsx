@@ -180,6 +180,46 @@ export default function LearnPage() {
         </Container>
       </div>
 
+      {/* Mental Health & Daily Functioning */}
+      <Container className="py-16 text-center sm:py-20">
+        <Reveal>
+          <h2 className="mx-auto max-w-3xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
+            Mental Health &amp; Daily Functioning
+          </h2>
+        </Reveal>
+        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
+          <Reveal delay={0.1}>
+            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+              <p className="text-sm leading-relaxed text-ink/80">
+                Chronic stress puts the body in survival mode, elevating
+                cortisol levels and disrupting metabolism. Over time, this raises
+                the risk of obesity, hypertension, and insulin resistance, making
+                it harder for youth to thrive.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+              <p className="text-sm leading-relaxed text-ink/80">
+                Food insecurity weakens immune function. Deficiencies in key
+                nutrients like vitamins C, D, and protein lower the
+                body&rsquo;s defenses, increasing young people&rsquo;s
+                vulnerability to illness.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <div className="rounded-2xl border border-border bg-surface px-6 py-8">
+              <p className="text-sm leading-relaxed text-ink/80">
+                Poor nutrition impacts brain health. Diets high in
+                ultra-processed foods fuel inflammation and oxidative stress,
+                impairing cognitive function and increasing the risk of
+                depression and other mental health challenges.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </Container>
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
