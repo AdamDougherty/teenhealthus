@@ -220,6 +220,46 @@ export default function LearnPage() {
           </Reveal>
         </div>
       </Container>
+
+      {/* Health → Life Outcomes */}
+      <div className="bg-sun/5">
+        <Container className="py-16 sm:py-20">
+          <Reveal>
+            <h2 className="text-center font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
+              Health &rarr; Life Outcomes
+            </h2>
+          </Reveal>
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
+            <Reveal delay={0.1}>
+              <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
+                Unmet biological and emotional needs have lasting effects on life
+                outcomes. Deficiencies in key nutrients like vitamin B12, B6, and
+                omega-3 fatty acids can lead to cognitive impairments, emotional
+                dysregulation, and increased risk of mental health challenges.
+                Children exposed to Adverse Childhood Experiences (ACEs),
+                including poverty and trauma, face elevated risks of depression
+                and anxiety. Without a stable biological foundation, youth may
+                struggle with focus, school performance, and emotional
+                resilience&mdash;leading to a higher risk of dropout,
+                unemployment, housing instability, and justice system
+                involvement.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
+                When basic needs go unmet, young people often seek safety and
+                belonging wherever they can find it. Homelessness raises exposure
+                to gang recruitment and street violence. Gangs can appear to
+                offer food, protection, and community&mdash;needs the system no
+                longer provides. Without intervention, these pathways increase
+                the risk of trauma, substance use, incarceration, and long-term
+                instability.
+              </p>
+            </Reveal>
+          </div>
+        </Container>
+      </div>
+
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
