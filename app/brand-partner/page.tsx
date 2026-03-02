@@ -173,20 +173,7 @@ export default function DonateProductPage() {
           </Reveal>
 
           {/* Carousel */}
-          <div className="relative mt-14">
-            {/* Left arrow */}
-            <button
-              type="button"
-              aria-label="Scroll left"
-              onClick={() => scrollTo("left")}
-              className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-2 text-white backdrop-blur transition hover:bg-white/20 sm:flex"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-
-            {/* Scrollable row */}
+          <div className="mt-14">
             <div
               ref={scrollRef}
               className="flex gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -200,28 +187,16 @@ export default function DonateProductPage() {
                 </div>
               ))}
             </div>
-
-            {/* Right arrow */}
-            <button
-              type="button"
-              aria-label="Scroll right"
-              onClick={() => scrollTo("right")}
-              className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-2 text-white backdrop-blur transition hover:bg-white/20 sm:flex"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
           </div>
 
-          {/* Dots + side arrows (mobile) */}
+          {/* Arrows + Dots */}
           <div className="mt-6 flex items-center justify-center gap-4">
-            {/* Mobile left arrow */}
+            {/* Left arrow */}
             <button
               type="button"
               aria-label="Scroll left"
               onClick={() => scrollTo("left")}
-              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20 sm:hidden"
+              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -237,19 +212,19 @@ export default function DonateProductPage() {
                   aria-label={`Go to partner ${i + 1}`}
                   onClick={() => scrollToDot(i)}
                   className={`h-2 rounded-full transition-all ${i === activeIdx
-                      ? "w-6 bg-sun"
-                      : "w-2 bg-white/25 hover:bg-white/40"
+                    ? "w-6 bg-sun"
+                    : "w-2 bg-white/25 hover:bg-white/40"
                     }`}
                 />
               ))}
             </div>
 
-            {/* Mobile right arrow */}
+            {/* Right arrow */}
             <button
               type="button"
               aria-label="Scroll right"
               onClick={() => scrollTo("right")}
-              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20 sm:hidden"
+              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
