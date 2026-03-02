@@ -234,6 +234,46 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── READY TO BEGIN ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            {/* Image placeholder */}
+            <Reveal>
+              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl bg-mist">
+                <span className="text-sm font-medium text-ink/30">
+                  Image Placeholder
+                </span>
+              </div>
+            </Reveal>
+
+            {/* Text + CTA */}
+            <div>
+              <Reveal delay={0.08}>
+                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                  Ready to Begin?
+                </h2>
+              </Reveal>
+              <Reveal delay={0.16}>
+                <p className="mt-6 text-lg leading-relaxed text-ink/60">
+                  We help you move closeout, distressed, mislabeled, and
+                  short-dated products quickly—through donations or opportunity
+                  buys—turning your excess inventory into meaningful impact for
+                  at-risk youth.
+                </p>
+              </Reveal>
+              <Reveal delay={0.24}>
+                <div className="mt-8">
+                  <Button href="#donate-product-form" variant="primary">
+                    Become a Partner
+                  </Button>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
