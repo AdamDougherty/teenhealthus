@@ -148,7 +148,7 @@ export default function DonateProductPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Corporate Partnerships
+                Brand Partnerships
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
