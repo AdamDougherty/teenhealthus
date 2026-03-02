@@ -240,7 +240,7 @@ export default function DonateProductPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Image placeholder */}
             <Reveal>
-              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl bg-mist">
+              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl border-2 border-dashed border-ink/20 bg-mist">
                 <span className="text-sm font-medium text-ink/30">
                   Image Placeholder
                 </span>
