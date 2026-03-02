@@ -229,7 +229,7 @@ export default function LearnPage() {
               Health &rarr; Life Outcomes
             </h2>
           </Reveal>
-          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 items-stretch gap-8 sm:grid-cols-2">
             <Reveal delay={0.1}>
               <div>
                 <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
@@ -251,7 +251,7 @@ export default function LearnPage() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="border-t-2 border-ink/20 pt-8 sm:border-l-2 sm:border-t-0 sm:pl-8 sm:pt-0">
+              <div className="h-full border-t-2 border-ink/20 pt-8 sm:border-l-2 sm:border-t-0 sm:pl-8 sm:pt-0">
                 <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
                   The Pull of the Streets
                 </h3>
