@@ -95,6 +95,17 @@ export default function DonateProductPage() {
 
   const opTotalDots = partnerPages.length;
 
+  /* ── FAQ accordion state ── */
+  const faqs = [
+    { q: "What types of products can I donate?", a: "We accept a wide range of health-focused products including food, beverages, hydration products, supplements, and personal care items. Products can be closeout, short-dated, mislabeled, or discontinued." },
+    { q: "Is my donation tax-deductible?", a: "Yes. Teen Health is a registered 501(c)(3) nonprofit organization. You will receive a tax receipt for the fair market value of all donated products." },
+    { q: "How does the logistics process work?", a: "We coordinate pickup or delivery of your products at no cost to you. Our team handles all transportation, warehousing, and distribution logistics using our tech-driven inventory management system." },
+    { q: "What is the minimum donation size?", a: "We are flexible and can accommodate donations of various sizes. Whether you have a single pallet or multiple truckloads, we can work with you to find the best solution." },
+    { q: "How will I know where my products end up?", a: "We provide detailed impact reports showing exactly how your donations were distributed, how many youth were served, and the measurable outcomes of your contribution." },
+    { q: "How quickly can you take receipt of products?", a: "In most cases, we can arrange pickup or receive shipments within 48-72 hours. For time-sensitive inventory like short-dated products, we prioritize rapid turnaround." },
+  ];
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
@@ -524,8 +535,8 @@ export default function DonateProductPage() {
                   onClick={() => opScrollToDot(i)}
                   aria-label={`Go to partner page ${i + 1}`}
                   className={`h-2.5 rounded-full transition-all ${i === opActiveIdx
-                      ? "w-7 bg-ink/60"
-                      : "w-2.5 bg-ink/15 hover:bg-ink/25"
+                    ? "w-7 bg-ink/60"
+                    : "w-2.5 bg-ink/15 hover:bg-ink/25"
                     }`}
                 />
               ))}
@@ -546,6 +557,56 @@ export default function DonateProductPage() {
                 />
               </svg>
             </button>
+          </div>
+        </Container>
+      </section>
+
+      {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Frequently Asked Questions
+            </h2>
+          </Reveal>
+
+          <div className="mx-auto mt-14 max-w-3xl divide-y divide-ink/10">
+            {faqs.map((faq, i) => (
+              <div key={i}>
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                >
+                  <span className="text-base font-medium text-ink">
+                    {faq.q}
+                  </span>
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className={`shrink-0 text-ink/40 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""
+                      }`}
+                  >
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openFaq === i ? "max-h-60 pb-5" : "max-h-0"
+                    }`}
+                >
+                  <p className="text-sm leading-relaxed text-ink/60">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
