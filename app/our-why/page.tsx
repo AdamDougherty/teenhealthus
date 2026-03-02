@@ -157,6 +157,29 @@ export default function LearnPage() {
         </Reveal>
       </Container>
 
+      {/* The Brain–Body Connection */}
+      <div className="bg-sun/5">
+        <Container className="py-16 text-center sm:py-20">
+          <Reveal>
+            <h2 className="mx-auto max-w-3xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
+              The Brain&ndash;Body Connection
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/80 sm:text-lg sm:leading-relaxed">
+              For young people, consistent nutrition is key to brain function.
+              The brain relies on essential nutrients to regulate mood, manage
+              stress, control impulses, and make sound decisions. Housing
+              instability and food insecurity lead to nutrient-poor diets,
+              weakening the brain&rsquo;s ability to cope under pressure. When
+              undernourishment combines with trauma, anxiety, depression, and
+              emotional dysregulation become more likely&mdash;making it harder
+              for youth to stay safe, focused, and hopeful.
+            </p>
+          </Reveal>
+        </Container>
+      </div>
+
       <Container className="py-14 sm:py-16">
         <Reveal>
           <SectionHeading
