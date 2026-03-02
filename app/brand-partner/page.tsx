@@ -388,6 +388,39 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── PURPOSE-DRIVEN PARTNERSHIPS ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            {/* Image placeholder — left */}
+            <Reveal>
+              <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border-2 border-dashed border-ink/20 bg-mist">
+                <span className="text-sm text-ink/30">Image Placeholder</span>
+              </div>
+            </Reveal>
+
+            {/* Text — right */}
+            <div>
+              <Reveal delay={0.08}>
+                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                  Purpose-Driven Partnerships
+                </h2>
+              </Reveal>
+              <Reveal delay={0.16}>
+                <p className="mt-6 text-base leading-relaxed text-ink/60">
+                  In an era of increased ESG (Environmental, Social, and
+                  Governance) scrutiny, partnering with Teen Health offers a
+                  transparent, measurable way to fulfill your Social (S) pillar.
+                  Our work helps you reduce waste, convert operational surplus
+                  into community resilience, support vulnerable youth, and drive
+                  measurable social impact.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
