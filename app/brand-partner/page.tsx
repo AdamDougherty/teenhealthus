@@ -111,7 +111,7 @@ export default function DonateProductPage() {
               { stat: "$25", label: "Delivers a gift bag or kit worth $50" },
             ].map((item, i) => (
               <Reveal key={item.stat} delay={i * 0.08}>
-                <Card className="text-center">
+                <Card className="h-full text-center">
                   <div className="font-serif text-3xl font-bold tracking-tight text-ink sm:text-4xl">
                     {item.stat}
                   </div>
