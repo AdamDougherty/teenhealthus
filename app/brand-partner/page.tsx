@@ -95,6 +95,36 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── IMPACT STATS ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Our Impact, Powered by Partnerships
+            </h2>
+          </Reveal>
+
+          <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-3">
+            {[
+              { stat: "X number", label: "Units/lbs of products rescued to date" },
+              { stat: "5,000", label: "Youth reached per year" },
+              { stat: "$25", label: "Delivers a gift bag or kit worth $50" },
+            ].map((item, i) => (
+              <Reveal key={item.stat} delay={i * 0.08}>
+                <Card className="text-center">
+                  <div className="font-serif text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+                    {item.stat}
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                    {item.label}
+                  </p>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
