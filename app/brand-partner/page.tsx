@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
@@ -12,6 +12,44 @@ type Status = "idle" | "sending" | "sent" | "error";
 export default function DonateProductPage() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+
+  /* ── Partner carousel state ── */
+  const partners = Array.from({ length: 10 }, (_, i) => `Partner ${i + 1}`);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const CARD_W = 200; // px width of each card + gap
+
+  const updateActiveIndex = useCallback(() => {
+    if (!scrollRef.current) return;
+    const idx = Math.round(scrollRef.current.scrollLeft / CARD_W);
+    setActiveIdx(idx);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateActiveIndex, { passive: true });
+    return () => el.removeEventListener("scroll", updateActiveIndex);
+  }, [updateActiveIndex]);
+
+  const scrollTo = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = CARD_W * 3;
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToDot = (idx: number) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollTo({
+      left: idx * CARD_W,
+      behavior: "smooth",
+    });
+  };
+
+  const totalDots = Math.max(1, partners.length - 3);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -121,6 +159,102 @@ export default function DonateProductPage() {
                 </Card>
               </Reveal>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ─── FEATURED PARTNERS ─── */}
+      <section className="bg-ink py-20 text-white sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+              Featured Partners
+            </h2>
+          </Reveal>
+
+          {/* Carousel */}
+          <div className="relative mt-14">
+            {/* Left arrow */}
+            <button
+              type="button"
+              aria-label="Scroll left"
+              onClick={() => scrollTo("left")}
+              className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-2 text-white backdrop-blur transition hover:bg-white/20 sm:flex"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+
+            {/* Scrollable row */}
+            <div
+              ref={scrollRef}
+              className="flex gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {partners.map((name, i) => (
+                <div
+                  key={i}
+                  className="flex h-28 w-44 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
+                >
+                  <span className="text-sm font-medium text-white/40">{name}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Right arrow */}
+            <button
+              type="button"
+              aria-label="Scroll right"
+              onClick={() => scrollTo("right")}
+              className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white/10 p-2 text-white backdrop-blur transition hover:bg-white/20 sm:flex"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Dots + side arrows (mobile) */}
+          <div className="mt-6 flex items-center justify-center gap-4">
+            {/* Mobile left arrow */}
+            <button
+              type="button"
+              aria-label="Scroll left"
+              onClick={() => scrollTo("left")}
+              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20 sm:hidden"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+
+            {/* Dots */}
+            <div className="flex gap-2">
+              {Array.from({ length: totalDots }, (_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  aria-label={`Go to partner ${i + 1}`}
+                  onClick={() => scrollToDot(i)}
+                  className={`h-2 rounded-full transition-all ${i === activeIdx
+                      ? "w-6 bg-sun"
+                      : "w-2 bg-white/25 hover:bg-white/40"
+                    }`}
+                />
+              ))}
+            </div>
+
+            {/* Mobile right arrow */}
+            <button
+              type="button"
+              aria-label="Scroll right"
+              onClick={() => scrollTo("right")}
+              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20 sm:hidden"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
           </div>
         </Container>
       </section>
