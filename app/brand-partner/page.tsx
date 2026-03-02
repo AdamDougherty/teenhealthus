@@ -345,6 +345,49 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── WHY PARTNER WITH US ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Why Partner With Us?
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            {/* Card 1 */}
+            <Reveal delay={0.08}>
+              <Container className="rounded-3xl bg-mist p-8 sm:p-10">
+                <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
+                  Intentional, Health-Focused Products
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  We ensure these products reach at-risk youth and young adults
+                  (13–29). Unlike a traditional food bank, we&rsquo;re
+                  intentional about the food, beverages, hydration, and
+                  supplements we provide, raising the level of health and
+                  wellness for those we support.
+                </p>
+              </Container>
+            </Reveal>
+
+            {/* Card 2 */}
+            <Reveal delay={0.16}>
+              <Container className="rounded-3xl bg-mist p-8 sm:p-10">
+                <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
+                  Tech-Driven Efficiency
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  We use Salesforce, NetSuite, and AI to automate operations and
+                  manage inventory seamlessly. This ensures your contributions
+                  reach those in need quickly and effectively.
+                </p>
+              </Container>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
