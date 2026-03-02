@@ -112,10 +112,10 @@ export default function DonateProductPage() {
             ].map((item, i) => (
               <Reveal key={item.stat} delay={i * 0.08}>
                 <Card className="text-center">
-                  <div className="font-serif text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+                  <div className="font-serif text-3xl font-bold tracking-tight text-ink sm:text-4xl">
                     {item.stat}
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                  <p className="mt-3 text-base leading-relaxed text-ink/60">
                     {item.label}
                   </p>
                 </Card>
