@@ -51,6 +51,50 @@ export default function DonateProductPage() {
 
   const totalDots = Math.max(1, partners.length - 1);
 
+  /* ── Our Partners grid carousel state ── */
+  const allPartners = Array.from({ length: 36 }, (_, i) => `Logo ${i + 1}`);
+  const GRID_SIZE = 12; // 4 cols × 3 rows per page
+  const partnerPages = Array.from(
+    { length: Math.ceil(allPartners.length / GRID_SIZE) },
+    (_, i) => allPartners.slice(i * GRID_SIZE, i * GRID_SIZE + GRID_SIZE)
+  );
+  const opScrollRef = useRef<HTMLDivElement>(null);
+  const [opActiveIdx, setOpActiveIdx] = useState(0);
+
+  const updateOpIndex = useCallback(() => {
+    if (!opScrollRef.current) return;
+    const pageW = opScrollRef.current.clientWidth;
+    const idx = Math.round(opScrollRef.current.scrollLeft / pageW);
+    setOpActiveIdx(idx);
+  }, []);
+
+  useEffect(() => {
+    const el = opScrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateOpIndex, { passive: true });
+    return () => el.removeEventListener("scroll", updateOpIndex);
+  }, [updateOpIndex]);
+
+  const opScrollTo = (dir: "left" | "right") => {
+    if (!opScrollRef.current) return;
+    const pageW = opScrollRef.current.clientWidth;
+    opScrollRef.current.scrollBy({
+      left: dir === "left" ? -pageW : pageW,
+      behavior: "smooth",
+    });
+  };
+
+  const opScrollToDot = (idx: number) => {
+    if (!opScrollRef.current) return;
+    const pageW = opScrollRef.current.clientWidth;
+    opScrollRef.current.scrollTo({
+      left: idx * pageW,
+      behavior: "smooth",
+    });
+  };
+
+  const opTotalDots = partnerPages.length;
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
@@ -417,6 +461,91 @@ export default function DonateProductPage() {
                 </p>
               </Reveal>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ─── OUR PARTNERS ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Our Partners
+            </h2>
+          </Reveal>
+
+          {/* Scrollable grid pages */}
+          <div
+            ref={opScrollRef}
+            className="mt-14 flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-hide"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {partnerPages.map((page, pageIdx) => (
+              <div
+                key={pageIdx}
+                className="grid w-full shrink-0 snap-start grid-cols-4 gap-4"
+              >
+                {page.map((name, i) => (
+                  <div
+                    key={i}
+                    className="flex h-24 items-center justify-center rounded-xl border border-dashed border-ink/15 bg-mist"
+                  >
+                    <span className="text-xs font-medium text-ink/30">
+                      {name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Arrows + Dots */}
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <button
+              onClick={() => opScrollTo("left")}
+              aria-label="Previous partners"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/5 text-ink/50 transition hover:bg-ink/10"
+            >
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M15 19l-7-7 7-7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div className="flex gap-2">
+              {Array.from({ length: opTotalDots }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => opScrollToDot(i)}
+                  aria-label={`Go to partner page ${i + 1}`}
+                  className={`h-2.5 rounded-full transition-all ${i === opActiveIdx
+                      ? "w-7 bg-ink/60"
+                      : "w-2.5 bg-ink/15 hover:bg-ink/25"
+                    }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() => opScrollTo("right")}
+              aria-label="Next partners"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/5 text-ink/50 transition hover:bg-ink/10"
+            >
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                <path
+                  d="M9 5l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </div>
         </Container>
       </section>
