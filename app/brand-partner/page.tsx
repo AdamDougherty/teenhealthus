@@ -329,6 +329,51 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── WHAT WE ACCEPT ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <Reveal>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+                  What we accept
+                </p>
+                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                  Quality products that make a real difference.
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-ink/70">
+                  We accept packaged, shelf-stable products that meet our quality
+                  standards. Every donated item is sorted, kitted, and
+                  distributed through our trusted partner network.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/programs/food-rescue/IMG_0731.jpeg"
+                    alt="Food products ready for rescue"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/programs/food-rescue/IMG_0733.jpeg"
+                    alt="Rescued food products organized"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── CORPORATE GIVING ─── */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -639,50 +684,6 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
-      {/* ─── WHAT WE ACCEPT ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <Reveal>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                  What we accept
-                </p>
-                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Quality products that make a real difference.
-                </h2>
-                <p className="mt-6 text-base leading-relaxed text-ink/70">
-                  We accept packaged, shelf-stable products that meet our quality
-                  standards. Every donated item is sorted, kitted, and
-                  distributed through our trusted partner network.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/programs/food-rescue/IMG_0731.jpeg"
-                    alt="Food products ready for rescue"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/programs/food-rescue/IMG_0733.jpeg"
-                    alt="Rescued food products organized"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
 
       {/* ─── PRODUCT CATEGORIES ─── */}
       <section className="py-20 sm:py-28">
