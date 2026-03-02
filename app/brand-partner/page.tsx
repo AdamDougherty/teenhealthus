@@ -274,6 +274,44 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── CORPORATE GIVING ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Corporate Giving &amp; Sponsorship
+            </h2>
+          </Reveal>
+
+          <div className="mx-auto mt-14 grid max-w-4xl gap-8 sm:grid-cols-2">
+            <Reveal delay={0.08}>
+              <Card className="h-full">
+                <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
+                  In-Kind Support
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  We accept excess inventory, discontinued items, and short-dated
+                  bulk food—turning potential waste into essential nutrition and
+                  supporting circular economy goals.
+                </p>
+              </Card>
+            </Reveal>
+
+            <Reveal delay={0.16}>
+              <Card className="h-full">
+                <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
+                  Program Sponsorship
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  Support our monthly food projects or our upcoming Q4 2025
+                  expansion into Northern California and the Central Valley.
+                </p>
+              </Card>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ─── WHAT WE ACCEPT ─── */}
       <section className="py-20 sm:py-28">
         <Container>
