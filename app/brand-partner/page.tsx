@@ -409,6 +409,71 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── HOW IT WORKS ─── */}
+      <section className="bg-ink py-20 text-white sm:py-28">
+        <Container>
+          <Reveal>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+              How it works
+            </p>
+            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+              From your warehouse to youth in need.
+            </h2>
+          </Reveal>
+
+          <div className="mt-16 space-y-0">
+            {[
+              {
+                num: "01",
+                title: "Tell us what you have",
+                desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs.",
+                image: "/images/programs/essential-kits/IMG_5095.jpeg",
+                imageAlt: "Essential kits being assembled",
+              },
+              {
+                num: "02",
+                title: "We coordinate logistics",
+                desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting.",
+                image: "/images/programs/essential-kits/IMG_5096.jpeg",
+                imageAlt: "Products sorted and organized",
+              },
+              {
+                num: "03",
+                title: "Products reach youth fast",
+                desc: "Donated products are kitted and distributed through our partner agencies to vulnerable youth across the country.",
+                image: "/images/partnerships/IMG_4664.jpg",
+                imageAlt: "Teen Health delivering kits",
+              },
+            ].map((step) => (
+              <Reveal key={step.num} delay={0.05}>
+                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
+                    {step.num}
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-2xl font-normal tracking-tight">
+                      {step.title}
+                    </h3>
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
+                      {step.desc}
+                    </p>
+                  </div>
+                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* ─── CORPORATE GIVING ─── */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -719,71 +784,6 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
-
-      {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
-        <Container>
-          <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
-              How it works
-            </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
-              From your warehouse to youth in need.
-            </h2>
-          </Reveal>
-
-          <div className="mt-16 space-y-0">
-            {[
-              {
-                num: "01",
-                title: "Tell us what you have",
-                desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs.",
-                image: "/images/programs/essential-kits/IMG_5095.jpeg",
-                imageAlt: "Essential kits being assembled",
-              },
-              {
-                num: "02",
-                title: "We coordinate logistics",
-                desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting.",
-                image: "/images/programs/essential-kits/IMG_5096.jpeg",
-                imageAlt: "Products sorted and organized",
-              },
-              {
-                num: "03",
-                title: "Products reach youth fast",
-                desc: "Donated products are kitted and distributed through our partner agencies to vulnerable youth across the country.",
-                image: "/images/partnerships/IMG_4664.jpg",
-                imageAlt: "Teen Health delivering kits",
-              },
-            ].map((step) => (
-              <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
-                    {step.num}
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-2xl font-normal tracking-tight">
-                      {step.title}
-                    </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
-                      {step.desc}
-                    </p>
-                  </div>
-                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
-                    <Image
-                      src={step.image}
-                      alt={step.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* ─── DONATION REASONS ─── */}
       <section className="py-20 sm:py-28">
