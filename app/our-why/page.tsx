@@ -231,30 +231,40 @@ export default function LearnPage() {
           </Reveal>
           <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
             <Reveal delay={0.1}>
-              <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
-                Unmet biological and emotional needs have lasting effects on life
-                outcomes. Deficiencies in key nutrients like vitamin B12, B6, and
-                omega-3 fatty acids can lead to cognitive impairments, emotional
-                dysregulation, and increased risk of mental health challenges.
-                Children exposed to Adverse Childhood Experiences (ACEs),
-                including poverty and trauma, face elevated risks of depression
-                and anxiety. Without a stable biological foundation, youth may
-                struggle with focus, school performance, and emotional
-                resilience&mdash;leading to a higher risk of dropout,
-                unemployment, housing instability, and justice system
-                involvement.
-              </p>
+              <div>
+                <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
+                  Nutrition, Trauma &amp; Lost Potential
+                </h3>
+                <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
+                  Unmet biological and emotional needs have lasting effects on life
+                  outcomes. Deficiencies in key nutrients like vitamin B12, B6, and
+                  omega-3 fatty acids can lead to cognitive impairments, emotional
+                  dysregulation, and increased risk of mental health challenges.
+                  Children exposed to Adverse Childhood Experiences (ACEs),
+                  including poverty and trauma, face elevated risks of depression
+                  and anxiety. Without a stable biological foundation, youth may
+                  struggle with focus, school performance, and emotional
+                  resilience&mdash;leading to a higher risk of dropout,
+                  unemployment, housing instability, and justice system
+                  involvement.
+                </p>
+              </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
-                When basic needs go unmet, young people often seek safety and
-                belonging wherever they can find it. Homelessness raises exposure
-                to gang recruitment and street violence. Gangs can appear to
-                offer food, protection, and community&mdash;needs the system no
-                longer provides. Without intervention, these pathways increase
-                the risk of trauma, substance use, incarceration, and long-term
-                instability.
-              </p>
+              <div>
+                <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
+                  The Pull of the Streets
+                </h3>
+                <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
+                  When basic needs go unmet, young people often seek safety and
+                  belonging wherever they can find it. Homelessness raises exposure
+                  to gang recruitment and street violence. Gangs can appear to
+                  offer food, protection, and community&mdash;needs the system no
+                  longer provides. Without intervention, these pathways increase
+                  the risk of trauma, substance use, incarceration, and long-term
+                  instability.
+                </p>
+              </div>
             </Reveal>
           </div>
         </Container>
