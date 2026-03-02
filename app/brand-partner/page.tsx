@@ -374,6 +374,41 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
+      {/* ─── PRODUCT CATEGORIES ─── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <div className="text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+                Product categories
+              </p>
+              <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                We accept a wide range of healthy products.
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
+              { icon: "💧", label: "Hydration", desc: "Water, electrolyte drinks, and functional beverages." },
+              { icon: "💊", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
+              { icon: "🧴", label: "Personal care", desc: "Hygiene products, skincare, and dental care." },
+            ].map((item, i) => (
+              <Reveal key={item.label} delay={i * 0.06}>
+                <Card className="text-center">
+                  <div className="text-3xl">{item.icon}</div>
+                  <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
+                    {item.label}
+                  </div>
+                  <p className="mt-2 text-xs leading-relaxed text-ink/60">{item.desc}</p>
+                </Card>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* ─── CORPORATE GIVING ─── */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -684,41 +719,6 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
-
-      {/* ─── PRODUCT CATEGORIES ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <Reveal>
-            <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                Product categories
-              </p>
-              <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                We accept a wide range of healthy products.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
-              { icon: "💧", label: "Hydration", desc: "Water, electrolyte drinks, and functional beverages." },
-              { icon: "💊", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
-              { icon: "🧴", label: "Personal care", desc: "Hygiene products, skincare, and dental care." },
-            ].map((item, i) => (
-              <Reveal key={item.label} delay={i * 0.06}>
-                <Card className="text-center">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
-                    {item.label}
-                  </div>
-                  <p className="mt-2 text-xs leading-relaxed text-ink/60">{item.desc}</p>
-                </Card>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* ─── HOW IT WORKS ─── */}
       <section className="bg-ink py-20 text-white sm:py-28">
