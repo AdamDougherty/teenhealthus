@@ -265,7 +265,7 @@ export default function HowWeWorkPage() {
                                     </div>
                                     <div>
                                         <dt className="font-semibold text-ink">Intended Outcomes</dt>
-                                        <dd className="mt-1 text-ink/80">Increased utilization of mental health services and reduced rates of crisis-level psychological events</dd>
+                                        <dd className="mt-1 text-ink/80">Increased utilization of mental health services and reduced rates of crisis-level psychological distress</dd>
                                     </div>
                                 </dl>
                             </div>
