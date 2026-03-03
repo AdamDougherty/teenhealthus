@@ -242,6 +242,84 @@ export default function OurWorkPage() {
                 </Container>
             </section>
 
+            {/* ─── EVERY TEEN DESERVES ─── */}
+            <section className="bg-mist py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-3xl">
+                        <Reveal>
+                            <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Every Teen Deserves a Brain That Can Keep Up With Their Dreams
+                            </h2>
+                        </Reveal>
+
+                        <Reveal delay={0.08}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                So many young people today are fighting battles no one can
+                                see — stress that never shuts off, moods that swing without
+                                warning, fog that makes school and relationships feel
+                                impossible. These aren&apos;t character flaws. They&apos;re
+                                signs of a brain struggling to get what it needs.
+                            </p>
+                        </Reveal>
+
+                        {/* Mission pull quote */}
+                        <Reveal delay={0.12}>
+                            <blockquote className="my-10 border-l-4 border-sun py-4 pl-6">
+                                <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
+                                    At TeenHealth, we believe mental wellness isn&apos;t a
+                                    mystery. It&apos;s biology. And biology can be supported.
+                                </p>
+                            </blockquote>
+                        </Reveal>
+
+                        <Reveal delay={0.16}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Modern food systems have changed. Stress has changed. The world
+                                teens are growing up in has changed. But the brain&apos;s
+                                nutritional needs haven&apos;t. When those needs aren&apos;t
+                                met, everything becomes harder — focus, emotional regulation,
+                                resilience, hope.
+                            </p>
+                        </Reveal>
+
+                        <Reveal delay={0.2}>
+                            <p className="mt-6 text-base font-semibold uppercase tracking-wide text-ink/50">
+                                That&apos;s why we champion a simple, powerful idea:
+                            </p>
+                        </Reveal>
+
+                        {/* Key idea */}
+                        <Reveal delay={0.24}>
+                            <blockquote className="my-10 border-l-4 border-sun py-4 pl-6">
+                                <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
+                                    Give the brain the full spectrum of nutrients it needs, and
+                                    it becomes more capable of healing, learning, and thriving.
+                                </p>
+                            </blockquote>
+                        </Reveal>
+
+                        <Reveal delay={0.28}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                This isn&apos;t about quick fixes or one-size-fits-all
+                                solutions. It&apos;s about restoring the biological foundation
+                                that makes every other intervention — therapy, school support,
+                                community care — more effective.
+                            </p>
+                        </Reveal>
+
+                        <Reveal delay={0.32}>
+                            <p className="mt-6 text-lg font-semibold leading-relaxed text-ink">
+                                We partner with evidence-based, broad-spectrum micronutrient
+                                approaches because they help teens regain clarity, stability,
+                                and strength from the inside out. When the brain is nourished,
+                                everything else becomes possible.
+                            </p>
+                        </Reveal>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── CTA ─── */}
             <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
