@@ -163,6 +163,85 @@ export default function OurWorkPage() {
                 </Container>
             </section>
 
+            {/* ─── RESEARCH & EVIDENCE BASED ─── */}
+            <section className="py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-3xl">
+                        <Reveal>
+                            <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Research &amp; Evidence Based
+                            </h2>
+                        </Reveal>
+                        <Reveal delay={0.06}>
+                            <h3 className="mt-6 text-lg font-semibold text-ink/80">
+                                Nutrition, Mental Health, and Youth Stability in California
+                            </h3>
+                        </Reveal>
+
+                        {/* Intro */}
+                        <Reveal delay={0.1}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                In California, thousands of young people experience
+                                homelessness, untreated mental health challenges, and exposure
+                                to violence or gangs each year. These issues are deeply
+                                connected — and nutrition plays a critical but often overlooked
+                                role.
+                            </p>
+                        </Reveal>
+
+                        {/* Body */}
+                        <Reveal delay={0.14}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                The brain requires a steady supply of essential nutrients to
+                                regulate mood, manage stress, control impulses, and make safe
+                                decisions. For youth facing food insecurity, unstable housing,
+                                or trauma, diets are often inconsistent and nutrient-poor,
+                                weakening the brain&apos;s ability to cope under pressure.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.18}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                When the brain is undernourished and chronically stressed,
+                                young people are more likely to experience anxiety, depression,
+                                emotional dysregulation, and impaired judgment. In survival
+                                mode, short-term safety and belonging can outweigh long-term
+                                goals — making youth more vulnerable to gang involvement,
+                                substance use, and continued housing instability.
+                            </p>
+                        </Reveal>
+
+                        {/* Pull quote */}
+                        <Reveal delay={0.22}>
+                            <blockquote className="my-10 border-l-4 border-sun py-4 pl-6">
+                                <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
+                                    This is not a failure of character. It is a predictable
+                                    outcome of unmet biological and social needs.
+                                </p>
+                            </blockquote>
+                        </Reveal>
+
+                        {/* Solution */}
+                        <Reveal delay={0.26}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Supporting nutrition alongside mental health care, housing
+                                stability, and community connection strengthens the foundation
+                                youth need to regulate emotions, resist high-risk pathways, and
+                                build safer, healthier futures.
+                            </p>
+                        </Reveal>
+
+                        {/* Closing statement */}
+                        <Reveal delay={0.3}>
+                            <p className="mt-8 text-lg font-semibold leading-relaxed text-ink">
+                                Mental wellness, homelessness prevention, and violence
+                                prevention start with meeting basic biological needs.
+                            </p>
+                        </Reveal>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── CTA ─── */}
             <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
