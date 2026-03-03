@@ -50,27 +50,18 @@ export default function OurStoryPage() {
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                                The beginning
+                                Where it started
                             </p>
                             <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                It started with a simple question
+                                Where It Started
                             </h2>
                         </Reveal>
                         <Reveal delay={0.08}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                In 2022, we asked: what happens when a young person
-                                doesn&apos;t have access to the basics — clean food, water,
-                                hygiene products, personal care? The answer wasn&apos;t hard to
-                                find, but the solution required a new approach.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.12}>
-                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                We saw an opportunity to bridge two problems — brands with
-                                surplus products and youth without access to essentials. Teen
-                                Health was born to connect the two: rescue high-quality
-                                products, assemble them into kits, and deliver them through
-                                trusted local agencies.
+                                Teen Health was born from a simple but powerful realization:
+                                many young people, especially those facing neurological,
+                                emotional, and social challenges, are being asked to regulate
+                                themselves in bodies that are biologically under-supported.
                             </p>
                         </Reveal>
                     </div>
