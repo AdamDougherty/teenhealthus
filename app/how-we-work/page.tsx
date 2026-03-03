@@ -180,7 +180,7 @@ export default function HowWeWorkPage() {
                                             Consistent access to nutritious meals and stabilized physical health for 13–29 year-olds
                                         </td>
                                         <td className="px-6 py-5 text-ink/80">
-                                            Increased utilization of mental health services and reduced rates of crisis-level psychological events
+                                            Increased utilization of mental health services and reduced rates of crisis-level psychological distress
                                         </td>
                                     </tr>
                                 </tbody>
