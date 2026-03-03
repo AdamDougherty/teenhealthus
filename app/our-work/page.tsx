@@ -152,8 +152,19 @@ export default function OurWorkPage() {
                             </Reveal>
                         </div>
 
+                        {/* Divider */}
+                        <Reveal delay={0.2}>
+                            <div className="my-10 flex items-center gap-4">
+                                <div className="h-px flex-1 bg-border" />
+                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
+                                    Foster Care Population
+                                </p>
+                                <div className="h-px flex-1 bg-border" />
+                            </div>
+                        </Reveal>
+
                         {/* National / state stats */}
-                        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.22}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
