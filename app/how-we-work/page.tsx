@@ -21,7 +21,7 @@ export default function HowWeWorkPage() {
 
                 {/* Text overlay */}
                 <Container className="relative z-10 flex min-h-[70vh] items-center justify-center pb-0 text-center">
-                    <div className="max-w-3xl">
+                    <div className="max-w-4xl">
                         <Reveal>
                             <h1 className="font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                                 Fueling Youth Well-Being and Stability
