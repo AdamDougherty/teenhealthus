@@ -153,7 +153,7 @@ export default function DonateProductPage() {
             </Reveal>
             <Reveal delay={0.15}>
               <p className="mt-5 text-xl font-medium leading-snug tracking-tight text-white/85 sm:text-2xl">
-                Turning Surplus Into Life-Changing Impact for Youth
+                Turn Surplus into Youth Impact
               </p>
             </Reveal>
             <Reveal delay={0.2}>
