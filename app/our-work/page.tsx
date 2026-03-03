@@ -102,6 +102,56 @@ export default function OurWorkPage() {
                 </Container>
             </section>
 
+            {/* ─── YOUTH HEALTH & HOUSING DATA ─── */}
+            <section className="bg-mist py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-4xl text-center">
+                        <Reveal>
+                            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Youth Health &amp; Housing Data
+                            </h2>
+                        </Reveal>
+
+                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                            <Reveal delay={0.08}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        40%
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        of foster youth will be homeless or incarcerated within
+                                        3 years of leaving the foster care system
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.12}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        27% / 14%
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        of CA foster youth had been incarcerated / experienced
+                                        homelessness while in the foster care system
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.16}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        376,900
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        individuals in foster care in the US — 44,400 in
+                                        California alone
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── CTA ─── */}
             <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
