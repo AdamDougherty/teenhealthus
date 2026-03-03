@@ -113,48 +113,64 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <Reveal delay={0.08}>
+                        {/* Hero stat */}
+                        <Reveal delay={0.08}>
+                            <div className="mt-12 rounded-2xl border border-border bg-white p-10 shadow-sm">
+                                <p className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
+                                    40%
+                                </p>
+                                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                                    of foster youth will be homeless or incarcerated within
+                                    3 years of leaving the foster care system
+                                </p>
+                            </div>
+                        </Reveal>
+
+                        {/* Sub-stats */}
+                        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.14}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
-                                        40%
-                                    </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        of foster youth will be homeless or incarcerated within
-                                        3 years of leaving the foster care system
-                                    </p>
-                                </div>
-                            </Reveal>
-                            <Reveal delay={0.12}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                         27%
                                     </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
                                         of youth transitioning out of foster care in California
                                         have been incarcerated
                                     </p>
                                 </div>
                             </Reveal>
-                            <Reveal delay={0.16}>
+                            <Reveal delay={0.18}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                         14%
                                     </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
                                         of youth transitioning out of foster care in California
                                         had experienced homelessness
                                     </p>
                                 </div>
                             </Reveal>
-                            <Reveal delay={0.2}>
+                        </div>
+
+                        {/* National / state stats */}
+                        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.22}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         376,900
                                     </p>
                                     <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        individuals in foster care in the US — 44,400 in
-                                        California alone
+                                        individuals in foster care in the US
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.26}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        44,400
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        individuals in foster care in California alone
                                     </p>
                                 </div>
                             </Reveal>
