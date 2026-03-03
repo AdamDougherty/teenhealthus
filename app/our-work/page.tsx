@@ -320,6 +320,33 @@ export default function OurWorkPage() {
                 </Container>
             </section>
 
+            {/* ─── ANNUAL IMPACT SNAPSHOT ─── */}
+            <section className="py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-4xl text-center">
+                        <Reveal>
+                            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Annual Impact Snapshot
+                            </h2>
+                        </Reveal>
+
+                        <div className="mt-12 flex justify-center">
+                            <Reveal delay={0.08}>
+                                <div className="rounded-2xl border border-border bg-mist px-16 py-10 shadow-sm">
+                                    <p className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
+                                        5,000
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        Youth Served
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── CTA ─── */}
             <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
