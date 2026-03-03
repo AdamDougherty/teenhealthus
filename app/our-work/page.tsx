@@ -146,7 +146,7 @@ export default function OurWorkPage() {
                                     </p>
                                     <p className="mt-3 text-sm leading-relaxed text-ink/60">
                                         of youth transitioning out of foster care in California
-                                        had experienced homelessness
+                                        have experienced homelessness
                                     </p>
                                 </div>
                             </Reveal>
