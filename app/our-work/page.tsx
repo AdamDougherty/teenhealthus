@@ -113,9 +113,9 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.08}>
-                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         40%
                                     </p>
@@ -126,18 +126,29 @@ export default function OurWorkPage() {
                                 </div>
                             </Reveal>
                             <Reveal delay={0.12}>
-                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
-                                        27% / 14%
+                                        27%
                                     </p>
                                     <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        of CA foster youth had been incarcerated / experienced
-                                        homelessness while in the foster care system
+                                        of youth transitioning out of foster care in California
+                                        had been incarcerated
                                     </p>
                                 </div>
                             </Reveal>
                             <Reveal delay={0.16}>
-                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        14%
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        of youth transitioning out of foster care in California
+                                        had experienced homelessness
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.2}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         376,900
                                     </p>
