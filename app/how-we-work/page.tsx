@@ -47,7 +47,7 @@ export default function HowWeWorkPage() {
                         {/* Pillar 1 */}
                         <Reveal delay={0.08}>
                             <div className="h-full rounded-2xl border border-border bg-mist p-8">
-                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun/20 text-sm font-bold text-sun">
+                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun text-sm font-bold text-white">
                                     1
                                 </span>
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
@@ -65,7 +65,7 @@ export default function HowWeWorkPage() {
                         {/* Pillar 2 */}
                         <Reveal delay={0.16}>
                             <div className="h-full rounded-2xl border border-border bg-mist p-8">
-                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun/20 text-sm font-bold text-sun">
+                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun text-sm font-bold text-white">
                                     2
                                 </span>
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
@@ -83,7 +83,7 @@ export default function HowWeWorkPage() {
                         {/* Pillar 3 */}
                         <Reveal delay={0.24}>
                             <div className="h-full rounded-2xl border border-border bg-mist p-8">
-                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun/20 text-sm font-bold text-sun">
+                                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sun text-sm font-bold text-white">
                                     3
                                 </span>
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
