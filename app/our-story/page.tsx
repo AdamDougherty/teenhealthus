@@ -45,7 +45,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── WHERE IT STARTED ─── */}
-            <section className="py-20 sm:py-28">
+            <section className="py-12 sm:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
@@ -76,7 +76,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── FROM AUTISM SUPPORT TO TEEN HEALTH ─── */}
-            <section className="bg-mist py-20 sm:py-28">
+            <section className="bg-mist py-12 sm:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
@@ -99,7 +99,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── WHAT WE DO TODAY ─── */}
-            <section className="py-20 sm:py-28">
+            <section className="py-12 sm:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
@@ -122,7 +122,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── THE MISSION AHEAD ─── */}
-            <section className="bg-mist py-20 sm:py-28">
+            <section className="bg-mist py-12 sm:py-16">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
