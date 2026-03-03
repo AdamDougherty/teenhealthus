@@ -132,7 +132,7 @@ export default function OurWorkPage() {
                                     </p>
                                     <p className="mt-4 text-sm leading-relaxed text-ink/60">
                                         of youth transitioning out of foster care in California
-                                        had been incarcerated
+                                        have been incarcerated
                                     </p>
                                 </div>
                             </Reveal>
