@@ -44,12 +44,12 @@ export default function OurStoryPage() {
                 </Container>
             </section>
 
-            {/* ─── THE BEGINNING ─── */}
+            {/* ─── WHERE IT STARTED ─── */}
             <section className="py-20 sm:py-28">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
-                            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Where It Started
                             </h2>
                         </Reveal>
@@ -61,63 +61,85 @@ export default function OurStoryPage() {
                                 themselves in bodies that are biologically under-supported.
                             </p>
                         </Reveal>
+                        <Reveal delay={0.12}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                We launched Autism Support in 2019 to serve families navigating
+                                autism — including my son Bradley, diagnosed in 2004. What began
+                                as a personal mission quickly revealed a broader reality: the
+                                families we supported were also facing housing instability, food
+                                insecurity, and economic hardship. Health challenges rarely exist
+                                in isolation.
+                            </p>
+                        </Reveal>
                     </div>
                 </Container>
             </section>
 
-            {/* ─── WHERE WE ARE TODAY ─── */}
+            {/* ─── FROM AUTISM SUPPORT TO TEEN HEALTH ─── */}
             <section className="bg-mist py-20 sm:py-28">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                                Where we are today
-                            </p>
-                            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                A growing network with real impact
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                From Autism Support to Teen Health
                             </h2>
                         </Reveal>
                         <Reveal delay={0.08}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                Today, Teen Health works with 250+ brand partners to rescue
-                                surplus products — from nutrition and hydration to personal
-                                care and wellness. Based in Southern California, our reach
-                                extends nationally through strategic logistics partnerships and
-                                a growing network of local distribution agencies.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.12}>
-                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                Every product we rescue is sorted, quality-checked, and
-                                assembled into kits designed for youth aged 13–29. These kits
-                                are distributed through agencies that already have trust and
-                                presence in their communities — shelters, foster care
-                                organizations, schools, and transitional programs.
+                                By 2022, it was clear we needed to expand beyond a single-focus
+                                program. We rebranded as Teen Health, Inc., a 501(c)(3)
+                                nonprofit, to address the interconnected drivers of youth
+                                vulnerability across California — recognizing that at-risk youth
+                                and young adults (ages 13–24) need holistic support integrating
+                                health, nutrition, stability, and opportunity.
                             </p>
                         </Reveal>
                     </div>
                 </Container>
             </section>
 
-            {/* ─── LOOKING AHEAD ─── */}
+            {/* ─── WHAT WE DO TODAY ─── */}
             <section className="py-20 sm:py-28">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                                Looking ahead
-                            </p>
-                            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                What&apos;s next for Teen Health
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                What We Do Today
                             </h2>
                         </Reveal>
                         <Reveal delay={0.08}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                We&apos;re expanding into Northern California and the Central
-                                Valley, building new brand partnerships, and investing in
-                                technology to make our operations even more efficient. Our
-                                goal is simple: reach more youth, rescue more products, and
-                                make the model easy to replicate.
+                                Today, Teen Health serves homeless, food-insecure, and low-income
+                                youth through nutrition distribution, hygiene and wellness kits,
+                                fitness programming, and partnerships with schools, shelters, and
+                                community organizations. We work alongside nonprofit partners and
+                                local agencies to strengthen the safety net for young people in
+                                poverty or without stable housing.
+                            </p>
+                        </Reveal>
+                    </div>
+                </Container>
+            </section>
+
+            {/* ─── THE MISSION AHEAD ─── */}
+            <section className="bg-mist py-20 sm:py-28">
+                <Container>
+                    <div className="mx-auto max-w-3xl">
+                        <Reveal>
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                The Mission Ahead
+                            </h2>
+                        </Reveal>
+                        <Reveal delay={0.08}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Our mission is to promote health and wellness through nutrition,
+                                fitness, and healthy living — not as standalone services, but as
+                                foundational pillars that help vulnerable youth stabilize,
+                                rebuild, and move toward independence. By broadening from a
+                                single program to a comprehensive youth health organization,
+                                Teen Health addresses both immediate needs and systemic
+                                barriers — empowering the next generation to lead healthier,
+                                safer, and more fulfilling lives.
                             </p>
                         </Reveal>
                     </div>
