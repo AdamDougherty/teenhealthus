@@ -21,8 +21,8 @@ export default function OurWorkPage() {
                 </div>
 
                 {/* Text overlay */}
-                <Container className="relative z-10 flex min-h-[70vh] items-end pb-16 sm:pb-20">
-                    <div className="max-w-2xl">
+                <Container className="relative z-10 flex min-h-[70vh] items-center justify-center pb-0 text-center">
+                    <div className="max-w-3xl">
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                                 Our Work
@@ -34,7 +34,7 @@ export default function OurWorkPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
+                            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
                                 Too many young people are navigating life without proper
                                 nutrition, mental health resources, or stable housing.
                                 Together, we&apos;re creating pathways to stability and
