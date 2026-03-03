@@ -49,9 +49,6 @@ export default function OurStoryPage() {
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                                Where it started
-                            </p>
                             <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Where It Started
                             </h2>
