@@ -45,6 +45,63 @@ export default function OurWorkPage() {
                 </Container>
             </section>
 
+            {/* ─── OUR GROWING IMPACT ─── */}
+            <section className="py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-4xl text-center">
+                        <Reveal>
+                            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Our Growing Impact
+                            </h2>
+                        </Reveal>
+
+                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.08}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        50,000+
+                                    </p>
+                                    <p className="mt-3 text-base font-medium text-ink/60">
+                                        Vulnerable Youth / Young Adults
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.12}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        250+
+                                    </p>
+                                    <p className="mt-3 text-base font-medium text-ink/60">
+                                        Company Partners
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.16}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        100
+                                    </p>
+                                    <p className="mt-3 text-base font-medium text-ink/60">
+                                        &ldquo;Superhero&rdquo; Social Service Partners
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.2}>
+                                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        $1 million+
+                                    </p>
+                                    <p className="mt-3 text-base font-medium text-ink/60">
+                                        Groceries
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── CTA ─── */}
             <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
