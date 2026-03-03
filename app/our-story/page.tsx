@@ -90,7 +90,7 @@ export default function OurStoryPage() {
                                 program. We rebranded as Teen Health, Inc., a 501(c)(3)
                                 nonprofit, to address the interconnected drivers of youth
                                 vulnerability across California — recognizing that at-risk youth
-                                and young adults (ages 13–24) need holistic support integrating
+                                and young adults (ages 13–29) need holistic support integrating
                                 health, nutrition, stability, and opportunity.
                             </p>
                         </Reveal>
