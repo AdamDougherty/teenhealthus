@@ -42,7 +42,7 @@ export default function AboutPage() {
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
-              <Card>
+              <Card className="h-full">
                 <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
                   {item.title}
                 </div>
