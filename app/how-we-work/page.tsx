@@ -53,7 +53,7 @@ export default function HowWeWorkPage() {
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                                     Nutrition as Foundation
                                 </h3>
-                                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                <p className="mt-3 text-sm leading-relaxed text-ink/80">
                                     We provide essential vitamins and healthy food that support brain
                                     function, emotional regulation, and stress management. When youth
                                     are nourished, they&apos;re better equipped to engage in care, make
@@ -71,7 +71,7 @@ export default function HowWeWorkPage() {
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                                     Dignity &amp; Immediate Stability
                                 </h3>
-                                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                <p className="mt-3 text-sm leading-relaxed text-ink/80">
                                     Hygiene kits and basic essentials reduce daily stress and restore
                                     dignity during moments of transition. Meeting core needs builds
                                     stability when youth are most vulnerable to exploitation,
@@ -89,7 +89,7 @@ export default function HowWeWorkPage() {
                                 <h3 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                                     Connection Before Crisis
                                 </h3>
-                                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                <p className="mt-3 text-sm leading-relaxed text-ink/80">
                                     We show up at shelters, transitional housing, and points of
                                     system exit to connect youth to care and community. By
                                     intervening early, we replace isolation with support—before
