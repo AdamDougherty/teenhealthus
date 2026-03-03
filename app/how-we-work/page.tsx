@@ -24,7 +24,7 @@ export default function HowWeWorkPage() {
                     <div className="max-w-4xl">
                         <Reveal>
                             <h1 className="font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                Fueling Youth Well-Being and Stability
+                                Fueling Youth Well-Being and&nbsp;Stability
                             </h1>
                         </Reveal>
                     </div>
