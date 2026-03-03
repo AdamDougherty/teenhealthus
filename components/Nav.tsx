@@ -53,7 +53,7 @@ export function Nav() {
             </Link>
             <div className="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 group-hover/about:pointer-events-auto group-hover/about:opacity-100">
               <div className="min-w-[200px] rounded-xl border border-border bg-white p-2 shadow-lg">
-                <Link href="/about" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
+                <Link href="/our-work" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Our Work
                 </Link>
                 <Link href="/about" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
