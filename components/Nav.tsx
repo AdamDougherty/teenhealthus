@@ -56,7 +56,7 @@ export function Nav() {
                 <Link href="/our-work" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Our Work
                 </Link>
-                <Link href="/about" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
+                <Link href="/how-we-work" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   How We Work
                 </Link>
                 <Link href="/our-story" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
