@@ -34,7 +34,7 @@ export default function OurWorkPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
+                            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
                                 Too many young people are navigating life without proper
                                 nutrition, mental health resources, or stable housing.
                                 Together, we&apos;re creating pathways to stability and
