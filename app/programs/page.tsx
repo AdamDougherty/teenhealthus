@@ -14,7 +14,7 @@ export default function ProgramsPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden bg-ink" style={{ minHeight: "70vh" }}>
+      <section className="relative overflow-hidden bg-ink" style={{ minHeight: "50vh" }}>
         {/* Full-width image placeholder */}
         <div className="absolute inset-0 bg-white/[0.04]" />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/30">
@@ -25,8 +25,8 @@ export default function ProgramsPage() {
         </div>
 
         {/* Text overlay */}
-        <Container className="relative z-10 flex min-h-[70vh] items-center justify-center pb-0 text-center">
-          <div className="max-w-4xl">
+        <Container className="relative z-10 flex min-h-[50vh] items-center justify-center pb-0 text-center">
+          <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                 Become a Program Sponsor
