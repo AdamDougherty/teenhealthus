@@ -46,13 +46,13 @@ export default function ProgramsPage() {
       <Container className="py-14 sm:py-16">
 
         {/* ─── SPONSOR A PROGRAM ─── */}
-        <div className="mt-10">
+        <div className="mt-10 text-center">
           <Reveal>
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               Sponsor a Program
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
               Program sponsors make it possible for Teen Health to sustain its
               mission year-round. Choose a program below to fund directly
               through our Benevity campaigns.
