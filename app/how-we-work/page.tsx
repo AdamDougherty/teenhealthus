@@ -23,7 +23,7 @@ export default function HowWeWorkPage() {
                 <Container className="relative z-10 flex min-h-[70vh] items-center justify-center pb-0 text-center">
                     <div className="max-w-4xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                                 How We Work
                             </p>
                             <h1 className="mt-4 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
