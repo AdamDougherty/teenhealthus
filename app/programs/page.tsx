@@ -36,7 +36,8 @@ export default function ProgramsPage() {
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70">
                 Fund a program that puts healthy essentials directly into the
-                hands of youth who need them most.
+                hands of youth who need them most. Your sponsorship keeps kits
+                stocked, communities connected, and young people seen.
               </p>
             </Reveal>
           </div>
