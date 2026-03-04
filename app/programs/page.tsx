@@ -70,12 +70,13 @@ export default function ProgramsPage() {
                   The Dignity Kit Program
                 </h3>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                  Every kit is a backpack filled with healthy snacks, hydration
-                  products, and essential personal care supplies — assembled and
-                  delivered to youth exiting foster care, juvenile detention, or
-                  homelessness. For many, it&apos;s the first sign that someone
-                  planned ahead for them. Your sponsorship keeps these kits
-                  stocked and ready to go when a young person needs them most.
+                  Teen Health is delivering 500 backpacks filled with healthy
+                  snacks, hydration, and essential supplies to young people
+                  experiencing homelessness across Los Angeles. Each backpack
+                  costs just $25 to assemble but delivers $50 in retail value —
+                  doubling every dollar you give. It&apos;s immediate
+                  nourishment, dignity, and stability for youth who need it
+                  most.
                 </p>
                 <div className="mt-6">
                   <Button href="#" variant="primary">
