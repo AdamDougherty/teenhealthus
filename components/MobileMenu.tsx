@@ -59,6 +59,7 @@ export function MobileMenu() {
           {[
             ["/get-involved", "Get Involved"],
             ["/about", "About"],
+            ["/leadership", "Leadership & Advisors"],
             ["/our-why", "Our Why"],
           ].map(([href, label]) => (
             <Link

@@ -62,7 +62,7 @@ export function Nav() {
                 <Link href="/our-story" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Our Story
                 </Link>
-                <Link href="/about" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
+                <Link href="/leadership" className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-black/5 hover:text-ink">
                   Leadership &amp; Advisors
                 </Link>
               </div>
