@@ -96,14 +96,13 @@ export default function ProgramsPage() {
                   The California Regenerative Youth Land&nbsp;Initiative
                 </h3>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                  Teen Health is acquiring two regenerative ranch properties in
-                  Southern California where unhoused young adults ages 18–29
-                  live on-site, earn wages, and build real skills through a paid
-                  12–18 month apprenticeship. Residents graduate to stable
-                  housing on their own timeline — no artificial deadlines, just
-                  genuine readiness. The farm itself generates revenue through
-                  CSA subscriptions, farmers markets, and branded products,
-                  creating a model designed to outlast its founders.
+                  This initiative connects unhoused young adults to working
+                  ranch properties in Southern California, building resilience
+                  through regenerative agriculture, paid apprenticeships, and
+                  hands-on workforce development. Residents earn wages, gain
+                  real skills, and transition to stable housing on their own
+                  timeline — creating a self-sustaining model rooted in land,
+                  community, and long-term healing.
                 </p>
                 <div className="mt-6">
                   <Button href="#" variant="primary">
