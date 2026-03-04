@@ -22,49 +22,8 @@ export default function ProgramsPage() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          {programs.map((p, index) => (
-            <Reveal key={p.slug} delay={index * 0.08}>
-              <Card className="flex flex-col overflow-hidden p-0">
-                <div className="relative" style={{ aspectRatio: "3/2" }}>
-                  <Image
-                    src={p.image.src}
-                    alt={p.image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                    {p.eyebrow}
-                  </div>
-                  <h3 className="mt-3 text-2xl font-normal tracking-tight text-ink">
-                    {p.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{p.description}</p>
-
-                  <div className="mt-6">
-                    <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
-                      What this includes
-                    </div>
-                    <ul className="mt-4 space-y-2 text-sm text-ink/70">
-                      {p.bullets.map((b) => (
-                        <li key={b} className="flex gap-2">
-                          <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
-
         {/* ─── SPONSOR A PROGRAM ─── */}
-        <div className="mt-20">
+        <div className="mt-10">
           <Reveal>
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -129,6 +88,48 @@ export default function ProgramsPage() {
               </Card>
             </Reveal>
           </div>
+        </div>
+
+        {/* ─── ALL PROGRAMS ─── */}
+        <div className="mt-20 grid gap-6 lg:grid-cols-3">
+          {programs.map((p, index) => (
+            <Reveal key={p.slug} delay={index * 0.08}>
+              <Card className="flex flex-col overflow-hidden p-0">
+                <div className="relative" style={{ aspectRatio: "3/2" }}>
+                  <Image
+                    src={p.image.src}
+                    alt={p.image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                    {p.eyebrow}
+                  </div>
+                  <h3 className="mt-3 text-2xl font-normal tracking-tight text-ink">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">{p.description}</p>
+
+                  <div className="mt-6">
+                    <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                      What this includes
+                    </div>
+                    <ul className="mt-4 space-y-2 text-sm text-ink/70">
+                      {p.bullets.map((b) => (
+                        <li key={b} className="flex gap-2">
+                          <span className="mt-1 inline-block h-2 w-2 rounded-full bg-sun" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </Reveal>
+          ))}
         </div>
 
         <Reveal delay={0.1}>
