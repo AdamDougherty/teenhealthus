@@ -63,6 +63,74 @@ export default function ProgramsPage() {
           ))}
         </div>
 
+        {/* ─── SPONSOR A PROGRAM ─── */}
+        <div className="mt-20">
+          <Reveal>
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
+            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Sponsor a Program
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+              Program sponsors make it possible for Teen Health to sustain its
+              mission year-round. Choose a program below to fund directly
+              through our Benevity campaigns.
+            </p>
+          </Reveal>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {/* Campaign 1 — California Regenerative Youth Land Initiative */}
+            <Reveal delay={0.08}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  The California Regenerative Youth Land&nbsp;Initiative
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  This initiative connects vulnerable youth to the land, building
+                  resilience through regenerative agriculture, nutrition
+                  education, and hands-on outdoor experience. By investing in
+                  soil, food systems, and community space, we create a foundation
+                  for long-term healing and self-sufficiency — rooted in
+                  California&apos;s landscape and the young people who will
+                  steward it.
+                </p>
+                <div className="mt-6">
+                  <Button href="#" variant="primary">
+                    Sponsor This Program
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
+
+            {/* Campaign 2 — The Dignity Kit Program */}
+            <Reveal delay={0.16}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  The Dignity Kit Program
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  Every kit is a backpack filled with healthy snacks, hydration
+                  products, and essential personal care supplies — assembled and
+                  delivered to youth exiting foster care, juvenile detention, or
+                  homelessness. For many, it&apos;s the first sign that someone
+                  planned ahead for them. Your sponsorship keeps these kits
+                  stocked and ready to go when a young person needs them most.
+                </p>
+                <div className="mt-6">
+                  <Button href="#" variant="primary">
+                    Sponsor This Program
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
+          </div>
+        </div>
+
         <Reveal delay={0.1}>
           <div className="mt-12 rounded-3xl bg-ink p-8 text-white sm:p-10">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
