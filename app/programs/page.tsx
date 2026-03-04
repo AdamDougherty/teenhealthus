@@ -35,9 +35,8 @@ export default function ProgramsPage() {
                 Built Around What Youth Actually&nbsp;Need
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/70">
-                Fund a program that puts healthy essentials directly into the
-                hands of youth who need them most. Your sponsorship keeps kits
-                stocked, communities connected, and young people seen.
+                Fund a program that puts healthy essentials directly into the hands of
+                youth who need them most — and help keep every kit stocked and ready.
               </p>
             </Reveal>
           </div>
