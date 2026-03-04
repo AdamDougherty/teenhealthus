@@ -59,7 +59,10 @@ export default function LeadershipPage() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
+                                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                                        President
+                                    </p>
+                                    <h3 className="mt-1 font-serif text-2xl font-normal tracking-tight text-ink">
                                         Scott Swift
                                     </h3>
                                     <div className="mt-4 space-y-4 text-sm leading-relaxed text-ink/80">
