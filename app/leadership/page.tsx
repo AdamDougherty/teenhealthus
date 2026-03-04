@@ -131,6 +131,31 @@ export default function LeadershipPage() {
                     </div>
                 </Container>
             </section>
+
+            {/* ─── BOARD AND ADVISORY ─── */}
+            <section className="bg-mist py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto max-w-4xl text-center">
+                        <Reveal>
+                            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                Board and Advisory
+                            </h2>
+                        </Reveal>
+                    </div>
+
+                    <Reveal delay={0.08}>
+                        <div className="mx-auto mt-14 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-6 sm:grid-cols-2">
+                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Name</p>
+                        </div>
+                    </Reveal>
+                </Container>
+            </section>
         </div>
     );
 }
