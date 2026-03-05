@@ -236,9 +236,19 @@ export default function DonateProductPage() {
               {partners.map((name, i) => (
                 <div
                   key={i}
-                  className="flex h-64 w-[520px] shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
+                  className="relative flex h-64 w-[520px] shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
                 >
-                  <span className="text-base font-medium text-white/40">{name}</span>
+                  {i === 0 ? (
+                    <Image
+                      src="/images/partnerships/wholefood.png"
+                      alt="Whole Foods Market"
+                      fill
+                      className="object-contain p-8"
+                      sizes="520px"
+                    />
+                  ) : (
+                    <span className="text-base font-medium text-white/40">{name}</span>
+                  )}
                 </div>
               ))}
             </div>
