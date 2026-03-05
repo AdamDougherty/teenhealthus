@@ -710,13 +710,15 @@ export default function DonateProductPage() {
                     className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-dashed border-ink/15 bg-mist"
                   >
                     {name === "Logo 1" ? (
-                      <Image
-                        src="/images/shared/wholefood.png"
-                        alt="Whole Foods Market"
-                        width={150}
-                        height={80}
-                        className="object-contain"
-                      />
+                      <div className="flex items-center justify-center h-full">
+                        <Image
+                          src="/images/shared/wholefood.png"
+                          alt="Whole Foods"
+                          width={180}
+                          height={180}
+                          className="object-contain"
+                        />
+                      </div>
                     ) : (
                       <span className="text-xs font-medium text-ink/30">
                         {name}
