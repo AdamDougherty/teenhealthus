@@ -9,12 +9,24 @@ import { Button } from "@/components/Button";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+interface FeaturedPartner {
+  name: string;
+  logo: string;        // path relative to /public/partners/
+  link?: string;       // optional external URL
+}
+
+const FEATURED_PARTNERS: FeaturedPartner[] = [
+  { name: "Whole Foods Market", logo: "/partners/wholefood.png", link: "https://www.wholefoodsmarket.com" },
+  // Add more partners here:
+  // { name: "Partner Name", logo: "/partners/logo.png", link: "https://..." },
+];
+
 export default function DonateProductPage() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
   /* ── Partner carousel state ── */
-  const partners = Array.from({ length: 10 }, (_, i) => `Partner ${i + 1}`);
+  const partners = FEATURED_PARTNERS;
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
   const CARD_W = 540; // px width of each card + gap (shows ~2 at a time)
@@ -49,7 +61,7 @@ export default function DonateProductPage() {
     });
   };
 
-  const totalDots = Math.max(1, partners.length - 1);
+  const totalDots = Math.max(1, partners.length);
 
   /* ── Our Partners grid carousel state ── */
   const allPartners = Array.from({ length: 36 }, (_, i) => `Logo ${i + 1}`);
@@ -233,24 +245,30 @@ export default function DonateProductPage() {
               ref={scrollRef}
               className="flex gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
-              {partners.map((name, i) => (
-                <div
-                  key={i}
-                  className="relative flex h-64 w-[520px] shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
-                >
-                  {i === 0 ? (
+              {partners.map((partner, i) => {
+                const card = (
+                  <div
+                    key={partner.name}
+                    className="relative flex h-64 w-[520px] shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
+                  >
                     <Image
-                      src="/images/partnerships/wholefood.png"
-                      alt="Whole Foods Market"
+                      src={partner.logo}
+                      alt={partner.name}
                       fill
                       className="object-contain p-8"
                       sizes="520px"
                     />
-                  ) : (
-                    <span className="text-base font-medium text-white/40">{name}</span>
-                  )}
-                </div>
-              ))}
+                  </div>
+                );
+
+                return partner.link ? (
+                  <a key={partner.name} href={partner.link} target="_blank" rel="noopener noreferrer">
+                    {card}
+                  </a>
+                ) : (
+                  card
+                );
+              })}
             </div>
           </div>
 
@@ -689,11 +707,21 @@ export default function DonateProductPage() {
                 {page.map((name, i) => (
                   <div
                     key={i}
-                    className="flex h-24 items-center justify-center rounded-xl border border-dashed border-ink/15 bg-mist"
+                    className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-dashed border-ink/15 bg-mist"
                   >
-                    <span className="text-xs font-medium text-ink/30">
-                      {name}
-                    </span>
+                    {name === "Logo 1" ? (
+                      <Image
+                        src="/partners/wholefood.png"
+                        alt="Whole Foods Market"
+                        fill
+                        className="object-contain p-3"
+                        sizes="(max-width: 768px) 25vw, 15vw"
+                      />
+                    ) : (
+                      <span className="text-xs font-medium text-ink/30">
+                        {name}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
