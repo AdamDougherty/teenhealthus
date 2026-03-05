@@ -709,10 +709,11 @@ export default function DonateProductPage() {
               >
                 {page.map((name, i) => {
                   const partner = FEATURED_PARTNERS.find(p => p.name === name);
+                  const needsDarkBg = name === "Intake";
                   return (
                     <div
                       key={i}
-                      className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 bg-white"
+                      className={`relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 ${needsDarkBg ? "bg-ink" : "bg-white"}`}
                     >
                       {partner ? (
                         <Image
