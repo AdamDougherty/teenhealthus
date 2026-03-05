@@ -711,11 +711,11 @@ export default function DonateProductPage() {
                   >
                     {name === "Logo 1" ? (
                       <Image
-                        src="/partners/wholefood.png"
+                        src="/images/shared/wholefood.png"
                         alt="Whole Foods Market"
-                        fill
-                        className="object-contain p-3"
-                        sizes="(max-width: 768px) 25vw, 15vw"
+                        width={150}
+                        height={80}
+                        className="object-contain"
                       />
                     ) : (
                       <span className="text-xs font-medium text-ink/30">
