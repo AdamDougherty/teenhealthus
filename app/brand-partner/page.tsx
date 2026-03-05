@@ -18,7 +18,7 @@ interface FeaturedPartner {
 const FEATURED_PARTNERS: FeaturedPartner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png", link: "https://www.wholefoodsmarket.com" },
   { name: "Betty Lou's", logo: "/partners/bettylous.png", link: "https://www.bettylous.com" },
-  { name: "Intake", logo: "/partners/intake.png", link: "https://www.intakebreathing.com" },
+  { name: "Intake", logo: "/images/shared/intake.png", link: "https://www.intakebreathing.com" },
   { name: "Marquis", logo: "/partners/marquis.svg", link: "https://drinkmarquis.com" },
   { name: "Oceanblue", logo: "/partners/oceanblue.jpg", link: "https://www.oceanblueomega.com" },
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png", link: "https://www.perfecthydration.com" },
@@ -709,11 +709,10 @@ export default function DonateProductPage() {
               >
                 {page.map((name, i) => {
                   const partner = FEATURED_PARTNERS.find(p => p.name === name);
-                  const needsDarkBg = name === "Intake";
                   return (
                     <div
                       key={i}
-                      className={`relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 ${needsDarkBg ? "bg-ink" : "bg-white"}`}
+                      className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 bg-white"
                     >
                       {partner ? (
                         <Image
