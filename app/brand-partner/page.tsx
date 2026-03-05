@@ -720,7 +720,7 @@ export default function DonateProductPage() {
                           alt={partner.name}
                           width={180}
                           height={180}
-                          className="h-14 w-auto max-w-[80%] object-contain"
+                          className={`w-auto max-w-[80%] object-contain ${partner.name === "Oceanblue" ? "h-20" : "h-14"}`}
                         />
                       ) : (
                         <span className="text-xs font-medium text-ink/30">
