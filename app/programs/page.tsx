@@ -57,7 +57,7 @@ export default function ProgramsPage() {
             </p>
           </Reveal>
 
-          <div className="mt-10 grid gap-6">
+          <div className="mx-auto mt-10 grid max-w-2xl gap-6">
             {/* Campaign 1 — The Dignity Kit Program */}
             <Reveal delay={0.08}>
               <Card className="flex h-full flex-col p-8">
