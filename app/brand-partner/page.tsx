@@ -17,8 +17,11 @@ interface FeaturedPartner {
 
 const FEATURED_PARTNERS: FeaturedPartner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png", link: "https://www.wholefoodsmarket.com" },
-  // Add more partners here:
-  // { name: "Partner Name", logo: "/partners/logo.png", link: "https://..." },
+  { name: "Betty Lou's", logo: "/partners/bettylous.png", link: "https://www.bettylous.com" },
+  { name: "Intake", logo: "/partners/intake.png", link: "https://www.intakebreathing.com" },
+  { name: "Marquis", logo: "/partners/marquis.svg", link: "https://drinkmarquis.com" },
+  { name: "Oceanblue", logo: "/partners/oceanblue.jpg", link: "https://www.oceanblueomega.com" },
+  { name: "Perfect Hydration", logo: "/partners/perfecthydration.png", link: "https://www.perfecthydration.com" },
 ];
 
 export default function DonateProductPage() {
@@ -64,7 +67,7 @@ export default function DonateProductPage() {
   const totalDots = Math.max(1, partners.length);
 
   /* ── Our Partners grid carousel state ── */
-  const allPartners = Array.from({ length: 36 }, (_, i) => `Logo ${i + 1}`);
+  const allPartners = FEATURED_PARTNERS.map(p => p.name);
   const GRID_SIZE = 12; // 4 cols × 3 rows per page
   const partnerPages = Array.from(
     { length: Math.ceil(allPartners.length / GRID_SIZE) },
@@ -704,28 +707,29 @@ export default function DonateProductPage() {
                 key={pageIdx}
                 className="grid w-full shrink-0 snap-start grid-cols-4 gap-4"
               >
-                {page.map((name, i) => (
-                  <div
-                    key={i}
-                    className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-dashed border-ink/15 bg-mist"
-                  >
-                    {name === "Logo 1" ? (
-                      <div className="flex items-center justify-center h-full">
+                {page.map((name, i) => {
+                  const partner = FEATURED_PARTNERS.find(p => p.name === name);
+                  return (
+                    <div
+                      key={i}
+                      className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 bg-white"
+                    >
+                      {partner ? (
                         <Image
-                          src="/images/shared/wholefood.png"
-                          alt="Whole Foods"
+                          src={partner.logo}
+                          alt={partner.name}
                           width={180}
                           height={180}
-                          className="h-16 w-auto object-contain mx-auto"
+                          className="h-14 w-auto max-w-[80%] object-contain"
                         />
-                      </div>
-                    ) : (
-                      <span className="text-xs font-medium text-ink/30">
-                        {name}
-                      </span>
-                    )}
-                  </div>
-                ))}
+                      ) : (
+                        <span className="text-xs font-medium text-ink/30">
+                          {name}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             ))}
           </div>
