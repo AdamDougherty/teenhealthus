@@ -716,7 +716,7 @@ export default function DonateProductPage() {
                           alt="Whole Foods"
                           width={180}
                           height={180}
-                          className="object-contain"
+                          className="h-16 w-auto object-contain mx-auto"
                         />
                       </div>
                     ) : (
