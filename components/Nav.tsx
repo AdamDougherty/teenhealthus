@@ -16,7 +16,7 @@ export function Nav() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-base font-semibold text-ink/80 md:flex">
+        <nav className="hidden items-center gap-8 text-lg font-semibold text-ink/80 md:flex">
           {/* Get involved dropdown */}
           <div className="group relative">
             <Link href="/get-involved" className="flex items-center gap-1 hover:text-ink">
