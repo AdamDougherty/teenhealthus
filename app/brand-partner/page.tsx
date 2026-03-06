@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
@@ -11,8 +11,8 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 interface FeaturedPartner {
   name: string;
-  logo: string;        // path relative to /public/partners/
-  link?: string;       // optional external URL
+  logo: string;
+  link?: string;
 }
 
 const FEATURED_PARTNERS: FeaturedPartner[] = [
@@ -24,102 +24,37 @@ const FEATURED_PARTNERS: FeaturedPartner[] = [
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png", link: "https://www.perfecthydration.com" },
 ];
 
-export default function DonateProductPage() {
+export default function BrandPartnerPage() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
-
-  /* ── Partner carousel state ── */
-  const partners = FEATURED_PARTNERS;
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIdx, setActiveIdx] = useState(0);
-  const CARD_W = 540; // px width of each card + gap (shows ~2 at a time)
-
-  const updateActiveIndex = useCallback(() => {
-    if (!scrollRef.current) return;
-    const idx = Math.round(scrollRef.current.scrollLeft / CARD_W);
-    setActiveIdx(idx);
-  }, []);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    el.addEventListener("scroll", updateActiveIndex, { passive: true });
-    return () => el.removeEventListener("scroll", updateActiveIndex);
-  }, [updateActiveIndex]);
-
-  const scrollTo = (dir: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = CARD_W * 2;
-    scrollRef.current.scrollBy({
-      left: dir === "left" ? -amount : amount,
-      behavior: "smooth",
-    });
-  };
-
-  const scrollToDot = (idx: number) => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollTo({
-      left: idx * CARD_W,
-      behavior: "smooth",
-    });
-  };
-
-  const totalDots = Math.max(1, partners.length);
-
-  /* ── Our Partners grid carousel state ── */
-  const allPartners = FEATURED_PARTNERS.map(p => p.name);
-  const GRID_SIZE = 12; // 4 cols × 3 rows per page
-  const partnerPages = Array.from(
-    { length: Math.ceil(allPartners.length / GRID_SIZE) },
-    (_, i) => allPartners.slice(i * GRID_SIZE, i * GRID_SIZE + GRID_SIZE)
-  );
-  const opScrollRef = useRef<HTMLDivElement>(null);
-  const [opActiveIdx, setOpActiveIdx] = useState(0);
-
-  const updateOpIndex = useCallback(() => {
-    if (!opScrollRef.current) return;
-    const pageW = opScrollRef.current.clientWidth;
-    const idx = Math.round(opScrollRef.current.scrollLeft / pageW);
-    setOpActiveIdx(idx);
-  }, []);
-
-  useEffect(() => {
-    const el = opScrollRef.current;
-    if (!el) return;
-    el.addEventListener("scroll", updateOpIndex, { passive: true });
-    return () => el.removeEventListener("scroll", updateOpIndex);
-  }, [updateOpIndex]);
-
-  const opScrollTo = (dir: "left" | "right") => {
-    if (!opScrollRef.current) return;
-    const pageW = opScrollRef.current.clientWidth;
-    opScrollRef.current.scrollBy({
-      left: dir === "left" ? -pageW : pageW,
-      behavior: "smooth",
-    });
-  };
-
-  const opScrollToDot = (idx: number) => {
-    if (!opScrollRef.current) return;
-    const pageW = opScrollRef.current.clientWidth;
-    opScrollRef.current.scrollTo({
-      left: idx * pageW,
-      behavior: "smooth",
-    });
-  };
-
-  const opTotalDots = partnerPages.length;
-
-  /* ── FAQ accordion state ── */
-  const faqs = [
-    { q: "Question", a: "Answer" },
-    { q: "Question", a: "Answer" },
-    { q: "Question", a: "Answer" },
-    { q: "Question", a: "Answer" },
-    { q: "Question", a: "Answer" },
-    { q: "Question", a: "Answer" },
-  ];
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: "What types of products can we donate?",
+      a: "We accept packaged, shelf-stable food and beverages, supplements, vitamins, personal care products, and hygiene items. Products should be in good condition with reasonable remaining shelf life.",
+    },
+    {
+      q: "Is there a minimum donation quantity?",
+      a: "We're flexible. Whether it's a single pallet or a full truckload, we'll work with you to coordinate pickup and distribution. Larger donations may qualify for additional impact reporting.",
+    },
+    {
+      q: "How do I receive a tax receipt?",
+      a: "Teen Health is a registered 501(c)(3) nonprofit. We provide a formal donation acknowledgment letter for all in-kind contributions, which you can use for tax deduction purposes.",
+    },
+    {
+      q: "Where are donated products distributed?",
+      a: "Products are distributed through our partner agency network to at-risk youth and young adults (ages 13–29) across California, with expansion planned into Northern California and the Central Valley.",
+    },
+    {
+      q: "Can we do an employee volunteer event?",
+      a: `Absolutely! We host professional \u201cProduct Kitting\u201d events where corporate teams assemble dignity kits for foster youth. It\u2019s a hands-on way to boost morale while making tangible impact.`,
+    },
+    {
+      q: "How is impact measured and reported?",
+      a: "We use Salesforce and NetSuite to track every donated unit from intake to distribution. Partners receive a custom impact report including total units distributed, youth reached, and geography served.",
+    },
+  ];
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -138,7 +73,7 @@ export default function DonateProductPage() {
 
       if (!res.ok) throw new Error("Request failed");
       setStatus("sent");
-      setMessage("Thanks for your interest in donating product! We'll be in touch soon.");
+      setMessage("Thanks for your interest in partnering with us! We'll be in touch soon.");
       e.currentTarget.reset();
     } catch {
       setStatus("error");
@@ -150,61 +85,69 @@ export default function DonateProductPage() {
     "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sun focus:ring-2 focus:ring-sun/20";
 
   return (
-    <div className="bg-transparent">
+    <div className="bg-white">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden bg-ink" style={{ minHeight: "85vh" }}>
-        <Container className="relative z-10 grid min-h-[85vh] items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left — Text */}
-          <div className="py-20 lg:py-28">
+      <section className="relative overflow-hidden" style={{ minHeight: "85vh" }}>
+        <Image
+          src="/images/partnerships/IMG_5265.jpeg"
+          alt="Teen Health youth partnership event"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+          quality={90}
+        />
+        {/* Gradient overlay */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(35,31,32,0.88) 0%, rgba(35,31,32,0.45) 50%, rgba(35,31,32,0.18) 100%)",
+          }}
+        />
+
+        <Container className="relative z-10 flex min-h-[85vh] items-end pb-16 sm:pb-24 lg:pb-28">
+          <div className="max-w-2xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
-                Partner with Teen Health
+                Brand Partnerships
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Brand Partnerships
+              <h1 className="mt-5 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                Make generosity
+                <br />
+                on&#8209;brand.
               </h1>
             </Reveal>
-            <Reveal delay={0.15}>
-              <p className="mt-5 text-xl font-medium leading-snug tracking-tight text-white/85 sm:text-2xl">
-                Turn Surplus into Youth Impact
-              </p>
-            </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
                 Since 2022, we&apos;ve teamed up with 250+ companies to turn
-                donations into life-changing impact&mdash;across every aisle,
+                surplus into life-changing impact&mdash;across every aisle,
                 from nutrition to wellness and beyond.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <Button href="#donate-product-form" variant="primary">
                   Partner With Us
+                </Button>
+                <Button
+                  href="#how-it-works"
+                  variant="ghost"
+                  className="text-white hover:bg-white/10"
+                >
+                  See how it works
                 </Button>
               </div>
             </Reveal>
           </div>
-
-          {/* Right — Image Placeholder */}
-          <Reveal delay={0.2}>
-            <div className="relative hidden overflow-hidden rounded-2xl lg:block" style={{ aspectRatio: "4/3" }}>
-              <div className="absolute inset-0 bg-white/[0.06] backdrop-blur-sm" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/30">
-                <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Zm16.5-13.5h.008v.008h-.008V7.5Zm0 0a1.125 1.125 0 1 0-2.25 0 1.125 1.125 0 0 0 2.25 0Z" />
-                </svg>
-                <span className="text-sm font-medium tracking-wide">Partner Image</span>
-              </div>
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-            </div>
-          </Reveal>
         </Container>
       </section>
 
       {/* ─── IMPACT STATS ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="border-b border-ink/5 py-20 sm:py-28">
         <Container>
           <Reveal>
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -212,150 +155,115 @@ export default function DonateProductPage() {
             </h2>
           </Reveal>
 
-          <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-4xl gap-12 sm:grid-cols-3">
             {[
-              { stat: "X", label: "Units/lbs of products rescued to date" },
+              { stat: "250+", label: "Brand partners to date" },
               { stat: "5,000", label: "Youth reached per year" },
-              { stat: "$25", label: "Delivers a gift bag or kit worth $50" },
+              { stat: "$25", label: "Delivers a kit worth $50" },
             ].map((item, i) => (
               <Reveal key={item.stat} delay={i * 0.08}>
-                <Card className="h-full text-center">
-                  <div className="font-serif text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                <div className="text-center">
+                  <div className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
                     {item.stat}
                   </div>
-                  <p className="mt-3 text-base leading-relaxed text-ink/60">
+                  <p className="mt-4 text-sm font-medium uppercase tracking-[0.15em] text-ink/40">
                     {item.label}
                   </p>
-                </Card>
+                </div>
               </Reveal>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* ─── FEATURED PARTNERS ─── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
+      {/* ─── IN GOOD COMPANY — Logo Grid ─── */}
+      <section className="py-20 sm:py-28">
         <Container>
           <Reveal>
-            <h2 className="text-center font-serif text-3xl font-normal tracking-tight sm:text-4xl">
-              Featured Partners
-            </h2>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                In good company
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-ink/60">
+                Our partnerships are as unique as every company in our community.
+                Whether you&apos;re a national brand or a local artisan,
+                it&apos;s never been easier to make generosity on&#8209;brand.
+              </p>
+            </div>
           </Reveal>
 
-          {/* Carousel */}
-          <div className="mt-14">
-            <div
-              ref={scrollRef}
-              className="flex gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
-              {partners.map((partner, i) => {
-                const card = (
-                  <div
-                    key={partner.name}
-                    className="relative flex h-64 w-[520px] shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-inset ring-white/10 transition hover:bg-white/10"
-                  >
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      fill
-                      className="object-contain p-8"
-                      sizes="520px"
-                    />
-                  </div>
-                );
+          {/* Logo grid — clean white cards */}
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/8 bg-ink/5 sm:grid-cols-3">
+            {FEATURED_PARTNERS.map((partner, i) => {
+              const inner = (
+                <div className="flex h-32 items-center justify-center bg-white px-8 transition-colors hover:bg-ink/[0.02] sm:h-36">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={180}
+                    height={80}
+                    className="max-h-16 w-auto object-contain opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                  />
+                </div>
+              );
 
-                return partner.link ? (
-                  <a key={partner.name} href={partner.link} target="_blank" rel="noopener noreferrer">
-                    {card}
+              return partner.link ? (
+                <Reveal key={partner.name} delay={i * 0.05}>
+                  <a href={partner.link} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
+                    {inner}
                   </a>
-                ) : (
-                  card
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Arrows + Dots */}
-          <div className="mt-6 flex items-center justify-center gap-4">
-            {/* Left arrow */}
-            <button
-              type="button"
-              aria-label="Scroll left"
-              onClick={() => scrollTo("left")}
-              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-
-            {/* Dots */}
-            <div className="flex gap-2">
-              {Array.from({ length: totalDots }, (_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  aria-label={`Go to partner ${i + 1}`}
-                  onClick={() => scrollToDot(i)}
-                  className={`h-2 rounded-full transition-all ${i === activeIdx
-                    ? "w-6 bg-sun"
-                    : "w-2 bg-white/25 hover:bg-white/40"
-                    }`}
-                />
-              ))}
-            </div>
-
-            {/* Right arrow */}
-            <button
-              type="button"
-              aria-label="Scroll right"
-              onClick={() => scrollTo("right")}
-              className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
+                </Reveal>
+              ) : (
+                <Reveal key={partner.name} delay={i * 0.05}>
+                  {inner}
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </section>
 
-      {/* ─── READY TO BEGIN ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            {/* Image placeholder */}
+      {/* ─── FULL-WIDTH PHOTO CTA ─── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "50vh" }}>
+        <Image
+          src="/images/partnerships/IMG_4664.jpg"
+          alt="Teen Health delivering kits to youth"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          quality={85}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(35,31,32,0.85) 0%, rgba(35,31,32,0.55) 60%, rgba(35,31,32,0.25) 100%)",
+          }}
+        />
+        <Container className="relative z-10 flex min-h-[50vh] items-center py-16">
+          <div className="max-w-lg">
             <Reveal>
-              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl border-2 border-dashed border-ink/20 bg-mist">
-                <span className="text-sm font-medium text-ink/30">
-                  Image Placeholder
-                </span>
+              <h2 className="font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-5xl">
+                Ready to make
+                <br />
+                an impact?
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg">
+                We help you move closeout, distressed, mislabeled, and
+                short-dated products quickly&mdash;turning your excess inventory
+                into meaningful impact for at-risk youth.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="mt-8">
+                <Button href="#donate-product-form" variant="primary">
+                  Become a Partner
+                </Button>
               </div>
             </Reveal>
-
-            {/* Text + CTA */}
-            <div>
-              <Reveal delay={0.08}>
-                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Ready to Begin?
-                </h2>
-              </Reveal>
-              <Reveal delay={0.16}>
-                <p className="mt-6 text-lg leading-relaxed text-ink/60">
-                  We help you move closeout, distressed, mislabeled, and
-                  short-dated products quickly—through donations or opportunity
-                  buys—turning your excess inventory into meaningful impact for
-                  at-risk youth.
-                </p>
-              </Reveal>
-              <Reveal delay={0.24}>
-                <div className="mt-8">
-                  <Button href="#donate-product-form" variant="primary">
-                    Become a Partner
-                  </Button>
-                </div>
-              </Reveal>
-            </div>
           </div>
         </Container>
       </section>
@@ -406,7 +314,7 @@ export default function DonateProductPage() {
       </section>
 
       {/* ─── PRODUCT CATEGORIES ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="border-y border-ink/5 py-20 sm:py-28">
         <Container>
           <Reveal>
             <div className="text-center">
@@ -441,13 +349,13 @@ export default function DonateProductPage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
+      <section id="how-it-works" className="scroll-mt-20 py-20 sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
               How it works
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               From your warehouse to youth in need.
             </h2>
           </Reveal>
@@ -477,15 +385,15 @@ export default function DonateProductPage() {
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
+                <div className="grid items-center gap-10 border-t border-ink/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                  <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
                     {step.num}
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-normal tracking-tight">
+                    <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
                       {step.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-ink/60">
                       {step.desc}
                     </p>
                   </div>
@@ -506,7 +414,7 @@ export default function DonateProductPage() {
       </section>
 
       {/* ─── DONATION REASONS ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="border-t border-ink/5 py-20 sm:py-28">
         <Container>
           <Reveal>
             <div className="text-center">
@@ -540,77 +448,6 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
-      {/* ─── CORPORATE GIVING ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <Reveal>
-            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Corporate Giving &amp; Sponsorship
-            </h2>
-          </Reveal>
-
-          <div className="mx-auto mt-14 grid max-w-4xl gap-8 sm:grid-cols-2">
-            <Reveal delay={0.08}>
-              <Card className="h-full">
-                <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
-                  In-Kind Support
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-ink/60">
-                  We accept excess inventory, discontinued items, and short-dated
-                  bulk food—turning potential waste into essential nutrition and
-                  supporting circular economy goals.
-                </p>
-              </Card>
-            </Reveal>
-
-            <Reveal delay={0.16}>
-              <Card className="h-full">
-                <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
-                  Program Sponsorship
-                </h3>
-                <p className="mt-4 text-base leading-relaxed text-ink/60">
-                  Support our monthly food projects or our upcoming Q4 2025
-                  expansion into Northern California and the Central Valley.
-                </p>
-              </Card>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
-      {/* ─── EMPLOYEE ENGAGEMENT ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            {/* Text */}
-            <div>
-              <Reveal>
-                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Employee Engagement
-                </h2>
-              </Reveal>
-              <Reveal delay={0.08}>
-                <p className="mt-6 text-lg leading-relaxed text-ink/60">
-                  Host professional &ldquo;Product Kitting&rdquo; events where
-                  corporate teams can assemble dignity kits for foster youth.
-                  These events boost employee morale while making a tangible
-                  difference.
-                </p>
-              </Reveal>
-            </div>
-
-            {/* Image placeholder */}
-            <Reveal delay={0.16}>
-              <div className="flex aspect-[4/3] items-center justify-center rounded-3xl border-2 border-dashed border-ink/20 bg-mist">
-                <span className="text-sm font-medium text-ink/30">
-                  Image Placeholder
-                </span>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       {/* ─── WHY PARTNER WITH US ─── */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -621,9 +458,8 @@ export default function DonateProductPage() {
           </Reveal>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2">
-            {/* Card 1 */}
             <Reveal delay={0.08}>
-              <Container className="rounded-3xl bg-mist p-8 sm:p-10">
+              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Intentional, Health-Focused Products
                 </h3>
@@ -634,12 +470,11 @@ export default function DonateProductPage() {
                   supplements we provide, raising the level of health and
                   wellness for those we support.
                 </p>
-              </Container>
+              </div>
             </Reveal>
 
-            {/* Card 2 */}
             <Reveal delay={0.16}>
-              <Container className="rounded-3xl bg-mist p-8 sm:p-10">
+              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Tech-Driven Efficiency
                 </h3>
@@ -648,145 +483,42 @@ export default function DonateProductPage() {
                   manage inventory seamlessly. This ensures your contributions
                   reach those in need quickly and effectively.
                 </p>
-              </Container>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
-      {/* ─── PURPOSE-DRIVEN PARTNERSHIPS ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            {/* Image placeholder — left */}
-            <Reveal>
-              <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border-2 border-dashed border-ink/20 bg-mist">
-                <span className="text-sm text-ink/30">Image Placeholder</span>
               </div>
             </Reveal>
 
-            {/* Text — right */}
-            <div>
-              <Reveal delay={0.08}>
-                <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+            <Reveal delay={0.24}>
+              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+                <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Purpose-Driven Partnerships
-                </h2>
-              </Reveal>
-              <Reveal delay={0.16}>
-                <p className="mt-6 text-base leading-relaxed text-ink/60">
-                  In an era of increased ESG (Environmental, Social, and
-                  Governance) scrutiny, partnering with Teen Health offers a
-                  transparent, measurable way to fulfill your Social (S) pillar.
-                  Our work helps you reduce waste, convert operational surplus
-                  into community resilience, support vulnerable youth, and drive
-                  measurable social impact.
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  In an era of increased ESG scrutiny, partnering with Teen
+                  Health offers a transparent, measurable way to fulfill your
+                  Social pillar. Our work helps you reduce waste, support
+                  vulnerable youth, and drive measurable social impact.
                 </p>
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* ─── OUR PARTNERS ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <Reveal>
-            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Our Partners
-            </h2>
-          </Reveal>
-
-          {/* Scrollable grid pages */}
-          <div
-            ref={opScrollRef}
-            className="mt-14 flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-hide"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {partnerPages.map((page, pageIdx) => (
-              <div
-                key={pageIdx}
-                className="grid w-full shrink-0 snap-start grid-cols-4 gap-4"
-              >
-                {page.map((name, i) => {
-                  const partner = FEATURED_PARTNERS.find(p => p.name === name);
-                  return (
-                    <div
-                      key={i}
-                      className="relative flex h-24 items-center justify-center overflow-hidden rounded-xl border border-ink/10 bg-white"
-                    >
-                      {partner ? (
-                        <Image
-                          src={partner.logo}
-                          alt={partner.name}
-                          width={180}
-                          height={180}
-                          className={`w-auto max-w-[80%] object-contain ${partner.name === "Oceanblue" ? "h-20" : "h-14"}`}
-                        />
-                      ) : (
-                        <span className="text-xs font-medium text-ink/30">
-                          {name}
-                        </span>
-                      )}
-                    </div>
-                  );
-                })}
               </div>
-            ))}
-          </div>
+            </Reveal>
 
-          {/* Arrows + Dots */}
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button
-              onClick={() => opScrollTo("left")}
-              aria-label="Previous partners"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/5 text-ink/50 transition hover:bg-ink/10"
-            >
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-                <path
-                  d="M15 19l-7-7 7-7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-
-            <div className="flex gap-2">
-              {Array.from({ length: opTotalDots }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => opScrollToDot(i)}
-                  aria-label={`Go to partner page ${i + 1}`}
-                  className={`h-2.5 rounded-full transition-all ${i === opActiveIdx
-                    ? "w-7 bg-ink/60"
-                    : "w-2.5 bg-ink/15 hover:bg-ink/25"
-                    }`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => opScrollTo("right")}
-              aria-label="Next partners"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/5 text-ink/50 transition hover:bg-ink/10"
-            >
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-                <path
-                  d="M9 5l7 7-7 7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <Reveal delay={0.32}>
+              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+                <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
+                  Employee Engagement
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                  Host professional &ldquo;Product Kitting&rdquo; events where
+                  corporate teams assemble dignity kits for foster youth.
+                  These events boost employee morale while making a tangible
+                  difference.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>
 
       {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="border-t border-ink/5 py-20 sm:py-28">
         <Container>
           <Reveal>
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -835,7 +567,7 @@ export default function DonateProductPage() {
         </Container>
       </section>
 
-      {/* ─── LET'S BUILD A HEALTHIER FUTURE TOGETHER ─── */}
+      {/* ─── FINAL CTA ─── */}
       <section className="py-20 sm:py-28">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
@@ -862,8 +594,6 @@ export default function DonateProductPage() {
           </div>
         </Container>
       </section>
-
-
 
       {/* ─── PRODUCT DONATION FORM ─── */}
       <section id="donate-product-form" className="scroll-mt-24 bg-ink py-20 text-white sm:py-28">
