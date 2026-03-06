@@ -75,7 +75,7 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:block">
-            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" className="px-6 py-2.5 text-base">
+            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" className="px-6 py-2.5 text-lg">
               Donate
             </Button>
           </div>
