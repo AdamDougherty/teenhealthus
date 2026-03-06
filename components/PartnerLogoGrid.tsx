@@ -41,13 +41,13 @@ export function PartnerLogoGrid() {
         <div className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {PARTNERS.map((partner, i) => {
             const inner = (
-              <div className="flex h-28 items-center justify-center rounded-xl bg-white px-6 shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition hover:shadow-md">
+              <div className="flex h-[7.5rem] items-center justify-center rounded-xl bg-white p-7 shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition hover:shadow-md">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
                   width={160}
                   height={160}
-                  className={`w-auto max-w-[75%] object-contain ${partner.name === "Oceanblue" ? "h-16" : "h-11"}`}
+                  className="h-auto w-auto max-h-[65px] max-w-[75%] object-contain"
                 />
               </div>
             );
