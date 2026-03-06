@@ -25,43 +25,46 @@ export function PartnerLogoGrid() {
     <section className="py-20 sm:py-28">
       <Container>
         <Reveal>
-          <div className="text-center">
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               In good company
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-ink/60">
+            <p className="mt-6 text-base leading-relaxed text-ink/60">
               Our partnerships are as unique as every company in our community.
-              Whether you&apos;re a national brand or a local artisan, it&apos;s
-              never been easier to make generosity on-brand.
+              Whether you&apos;re a national brand or a local artisan,
+              it&apos;s never been easier to make generosity on&#8209;brand.
             </p>
           </div>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <div className="mx-auto mt-14 grid max-w-4xl grid-cols-3 border-t border-l border-border">
-            {PARTNERS.map((partner) => {
-              const inner = (
-                <div className="flex items-center justify-center border-b border-r border-border p-8 transition-all duration-300 grayscale hover:grayscale-0 sm:p-10" style={{ aspectRatio: "3/2" }}>
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={140}
-                    height={60}
-                    className="max-h-10 w-auto object-contain opacity-60 transition-opacity duration-300 hover:opacity-100 sm:max-h-12"
-                  />
-                </div>
-              );
+        {/* Logo grid — clean white cards */}
+        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/8 bg-ink/5 sm:grid-cols-3">
+          {PARTNERS.map((partner, i) => {
+            const inner = (
+              <div className="flex h-32 items-center justify-center bg-white px-8 transition-colors hover:bg-ink/[0.02] sm:h-36">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={180}
+                  height={80}
+                  className="max-h-16 w-auto object-contain opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                />
+              </div>
+            );
 
-              return partner.link ? (
-                <a key={partner.name} href={partner.link} target="_blank" rel="noopener noreferrer" title={partner.name}>
+            return partner.link ? (
+              <Reveal key={partner.name} delay={i * 0.05}>
+                <a href={partner.link} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
                   {inner}
                 </a>
-              ) : (
-                <div key={partner.name}>{inner}</div>
-              );
-            })}
-          </div>
-        </Reveal>
+              </Reveal>
+            ) : (
+              <Reveal key={partner.name} delay={i * 0.05}>
+                {inner}
+              </Reveal>
+            );
+          })}
+        </div>
       </Container>
     </section>
   );
