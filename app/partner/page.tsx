@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
+import { PartnerLogoGrid } from "@/components/PartnerLogoGrid";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -242,55 +243,9 @@ export default function PartnerPage() {
         </Container>
       </section>
 
-      {/* ─── IMPACT STAT ─── */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="text-center">
-            <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                Our growing network
-              </p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-6 font-serif text-7xl font-normal tracking-tight text-ink sm:text-8xl lg:text-9xl">
-                250+
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-ink/60">
-                food, beverage, hydration, supplement and personal care product
-                companies partner with Teen Health.
-              </p>
-            </Reveal>
-          </div>
+      {/* ─── PARTNER LOGOS ─── */}
+      <PartnerLogoGrid />
 
-          {/* Partner logos */}
-          <Reveal delay={0.2}>
-            <div className="mx-auto mt-16 max-w-3xl">
-              <p className="mb-8 text-center text-xs font-bold uppercase tracking-[0.22em] text-ink/40">
-                Who we&apos;ve partnered with
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-sm font-semibold text-ink/35">
-                {[
-                  "Carlson",
-                  "Purely Elizabeth",
-                  "Whole Foods Market",
-                  "OWYN",
-                  "Olyra",
-                  "Primal Kitchen",
-                  "Emergen-C",
-                  "Earth Harmony",
-                  "Guayakí Yerba Mate",
-                ].map((name) => (
-                  <span key={name} className="text-base tracking-wide">
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
 
       {/* ─── OFFSET IMAGE GRID (charity:water style) ─── */}
       <section className="pb-10">
