@@ -37,29 +37,29 @@ export function PartnerLogoGrid() {
           </div>
         </Reveal>
 
-        {/* Logo grid — clean white cards */}
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink/8 bg-ink/5 sm:grid-cols-3">
+        {/* Responsive logo grid */}
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {PARTNERS.map((partner, i) => {
             const inner = (
-              <div className="flex h-32 items-center justify-center bg-white px-8 transition-colors hover:bg-ink/[0.02] sm:h-36">
+              <div className="flex h-28 items-center justify-center rounded-xl bg-white px-6 shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition hover:shadow-md">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  width={180}
-                  height={80}
-                  className="max-h-16 w-auto object-contain opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                  width={160}
+                  height={160}
+                  className={`w-auto max-w-[75%] object-contain ${partner.name === "Oceanblue" ? "h-16" : "h-11"}`}
                 />
               </div>
             );
 
             return partner.link ? (
-              <Reveal key={partner.name} delay={i * 0.05}>
+              <Reveal key={partner.name} delay={i * 0.04}>
                 <a href={partner.link} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
                   {inner}
                 </a>
               </Reveal>
             ) : (
-              <Reveal key={partner.name} delay={i * 0.05}>
+              <Reveal key={partner.name} delay={i * 0.04}>
                 {inner}
               </Reveal>
             );
