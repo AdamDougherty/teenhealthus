@@ -84,7 +84,7 @@ export default function GiveMonthlyPage() {
             <section className="relative overflow-hidden bg-ink">
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/events/IMG_4150.jpeg"
+                        src="/images/shared/vista teen trace pe.jpeg"
                         alt="Volunteers preparing essentials kits"
                         fill
                         priority
@@ -204,8 +204,8 @@ export default function GiveMonthlyPage() {
                                 <a
                                     href="https://www.classy.org/give/665776/#!/donation/checkout"
                                     className={`group block rounded-2xl border p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${tier.featured
-                                            ? "border-sun bg-white/10 shadow-md"
-                                            : "border-white/10 bg-white/5 hover:border-white/20"
+                                        ? "border-sun bg-white/10 shadow-md"
+                                        : "border-white/10 bg-white/5 hover:border-white/20"
                                         }`}
                                 >
                                     {tier.featured && (
