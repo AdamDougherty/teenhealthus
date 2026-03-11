@@ -242,7 +242,7 @@ export default function BrandPartnerPage() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
-                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
                   <Image
                     src="/images/shared/IMG_3800.jpeg"
                     alt="Products ready for youth distribution"
