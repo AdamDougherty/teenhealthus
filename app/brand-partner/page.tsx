@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -274,7 +274,7 @@ export default function BrandPartnerPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
-              { icon: "💧", label: "Hydration", desc: "Water, electrolyte drinks, and functional beverages." },
+              { icon: "💧", label: "Beverages", desc: "Water, electrolyte drinks, and functional beverages." },
               { icon: "⚡", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
               { icon: "🧴", label: "Personal care", desc: "Hygiene products, skincare, and dental care." },
             ].map((item, i) => (
