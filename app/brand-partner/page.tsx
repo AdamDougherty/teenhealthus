@@ -266,7 +266,7 @@ export default function BrandPartnerPage() {
                 Product categories
               </p>
               <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                We accept a wide range of healthy products.
+                We accept a wide range of quality products.
               </h2>
             </div>
           </Reveal>
@@ -276,7 +276,10 @@ export default function BrandPartnerPage() {
               { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
               { icon: "💧", label: "Beverages", desc: "Water, electrolyte drinks, and functional beverages." },
               { icon: "⚡", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
-              { icon: "🧴", label: "Personal care", desc: "Hygiene products, skincare, and dental care." },
+              { icon: "🧴", label: "Natural personal care", desc: "Natural hygiene products, skincare, and dental care." },
+              { icon: "💦", label: "Hydration supplements", desc: "Electrolyte powders, hydration packets, and drink mixes." },
+              { icon: "👕", label: "Apparel & clothing", desc: "Clothing, outerwear, and accessories for youth in need." },
+              { icon: "⛺", label: "Tents & sleeping bags", desc: "Shelter essentials for homeless and at-risk youth." },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.06}>
                 <Card className="text-center">
