@@ -91,11 +91,11 @@ export default function BrandPartnerPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(35,31,32,0.88) 0%, rgba(35,31,32,0.45) 50%, rgba(35,31,32,0.18) 100%)",
+              "linear-gradient(to left, rgba(35,31,32,0.92) 0%, rgba(35,31,32,0.70) 50%, rgba(35,31,32,0.15) 100%)",
           }}
         />
 
-        <Container className="relative z-10 flex min-h-[85vh] items-end pb-16 sm:pb-24 lg:pb-28">
+        <Container className="relative z-10 flex min-h-[85vh] items-end justify-end pb-16 sm:pb-24 lg:pb-28">
           <div className="max-w-2xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
