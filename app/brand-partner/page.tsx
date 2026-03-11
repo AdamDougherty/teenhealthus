@@ -299,7 +299,7 @@ export default function BrandPartnerPage() {
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
               How it works
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               From your warehouse to youth in need.
             </h2>
           </Reveal>
