@@ -275,7 +275,7 @@ export default function BrandPartnerPage() {
             {[
               { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
               { icon: "💧", label: "Hydration", desc: "Water, electrolyte drinks, and functional beverages." },
-              { icon: "�", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
+              { icon: "⚡", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
               { icon: "🧴", label: "Personal care", desc: "Hygiene products, skincare, and dental care." },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.06}>
