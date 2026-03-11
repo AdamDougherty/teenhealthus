@@ -135,7 +135,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── IMPACT STATS ─── */}
-      <section className="border-b border-ink/5 py-20 sm:py-28">
+      <section className="border-b border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -214,7 +214,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── WHAT WE ACCEPT ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="py-12 sm:py-16">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <Reveal>
@@ -259,7 +259,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── PRODUCT CATEGORIES ─── */}
-      <section className="border-y border-ink/5 py-20 sm:py-28">
+      <section className="border-y border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
             <div className="text-center">
@@ -298,7 +298,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section id="how-it-works" className="scroll-mt-20 py-20 sm:py-28">
+      <section id="how-it-works" className="scroll-mt-20 py-12 sm:py-16">
         <Container>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
@@ -364,7 +364,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── DONATION REASONS ─── */}
-      <section className="border-t border-ink/5 py-20 sm:py-28">
+      <section className="border-t border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
             <div className="text-center">
@@ -399,7 +399,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── WHY PARTNER WITH US ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="py-12 sm:py-16">
         <Container>
           <Reveal>
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -468,7 +468,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
-      <section className="border-t border-ink/5 py-20 sm:py-28">
+      <section className="border-t border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -518,7 +518,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── FINAL CTA ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
