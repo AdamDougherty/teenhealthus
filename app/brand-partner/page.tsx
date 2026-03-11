@@ -408,8 +408,8 @@ export default function BrandPartnerPage() {
           </Reveal>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2">
-            <Reveal delay={0.08}>
-              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+            <Reveal delay={0.08} className="h-full">
+              <div className="h-full rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Intentional, Health-Focused Products
                 </h3>
@@ -423,8 +423,8 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.16}>
-              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+            <Reveal delay={0.16} className="h-full">
+              <div className="h-full rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Tech-Driven Efficiency
                 </h3>
@@ -436,8 +436,8 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.24}>
-              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+            <Reveal delay={0.24} className="h-full">
+              <div className="h-full rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Purpose-Driven Partnerships
                 </h3>
@@ -450,8 +450,8 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.32}>
-              <div className="rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
+            <Reveal delay={0.32} className="h-full">
+              <div className="h-full rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
                   Employee Engagement
                 </h3>
