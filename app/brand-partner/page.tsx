@@ -341,7 +341,7 @@ export default function BrandPartnerPage() {
                       {step.desc}
                     </p>
                   </div>
-                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
+                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
                     <Image
                       src={step.image}
                       alt={step.imageAlt}
