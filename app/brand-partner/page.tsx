@@ -170,7 +170,7 @@ export default function BrandPartnerPage() {
       {/* ─── FULL-WIDTH PHOTO CTA ─── */}
       <section className="relative overflow-hidden" style={{ minHeight: "50vh" }}>
         <Image
-          src="/images/partnerships/IMG_4664.jpg"
+          src="/images/shared/ch la.jpeg"
           alt="Teen Health delivering kits to youth"
           fill
           className="object-cover object-top"
@@ -328,8 +328,8 @@ export default function BrandPartnerPage() {
                 num: "03",
                 title: "Products reach youth fast",
                 desc: "Donated products are kitted and distributed through our partner agencies to at-risk youth ages 13–29 across California. Every item goes directly to someone who needs it.",
-                image: "/images/shared/ch la.jpeg",
-                imageAlt: "Teen Health delivering products to youth",
+                image: "/images/partnerships/IMG_4664.jpg",
+                imageAlt: "Teen Health delivering kits to youth",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
