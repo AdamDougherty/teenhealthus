@@ -310,22 +310,22 @@ export default function BrandPartnerPage() {
                 num: "01",
                 title: "Tell us what you have",
                 desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs.",
-                image: "/images/shared/ch la.jpeg",
-                imageAlt: "Teen Health youth program",
+                image: "/images/programs/essential-kits/IMG_5095.jpeg",
+                imageAlt: "Essential kits being assembled",
               },
               {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting.",
-                image: "/images/shared/IMG_2274.jpeg",
-                imageAlt: "Products coordinated for distribution",
+                image: "/images/shared/IMG_4151.jpeg",
+                imageAlt: "Logistics coordination for product donation",
               },
               {
                 num: "03",
                 title: "Products reach youth fast",
                 desc: "Donated products are kitted and distributed through our partner agencies to vulnerable youth across the country.",
-                image: "/images/partnerships/IMG_4664.jpg",
-                imageAlt: "Teen Health delivering kits",
+                image: "/images/shared/ch la.jpeg",
+                imageAlt: "Teen Health delivering products to youth",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
@@ -348,6 +348,7 @@ export default function BrandPartnerPage() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 40vw"
+                      quality={90}
                     />
                   </div>
                 </div>
