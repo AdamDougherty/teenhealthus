@@ -277,8 +277,9 @@ export default function BrandPartnerPage() {
               { icon: "💧", label: "Beverages", desc: "Water, electrolyte drinks, and functional beverages." },
               { icon: "⚡", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
               { icon: "🧴", label: "Natural personal care", desc: "Natural hygiene products, skincare, and dental care." },
-              { icon: "💦", label: "Hydration supplements", desc: "Electrolyte powders, hydration packets, and drink mixes." },
+              { icon: "💦", label: "Hydration mixes", desc: "Electrolyte powders, hydration packets, and drink mixes." },
               { icon: "👕", label: "Apparel & clothing", desc: "Clothing, outerwear, and accessories for youth in need." },
+              { icon: "🎒", label: "Backpacks", desc: "Everyday carry essentials for youth on the move." },
               { icon: "⛺", label: "Tents & sleeping bags", desc: "Shelter essentials for homeless and at-risk youth." },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.06}>
