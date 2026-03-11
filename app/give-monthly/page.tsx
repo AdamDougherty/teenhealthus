@@ -37,7 +37,7 @@ const impactTiers = [
 ];
 
 const stats = [
-    { value: "5000+", label: "Youths supported annually" },
+    { value: "5000+", label: "Youth supported annually" },
     { value: "250+", label: "Brand partners" },
     { value: "100+", label: "Agency partners" },
     { value: "100%", label: "Goes to the mission" },
