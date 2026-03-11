@@ -329,7 +329,7 @@ export default function BrandPartnerPage() {
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-ink/10 py-8 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                <div className="grid items-center gap-10 border-t border-ink/10 py-5 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
                   <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
                     {step.num}
                   </div>
@@ -341,7 +341,7 @@ export default function BrandPartnerPage() {
                       {step.desc}
                     </p>
                   </div>
-                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
+                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
                     <Image
                       src={step.image}
                       alt={step.imageAlt}
