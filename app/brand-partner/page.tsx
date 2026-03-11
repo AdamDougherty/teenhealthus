@@ -96,7 +96,7 @@ export default function BrandPartnerPage() {
         />
 
         <Container className="relative z-10 flex min-h-[85vh] items-end justify-end pb-16 sm:pb-24 lg:pb-28">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl text-right">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                 Brand Partnerships
@@ -110,14 +110,14 @@ export default function BrandPartnerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
+              <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
                 Since 2022, we&apos;ve teamed up with 250+ companies to turn
                 surplus into life-changing impact&mdash;across every aisle,
                 from nutrition to wellness and beyond.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-end">
                 <Button href="#donate-product-form" variant="primary">
                   Partner With Us
                 </Button>
