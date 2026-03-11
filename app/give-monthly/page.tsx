@@ -109,7 +109,7 @@ export default function GiveMonthlyPage() {
                     <Reveal delay={0.1}>
                         <h1 className="mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl">
                             Give essentials to youth{" "}
-                            <span className="hero-highlight">every month</span>
+                            <span className="hero-highlight whitespace-nowrap">every month</span>
                         </h1>
                     </Reveal>
                     <Reveal delay={0.2}>
