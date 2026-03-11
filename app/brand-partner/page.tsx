@@ -91,7 +91,7 @@ export default function BrandPartnerPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to left, rgba(35,31,32,0.92) 0%, rgba(35,31,32,0.70) 50%, rgba(35,31,32,0.15) 100%)",
+              "linear-gradient(to left, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.70) 50%, rgba(26,58,110,0.15) 100%)",
           }}
         />
 
@@ -183,7 +183,7 @@ export default function BrandPartnerPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(35,31,32,0.85) 0%, rgba(35,31,32,0.55) 60%, rgba(35,31,32,0.25) 100%)",
+              "linear-gradient(to right, rgba(26,58,110,0.85) 0%, rgba(26,58,110,0.55) 60%, rgba(26,58,110,0.25) 100%)",
           }}
         />
         <Container className="relative z-10 flex min-h-[85vh] items-center py-16">
@@ -546,7 +546,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* ─── PRODUCT DONATION FORM ─── */}
-      <section id="donate-product-form" className="scroll-mt-24 bg-ink py-20 text-white sm:py-28">
+      <section id="donate-product-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}

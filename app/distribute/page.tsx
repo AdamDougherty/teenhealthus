@@ -44,7 +44,7 @@ export default function DistributePage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden bg-ink" style={{ minHeight: "85vh" }}>
+      <section className="relative overflow-hidden section-dark" style={{ minHeight: "85vh" }}>
         <div className="absolute inset-0">
           <Image
             src="/images/partnerships/IMG_4664.jpg"
@@ -59,7 +59,7 @@ export default function DistributePage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(160deg, rgba(35,31,32,0.92) 0%, rgba(35,31,32,0.7) 50%, rgba(35,31,32,0.4) 100%)",
+                "linear-gradient(160deg, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.7) 50%, rgba(26,58,110,0.4) 100%)",
             }}
           />
         </div>
@@ -176,7 +176,7 @@ export default function DistributePage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
+      <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
@@ -273,7 +273,7 @@ export default function DistributePage() {
       </section>
 
       {/* ─── DISTRIBUTION PARTNER FORM ─── */}
-      <section id="distribution-form" className="scroll-mt-24 bg-ink py-20 text-white sm:py-28">
+      <section id="distribution-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}

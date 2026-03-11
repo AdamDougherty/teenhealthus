@@ -21,7 +21,7 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden bg-ink">
+      <section className="relative overflow-hidden section-dark">
         {/* Decorative gradient accent */}
         <div
           aria-hidden

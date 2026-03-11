@@ -80,7 +80,7 @@ export default function GiveMonthlyPage() {
     return (
         <div className="bg-transparent">
             {/* Hero */}
-            <section className="relative overflow-hidden bg-ink">
+            <section className="relative overflow-hidden section-dark">
                 <div className="absolute inset-0">
                     <Image
                         src="/images/shared/vista teen trace pe.jpeg"
@@ -96,7 +96,7 @@ export default function GiveMonthlyPage() {
                     className="pointer-events-none absolute inset-0"
                     style={{
                         background:
-                            "linear-gradient(to top, rgba(35,31,32,0.95) 0%, rgba(35,31,32,0.6) 50%, rgba(35,31,32,0.4) 100%)",
+                            "linear-gradient(to top, rgba(26,58,110,0.95) 0%, rgba(26,58,110,0.6) 50%, rgba(26,58,110,0.4) 100%)",
                     }}
                 />
                 <Container className="relative z-10 pb-20 pt-28 sm:pb-28 sm:pt-36">
@@ -179,7 +179,7 @@ export default function GiveMonthlyPage() {
             </Container>
 
             {/* Choose your impact — donation tiers */}
-            <section className="bg-ink text-white">
+            <section className="section-dark text-white">
                 <Container className="py-16 sm:py-20">
                     <Reveal>
                         <div className="max-w-2xl">
@@ -309,7 +309,7 @@ export default function GiveMonthlyPage() {
             </section>
 
             {/* Final CTA */}
-            <section className="bg-ink text-white">
+            <section className="section-dark text-white">
                 <Container className="py-16 text-center sm:py-20">
                     <Reveal>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
