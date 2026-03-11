@@ -151,7 +151,7 @@ export default function BrandPartnerPage() {
             ].map((item, i) => (
               <Reveal key={item.stat} delay={i * 0.08}>
                 <div className="text-center">
-                  <div className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                  <div className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                     {item.stat}
                   </div>
                   <p className="mt-4 text-sm font-medium uppercase tracking-[0.15em] text-ink/40">
