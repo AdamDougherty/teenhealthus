@@ -168,7 +168,7 @@ export default function BrandPartnerPage() {
       <PartnerLogoGrid />
 
       {/* ─── FULL-WIDTH PHOTO CTA ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "50vh" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         <Image
           src="/images/shared/ch la.jpeg"
           alt="Teen Health delivering kits to youth"
@@ -185,7 +185,7 @@ export default function BrandPartnerPage() {
               "linear-gradient(to right, rgba(35,31,32,0.85) 0%, rgba(35,31,32,0.55) 60%, rgba(35,31,32,0.25) 100%)",
           }}
         />
-        <Container className="relative z-10 flex min-h-[50vh] items-center py-16">
+        <Container className="relative z-10 flex min-h-[70vh] items-center py-16">
           <div className="max-w-lg">
             <Reveal>
               <h2 className="font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-5xl">
