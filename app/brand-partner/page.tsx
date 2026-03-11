@@ -346,7 +346,7 @@ export default function BrandPartnerPage() {
                       src={step.image}
                       alt={step.imageAlt}
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                       sizes="(max-width: 768px) 100vw, 40vw"
                       quality={90}
                     />
