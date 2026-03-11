@@ -173,7 +173,7 @@ export default function BrandPartnerPage() {
           src="/images/shared/ch la.jpeg"
           alt="Teen Health delivering kits to youth"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           sizes="100vw"
           quality={85}
         />
