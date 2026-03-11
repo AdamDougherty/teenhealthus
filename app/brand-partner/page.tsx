@@ -244,8 +244,8 @@ export default function BrandPartnerPage() {
                 </div>
                 <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
                   <Image
-                    src="/images/programs/food-rescue/IMG_0733.jpeg"
-                    alt="Rescued food products organized"
+                    src="/images/shared/IMG_3800.jpeg"
+                    alt="Products ready for youth distribution"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"
