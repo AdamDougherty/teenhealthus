@@ -329,7 +329,7 @@ export default function BrandPartnerPage() {
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-ink/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                <div className="grid items-center gap-10 border-t border-ink/10 py-8 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
                   <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
                     {step.num}
                   </div>
