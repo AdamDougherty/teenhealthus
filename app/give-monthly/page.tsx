@@ -13,14 +13,10 @@ export const metadata = {
 
 const impactTiers = [
     {
-        amount: "$25",
+        amount: "$500",
         label: "/month",
-        impact: "Assembles and ships a full essentials kit to a youth in need every month.",
-    },
-    {
-        amount: "$50",
-        label: "/month",
-        impact: "Covers kit assembly, shipping, and partner coordination for two youth monthly.",
+        impact:
+            "Sponsors a full month of kits for an agency — reaching dozens of youth, consistently.",
     },
     {
         amount: "$100",
@@ -28,10 +24,14 @@ const impactTiers = [
         impact: "Funds bulk distribution to an entire partner agency every month.",
     },
     {
-        amount: "$500",
+        amount: "$50",
         label: "/month",
-        impact:
-            "Sponsors a full month of kits for an agency — reaching dozens of youth, consistently.",
+        impact: "Covers kit assembly, shipping, and partner coordination for two youth monthly.",
+    },
+    {
+        amount: "$25",
+        label: "/month",
+        impact: "Assembles and ships a full essentials kit to a youth in need every month.",
     },
 ];
 
