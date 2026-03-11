@@ -156,7 +156,7 @@ export default function GiveMonthlyPage() {
             <Container className="py-16 sm:py-20">
                 <Reveal>
                     <SectionHeading
-                        eyebrow="Why monthly"
+                        eyebrow="Why monthly?"
                         title="Recurring gifts change the game"
                         description="One-time donations help in the moment. Monthly gifts build the foundation for sustained, scalable impact — month after month."
                     />
