@@ -21,7 +21,6 @@ const impactTiers = [
         amount: "$50",
         label: "/month",
         impact: "Covers kit assembly, shipping, and partner coordination for two youth monthly.",
-        featured: true,
     },
     {
         amount: "$100",
@@ -203,16 +202,8 @@ export default function GiveMonthlyPage() {
                             <Reveal key={tier.amount} delay={i * 0.08}>
                                 <a
                                     href="https://www.classy.org/give/665776/#!/donation/checkout"
-                                    className={`group block rounded-2xl border p-6 transition-all hover:-translate-y-1 hover:shadow-lg ${tier.featured
-                                        ? "border-sun bg-white/10 shadow-md"
-                                        : "border-white/10 bg-white/5 hover:border-white/20"
-                                        }`}
+                                    className="group block rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-white/20 hover:shadow-lg"
                                 >
-                                    {tier.featured && (
-                                        <div className="mb-3 inline-block rounded-full bg-sun px-3 py-0.5 text-xs font-bold text-ink">
-                                            Most popular
-                                        </div>
-                                    )}
                                     <div className="flex items-baseline gap-1">
                                         <span className="font-serif text-3xl font-normal tracking-tight">
                                             {tier.amount}
