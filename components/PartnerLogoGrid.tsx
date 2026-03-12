@@ -11,7 +11,7 @@ interface Partner {
 const PARTNERS: Partner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png" },
   { name: "Betty Lou's", logo: "/partners/bettylous.png" },
-  { name: "Intake", logo: "/partners/intake.png" },
+  { name: "Intake", logo: "/images/shared/intake.png" },
   { name: "Google", logo: "/partners/google.svg" },
   { name: "Anthropic", logo: "/partners/anthropic.svg" },
   { name: "Salesforce", logo: "/partners/salesforce.svg" },
@@ -56,7 +56,7 @@ export function PartnerLogoGrid() {
         <div className="mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {PARTNERS.map((partner, i) => (
             <Reveal key={partner.name} delay={i * 0.04}>
-              <div className="group flex h-[11rem] items-center justify-center rounded-xl bg-white p-7 opacity-[0.92] shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition-all duration-[250ms] ease-out hover:opacity-100 hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="group flex h-[11rem] items-center justify-center rounded-xl bg-white p-4 opacity-[0.92] shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition-all duration-[250ms] ease-out hover:opacity-100 hover:-translate-y-0.5 hover:shadow-lg">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
