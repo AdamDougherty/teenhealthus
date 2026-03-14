@@ -143,7 +143,7 @@ export default function OurStoryPage() {
                                 alt="Pallets of product in our warehouse"
                                 width={2400}
                                 height={1350}
-                                className="h-72 w-full object-cover object-top sm:h-96"
+                                className="h-72 w-full object-cover object-bottom sm:h-96"
                             />
                         </div>
                     </Reveal>
