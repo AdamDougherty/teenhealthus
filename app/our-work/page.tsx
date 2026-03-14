@@ -106,6 +106,16 @@ export default function OurWorkPage() {
                         </Reveal>
 
                         {/* ─── Youth Homelessness ─── */}
+                        <Reveal delay={0.04}>
+                            <div className="my-10 flex items-center gap-4">
+                                <div className="h-px flex-1 bg-border" />
+                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
+                                    Youth Homelessness
+                                </p>
+                                <div className="h-px flex-1 bg-border" />
+                            </div>
+                        </Reveal>
+
                         <Reveal delay={0.08}>
                             <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
                                 {/* Column headers */}
