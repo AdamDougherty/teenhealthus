@@ -85,8 +85,8 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {programs.map((p, index) => (
-              <Reveal key={p.slug} delay={index * 0.08}>
-                <Card className="flex flex-col overflow-hidden p-0">
+              <Reveal key={p.slug} delay={index * 0.08} className="h-full">
+                <Card className="flex flex-col overflow-hidden p-0 h-full">
                   <div className="relative" style={{ aspectRatio: "3/2" }}>
                     <Image
                       src={p.image.src}
