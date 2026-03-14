@@ -218,7 +218,7 @@ export default function OurWorkPage() {
             {/* ─── RESEARCH & EVIDENCE BASED ─── */}
             <section className="py-16 sm:py-20">
                 <Container>
-                    <div className="mx-auto max-w-3xl">
+                    <div className="mx-auto max-w-4xl">
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -297,7 +297,7 @@ export default function OurWorkPage() {
             {/* ─── EVERY TEEN DESERVES ─── */}
             <section className="bg-mist py-16 sm:py-20">
                 <Container>
-                    <div className="mx-auto max-w-3xl">
+                    <div className="mx-auto max-w-4xl">
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -331,7 +331,7 @@ export default function OurWorkPage() {
                         <Reveal delay={0.12}>
                             <blockquote className="my-10 border-l-4 border-sun py-4 pl-6">
                                 <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
-                                    At TeenHealth, we believe mental wellness isn&apos;t a
+                                    At Teen Health, we believe mental wellness isn&apos;t a
                                     mystery. It&apos;s biology. And biology can be supported.
                                 </p>
                             </blockquote>
