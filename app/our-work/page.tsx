@@ -65,14 +65,14 @@ export default function OurWorkPage() {
                                         250+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
-                                        Company Partners
+                                        Brand Partners
                                     </p>
                                 </div>
                             </Reveal>
                             <Reveal delay={0.16}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
-                                        100
+                                        100+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
                                         &ldquo;Superhero&rdquo; Social Service Partners
