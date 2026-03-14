@@ -50,6 +50,32 @@ export default function ProgramsPage() {
           </Reveal>
 
           <div className="mx-auto mt-10 grid max-w-2xl gap-6">
+            {/* Campaign 0 — Easter Gift Bag Project */}
+            <Reveal delay={0.08}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  Easter Gift Bag Project
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  Running through March and into the first week of April, our
+                  Easter Gift Bag Project delivers nourishing products and a
+                  message of care to youth and young adults across Southern
+                  California. We are actively seeking product and monetary
+                  donations — especially wholesome snacks, functional beverages,
+                  vitamins, and supplements — to bring health, wellness, and
+                  community to at-risk youth who need it most.
+                </p>
+                <div className="mt-6">
+                  <Button href="#" variant="primary">
+                    Sponsor This Program
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
+
             {/* Campaign 1 — The Dignity Kit Program */}
             <Reveal delay={0.08}>
               <Card className="flex h-full flex-col p-8">
