@@ -43,20 +43,20 @@ export const programs: Program[] = [
     },
   },
   {
-    title: "Disaster Relief",
-    slug: "disaster-relief",
-    eyebrow: "Rapid response",
+    title: "Regenerative Farm",
+    slug: "regenerative-farm",
+    eyebrow: "Land + livelihood",
     description:
-      "When emergencies hit, youth facing homelessness or food insecurity are impacted first. We mobilize essential supplies fast through our partner network.",
+      "We are acquiring working ranch properties in Southern California where unhoused young adults live on-site, earn wages through regenerative agriculture, and transition to permanent housing at their own pace.",
     bullets: [
-      "Fast, flexible shipments",
-      "Works alongside local agencies",
-      "Focus on youth and young adults",
-      "Built for unpredictable needs",
+      "On-site housing, meals & life skills",
+      "Paid apprenticeships in farming & sales",
+      "CSA, farmers markets & agritourism revenue",
+      "Graduate to permanent housing when ready",
     ],
     image: {
-      src: "/images/events/IMG_0475.jpeg",
-      alt: "Teen Health team with supplies ready for rapid response",
+      src: "/images/shared/ch la.jpeg",
+      alt: "California landscape for the Regenerative Youth Land Initiative",
     },
   },
 ];
