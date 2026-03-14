@@ -308,10 +308,10 @@ export default function OurWorkPage() {
                         <Reveal delay={0.06}>
                             <div className="mt-8 max-w-md overflow-hidden rounded-2xl shadow-sm">
                                 <Image
-                                    src="/images/shared/kids.jpeg"
+                                    src="/images/shared/IMG_0624 cropped.jpeg"
                                     alt="Teens together"
-                                    width={4032}
-                                    height={3024}
+                                    width={3973}
+                                    height={2440}
                                     className="h-auto w-full"
                                 />
                             </div>
