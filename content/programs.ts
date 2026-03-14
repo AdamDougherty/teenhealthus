@@ -56,8 +56,8 @@ export const programs: Program[] = [
       "Graduate to permanent housing when ready",
     ],
     image: {
-      src: "/images/shared/ch la.jpeg",
-      alt: "California landscape for the Regenerative Youth Land Initiative",
+      src: "/images/shared/regen-farm.png",
+      alt: "Regenerative farm with crops and young adult worker in Southern California",
     },
   },
 ];
