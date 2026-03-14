@@ -129,7 +129,7 @@ export function LandInitiativeCard() {
 
                 {/* Always-visible buttons */}
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                    <Button href="#" variant="primary">
+                    <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/62XL70NG8P" variant="primary" target="_blank" rel="noopener noreferrer">
                         Sponsor This Program
                     </Button>
                 </div>

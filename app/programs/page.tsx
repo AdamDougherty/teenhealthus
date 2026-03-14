@@ -98,7 +98,7 @@ export default function ProgramsPage() {
                     most.
                   </p>
                   <div className="mt-6">
-                    <Button href="#" variant="primary">
+                    <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/5X9ZLPQV7M" variant="primary" target="_blank" rel="noopener noreferrer">
                       Sponsor This Program
                     </Button>
                   </div>
