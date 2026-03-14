@@ -21,7 +21,7 @@ export const programs: Program[] = [
       "Packaged with dignity and consistency",
     ],
     image: {
-      src: "/images/shared/IMG_5153.jpeg",
+      src: "/images/shared/IMG_7098.jpeg",
       alt: "Essential kits laid out and ready for distribution",
     },
   },
