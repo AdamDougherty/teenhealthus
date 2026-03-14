@@ -36,8 +36,8 @@ export function LandInitiativeCard() {
                     ].map(({ icon, label, sub }) => (
                         <div key={label} className="rounded-xl bg-mist p-4 text-center">
                             <div className="text-2xl">{icon}</div>
-                            <p className="mt-2 text-xs font-bold leading-tight text-ink">{label}</p>
-                            <p className="mt-1 text-xs leading-snug text-ink/60">{sub}</p>
+                            <p className="mt-2 text-sm font-bold leading-tight text-ink">{label}</p>
+                            <p className="mt-1 text-sm leading-snug text-ink/60">{sub}</p>
                         </div>
                     ))}
                 </div>
