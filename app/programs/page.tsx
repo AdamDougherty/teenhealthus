@@ -86,7 +86,7 @@ export default function ProgramsPage() {
                   The Dignity Kit Program
                 </h3>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                  Teen Health is delivering 500 backpacks filled with healthy
+                  We are delivering 500 backpacks filled with healthy
                   snacks, hydration, and essential supplies to young people
                   experiencing homelessness across Los Angeles. Each backpack
                   costs just $25 to assemble but delivers $50 in retail value —
