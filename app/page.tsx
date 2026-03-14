@@ -103,7 +103,7 @@ export default function HomePage() {
                     <h3 className="mt-3 text-xl font-normal tracking-tight text-ink">
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-ink/70 flex-1">
+                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
                       {p.description}
                     </p>
                     <ul className="mt-5 space-y-2 text-sm text-ink/70">
@@ -114,6 +114,7 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
+                    <div className="flex-1" />
                     <div className="mt-6">
                       <Link
                         href="/programs"
