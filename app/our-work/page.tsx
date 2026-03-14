@@ -301,18 +301,18 @@ export default function OurWorkPage() {
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                Every Teen Deserves a Brain That Can Keep Up With Their&nbsp;Dreams
+                                Every Teen Deserves a Brain Built for Dreams
                             </h2>
                         </Reveal>
 
                         <Reveal delay={0.06}>
-                            <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl shadow-sm">
+                            <div className="mx-auto mt-8 max-w-sm overflow-hidden rounded-2xl shadow-sm">
                                 <Image
                                     src="/images/shared/kids.jpeg"
                                     alt="Teens together"
                                     width={900}
                                     height={500}
-                                    className="h-64 w-full object-cover sm:h-80"
+                                    className="h-56 w-full object-cover sm:h-72"
                                 />
                             </div>
                         </Reveal>
