@@ -96,14 +96,14 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="flex flex-col p-6 flex-1">
                     <div className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
                       {p.eyebrow}
                     </div>
                     <h3 className="mt-3 text-xl font-normal tracking-tight text-ink">
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                    <p className="mt-3 text-sm leading-relaxed text-ink/70 flex-1">
                       {p.description}
                     </p>
                     <ul className="mt-5 space-y-2 text-sm text-ink/70">

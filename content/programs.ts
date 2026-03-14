@@ -47,7 +47,7 @@ export const programs: Program[] = [
     slug: "regenerative-farm",
     eyebrow: "Land + livelihood",
     description:
-      "We are acquiring working ranch properties in Southern California where unhoused young adults live on-site, earn wages through regenerative agriculture, and transition to permanent housing at their own pace.",
+      "Working ranch properties in Southern California where unhoused young adults live on-site, earn wages in regenerative agriculture, and prepare for permanent housing when ready.",
     bullets: [
       "On-site housing, meals & life skills",
       "Paid apprenticeships in farming & sales",
