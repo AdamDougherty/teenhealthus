@@ -93,6 +93,7 @@ export default function HomePage() {
                       alt={p.image.alt}
                       fill
                       className="object-cover"
+                      style={{ objectPosition: p.image.position ?? "center" }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>

@@ -4,7 +4,7 @@ export type Program = {
   eyebrow: string;
   description: string;
   bullets: string[];
-  image: { src: string; alt: string };
+  image: { src: string; alt: string; position?: string };
 };
 
 export const programs: Program[] = [
@@ -23,6 +23,7 @@ export const programs: Program[] = [
     image: {
       src: "/images/shared/IMG_7098.jpeg",
       alt: "Essential kits laid out and ready for distribution",
+      position: "bottom",
     },
   },
   {
