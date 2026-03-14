@@ -49,58 +49,61 @@ export default function ProgramsPage() {
             </p>
           </Reveal>
 
-          <div className="mx-auto mt-10 grid max-w-2xl gap-6">
-            {/* Campaign 0 — Easter Gift Bag Project */}
-            <Reveal delay={0.08}>
-              <Card className="flex h-full flex-col p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
-                  Campaign
-                </p>
-                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                  Easter Gift Bag Project
-                </h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                  Running through March and into the first week of April, our
-                  Easter Gift Bag Project delivers nourishing products and a
-                  message of care to youth and young adults across Southern
-                  California. We are actively seeking product and monetary
-                  donations — especially wholesome snacks, functional beverages,
-                  vitamins, and supplements — to bring health, wellness, and
-                  community to at-risk youth who need it most.
-                </p>
-                <div className="mt-6">
-                  <Button href="#" variant="primary">
-                    Sponsor This Program
-                  </Button>
-                </div>
-              </Card>
-            </Reveal>
+          <div className="mx-auto mt-10 flex max-w-4xl flex-col gap-6">
+            {/* Top row — two smaller campaigns side by side */}
+            <div className="grid gap-6 sm:grid-cols-2">
+              {/* Campaign 0 — Easter Gift Bag Project */}
+              <Reveal delay={0.08}>
+                <Card className="flex h-full flex-col p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                    Campaign
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                    Easter Gift Bag Project
+                  </h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                    Running through March and into the first week of April, our
+                    Easter Gift Bag Project delivers nourishing products and a
+                    message of care to youth and young adults across Southern
+                    California. We are actively seeking product and monetary
+                    donations — especially wholesome snacks, functional beverages,
+                    vitamins, and supplements — to bring health, wellness, and
+                    community to at-risk youth who need it most.
+                  </p>
+                  <div className="mt-6">
+                    <Button href="#" variant="primary">
+                      Sponsor This Program
+                    </Button>
+                  </div>
+                </Card>
+              </Reveal>
 
-            {/* Campaign 1 — The Dignity Kit Program */}
-            <Reveal delay={0.08}>
-              <Card className="flex h-full flex-col p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
-                  Campaign
-                </p>
-                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                  The Dignity Kit Program
-                </h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                  We are delivering 500 backpacks filled with healthy
-                  snacks, hydration, and essential supplies to young people
-                  experiencing homelessness across Los Angeles. Each backpack
-                  costs just $25 to assemble but delivers $50 in retail value —
-                  doubling every dollar you give. It&apos;s immediate
-                  nourishment, dignity, and stability for youth who need it
-                  most.
-                </p>
-                <div className="mt-6">
-                  <Button href="#" variant="primary">
-                    Sponsor This Program
-                  </Button>
-                </div>
-              </Card>
-            </Reveal>
+              {/* Campaign 1 — The Dignity Kit Program */}
+              <Reveal delay={0.08}>
+                <Card className="flex h-full flex-col p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                    Campaign
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                    The Dignity Kit Program
+                  </h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                    We are delivering 500 backpacks filled with healthy
+                    snacks, hydration, and essential supplies to young people
+                    experiencing homelessness across Los Angeles. Each backpack
+                    costs just $25 to assemble but delivers $50 in retail value —
+                    doubling every dollar you give. It&apos;s immediate
+                    nourishment, dignity, and stability for youth who need it
+                    most.
+                  </p>
+                  <div className="mt-6">
+                    <Button href="#" variant="primary">
+                      Sponsor This Program
+                    </Button>
+                  </div>
+                </Card>
+              </Reveal>
+            </div>{/* end top 2-col grid */}
 
             {/* Campaign 2 — California Regenerative Youth Land Initiative */}
             <Reveal delay={0.16}>
