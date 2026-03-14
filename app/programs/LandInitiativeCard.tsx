@@ -45,7 +45,7 @@ export function LandInitiativeCard() {
                 {/* Expand / collapse toggle */}
                 <button
                     onClick={() => setExpanded((v) => !v)}
-                    className="flex items-center gap-2 text-sm font-semibold text-ink hover:text-ink/70 transition-colors"
+                    className="flex items-center justify-center gap-2 text-sm font-semibold text-ink hover:text-ink/70 transition-colors w-full"
                     aria-expanded={expanded}
                 >
                     <span>{expanded ? "Show less" : "Learn more about this program"}</span>
@@ -128,7 +128,7 @@ export function LandInitiativeCard() {
                 )}
 
                 {/* Always-visible buttons */}
-                <div className="flex flex-col gap-3 sm:flex-row">
+                <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <Button href="#" variant="primary">
                         Sponsor This Program
                     </Button>
