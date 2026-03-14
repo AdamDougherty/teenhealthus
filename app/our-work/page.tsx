@@ -178,6 +178,65 @@ export default function OurWorkPage() {
                                 </div>
                             </Reveal>
                         </div>
+
+                        {/* Divider */}
+                        <Reveal delay={0.28}>
+                            <div className="my-10 flex items-center gap-4">
+                                <div className="h-px flex-1 bg-border" />
+                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
+                                    Youth Homelessness
+                                </p>
+                                <div className="h-px flex-1 bg-border" />
+                            </div>
+                        </Reveal>
+
+                        {/* Hero homelessness stat */}
+                        <Reveal delay={0.32}>
+                            <div className="rounded-2xl border border-border bg-white p-10 shadow-sm">
+                                <p className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
+                                    4.2 million
+                                </p>
+                                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                                    youth ages 13–25 experience homelessness each year in the US
+                                </p>
+                            </div>
+                        </Reveal>
+
+                        {/* Homelessness sub-stats */}
+                        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.36}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                        ~150,000
+                                    </p>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                        children under 18 counted on a single night in the US
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.4}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                        200,000
+                                    </p>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                        Californians under age 18 experience homelessness for at
+                                        least one day per year
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.44}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm sm:col-span-2">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                        ~9,900
+                                    </p>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                        homeless youth under age 24 identified in California&apos;s
+                                        most recent single-night count
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
                     </div>
                 </Container>
             </section>
