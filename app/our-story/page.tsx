@@ -143,7 +143,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── CTA ─── */}
-            <section className="bg-ink py-20 text-white sm:py-28">
+            <section className="section-dark py-20 text-white sm:py-28">
                 <Container>
                     <div className="mx-auto max-w-3xl text-center">
                         <Reveal>

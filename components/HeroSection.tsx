@@ -37,7 +37,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(35,31,32,0.92) 0%, rgba(35,31,32,0.55) 45%, rgba(35,31,32,0.15) 100%)",
+            "linear-gradient(to top, rgba(26,58,110,0.75) 0%, rgba(26,58,110,0.35) 45%, rgba(26,58,110,0.08) 100%)",
         }}
       />
       <div

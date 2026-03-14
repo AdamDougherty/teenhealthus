@@ -65,9 +65,19 @@ a {
   50% { background-position: 100% 50%; }
 }
 
+/* Dark sections — deep navy with subtle light flare from bottom-right */
+.section-dark {
+  position: relative;
+  background-color: #1a3a6e;
+  background-image:
+    radial-gradient(ellipse 1000px 700px at 90% 100%, rgba(46, 157, 247, 0.30), transparent 60%),
+    radial-gradient(ellipse 800px 600px at 95% 85%, rgba(139, 209, 203, 0.18), transparent 50%),
+    linear-gradient(160deg, rgba(46, 157, 247, 0.10) 0%, transparent 40%);
+}
+
 /* Hero section */
 .hero-section {
-  background-color: #231F20;
+  background-color: #1a3a6e;
 }
 
 .hero-eyebrow {

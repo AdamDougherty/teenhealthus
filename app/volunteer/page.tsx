@@ -161,7 +161,7 @@ export default function VolunteerPage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="bg-ink py-20 text-white sm:py-28">
+      <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
@@ -287,7 +287,7 @@ export default function VolunteerPage() {
       </section>
 
       {/* ─── VOLUNTEER FORM ─── */}
-      <section id="volunteer-form" className="scroll-mt-24 bg-ink py-20 text-white sm:py-28">
+      <section id="volunteer-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}

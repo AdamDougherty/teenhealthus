@@ -367,7 +367,7 @@ export default function OurWorkPage() {
             </section>
 
             {/* ─── CTA ─── */}
-            <section className="bg-ink py-16 text-white sm:py-20">
+            <section className="section-dark py-16 text-white sm:py-20">
                 <Container>
                     <div className="mx-auto max-w-3xl text-center">
                         <Reveal>

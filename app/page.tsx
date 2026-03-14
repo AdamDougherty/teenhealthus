@@ -131,7 +131,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact */}
-      <section className="bg-ink py-16 text-white sm:py-20">
+      <section className="section-dark py-16 text-white sm:py-20">
         <Container>
           <Reveal>
             <SectionHeading

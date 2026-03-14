@@ -179,7 +179,7 @@ export default function GiveMonthlyPage() {
             </Container>
 
             {/* Choose your impact — donation tiers */}
-            <section className="bg-ink text-white">
+            <section className="section-dark text-white">
                 <Container className="py-16 sm:py-20">
                     <Reveal>
                         <div className="max-w-2xl">
@@ -309,7 +309,7 @@ export default function GiveMonthlyPage() {
             </section>
 
             {/* Final CTA */}
-            <section className="bg-ink text-white">
+            <section className="section-dark text-white">
                 <Container className="py-16 text-center sm:py-20">
                     <Reveal>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
