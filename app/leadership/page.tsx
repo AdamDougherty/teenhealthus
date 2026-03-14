@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 
@@ -43,12 +44,15 @@ export default function LeadershipPage() {
                         {/* Scott Swift */}
                         <Reveal delay={0.08}>
                             <div className="flex flex-col items-start gap-8 md:flex-row">
-                                <div className="w-full flex-shrink-0 md:w-80">
-                                    <div className="aspect-[4/5] w-full rounded-2xl border border-border bg-mist flex flex-col items-center justify-center gap-3 text-ink/30">
-                                        <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Zm16.5-13.5h.008v.008h-.008V7.5Zm0 0a1.125 1.125 0 1 0-2.25 0 1.125 1.125 0 0 0 2.25 0Z" />
-                                        </svg>
-                                        <span className="text-sm font-medium tracking-wide">Photo</span>
+                                <div className="w-full flex-shrink-0 md:w-72">
+                                    <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
+                                        <Image
+                                            src="/images/shared/Scott.png"
+                                            alt="Scott Swift"
+                                            width={1080}
+                                            height={1080}
+                                            className="h-full w-full object-cover"
+                                        />
                                     </div>
                                 </div>
                                 <div className="flex-1">
@@ -85,12 +89,15 @@ export default function LeadershipPage() {
                         {/* Lisa Carlson */}
                         <Reveal delay={0.16}>
                             <div className="flex flex-col items-start gap-8 md:flex-row">
-                                <div className="w-full flex-shrink-0 md:w-80">
-                                    <div className="aspect-[4/5] w-full rounded-2xl border border-border bg-mist flex flex-col items-center justify-center gap-3 text-ink/30">
-                                        <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Zm16.5-13.5h.008v.008h-.008V7.5Zm0 0a1.125 1.125 0 1 0-2.25 0 1.125 1.125 0 0 0 2.25 0Z" />
-                                        </svg>
-                                        <span className="text-sm font-medium tracking-wide">Photo</span>
+                                <div className="w-full flex-shrink-0 md:w-72">
+                                    <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
+                                        <Image
+                                            src="/images/shared/Lisa.png"
+                                            alt="Lisa Carlson"
+                                            width={1080}
+                                            height={1080}
+                                            className="h-full w-full object-cover"
+                                        />
                                     </div>
                                 </div>
                                 <div className="flex-1">
@@ -139,12 +146,11 @@ export default function LeadershipPage() {
 
                     <Reveal delay={0.08}>
                         <div className="mx-auto mt-14 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-6 sm:grid-cols-2">
-                            <p className="text-base font-semibold text-ink">Name</p>
-                            <p className="text-base font-semibold text-ink">Name</p>
-                            <p className="text-base font-semibold text-ink">Name</p>
-                            <p className="text-base font-semibold text-ink">Name</p>
-                            <p className="text-base font-semibold text-ink">Name</p>
-                            <p className="text-base font-semibold text-ink">Name</p>
+                            <p className="text-base font-semibold text-ink">Lisa Martinez</p>
+                            <p className="text-base font-semibold text-ink">Darren Porter</p>
+                            <p className="text-base font-semibold text-ink">Corey Swift</p>
+                            <p className="text-base font-semibold text-ink">Cathy Kemendy</p>
+                            <p className="text-base font-semibold text-ink">Stephen Chee</p>
                         </div>
                     </Reveal>
                 </Container>
