@@ -139,10 +139,10 @@ export default function OurStoryPage() {
                     <Reveal>
                         <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl shadow-sm">
                             <Image
-                                src="/images/shared/warehouse_pallets.png"
+                                src="/images/shared/warehouse_real.jpg"
                                 alt="Pallets of product in our warehouse"
-                                width={2400}
-                                height={1350}
+                                width={3000}
+                                height={2000}
                                 className="h-72 w-full object-cover object-bottom sm:h-96"
                             />
                         </div>
