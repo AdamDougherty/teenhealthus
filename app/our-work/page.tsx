@@ -1,4 +1,5 @@
-﻿import { Container } from "@/components/Container";
+﻿import Image from "next/image";
+import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 
@@ -302,6 +303,18 @@ export default function OurWorkPage() {
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Every Teen Deserves a Brain That Can Keep Up With Their Dreams
                             </h2>
+                        </Reveal>
+
+                        <Reveal delay={0.06}>
+                            <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
+                                <Image
+                                    src="/images/shared/kids.jpeg"
+                                    alt="Teens together"
+                                    width={900}
+                                    height={500}
+                                    className="h-72 w-full object-cover sm:h-96"
+                                />
+                            </div>
                         </Reveal>
 
                         <Reveal delay={0.08}>
