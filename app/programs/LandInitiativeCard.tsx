@@ -26,7 +26,23 @@ export function LandInitiativeCard() {
             </div>
 
             <div className="flex flex-col gap-6 p-8">
-                {/* Expand / collapse */}
+                {/* 4 Pillars — always visible */}
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                    {[
+                        { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
+                        { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
+                        { icon: "📈", label: "Enterprise Revenue", sub: "CSA, farmers markets & agritourism" },
+                        { icon: "🏡", label: "Permanent Housing", sub: "Graduate when genuinely ready" },
+                    ].map(({ icon, label, sub }) => (
+                        <div key={label} className="rounded-xl bg-mist p-4 text-center">
+                            <div className="text-2xl">{icon}</div>
+                            <p className="mt-2 text-xs font-bold leading-tight text-ink">{label}</p>
+                            <p className="mt-1 text-xs leading-snug text-ink/60">{sub}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Expand / collapse toggle */}
                 <button
                     onClick={() => setExpanded((v) => !v)}
                     className="flex items-center gap-2 text-sm font-semibold text-ink hover:text-ink/70 transition-colors"
@@ -52,25 +68,9 @@ export function LandInitiativeCard() {
                 {/* Expandable content */}
                 {expanded && (
                     <div className="flex flex-col gap-8">
-                        {/* 4 Pillars */}
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                            {[
-                                { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
-                                { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
-                                { icon: "📈", label: "Enterprise Revenue", sub: "CSA, farmers markets & agritourism" },
-                                { icon: "🏡", label: "Permanent Housing", sub: "Graduate when genuinely ready" },
-                            ].map(({ icon, label, sub }) => (
-                                <div key={label} className="rounded-xl bg-mist p-4 text-center">
-                                    <div className="text-2xl">{icon}</div>
-                                    <p className="mt-2 text-xs font-bold leading-tight text-ink">{label}</p>
-                                    <p className="mt-1 text-xs leading-snug text-ink/60">{sub}</p>
-                                </div>
-                            ))}
-                        </div>
-
                         {/* Apprenticeship Track */}
                         <div>
-                            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-ink/50">The Apprenticeship Track</p>
+                            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">The Apprenticeship Track</p>
                             <div className="grid gap-2 sm:grid-cols-2">
                                 {[
                                     { phase: "Foundation", months: "Months 1–3", desc: "On-site housing, life skills & farm orientation." },
@@ -78,13 +78,13 @@ export function LandInitiativeCard() {
                                     { phase: "Senior Apprentice", months: "Months 10–15", desc: "Crop planning, team leadership & enterprise management." },
                                     { phase: "Graduate", months: "When Ready", desc: "Job placement, housing navigation & alumni support." },
                                 ].map(({ phase, months, desc }) => (
-                                    <div key={phase} className="flex gap-3 rounded-lg border border-ink/10 p-3">
-                                        <div className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-sun" />
+                                    <div key={phase} className="flex gap-3 rounded-lg border border-ink/10 p-4">
+                                        <div className="mt-1 h-2 w-2 shrink-0 rounded-full bg-sun" />
                                         <div>
-                                            <p className="text-xs font-bold text-ink">
+                                            <p className="text-sm font-bold text-ink">
                                                 {phase} <span className="font-normal text-ink/50">· {months}</span>
                                             </p>
-                                            <p className="mt-0.5 text-xs leading-snug text-ink/60">{desc}</p>
+                                            <p className="mt-1 text-sm leading-snug text-ink/60">{desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -93,7 +93,7 @@ export function LandInitiativeCard() {
 
                         {/* 5-Year Plan */}
                         <div>
-                            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-ink/50">5-Year Plan</p>
+                            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">5-Year Plan</p>
                             <div className="flex flex-col gap-2 sm:flex-row">
                                 {[
                                     { phase: "Phase I", detail: "80-acre Fallbrook ranch · 8–12 beds · CSA launch" },
@@ -101,8 +101,8 @@ export function LandInitiativeCard() {
                                     { phase: "Phase III", detail: "60–80 beds · $3.5–4M annual enterprise revenue" },
                                 ].map(({ phase, detail }) => (
                                     <div key={phase} className="flex-1 rounded-lg bg-sun/10 px-4 py-3">
-                                        <p className="text-xs font-bold text-ink">{phase}</p>
-                                        <p className="mt-0.5 text-xs leading-snug text-ink/70">{detail}</p>
+                                        <p className="text-sm font-bold text-ink">{phase}</p>
+                                        <p className="mt-1 text-sm leading-snug text-ink/70">{detail}</p>
                                     </div>
                                 ))}
                             </div>
@@ -110,7 +110,7 @@ export function LandInitiativeCard() {
 
                         {/* Giving ladder */}
                         <div>
-                            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-ink/50">Your Contribution</p>
+                            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">Your Contribution</p>
                             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                                 {[
                                     { amount: "$100", desc: "Tools & supplies for one apprentice's first month" },
@@ -118,8 +118,8 @@ export function LandInitiativeCard() {
                                     { amount: "$1,000", desc: "One orchard tree — a 30-year asset that feeds and earns" },
                                 ].map(({ amount, desc }) => (
                                     <div key={amount} className="rounded-lg border border-ink/10 p-3">
-                                        <p className="text-sm font-bold text-ink">{amount}</p>
-                                        <p className="mt-0.5 text-xs leading-snug text-ink/60">{desc}</p>
+                                        <p className="text-base font-bold text-ink">{amount}</p>
+                                        <p className="mt-1 text-sm leading-snug text-ink/60">{desc}</p>
                                     </div>
                                 ))}
                             </div>
