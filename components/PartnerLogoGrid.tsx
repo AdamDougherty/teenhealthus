@@ -65,14 +65,8 @@ export function PartnerLogoGrid() {
                   className={`h-auto w-auto max-h-[65px] max-w-[75%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""} ${partner.invertLogo ? "invert" : ""}`}
                 />
               </div>
-            );
-
-            return (
-              <Reveal key={partner.name} delay={i * 0.04}>
-                {inner}
-              </Reveal>
-            );
-          })}
+            </Reveal>
+          ))}
         </div>
       </Container>
     </section>
