@@ -48,6 +48,15 @@ export default function OurStoryPage() {
                         </Reveal>
                         <Reveal delay={0.08}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Teen Health is a nonprofit dedicated to helping vulnerable youth
+                                and young adults overcome barriers to accessing healthy, nutritious
+                                food, beverages, supplements, and related support. We believe that
+                                every young person deserves the foundation of good health —
+                                regardless of their circumstances.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.10}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
                                 Teen Health was born from a simple but powerful realization:
                                 many young people, especially those facing neurological,
                                 emotional, and social challenges, are being asked to regulate
@@ -112,6 +121,13 @@ export default function OurStoryPage() {
                                 poverty or without stable housing.
                             </p>
                         </Reveal>
+                        <Reveal delay={0.12}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                And the momentum is growing. Today, we are taking in product by
+                                the truckload — because the need is real, and the community is
+                                responding.
+                            </p>
+                        </Reveal>
                     </div>
                 </Container>
             </section>
@@ -127,6 +143,15 @@ export default function OurStoryPage() {
                             </h2>
                         </Reveal>
                         <Reveal delay={0.08}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                We are currently seeking both product and monetary donations to
+                                support our ongoing distribution efforts across Southern
+                                California — especially some of the healthiest products on the
+                                market, items that can genuinely raise the level of health and
+                                wellness for at-risk youth.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.12}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
                                 Our mission is to promote health and wellness through nutrition,
                                 fitness, and healthy living — not as standalone services, but as
