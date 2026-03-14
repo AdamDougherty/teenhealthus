@@ -27,7 +27,7 @@ export function LandInitiativeCard() {
 
             <div className="flex flex-col gap-6 p-8">
                 {/* 4 Pillars — always visible */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3">
                     {[
                         { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
                         { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
@@ -131,9 +131,6 @@ export function LandInitiativeCard() {
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <Button href="#" variant="primary">
                         Sponsor This Program
-                    </Button>
-                    <Button href="mailto:partnerships@teenhealth.us" variant="ghost" className="text-ink hover:bg-ink/5">
-                        Corporate Tiers — Contact Us
                     </Button>
                 </div>
             </div>
