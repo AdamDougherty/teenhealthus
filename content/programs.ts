@@ -32,9 +32,9 @@ export const programs: Program[] = [
     description:
       "We partner with brands and distributors to divert quality surplus products away from landfills and into the hands of youth who need them most.",
     bullets: [
-      "Diverts healthy surplus from landfills",
-      "Improves access for high-need youth",
-      "Moves truckloads through partner networks",
+      "Rescues surplus from the waste stream",
+      "Gets products to high-need youth",
+      "Ships truckloads via local partners",
       "Reaches youth through local programs",
     ],
     image: {
