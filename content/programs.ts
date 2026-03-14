@@ -38,7 +38,7 @@ export const programs: Program[] = [
       "Reaches youth through local programs",
     ],
     image: {
-      src: "/images/programs/food-rescue/IMG_0731.jpeg",
+      src: "/images/shared/YMCA TAY2.jpeg",
       alt: "Food rescue delivery at the Orangewood Foundation",
     },
   },
