@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
@@ -131,6 +132,19 @@ export default function OurStoryPage() {
                     </div>
                 </Container>
             </section>
+
+            {/* ─── WAREHOUSE PHOTO ─── */}
+            <Reveal>
+                <div className="overflow-hidden">
+                    <Image
+                        src="/images/shared/warehouse_pallets.png"
+                        alt="Pallets of product in our warehouse"
+                        width={2400}
+                        height={1350}
+                        className="h-64 w-full object-cover sm:h-96"
+                    />
+                </div>
+            </Reveal>
 
             {/* ─── THE MISSION AHEAD ─── */}
             <section className="bg-mist py-12 sm:py-16">
