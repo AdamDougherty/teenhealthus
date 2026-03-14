@@ -163,29 +163,21 @@ export default function OurWorkPage() {
                             </div>
                         </Reveal>
 
-                        {/* National / state population stats */}
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <Reveal delay={0.18}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        376,900
-                                    </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        individuals in foster care in the US
-                                    </p>
+                        {/* Foster Care Population unified card */}
+                        <Reveal delay={0.18}>
+                            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                                <div className="grid grid-cols-2">
+                                    <div className="border-r border-border p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">376,900</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">individuals in foster care in the US</p>
+                                    </div>
+                                    <div className="p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">44,400</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">individuals in foster care in California alone</p>
+                                    </div>
                                 </div>
-                            </Reveal>
-                            <Reveal delay={0.22}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        44,400
-                                    </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        individuals in foster care in California alone
-                                    </p>
-                                </div>
-                            </Reveal>
-                        </div>
+                            </div>
+                        </Reveal>
 
                         {/* Divider: Foster Care Outcomes */}
                         <Reveal delay={0.26}>
@@ -198,39 +190,25 @@ export default function OurWorkPage() {
                             </div>
                         </Reveal>
 
-                        {/* 3-column outcomes grid */}
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-                            <Reveal delay={0.3}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        40%
-                                    </p>
-                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
-                                        of foster youth will be homeless or incarcerated within 3 years of leaving the system
-                                    </p>
+                        {/* Foster Care Outcomes unified card */}
+                        <Reveal delay={0.3}>
+                            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                                <div className="grid grid-cols-1 sm:grid-cols-3">
+                                    <div className="border-b border-border p-8 sm:border-b-0 sm:border-r">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">40%</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of foster youth will be homeless or incarcerated within 3 years of leaving the system</p>
+                                    </div>
+                                    <div className="border-b border-border p-8 sm:border-b-0 sm:border-r">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">27%</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of youth transitioning out of foster care in California have been incarcerated</p>
+                                    </div>
+                                    <div className="p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">14%</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of youth transitioning out of foster care in California have experienced homelessness</p>
+                                    </div>
                                 </div>
-                            </Reveal>
-                            <Reveal delay={0.34}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        27%
-                                    </p>
-                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
-                                        of youth transitioning out of foster care in California have been incarcerated
-                                    </p>
-                                </div>
-                            </Reveal>
-                            <Reveal delay={0.38}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        14%
-                                    </p>
-                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
-                                        of youth transitioning out of foster care in California have experienced homelessness
-                                    </p>
-                                </div>
-                            </Reveal>
-                        </div>
+                            </div>
+                        </Reveal>
 
                     </div>
                 </Container>
