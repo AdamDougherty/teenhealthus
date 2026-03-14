@@ -25,9 +25,9 @@ export function LandInitiativeCard() {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-6 p-8">
+            <div className="flex flex-col gap-6 px-8 pb-8 pt-4">
                 {/* 4 Pillars — always visible */}
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2">
                     {[
                         { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
                         { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
