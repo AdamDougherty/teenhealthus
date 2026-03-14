@@ -21,31 +21,22 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden bg-ink">
-        {/* Decorative gradient accent */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 50% 120%, rgba(243,196,41,0.15) 0%, transparent 70%)",
-          }}
-        />
-        <Container className="relative z-10 py-20 text-center sm:py-28">
+      <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+        <Container className="relative z-10 py-20 sm:py-28">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
               Our Why
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h1 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
               Survive{" "}
               <span className="mx-2 inline-block text-sun sm:mx-4">→</span>{" "}
               <span className="hero-highlight">Thrive</span>
             </h1>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
               Every young person deserves more than survival. We exist to close
               the gap between getting by and growing up with dignity.
             </p>
@@ -92,10 +83,16 @@ export default function LearnPage() {
             {/* Photo 1 */}
             <div>
               <div
-                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                className="relative overflow-hidden rounded-2xl"
                 style={{ aspectRatio: "4/3" }}
               >
-                <span className="text-sm text-ink/30">Photo 1</span>
+                <Image
+                  src="/images/our-why/staggering_poverty.jpg"
+                  alt="Children living in persistent poverty"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Persistent Poverty
@@ -108,10 +105,16 @@ export default function LearnPage() {
             {/* Photo 2 */}
             <div>
               <div
-                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                className="relative overflow-hidden rounded-2xl"
                 style={{ aspectRatio: "4/3" }}
               >
-                <span className="text-sm text-ink/30">Photo 2</span>
+                <Image
+                  src="/images/our-why/foster_care.jpg"
+                  alt="Youth in foster care"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Housing &amp; Foster Care

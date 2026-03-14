@@ -134,41 +134,12 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── IMPACT STATS ─── */}
-      <section className="border-b border-ink/5 py-12 sm:py-16">
-        <Container>
-          <Reveal>
-            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Our Impact, Powered by Partnerships
-            </h2>
-          </Reveal>
-
-          <div className="mx-auto mt-16 grid max-w-4xl gap-12 sm:grid-cols-3">
-            {[
-              { stat: "250+", label: "Brand partners to date" },
-              { stat: "5,000", label: "Youth reached per year" },
-              { stat: "$25", label: "Delivers a kit worth $50" },
-            ].map((item, i) => (
-              <Reveal key={item.stat} delay={i * 0.08}>
-                <div className="text-center">
-                  <div className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                    {item.stat}
-                  </div>
-                  <p className="mt-4 text-sm font-medium uppercase tracking-[0.15em] text-ink/40">
-                    {item.label}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* ─── IN GOOD COMPANY — Logo Grid ─── */}
       <PartnerLogoGrid />
 
-      {/* ─── FULL-WIDTH PHOTO CTA ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "85vh" }}>
+      {/* ─── FULL-WIDTH PHOTO ─── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "65vh" }}>
         <Image
           src="/images/shared/ch la.jpeg"
           alt="Teen Health delivering kits to youth"
@@ -178,32 +149,26 @@ export default function BrandPartnerPage() {
           sizes="100vw"
           quality={85}
         />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(35,31,32,0.85) 0%, rgba(35,31,32,0.55) 60%, rgba(35,31,32,0.25) 100%)",
-          }}
-        />
-        <Container className="relative z-10 flex min-h-[85vh] items-center py-16">
-          <div className="max-w-lg">
+      </section>
+
+      {/* ─── PHOTO CTA TEXT ─── */}
+      <section className="bg-[#f8f7f4] py-20 sm:py-28">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
             <Reveal>
-              <h2 className="font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-5xl">
-                Ready to make
-                <br />
-                an impact?
+              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
+                Ready to make an impact?
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg">
+              <p className="mt-6 text-balance text-base leading-relaxed text-ink/60 sm:text-lg">
                 We help you move closeout, distressed, mislabeled, and
                 short-dated products quickly&mdash;turning your excess inventory
                 into meaningful impact for at-risk youth.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Button href="#donate-product-form" variant="primary">
                   Become a Partner
                 </Button>
@@ -236,8 +201,8 @@ export default function BrandPartnerPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
                   <Image
-                    src="/images/programs/food-rescue/IMG_0731.jpeg"
-                    alt="Food products ready for rescue"
+                    src="/images/shared/IMG_3800.jpeg"
+                    alt="Products ready for youth distribution"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"
@@ -245,10 +210,11 @@ export default function BrandPartnerPage() {
                 </div>
                 <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
                   <Image
-                    src="/images/shared/IMG_3800.jpeg"
-                    alt="Products ready for youth distribution"
+                    src="/images/shared/IMG_0705.jpeg"
+                    alt="Products ready for donation"
                     fill
                     className="object-cover"
+                    style={{ transform: 'scale(1.4)', transformOrigin: 'center center' }}
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
@@ -315,15 +281,17 @@ export default function BrandPartnerPage() {
                 num: "01",
                 title: "Tell us what you have",
                 desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs. We work with a wide range of products across food, hydration, supplements, and personal care, so don't hesitate to reach out even if you're unsure.",
-                image: "/images/programs/essential-kits/IMG_5095.jpeg",
-                imageAlt: "Essential kits being assembled",
+                image: "/images/shared/IMG_5296.jpeg",
+                imageAlt: "Teen Health products ready to help youth",
+                imagePosition: "center 45%",
               },
               {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/IMG_4151.jpeg",
-                imageAlt: "Logistics coordination for product donation",
+                image: "/images/shared/warehouse_health_products.png",
+                imageAlt: "Warehouse stocked with health and wellness products ready for donation",
+                imagePosition: "center 60%",
               },
               {
                 num: "03",
@@ -351,7 +319,8 @@ export default function BrandPartnerPage() {
                       src={step.image}
                       alt={step.imageAlt}
                       fill
-                      className="object-cover object-top"
+                      className="object-cover"
+                      style={{ objectPosition: (step as any).imagePosition ?? 'top' }}
                       sizes="(max-width: 768px) 100vw, 40vw"
                       quality={90}
                     />

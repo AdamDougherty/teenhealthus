@@ -5,19 +5,34 @@ import { Container } from "@/components/Container";
 interface Partner {
   name: string;
   logo: string;
-  link?: string;
+  invertLogo?: boolean;
 }
 
 const PARTNERS: Partner[] = [
-  { name: "Whole Foods Market", logo: "/partners/wholefood.png", link: "https://www.wholefoodsmarket.com" },
-  { name: "Betty Lou's", logo: "/partners/bettylous.png", link: "https://www.bettylous.com" },
-  { name: "Intake", logo: "/images/shared/intake.png", link: "https://www.intakebreathing.com" },
-  { name: "Google", logo: "/partners/google.svg", link: "https://www.google.org" },
-  { name: "Claude", logo: "/partners/claude.svg", link: "https://www.anthropic.com" },
-  { name: "Salesforce", logo: "/partners/salesforce.svg", link: "https://www.salesforce.org" },
-  { name: "Marquis", logo: "/partners/marquis.svg", link: "https://drinkmarquis.com" },
-  { name: "Oceanblue", logo: "/partners/oceanblue.jpg", link: "https://www.oceanblueomega.com" },
-  { name: "Perfect Hydration", logo: "/partners/perfecthydration.png", link: "https://www.perfecthydration.com" },
+  { name: "Whole Foods Market", logo: "/partners/wholefood.png" },
+  { name: "Betty Lou's", logo: "/partners/bettylous.png" },
+  { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
+  { name: "Google", logo: "/partners/google.svg" },
+  { name: "Salesforce", logo: "/partners/salesforce.svg" },
+  { name: "Marquis", logo: "/partners/marquis.svg" },
+  { name: "Oceanblue", logo: "/partners/oceanblue.jpg" },
+  { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
+  { name: "Primal Kitchen", logo: "/partners/primalkitchen.png" },
+  { name: "Purely Elizabeth", logo: "/partners/purelyelizabeth.png" },
+  { name: "Boost Oxygen", logo: "/partners/boostoxygen.png" },
+  { name: "Carlson", logo: "/partners/carlson.png" },
+  { name: "Emergen-C", logo: "/partners/emergenc.png" },
+  { name: "Gatorade", logo: "/partners/gatorade.png" },
+  { name: "Guayakí", logo: "/partners/guayaki.png" },
+  { name: "Kate's Real Food", logo: "/partners/katesrealfood.png" },
+  { name: "Olyra", logo: "/partners/olyra.png" },
+  { name: "OWYN", logo: "/partners/owyn.png" },
+  { name: "Partake", logo: "/partners/partake.png" },
+  { name: "Trace", logo: "/partners/trace.png" },
+  { name: "VenturePal", logo: "/partners/venturepal.png" },
+  { name: "Zahler", logo: "/partners/zahler.png" },
+  { name: "Earth Harmony", logo: "/partners/earthharmony.png" },
+  { name: "Anthropic", logo: "/partners/anthropic.png" },
 ];
 
 export function PartnerLogoGrid() {
@@ -47,18 +62,12 @@ export function PartnerLogoGrid() {
                   alt={partner.name}
                   width={160}
                   height={160}
-                  className={`h-auto w-auto max-h-[65px] max-w-[75%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""}`}
+                  className={`h-auto w-auto max-h-[65px] max-w-[75%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""} ${partner.invertLogo ? "invert" : ""}`}
                 />
               </div>
             );
 
-            return partner.link ? (
-              <Reveal key={partner.name} delay={i * 0.04}>
-                <a href={partner.link} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
-                  {inner}
-                </a>
-              </Reveal>
-            ) : (
+            return (
               <Reveal key={partner.name} delay={i * 0.04}>
                 {inner}
               </Reveal>

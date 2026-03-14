@@ -80,14 +80,14 @@ export default function GiveMonthlyPage() {
     return (
         <div className="bg-transparent">
             {/* Hero */}
-            <section className="relative overflow-hidden bg-ink">
+            <section className="relative overflow-hidden" style={{ backgroundColor: '#1a2a6e' }}>
                 <div className="absolute inset-0">
                     <Image
                         src="/images/shared/vista teen trace pe.jpeg"
                         alt="Volunteers preparing essentials kits"
                         fill
                         priority
-                        className="object-cover opacity-30"
+                        className="object-cover opacity-45"
                         sizes="100vw"
                     />
                 </div>
@@ -96,13 +96,13 @@ export default function GiveMonthlyPage() {
                     className="pointer-events-none absolute inset-0"
                     style={{
                         background:
-                            "linear-gradient(to top, rgba(35,31,32,0.95) 0%, rgba(35,31,32,0.6) 50%, rgba(35,31,32,0.4) 100%)",
+                            "linear-gradient(135deg, rgba(26,42,110,0.72) 0%, rgba(30,58,138,0.68) 40%, rgba(37,99,200,0.62) 100%)",
                     }}
                 />
                 <Container className="relative z-10 pb-20 pt-28 sm:pb-28 sm:pt-36">
                     <Reveal>
                         <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
-                            Monthly giving
+                            Give monthly
                         </p>
                     </Reveal>
                     <Reveal delay={0.1}>
