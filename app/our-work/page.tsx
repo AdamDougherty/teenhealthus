@@ -301,7 +301,7 @@ export default function OurWorkPage() {
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                Every Teen Deserves a Brain Built for Dreams
+                                Every Young Person Deserves a Brain Built For Dreams
                             </h2>
                         </Reveal>
 
