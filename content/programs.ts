@@ -32,6 +32,7 @@ export const programs: Program[] = [
     title: "Food Rescue",
     slug: "food-rescue",
     eyebrow: "Waste → wellness",
+    href: "/brand-partner",
     description:
       "We partner with brands and distributors to divert quality surplus products away from landfills and into the hands of youth who need them most.",
     bullets: [
