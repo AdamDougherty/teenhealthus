@@ -306,7 +306,7 @@ export default function OurWorkPage() {
                         </Reveal>
 
                         <Reveal delay={0.06}>
-                            <div className="mt-8 max-w-xl overflow-hidden rounded-2xl shadow-sm">
+                            <div className="mx-auto mt-8 max-w-xl overflow-hidden rounded-2xl shadow-sm">
                                 <div className="relative h-72 sm:h-96">
                                     <Image
                                         src="/images/shared/IMG_0624 cropped.jpeg"
