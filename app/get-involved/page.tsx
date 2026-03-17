@@ -146,8 +146,8 @@ export default function GetInvolvedPage() {
           </Reveal>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <Card className="overflow-hidden p-0">
+            <Reveal className="h-full">
+              <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
                     src="/images/partnerships/IMG_4664.jpg"
@@ -178,8 +178,8 @@ export default function GetInvolvedPage() {
               </Card>
             </Reveal>
 
-            <Reveal delay={0.08}>
-              <Card className="overflow-hidden p-0">
+            <Reveal delay={0.08} className="h-full">
+              <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
                     src="/images/partnerships/IMG_1710.jpeg"
