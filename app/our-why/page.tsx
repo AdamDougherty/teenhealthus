@@ -149,10 +149,16 @@ export default function LearnPage() {
             {/* Photo 4 */}
             <div>
               <div
-                className="flex items-center justify-center rounded-2xl border border-border bg-surface"
+                className="relative overflow-hidden rounded-2xl"
                 style={{ aspectRatio: "4/3" }}
               >
-                <span className="text-sm text-ink/30">Photo 4</span>
+                <Image
+                  src="/images/shared/younggirl5.jpg"
+                  alt="Young girl experiencing food insecurity"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Food Insecurity
