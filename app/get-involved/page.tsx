@@ -157,7 +157,7 @@ export default function GetInvolvedPage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-6">
+                <div className="flex flex-col p-6">
                   <h3 className="text-xl font-normal tracking-tight text-ink">Donate product</h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink/70">
                     If you're a brand or distributor, we can accept eligible products and
@@ -169,7 +169,7 @@ export default function GetInvolvedPage() {
                     <div>• Hydration products</div>
                     <div>• Natural personal care</div>
                   </div>
-                  <div className="mt-6">
+                  <div className="mt-auto pt-6">
                     <Button href="/brand-partner#donate-product-form" variant="primary">
                       Start a product donation
                     </Button>
@@ -189,7 +189,7 @@ export default function GetInvolvedPage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-6">
+                <div className="flex flex-col p-6">
                   <h3 className="text-xl font-normal tracking-tight text-ink">
                     Agency distribution
                   </h3>
@@ -197,7 +197,12 @@ export default function GetInvolvedPage() {
                     If you serve vulnerable youth and want to distribute kits, this is the
                     intake path: location, population served, distribution plan, and reporting.
                   </p>
-                  <div className="mt-6">
+                  <div className="mt-5 space-y-2 text-sm text-ink/70">
+                    <div>• Youth-serving nonprofits</div>
+                    <div>• Shelters & transitional housing</div>
+                    <div>• Schools & community orgs</div>
+                  </div>
+                  <div className="mt-auto pt-6">
                     <Button href="/distribute#distribution-form" variant="secondary">
                       Become a distribution partner
                     </Button>
