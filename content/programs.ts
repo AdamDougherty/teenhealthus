@@ -5,6 +5,7 @@ export type Program = {
   description: string;
   bullets: string[];
   image: { src: string; alt: string; position?: string };
+  href?: string;
 };
 
 export const programs: Program[] = [
@@ -12,6 +13,7 @@ export const programs: Program[] = [
     title: "Essential Kits",
     slug: "essential-kits",
     eyebrow: "Direct support",
+    href: "/how-we-work",
     description:
       "We assemble and distribute kits that include nourishing foods, hydration, supplements, and natural personal care—so youth can focus on school, work, and safety.",
     bullets: [

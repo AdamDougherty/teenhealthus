@@ -118,7 +118,7 @@ export default function HomePage() {
                     <div className="flex-1" />
                     <div className="mt-6">
                       <Link
-                        href="/programs"
+                        href={p.href ?? "/programs"}
                         className="text-sm font-semibold text-sky hover:underline"
                       >
                         Learn more →
