@@ -103,7 +103,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── WHAT WE DO TODAY ─── */}
-            <section className="py-12 sm:py-16">
+            <section className="pt-12 pb-4 sm:pt-16 sm:pb-6">
                 <Container>
                     <div className="mx-auto max-w-3xl">
                         <Reveal>
@@ -134,7 +134,7 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── WAREHOUSE PHOTO ─── */}
-            <section className="py-8">
+            <section className="pb-8">
                 <Container>
                     <Reveal>
                         <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl shadow-sm">
