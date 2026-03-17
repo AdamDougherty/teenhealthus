@@ -307,13 +307,14 @@ export default function OurWorkPage() {
 
                         <Reveal delay={0.06}>
                             <div className="mt-8 max-w-xl overflow-hidden rounded-2xl shadow-sm">
-                                <Image
-                                    src="/images/shared/IMG_0624 cropped.jpeg"
-                                    alt="Teens together"
-                                    width={3973}
-                                    height={2440}
-                                    className="h-auto w-full"
-                                />
+                                <div className="relative h-72 sm:h-96">
+                                    <Image
+                                        src="/images/shared/IMG_0624 cropped.jpeg"
+                                        alt="Teens together"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
                             </div>
                         </Reveal>
 
