@@ -13,10 +13,10 @@ export default function ProgramsPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "50vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
 
         {/* Text overlay */}
-        <Container className="relative z-10 flex min-h-[50vh] items-center pb-0">
+        <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
           <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">

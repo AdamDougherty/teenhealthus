@@ -59,7 +59,7 @@ export default function DistributePage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(160deg, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.7) 50%, rgba(26,58,110,0.4) 100%)",
+                "linear-gradient(160deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.2) 100%)",
             }}
           />
         </div>

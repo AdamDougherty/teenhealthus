@@ -85,13 +85,13 @@ export default function BrandPartnerPage() {
           sizes="100vw"
           quality={90}
         />
-        {/* Gradient overlay */}
+        {/* Scrim for text legibility */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to left, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.70) 50%, rgba(26,58,110,0.15) 100%)",
+              "linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)",
           }}
         />
 
@@ -198,26 +198,14 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/shared/IMG_3800.jpeg"
-                    alt="Products ready for youth distribution"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/shared/IMG_0705.jpeg"
-                    alt="Products ready for donation"
-                    fill
-                    className="object-cover"
-                    style={{ transform: 'scale(1.4)', transformOrigin: 'center center' }}
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
+              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "4/5" }}>
+                <Image
+                  src="/images/shared/IMG_3800.jpeg"
+                  alt="Products ready for youth distribution"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
               </div>
             </Reveal>
           </div>
@@ -281,28 +269,20 @@ export default function BrandPartnerPage() {
                 num: "01",
                 title: "Tell us what you have",
                 desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs. We work with a wide range of products across food, hydration, supplements, and personal care, so don't hesitate to reach out even if you're unsure.",
-                image: "/images/shared/IMG_5296.jpeg",
-                imageAlt: "Teen Health products ready to help youth",
-                imagePosition: "center 45%",
               },
               {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/warehouse_health_products.png",
-                imageAlt: "Warehouse stocked with health and wellness products ready for donation",
-                imagePosition: "center 60%",
               },
               {
                 num: "03",
                 title: "Products reach youth fast",
                 desc: "Donated products are kitted and distributed through our partner agencies to at-risk youth ages 13–29 across California. Every item goes directly to someone who needs it.",
-                image: "/images/partnerships/IMG_4664.jpg",
-                imageAlt: "Teen Health delivering kits to youth",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-ink/10 py-5 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                <div className="grid items-center gap-10 border-t border-ink/10 py-5 lg:grid-cols-[100px_1fr] lg:gap-16">
                   <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
                     {step.num}
                   </div>
@@ -313,17 +293,6 @@ export default function BrandPartnerPage() {
                     <p className="mt-4 max-w-md text-base leading-relaxed text-ink/60">
                       {step.desc}
                     </p>
-                  </div>
-                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
-                    <Image
-                      src={step.image}
-                      alt={step.imageAlt}
-                      fill
-                      className="object-cover"
-                      style={{ objectPosition: (step as any).imagePosition ?? 'top' }}
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      quality={90}
-                    />
                   </div>
                 </div>
               </Reveal>

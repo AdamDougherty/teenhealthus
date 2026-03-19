@@ -96,7 +96,7 @@ export default function GiveMonthlyPage() {
                     className="pointer-events-none absolute inset-0"
                     style={{
                         background:
-                            "linear-gradient(135deg, rgba(26,42,110,0.72) 0%, rgba(30,58,138,0.68) 40%, rgba(37,99,200,0.62) 100%)",
+                            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.2) 100%)",
                     }}
                 />
                 <Container className="relative z-10 pb-20 pt-28 sm:pb-28 sm:pt-36">

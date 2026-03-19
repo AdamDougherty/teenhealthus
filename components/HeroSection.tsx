@@ -31,21 +31,13 @@ export function HeroSection() {
         quality={90}
       />
 
-      {/* Gradient overlays */}
+      {/* Bottom scrim for text legibility */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(26,58,110,0.75) 0%, rgba(26,58,110,0.35) 45%, rgba(26,58,110,0.08) 100%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(46,157,247,0.25) 0%, transparent 50%, rgba(255,201,7,0.2) 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)",
         }}
       />
 

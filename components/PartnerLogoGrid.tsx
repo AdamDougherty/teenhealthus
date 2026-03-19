@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 interface Partner {
   name: string;
   logo: string;
+  link?: string;
   invertLogo?: boolean;
 }
 
@@ -33,6 +34,7 @@ const PARTNERS: Partner[] = [
   { name: "Zahler", logo: "/partners/zahler.png" },
   { name: "Earth Harmony", logo: "/partners/earthharmony.png" },
   { name: "Anthropic", logo: "/partners/anthropic.png" },
+  { name: "Food for Life", logo: "/partners/foodforlife.png", link: "https://www.foodforlife.com" },
 ];
 
 export function PartnerLogoGrid() {
@@ -56,13 +58,13 @@ export function PartnerLogoGrid() {
         <div className="mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {PARTNERS.map((partner, i) => (
             <Reveal key={partner.name} delay={i * 0.04}>
-              <div className="group flex h-[11rem] items-center justify-center rounded-xl bg-white p-4 opacity-[0.92] shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition-all duration-[250ms] ease-out hover:opacity-100 hover:-translate-y-0.5 hover:shadow-lg">
+              <div className="group flex aspect-square items-center justify-center rounded-xl bg-white p-6 shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition-all duration-[250ms] ease-out hover:-translate-y-0.5 hover:shadow-lg">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  width={160}
-                  height={160}
-                  className={`h-auto w-auto max-h-[65px] max-w-[75%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""} ${partner.invertLogo ? "invert" : ""}`}
+                  width={200}
+                  height={200}
+                  className={`h-auto w-auto max-h-[80px] max-w-[80%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""} ${partner.invertLogo ? "invert" : ""}`}
                 />
               </div>
             </Reveal>
