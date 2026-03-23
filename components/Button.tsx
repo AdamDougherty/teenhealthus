@@ -20,6 +20,7 @@ export function Button({
   disabled = false,
   variant = "primary",
   className,
+  style,
   children,
   target,
   rel,
@@ -30,6 +31,7 @@ export function Button({
   disabled?: boolean;
   variant?: Variant;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
   target?: string;
   rel?: string;
@@ -47,6 +49,7 @@ export function Button({
       <Link
         href={href}
         className={classes}
+        style={style}
         target={target ?? (external ? "_blank" : undefined)}
         rel={rel ?? (external ? "noreferrer" : undefined)}
         aria-disabled={disabled}
@@ -57,7 +60,7 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
+    <button type={type} onClick={onClick} className={classes} style={style} disabled={disabled}>
       {children}
     </button>
   );

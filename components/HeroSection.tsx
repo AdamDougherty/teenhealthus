@@ -62,9 +62,9 @@ export function HeroSection() {
           {...anim(0.4)}
           className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          Healthy essentials.
+          Healthy Essentials.
           <br />
-          <span className="hero-highlight">Delivered with Dignity.</span>
+          <span className="hero-highlight" style={{ color: "#FFA10A" }}>Delivered with Dignity.</span>
         </motion.h1>
 
         <motion.p

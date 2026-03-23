@@ -1,4 +1,3 @@
-﻿import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
@@ -12,26 +11,24 @@ export default function OurWorkPage() {
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
             <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+                <div className="absolute inset-0 bg-white/[0.04]" />
 
                 {/* Text overlay */}
                 <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
-                    <div className="max-w-3xl">
+                    <div className="max-w-4xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Our Work
                             </p>
                         </Reveal>
                         <Reveal delay={0.1}>
-                            <h1 className="mt-6 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                Impact &amp; Insights: Youth Health and Stability
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                Impact &amp; Insights:<br />Youth Health &amp; Stability
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
-                                Too many young people are navigating life without proper
-                                nutrition, mental health resources, or stable housing.
-                                Together, we&apos;re creating pathways to stability and
-                                well-being.
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                                Too many young people are navigating life without proper nutrition,<br />mental health resources, or stable housing. Together, we&apos;re creating<br />pathways to stability and well-being.
                             </p>
                         </Reveal>
                     </div>
@@ -52,7 +49,7 @@ export default function OurWorkPage() {
                         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.08}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         50,000+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -62,18 +59,18 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.12}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         250+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
-                                        Brand Partners
+                                        Company Partners
                                     </p>
                                 </div>
                             </Reveal>
                             <Reveal delay={0.16}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                        100+
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        100
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
                                         &ldquo;Superhero&rdquo; Social Service Partners
@@ -82,7 +79,7 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.2}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         $1 million+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -106,55 +103,47 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        {/* ─── Youth Homelessness ─── */}
-                        <Reveal delay={0.04}>
-                            <div className="my-10 flex items-center gap-4">
-                                <div className="h-px flex-1 bg-border" />
-                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
-                                    Youth Homelessness
-                                </p>
-                                <div className="h-px flex-1 bg-border" />
-                            </div>
-                        </Reveal>
-
+                        {/* Hero stat */}
                         <Reveal delay={0.08}>
-                            <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                                {/* Column headers */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-b border-r border-border px-6 py-3">
-                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">National</p>
-                                    </div>
-                                    <div className="border-b border-border px-6 py-3">
-                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">California</p>
-                                    </div>
-                                </div>
-                                {/* Row 1 */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-b border-r border-border p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">4.2 million</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 13–25 experience homelessness each year</p>
-                                    </div>
-                                    <div className="border-b border-border p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">200,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 12–24 experience homelessness each year</p>
-                                    </div>
-                                </div>
-                                {/* Row 2 */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-r border-border p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">38,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth under age 25 experience homelessness on any given night</p>
-                                    </div>
-                                    <div className="p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">9,900</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth under age 24 experience homelessness on any given night</p>
-                                    </div>
-                                </div>
+                            <div className="mt-12 rounded-2xl border border-border bg-white p-10 shadow-sm">
+                                <p className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
+                                    40%
+                                </p>
+                                <p className="mt-4 text-base leading-relaxed text-ink/60">
+                                    of foster youth will be homeless or incarcerated within
+                                    3 years of leaving the foster care system
+                                </p>
                             </div>
                         </Reveal>
 
-                        {/* Divider: Foster Care Population */}
-                        <Reveal delay={0.14}>
+                        {/* Sub-stats */}
+                        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.14}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                        27%
+                                    </p>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                        of youth transitioning out of foster care in California
+                                        have been incarcerated
+                                    </p>
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.18}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                        14%
+                                    </p>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                                        of youth transitioning out of foster care in California
+                                        have experienced homelessness
+                                    </p>
+                                </div>
+                            </Reveal>
+                        </div>
+
+                        {/* Divider */}
+                        <Reveal delay={0.2}>
                             <div className="my-10 flex items-center gap-4">
                                 <div className="h-px flex-1 bg-border" />
                                 <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
@@ -164,53 +153,29 @@ export default function OurWorkPage() {
                             </div>
                         </Reveal>
 
-                        {/* Foster Care Population unified card */}
-                        <Reveal delay={0.18}>
-                            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                                <div className="grid grid-cols-2">
-                                    <div className="border-r border-border p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">376,900</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">individuals in foster care in the US</p>
-                                    </div>
-                                    <div className="p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">44,400</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">individuals in foster care in California alone</p>
-                                    </div>
+                        {/* National / state stats */}
+                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <Reveal delay={0.22}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        376,900
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        individuals in foster care in the US
+                                    </p>
                                 </div>
-                            </div>
-                        </Reveal>
-
-                        {/* Divider: Foster Care Outcomes */}
-                        <Reveal delay={0.26}>
-                            <div className="my-10 flex items-center gap-4">
-                                <div className="h-px flex-1 bg-border" />
-                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
-                                    Foster Care Outcomes
-                                </p>
-                                <div className="h-px flex-1 bg-border" />
-                            </div>
-                        </Reveal>
-
-                        {/* Foster Care Outcomes unified card */}
-                        <Reveal delay={0.3}>
-                            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                                <div className="grid grid-cols-1 sm:grid-cols-3">
-                                    <div className="border-b border-border p-8 sm:border-b-0 sm:border-r">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">40%</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of foster youth will be homeless or incarcerated within 3 years of leaving the system</p>
-                                    </div>
-                                    <div className="border-b border-border p-8 sm:border-b-0 sm:border-r">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">27%</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of youth transitioning out of foster care in California have been incarcerated</p>
-                                    </div>
-                                    <div className="p-8">
-                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">14%</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">of youth transitioning out of foster care in California have experienced homelessness</p>
-                                    </div>
+                            </Reveal>
+                            <Reveal delay={0.26}>
+                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                        44,400
+                                    </p>
+                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                        individuals in foster care in California alone
+                                    </p>
                                 </div>
-                            </div>
-                        </Reveal>
-
+                            </Reveal>
+                        </div>
                     </div>
                 </Container>
             </section>
@@ -218,7 +183,7 @@ export default function OurWorkPage() {
             {/* ─── RESEARCH & EVIDENCE BASED ─── */}
             <section className="py-16 sm:py-20">
                 <Container>
-                    <div className="mx-auto max-w-4xl">
+                    <div className="mx-auto max-w-3xl">
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
@@ -297,25 +262,12 @@ export default function OurWorkPage() {
             {/* ─── EVERY TEEN DESERVES ─── */}
             <section className="bg-mist py-16 sm:py-20">
                 <Container>
-                    <div className="mx-auto max-w-4xl">
+                    <div className="mx-auto max-w-3xl">
                         <Reveal>
                             <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                Every Young Person Deserves a Brain Built For Dreams
+                                Every Teen Deserves a Brain That Can Keep Up With Their Dreams
                             </h2>
-                        </Reveal>
-
-                        <Reveal delay={0.06}>
-                            <div className="mx-auto mt-8 max-w-xl overflow-hidden rounded-2xl shadow-sm">
-                                <div className="relative h-72 sm:h-96">
-                                    <Image
-                                        src="/images/shared/IMG_0624 cropped.jpeg"
-                                        alt="Teens together"
-                                        fill
-                                        className="object-cover"
-                                    />
-                                </div>
-                            </div>
                         </Reveal>
 
                         <Reveal delay={0.08}>
@@ -332,7 +284,7 @@ export default function OurWorkPage() {
                         <Reveal delay={0.12}>
                             <blockquote className="my-10 border-l-4 border-sun py-4 pl-6">
                                 <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
-                                    At Teen Health, we believe mental wellness isn&apos;t a
+                                    At TeenHealth, we believe mental wellness isn&apos;t a
                                     mystery. It&apos;s biology. And biology can be supported.
                                 </p>
                             </blockquote>
@@ -413,7 +365,7 @@ export default function OurWorkPage() {
             </section>
 
             {/* ─── CTA ─── */}
-            <section className="section-dark py-16 text-white sm:py-20">
+            <section className="bg-ink py-16 text-white sm:py-20">
                 <Container>
                     <div className="mx-auto max-w-3xl text-center">
                         <Reveal>

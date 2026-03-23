@@ -80,7 +80,7 @@ export default function GiveMonthlyPage() {
     return (
         <div className="bg-transparent">
             {/* Hero */}
-            <section className="relative overflow-hidden" style={{ backgroundColor: '#1a2a6e' }}>
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#1a2a6e' }}>
                 <div className="absolute inset-0">
                     <Image
                         src="/images/shared/vista teen trace pe.jpeg"
@@ -99,35 +99,37 @@ export default function GiveMonthlyPage() {
                             "linear-gradient(135deg, rgba(26,42,110,0.72) 0%, rgba(30,58,138,0.68) 40%, rgba(37,99,200,0.62) 100%)",
                     }}
                 />
-                <Container className="relative z-10 pb-20 pt-28 sm:pb-28 sm:pt-36">
-                    <Reveal>
-                        <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
-                            Give monthly
-                        </p>
-                    </Reveal>
-                    <Reveal delay={0.1}>
-                        <h1 className="mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl">
-                            Give essentials to youth{" "}
-                            <span className="hero-highlight whitespace-nowrap">every month</span>
-                        </h1>
-                    </Reveal>
-                    <Reveal delay={0.2}>
-                        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-                            Healthy food, hydration, and personal care are not one-time needs.
-                            Your monthly gift keeps essentials kits moving to vulnerable youth
-                            and young adults — consistently, reliably, and with dignity.
-                        </p>
-                    </Reveal>
-                    <Reveal delay={0.3}>
-                        <div className="mt-8">
-                            <Button
-                                href="https://www.classy.org/give/665776/#!/donation/checkout"
-                                variant="primary"
-                            >
-                                Start giving monthly
-                            </Button>
-                        </div>
-                    </Reveal>
+                <Container className="relative z-10 flex min-h-[70vh] items-center">
+                    <div className="max-w-2xl">
+                        <Reveal>
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                                Give monthly
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.1}>
+                            <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.0 }}>
+                                Give essentials to youth{" "}
+                                <span className="hero-highlight whitespace-nowrap" style={{ color: "#FFA10A" }}>every month</span>
+                            </h1>
+                        </Reveal>
+                        <Reveal delay={0.2}>
+                            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+                                Healthy food, hydration, and personal care are not one-time needs.
+                                Your monthly gift keeps essentials kits moving to vulnerable youth
+                                and young adults — consistently, reliably, and with dignity.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.3}>
+                            <div className="mt-10">
+                                <Button
+                                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                    variant="primary"
+                                >
+                                    Start giving monthly
+                                </Button>
+                            </div>
+                        </Reveal>
+                    </div>
                 </Container>
             </section>
 
@@ -314,7 +316,7 @@ export default function GiveMonthlyPage() {
                     <Reveal>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
-                            <span className="hero-highlight">Help us change that.</span>
+                            <span className="hero-highlight" style={{ color: "#FFA10A" }}>Help us change that.</span>
                         </h2>
                     </Reveal>
                     <Reveal delay={0.1}>

@@ -36,10 +36,16 @@ These steps will get the site running on your computer so you can make changes. 
 
 ### Prerequisites
 
-You need two things installed on your Mac:
+You need two things installed:
 
 1. **Node.js** (version 20 or newer) — [download here](https://nodejs.org/)
-2. **Git** — usually pre-installed on Mac. To check, open Terminal and type `git --version`. If it's not installed, you'll be prompted to install it.
+2. **Git** — [download here](https://git-scm.com/downloads). On Mac it's usually pre-installed; on Windows it comes with Git Bash.
+
+### Development environment notes
+
+- **Windows (RDP):** The dev environment runs on Windows with PowerShell. PowerShell doesn't support `&&` to chain commands — run them one at a time or use `;` instead.
+- **Deployment uses `scp`**, not `rsync` (rsync is unavailable on Windows). See deploy steps below.
+- **Always preview changes locally** at `http://localhost:3000` before deploying to production.
 
 ### Step 1: Clone the repository
 
@@ -73,11 +79,22 @@ npm run dev
 
 1. Open the `teenhealthus` folder in your code editor (VS Code, Cursor, etc.)
 2. Open Antigravity / Opus in the sidebar
-3. Ask it to make changes in plain English, for example:
+3. **Keep your browser open at http://localhost:3000** — all changes are previewed here in real time
+4. Ask it to make changes in plain English, for example:
    - *"Change the hero headline to 'Supporting youth in Orange County'"*
    - *"Update the Executive Director team photo to use the image I just added to public/images/team/"*
    - *"Add a new article about food insecurity in content/articles.ts"*
-4. Antigravity will edit the files for you — you'll see the changes live at `localhost:3000`
+5. Antigravity will edit the files for you — **always verify changes visually in your browser before deploying**
+
+> ⚠️ **Important:** Never deploy without previewing first. The dev server hot-reloads on every save, so your browser at `localhost:3000` always reflects the latest code.
+
+### Quick deploy shortcut
+
+Once you've previewed and are happy with your changes, tell Antigravity:
+
+> *"make it live"*
+
+This will automatically commit, push to GitHub, and deploy to production in one step.
 
 ### Step 5: Save and push your changes
 
@@ -100,7 +117,7 @@ Ask Antigravity:
 
 Or run manually:
 ```bash
-rsync -avz --delete --exclude='node_modules' --exclude='.next' --exclude='.git' ./ root@159.65.75.30:/var/www/teenhealth-starter/
+scp -r ./* root@159.65.75.30:/var/www/teenhealth-starter/
 ssh root@159.65.75.30 "cd /var/www/teenhealth-starter && npm install && npm run build && pm2 restart teenhealth"
 ```
 
@@ -120,17 +137,16 @@ The site runs on a DigitalOcean droplet at `/var/www/teenhealth-starter`, manage
 ### Deploy steps
 
 ```bash
-# 1. Build locally to catch errors
+# 1. Preview at localhost:3000 — verify all changes look correct in browser
+npm run dev
+
+# 2. Build locally to catch errors
 npm run build
 
-# 2. Sync files to production (excludes node_modules, .next, .git)
-rsync -avz --delete \
-  --exclude='node_modules' \
-  --exclude='.next' \
-  --exclude='.git' \
-  ./ root@159.65.75.30:/var/www/teenhealth-starter/
+# 3. Sync files to production via scp (rsync unavailable on Windows)
+scp -r ./* root@159.65.75.30:/var/www/teenhealth-starter/
 
-# 3. SSH in, install deps, build, and restart
+# 4. SSH in, install deps, build, and restart
 ssh root@159.65.75.30 "cd /var/www/teenhealth-starter && npm install && npm run build && pm2 restart teenhealth"
 ```
 

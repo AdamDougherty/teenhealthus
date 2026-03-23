@@ -14,20 +14,20 @@ export default function OurStoryPage() {
             <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
 
                 {/* Text overlay */}
-                <Container className="relative z-10 flex min-h-[70vh] items-end pb-16 sm:pb-20">
+                <Container className="relative z-10 flex min-h-[70vh] items-center">
                     <div className="max-w-2xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Our Story
                             </p>
                         </Reveal>
                         <Reveal delay={0.1}>
-                            <h1 className="mt-6 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                How Teen Health Started — and Where We&apos;re Going
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                How Teen Health Started —<br />and Where We&apos;re Going
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-lg text-base leading-relaxed text-white/65 sm:text-lg sm:leading-relaxed">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
                                 From a simple question about access to essentials, to a growing
                                 network of partners, brands, and agencies serving youth across
                                 the country.

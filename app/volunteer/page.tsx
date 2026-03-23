@@ -44,7 +44,7 @@ export default function VolunteerPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "85vh", backgroundColor: '#1a2a6e' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#1a2a6e' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/events/IMG_4154.jpeg"
@@ -64,21 +64,21 @@ export default function VolunteerPage() {
           />
         </div>
 
-        <Container className="relative z-10 flex min-h-[85vh] items-center">
-          <div className="max-w-2xl py-20">
+        <Container className="relative z-10 flex min-h-[70vh] items-center">
+          <div className="max-w-2xl">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
+              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Your time makes a{" "}
-                <span className="hero-highlight">real difference.</span>
+                <br /><span className="hero-highlight" style={{ color: "#FFA10A" }}>real difference</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70">
                 Whether you can give a few hours or a few days, your skills and
                 energy help Teen Health sort, kit, and deliver essentials to
                 youth across the country.

@@ -11,7 +11,7 @@ export function LandInitiativeCard() {
         <Card className="flex h-full flex-col overflow-hidden p-0">
             {/* Header band */}
             <div className="bg-ink px-8 py-6">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
                     Signature Campaign
                 </p>
                 <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-white">

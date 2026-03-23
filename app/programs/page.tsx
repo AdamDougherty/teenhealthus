@@ -13,21 +13,21 @@ export default function ProgramsPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "50vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
 
         {/* Text overlay */}
-        <Container className="relative z-10 flex min-h-[50vh] items-center pb-0">
+        <Container className="relative z-10 flex min-h-[70vh] items-center">
           <div className="max-w-3xl">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Program Sponsor
               </p>
-              <h1 className="mt-4 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Built Around What Youth Actually&nbsp;Need
+              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                Built around what youth <br />actually&nbsp;need
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
-                Fund a program that puts healthy essentials directly into the hands of
-                youth who need them most — and help keep every kit stocked and ready.
+                Fund a program that puts healthy essentials directly into the hands of youth{" "}
+                <br />who need them most — and help keep every kit stocked and ready.
               </p>
             </Reveal>
           </div>
@@ -56,7 +56,7 @@ export default function ProgramsPage() {
               {/* Campaign 0 — Easter Gift Bag Project */}
               <Reveal delay={0.08}>
                 <Card className="flex h-full flex-col p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
                     Campaign
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
@@ -82,7 +82,7 @@ export default function ProgramsPage() {
               {/* Campaign 1 — The Dignity Kit Program */}
               <Reveal delay={0.08}>
                 <Card className="flex h-full flex-col p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
                     Campaign
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">

@@ -21,6 +21,19 @@ export default function AboutPage() {
           />
         </Reveal>
 
+        <Reveal>
+          <div className="mt-10 relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/6" }}>
+            <Image
+              src="/images/youth/IMG_1205.jpeg"
+              alt="Teen Health team holding banner with backpack kits"
+              fill
+              className="object-cover object-[50%_20%]"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </Reveal>
+
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
             {
@@ -55,96 +68,40 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start">
-          <div className="space-y-10">
-            <Reveal>
-              <section className="space-y-4">
-                <h2 className="text-2xl font-normal tracking-tight text-ink">
-                  Our story
-                </h2>
-                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
-                  <Image
-                    src="/images/youth/IMG_1205.jpeg"
-                    alt="Teen Health team holding banner with backpack kits"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                  />
-                </div>
-                <p className="text-base leading-relaxed text-ink/80">
-                  We started in 2022 with a simple question: what happens when a young person
-                  doesn't have access to the basics — clean food, water, hygiene products,
-                  personal care? The answer wasn't hard to find, but the solution required
-                  a new approach.
-                </p>
-                <p className="text-base leading-relaxed text-ink/80">
-                  Today Teen Health rescues surplus product from brands and
-                  distributors, assembles essentials kits, and delivers them through a
-                  growing network of local agencies that already have trust in the
-                  community. Based in Southern California, our reach extends nationally
-                  through strategic logistics partnerships.
-                </p>
-              </section>
-            </Reveal>
 
-            <Reveal delay={0.08}>
-              <section className="space-y-4">
-                <h2 className="text-2xl font-normal tracking-tight text-ink">
-                  Team & partners
-                </h2>
-                <p className="text-base leading-relaxed text-ink/80">
-                  Teen Health is powered by a small, dedicated team and a network of
-                  volunteers, brand partners, and local agencies. Here are a few of the
-                  people making it happen.
-                </p>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {[
-                    { role: "Executive Director", image: "/images/team/IMG_5106.jpeg" },
-                    { role: "Operations", image: "/images/team/IMG_5150.jpeg" },
-                    { role: "Partnerships", image: "/images/team/IMG_5151.jpeg" },
-                    { role: "Programs", image: "/images/team/IMG_5152.jpeg" },
-                  ].map(
-                    (item, index) => (
-                      <Reveal key={item.role} delay={index * 0.06}>
-                        <Card className="overflow-hidden p-0">
-                          <div className="relative" style={{ aspectRatio: "4/3" }}>
-                            <Image
-                              src={item.image}
-                              alt={`${item.role} team member`}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                          </div>
-                          <div className="p-5">
-                            <div className="text-sm font-normal tracking-tight text-ink">
-                              {item.role}
-                            </div>
-                            <p className="mt-2 text-sm text-ink/70">
-                              {item.role}
-                            </p>
-                          </div>
-                        </Card>
-                      </Reveal>
-                    )
-                  )}
-                </div>
-              </section>
-            </Reveal>
-          </div>
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start">
+          <Reveal>
+            <section className="space-y-4">
+              <h2 className="text-2xl font-normal tracking-tight text-ink">
+                Our story
+              </h2>
+              <p className="text-base leading-relaxed text-ink/80">
+                We started in 2022 with a simple question: what happens when a young person
+                doesn't have access to the basics — clean food, water, hygiene products,
+                personal care? The answer wasn't hard to find, but the solution required
+                a new approach.
+              </p>
+              <p className="text-base leading-relaxed text-ink/80">
+                Today Teen Health rescues surplus product from brands and
+                distributors, assembles essentials kits, and delivers them through a
+                growing network of local agencies that already have trust in the
+                community. Based in Southern California, our reach extends nationally
+                through strategic logistics partnerships.
+              </p>
+            </section>
+          </Reveal>
+
 
           <aside className="space-y-6">
-            <Reveal>
-              <Card>
-                <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  Use this form for partners, volunteers, and general inquiries.
-                </p>
-                <div className="mt-6">
-                  <ContactForm />
-                </div>
-              </Card>
-            </Reveal>
+            <Card>
+              <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
+              <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                Use this form for partners, volunteers, and general inquiries.
+              </p>
+              <div className="mt-6">
+                <ContactForm />
+              </div>
+            </Card>
 
             <Reveal delay={0.08}>
               <Card>

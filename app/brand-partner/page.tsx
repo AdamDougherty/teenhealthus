@@ -36,7 +36,7 @@ export default function BrandPartnerPage() {
     },
     {
       q: "Can we do an employee volunteer event?",
-      a: `Absolutely! We host professional \u201cProduct Kitting\u201d events where corporate teams assemble dignity kits for foster youth. It\u2019s a hands-on way to boost morale while making tangible impact.`,
+      a: `Absolutely! We host professional “Product Kitting” events where corporate teams assemble dignity kits for foster youth. It’s a hands-on way to boost morale while making tangible impact.`,
     },
     {
       q: "How is impact measured and reported?",
@@ -74,8 +74,8 @@ export default function BrandPartnerPage() {
 
   return (
     <div className="bg-white">
-      {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "85vh" }}>
+      {/* ——— HERO ——— */}
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         <Image
           src="/images/partnerships/IMG_5265.jpeg"
           alt="Teen Health youth partnership event"
@@ -91,28 +91,28 @@ export default function BrandPartnerPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to left, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.70) 50%, rgba(26,58,110,0.15) 100%)",
+              "linear-gradient(to top, rgba(35,31,32,0.88) 0%, rgba(35,31,32,0.45) 50%, rgba(35,31,32,0.18) 100%)",
           }}
         />
 
-        <Container className="relative z-10 flex min-h-[85vh] items-end justify-end pb-16 sm:pb-24 lg:pb-28">
+        <Container className="relative z-10 flex min-h-[70vh] items-center justify-end">
           <div className="max-w-2xl text-right">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
-                Brand Partnerships
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                Become a Brand Partner
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-5 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Make generosity
                 <br />
-                on&#8209;brand.
+                on‑brand
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg sm:leading-relaxed">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70 ml-auto">
                 Since 2022, we&apos;ve teamed up with 250+ companies to turn
-                surplus into life-changing impact&mdash;across every aisle,
+                surplus into life-changing impact—across every aisle,
                 from nutrition to wellness and beyond.
               </p>
             </Reveal>
@@ -135,10 +135,10 @@ export default function BrandPartnerPage() {
       </section>
 
 
-      {/* ─── IN GOOD COMPANY — Logo Grid ─── */}
+      {/* ——— IN GOOD COMPANY — Logo Grid ——— */}
       <PartnerLogoGrid />
 
-      {/* ─── FULL-WIDTH PHOTO ─── */}
+      {/* ——— FULL-WIDTH PHOTO ——— */}
       <section className="relative overflow-hidden" style={{ minHeight: "65vh" }}>
         <Image
           src="/images/shared/ch la.jpeg"
@@ -151,19 +151,19 @@ export default function BrandPartnerPage() {
         />
       </section>
 
-      {/* ─── PHOTO CTA TEXT ─── */}
+      {/* ——— PHOTO CTA TEXT ——— */}
       <section className="bg-[#f8f7f4] py-20 sm:py-28">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <Reveal>
-              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
+              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 Ready to make an impact?
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-6 text-balance text-base leading-relaxed text-ink/60 sm:text-lg">
+              <p className="mt-6 text-balance text-base leading-relaxed text-ink/60">
                 We help you move closeout, distressed, mislabeled, and
-                short-dated products quickly&mdash;turning your excess inventory
+                short-dated products quickly—turning your excess inventory
                 into meaningful impact for at-risk youth.
               </p>
             </Reveal>
@@ -178,7 +178,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── WHAT WE ACCEPT ─── */}
+      {/* ——— WHAT WE ACCEPT ——— */}
       <section className="py-12 sm:py-16">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -188,7 +188,9 @@ export default function BrandPartnerPage() {
                   What we accept
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Quality products that make a real difference.
+                  Quality products that make a{" "}
+                  <br className="hidden sm:block" />
+                  real difference.
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-ink/70">
                   We accept packaged, shelf-stable products that meet our quality
@@ -224,7 +226,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── PRODUCT CATEGORIES ─── */}
+      {/* ——— PRODUCT CATEGORIES ——— */}
       <section className="border-y border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
@@ -232,7 +234,7 @@ export default function BrandPartnerPage() {
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
                 Product categories
               </p>
-              <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 We accept a wide range of quality products.
               </h2>
             </div>
@@ -263,7 +265,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── HOW IT WORKS ─── */}
+      {/* ——— HOW IT WORKS ——— */}
       <section id="how-it-works" className="scroll-mt-20 py-12 sm:py-16">
         <Container>
           <Reveal>
@@ -332,7 +334,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── DONATION REASONS ─── */}
+      {/* ——— DONATION REASONS ——— */}
       <section className="border-t border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
@@ -367,7 +369,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── WHY PARTNER WITH US ─── */}
+      {/* ——— WHY PARTNER WITH US ——— */}
       <section className="py-12 sm:py-16">
         <Container>
           <Reveal>
@@ -436,7 +438,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
+      {/* â”€â”€â”€ FREQUENTLY ASKED QUESTIONS â”€â”€â”€ */}
       <section className="border-t border-ink/5 py-12 sm:py-16">
         <Container>
           <Reveal>
@@ -486,7 +488,7 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── FINAL CTA ─── */}
+      {/* â”€â”€â”€ FINAL CTA â”€â”€â”€ */}
       <section className="py-12 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
@@ -514,11 +516,11 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* ─── PRODUCT DONATION FORM ─── */}
+      {/* â”€â”€â”€ PRODUCT DONATION FORM â”€â”€â”€ */}
       <section id="donate-product-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
-            {/* Left — Text */}
+            {/* Left â€” Text */}
             <div>
               <Reveal>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
@@ -566,7 +568,7 @@ export default function BrandPartnerPage() {
               </Reveal>
             </div>
 
-            {/* Right — Form Card */}
+            {/* Right â€” Form Card */}
             <Reveal delay={0.05}>
               {status === "sent" ? (
                 <Card className="border-mint/20 bg-mint/10">
@@ -676,3 +678,4 @@ export default function BrandPartnerPage() {
     </div>
   );
 }
+

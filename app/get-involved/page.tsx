@@ -86,10 +86,10 @@ export default function GetInvolvedPage() {
           <Reveal delay={0.05}>
             <div className="relative mt-8 mb-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
               <Image
-                src="/images/events/IMG_4150.jpeg"
+                src="/images/shared/IMG_2274.jpeg"
                 alt="Volunteers sorting and preparing supplies"
                 fill
-                className="object-cover"
+                className="object-cover" style={{ objectPosition: "center 15%" }}
                 sizes="(max-width: 768px) 100vw, 1200px"
               />
             </div>
@@ -129,7 +129,7 @@ export default function GetInvolvedPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="/volunteer#volunteer-form" variant="secondary">
+            <Button href="/volunteer#volunteer-form" variant="primary">
               Volunteer interest form
             </Button>
           </div>
@@ -203,7 +203,7 @@ export default function GetInvolvedPage() {
                     <div>• Schools & community orgs</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/distribute#distribution-form" variant="secondary">
+                    <Button href="/distribute#distribution-form" variant="primary">
                       Become a distribution partner
                     </Button>
                   </div>
@@ -216,7 +216,7 @@ export default function GetInvolvedPage() {
             <div className="mt-6 rounded-3xl border border-border bg-ink p-8 text-white shadow-soft sm:p-10">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-sun">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
                     Corporate partnerships
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl">

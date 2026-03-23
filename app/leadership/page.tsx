@@ -17,12 +17,17 @@ export default function LeadershipPage() {
                 <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
                     <div className="max-w-4xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Leadership &amp; Advisors
                             </p>
-                            <h1 className="mt-4 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                A Huge-Hearted, Innovative&nbsp;Team
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                A Huge-Hearted, Innovative Team
                             </h1>
+                        </Reveal>
+                        <Reveal delay={0.15}>
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                                Meet the passionate people driving our mission — leaders and advisors<br />who bring deep expertise, lived experience, and a shared commitment<br />to youth well-being.
+                            </p>
                         </Reveal>
                     </div>
                 </Container>
@@ -56,7 +61,7 @@ export default function LeadershipPage() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                                         President
                                     </p>
                                     <h3 className="mt-1 font-serif text-2xl font-normal tracking-tight text-ink">
@@ -101,7 +106,7 @@ export default function LeadershipPage() {
                                     </div>
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                                         Vice-President
                                     </p>
                                     <h3 className="mt-1 font-serif text-2xl font-normal tracking-tight text-ink">

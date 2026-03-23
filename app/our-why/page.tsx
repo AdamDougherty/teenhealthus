@@ -21,26 +21,27 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
-        <Container className="relative z-10 py-20 sm:py-28">
-          <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
-              Our Why
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="mt-5 max-w-3xl font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              Survive{" "}
-              <span className="mx-2 inline-block text-sun sm:mx-4">→</span>{" "}
-              <span className="hero-highlight">Thrive</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-              Every young person deserves more than survival. We exist to close
-              the gap between getting by and growing up with dignity.
-            </p>
-          </Reveal>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+        <Container className="relative z-10 flex min-h-[70vh] items-center">
+          <div className="max-w-3xl">
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                Our Why
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h1 className="mt-4 max-w-3xl font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                Survive{" "}
+                <span className="mx-2 inline-block text-sun sm:mx-4">→</span>{" "}
+                <span className="hero-highlight" style={{ color: "#FFA10A" }}>Thrive</span>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                Every young person deserves more than survival. We exist to<br />close the gap between getting by and growing up with dignity.
+              </p>
+            </Reveal>
+          </div>
         </Container>
       </section>
 

@@ -50,7 +50,7 @@ export default function PartnerPage() {
           {/* Left — Text */}
           <div className="py-20 lg:py-28">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                 Partner with Teen Health
               </p>
             </Reveal>
@@ -133,7 +133,7 @@ export default function PartnerPage() {
       <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
               How your company can partner with us
             </p>
             <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
@@ -318,7 +318,7 @@ export default function PartnerPage() {
             {/* Left — Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                   Get started
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">

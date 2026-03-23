@@ -16,12 +16,17 @@ export default function HowWeWorkPage() {
                 <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
                     <div className="max-w-4xl">
                         <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 How We Work
                             </p>
-                            <h1 className="mt-4 font-serif text-4xl font-normal leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                                Fueling Youth Well-Being and&nbsp;Stability
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                Fueling Youth Well-Being<br />and Stability
                             </h1>
+                        </Reveal>
+                        <Reveal delay={0.15}>
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                                From food rescue to essential kits to mental health support, our programs<br />address the whole person — meeting youth where they are and building<br />toward lasting stability.
+                            </p>
                         </Reveal>
                     </div>
                 </Container>

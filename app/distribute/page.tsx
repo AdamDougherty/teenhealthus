@@ -67,14 +67,14 @@ export default function DistributePage() {
         <Container className="relative z-10 flex min-h-[85vh] items-center">
           <div className="max-w-2xl py-20">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                 Distribution partners
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Get essentials to the{" "}
-                <span className="hero-highlight">youth you serve.</span>
+                <span className="hero-highlight" style={{ color: "#FFA10A" }}>youth you serve.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
@@ -179,7 +179,7 @@ export default function DistributePage() {
       <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
               How it works
             </p>
             <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
@@ -279,7 +279,7 @@ export default function DistributePage() {
             {/* Left — Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
                   Get started
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
