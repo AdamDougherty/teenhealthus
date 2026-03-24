@@ -80,7 +80,7 @@ export function HeroSection() {
           {...anim(0.85)}
           className="mt-8 flex flex-col gap-3 sm:flex-row"
         >
-          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00' }}>
             Give today
           </Button>
           <Button

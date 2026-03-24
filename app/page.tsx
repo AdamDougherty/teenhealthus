@@ -174,7 +174,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00' }}>
               Donate
             </Button>
             <Button
@@ -218,7 +218,7 @@ export default function HomePage() {
                     </p>
 
                     <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
-                      <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+                      <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00' }}>
                         Give today
                       </Button>
                       <Button href="/get-involved#volunteer" variant="secondary">

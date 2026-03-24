@@ -74,7 +74,7 @@ export function MobileMenu() {
         </nav>
 
         <div className="mt-8">
-          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" className="w-full">
+          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" className="w-full" style={{ backgroundColor: '#FF6B00' }}>
             Donate
           </Button>
         </div>
