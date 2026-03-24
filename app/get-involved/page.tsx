@@ -178,7 +178,7 @@ export default function GetInvolvedPage() {
           </div>
 
           <Reveal delay={0.12}>
-            <div className="mt-6 rounded-3xl border border-border p-8 text-white shadow-soft sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
+            <div className="mt-6 rounded-3xl border border-border p-8 text-white shadow-soft sm:p-10" style={{ backgroundColor: '#3578B2' }}>
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
@@ -206,7 +206,7 @@ export default function GetInvolvedPage() {
         {/* Donate */}
         <section id="donate" className="mt-14 scroll-mt-24">
           <Reveal>
-            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
+            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#3578B2' }}>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                 Donate
               </p>
