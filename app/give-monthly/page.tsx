@@ -183,17 +183,17 @@ export default function GiveMonthlyPage() {
             </Container>
 
             {/* Choose your impact — donation tiers */}
-            <section className="section-dark text-white">
+            <section style={{ backgroundColor: '#FAF3EB' }}>
                 <Container className="py-16 sm:py-20">
                     <Reveal>
                         <div className="max-w-2xl">
-                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/50">
+                            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
                                 Choose your impact
                             </p>
-                            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+                            <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Every dollar funds essentials
                             </h2>
-                            <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
+                            <p className="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
                                 Pick a monthly amount that works for you. Every gift — no matter
                                 the size — goes directly toward assembling, shipping, and
                                 distributing kits to youth who need them.
@@ -206,18 +206,18 @@ export default function GiveMonthlyPage() {
                             <Reveal key={tier.amount} delay={i * 0.08}>
                                 <a
                                     href="https://www.classy.org/give/665776/#!/donation/checkout"
-                                    className="group block rounded-2xl border border-white/10 bg-white/5 p-6 transition-all hover:-translate-y-1 hover:border-white/20 hover:shadow-lg"
+                                    className="group block rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
-                                        <span className="font-serif text-3xl font-normal tracking-tight">
+                                        <span className="font-serif text-3xl font-normal tracking-tight text-ink">
                                             {tier.amount}
                                         </span>
-                                        <span className="text-sm text-white/50">{tier.label}</span>
+                                        <span className="text-sm text-ink/50">{tier.label}</span>
                                     </div>
-                                    <p className="mt-3 text-sm leading-relaxed text-white/70">
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
                                         {tier.impact}
                                     </p>
-                                    <div className="mt-4 text-sm font-semibold text-sun opacity-0 transition-opacity group-hover:opacity-100">
+                                    <div className="mt-4 text-sm font-semibold opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#FF6B00' }}>
                                         Give {tier.amount}/mo →
                                     </div>
                                 </a>
@@ -234,7 +234,7 @@ export default function GiveMonthlyPage() {
                             >
                                 Start giving monthly
                             </Button>
-                            <p className="mt-4 text-xs text-white/40">
+                            <p className="mt-4 text-xs text-ink/40">
                                 Cancel or change your amount anytime. No commitments.
                             </p>
                         </div>
@@ -314,16 +314,16 @@ export default function GiveMonthlyPage() {
             </section>
 
             {/* Final CTA */}
-            <section className="section-dark text-white">
+            <section style={{ backgroundColor: '#FAF3EB' }}>
                 <Container className="py-16 text-center sm:py-20">
                     <Reveal>
-                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
+                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
-                            <span className="hero-highlight" style={{ color: "#FFA10A" }}>Help us change that.</span>
+                            <span className="hero-highlight" style={{ color: "#FF6B00" }}>Help us change that.</span>
                         </h2>
                     </Reveal>
                     <Reveal delay={0.1}>
-                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/70">
+                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
                             Join the community of monthly supporters keeping essentials kits
                             flowing to youth who need them — every single month.
                         </p>
