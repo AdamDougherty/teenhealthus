@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -13,28 +13,10 @@ export default function AboutPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/images/youth/IMG_1205.jpeg"
-            alt="Teen Health team holding banner with backpack kits"
-            fill
-            priority
-            className="object-cover object-[50%_20%] opacity-80"
-            sizes="100vw"
-          />
-        </div>
-        {/* Dark bottom gradient for text readability */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 40%, transparent 70%)",
-          }}
-        />
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+        <div className="absolute inset-0 bg-white/[0.04]" />
         <Container className="relative z-10 flex min-h-[70vh] items-center">
-          <div className="max-w-3xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+          <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 About
@@ -46,7 +28,7 @@ export default function AboutPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
                 Teen Health focuses on practical essentials for vulnerable youth — delivered
                 through partners that already have trust in the community.
               </p>
