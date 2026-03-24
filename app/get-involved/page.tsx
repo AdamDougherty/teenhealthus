@@ -38,7 +38,7 @@ export default function GetInvolvedPage() {
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
                   Donate now
                 </Button>
                 <Button href="#partner" variant="ghost" className="text-white hover:bg-white/10">
@@ -129,7 +129,7 @@ export default function GetInvolvedPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="/volunteer#volunteer-form" variant="primary">
+            <Button href="/volunteer#volunteer-form" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
               Volunteer interest form
             </Button>
           </div>
@@ -170,7 +170,7 @@ export default function GetInvolvedPage() {
                     <div>• Natural personal care</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/brand-partner#donate-product-form" variant="primary">
+                    <Button href="/brand-partner#donate-product-form" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
                       Start a product donation
                     </Button>
                   </div>
@@ -203,7 +203,7 @@ export default function GetInvolvedPage() {
                     <div>• Schools & community orgs</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/distribute#distribution-form" variant="primary">
+                    <Button href="/distribute#distribution-form" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
                       Become a distribution partner
                     </Button>
                   </div>
@@ -229,7 +229,7 @@ export default function GetInvolvedPage() {
                   </p>
                 </div>
                 <div className="shrink-0">
-                  <Button href="/partner#become-a-partner" variant="primary">
+                  <Button href="/partner#become-a-partner" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
                     Learn more &amp; apply
                   </Button>
                 </div>
