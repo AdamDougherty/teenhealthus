@@ -125,6 +125,7 @@ export default function GiveMonthlyPage() {
                                 <Button
                                     href="https://www.classy.org/give/665776/#!/donation/checkout"
                                     variant="primary"
+                                    style={{ backgroundColor: '#FF6B00', color: 'white' }}
                                 >
                                     Start giving monthly
                                 </Button>
@@ -229,6 +230,7 @@ export default function GiveMonthlyPage() {
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout"
                                 variant="primary"
+                                style={{ backgroundColor: '#FF6B00', color: 'white' }}
                             >
                                 Start giving monthly
                             </Button>
@@ -331,6 +333,7 @@ export default function GiveMonthlyPage() {
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout"
                                 variant="primary"
+                                style={{ backgroundColor: '#FF6B00', color: 'white' }}
                             >
                                 Give monthly now
                             </Button>
