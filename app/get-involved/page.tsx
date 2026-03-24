@@ -41,7 +41,7 @@ export default function GetInvolvedPage() {
         {/* Donate */}
         <section id="donate" className="mt-12 scroll-mt-24">
           <Reveal>
-            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#005AE0' }}>
+            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#5BAFE6' }}>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                 Donate
               </p>
