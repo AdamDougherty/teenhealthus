@@ -110,7 +110,7 @@ export default function GiveMonthlyPage() {
                         <Reveal delay={0.1}>
                             <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.0 }}>
                                 Give essentials to youth{" "}
-                                <span className="hero-highlight whitespace-nowrap" style={{ color: "#FFA10A" }}>every month</span>
+                                <span className="whitespace-nowrap" style={{ color: "#FF6B00" }}>every month</span>
                             </h1>
                         </Reveal>
                         <Reveal delay={0.2}>
