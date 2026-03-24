@@ -319,7 +319,7 @@ export default function GiveMonthlyPage() {
                     <Reveal>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
-                            <span className="hero-highlight" style={{ color: "#FF6B00" }}>Help us change that.</span>
+                            <span style={{ color: "#FF6B00" }}>Help us change that.</span>
                         </h2>
                     </Reveal>
                     <Reveal delay={0.1}>
