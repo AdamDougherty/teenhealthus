@@ -210,10 +210,10 @@ export default function GetInvolvedPage() {
               <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#000000', opacity: 0.6 }}>
                 Donate
               </p>
-              <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl" style={{ color: '#000000' }}>
+              <h2 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl" style={{ color: '#000000' }}>
                 Fund essentials that move fast
               </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed" style={{ color: '#000000', opacity: 0.8 }}>
+              <p className="mt-3 max-w-lg text-sm leading-relaxed" style={{ color: '#000000', opacity: 0.7 }}>
                 Every dollar goes toward packing and shipping essentials kits to youth
                 through our partner agencies. Donate once or set up a monthly gift to keep
                 kits moving.
