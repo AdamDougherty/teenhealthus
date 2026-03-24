@@ -29,8 +29,8 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.15}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
-                Teen Health focuses on practical essentials for vulnerable youth — delivered
-                through partners that already have trust in the community.
+                Teen Health focuses on practical essentials for vulnerable youth —<br />
+                delivered through partners that already have trust in the community.
               </p>
             </Reveal>
           </div>
