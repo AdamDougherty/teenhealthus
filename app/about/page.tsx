@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -24,7 +24,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                A simple mission with real-world logistics
+                A simple mission with<br />real-world logistics
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
@@ -38,6 +38,19 @@ export default function AboutPage() {
       </section>
 
       <Container className="py-14 sm:py-16">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/6" }}>
+            <Image
+              src="/images/youth/IMG_1205.jpeg"
+              alt="Teen Health team holding banner with backpack kits"
+              fill
+              className="object-cover object-[50%_20%]"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </Reveal>
+
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
