@@ -89,7 +89,7 @@ export default function AboutPage() {
 
         {/* Our story — full width */}
         <Reveal>
-          <section className="mt-14 max-w-3xl space-y-4">
+          <section className="mt-14 space-y-4">
             <h2 className="text-2xl font-normal tracking-tight text-ink">
               Our story
             </h2>
