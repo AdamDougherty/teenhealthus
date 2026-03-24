@@ -21,10 +21,11 @@ export default function GetInvolvedPage() {
                 Get Involved
               </p>
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                There are lots of ways<br />to&nbsp;help
+                There are many ways to&nbsp;help
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
-                Donate, volunteer, or partner with us — everything you need to make an impact, all in one place.
+                Donate, volunteer, or partner with us — everything you need to make<br />
+                an impact, all in one place.
               </p>
               <div className="mt-8">
                 <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
