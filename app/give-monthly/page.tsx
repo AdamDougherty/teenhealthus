@@ -87,21 +87,21 @@ export default function GiveMonthlyPage() {
                         alt="Volunteers preparing essentials kits"
                         fill
                         priority
-                        className="object-cover opacity-70"
+                        className="object-cover opacity-60"
                         sizes="100vw"
                     />
                 </div>
-                {/* Subtle bottom gradient for text readability */}
+                {/* Bottom gradient for text readability */}
                 <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0"
                     style={{
                         background:
-                            "linear-gradient(to top, rgba(26,42,110,0.6) 0%, rgba(26,42,110,0.25) 50%, transparent 100%)",
+                            "linear-gradient(to top, rgba(26,42,110,0.75) 0%, rgba(26,42,110,0.45) 40%, rgba(26,42,110,0.1) 100%)",
                     }}
                 />
                 <Container className="relative z-10 flex min-h-[70vh] items-center">
-                    <div className="max-w-2xl">
+                    <div className="max-w-2xl" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Give monthly
