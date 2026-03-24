@@ -178,16 +178,16 @@ export default function GetInvolvedPage() {
           </div>
 
           <Reveal delay={0.12}>
-            <div className="mt-6 rounded-3xl border border-border p-8 shadow-soft sm:p-10" style={{ backgroundColor: '#4A9AD9', color: '#0D2447' }}>
+            <div className="mt-6 rounded-3xl border border-border p-8 text-white shadow-soft sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#0D2447', opacity: 0.6 }}>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                     Corporate partnerships
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl">
                     Become a corporate partner
                   </h3>
-                  <p className="mt-3 max-w-lg text-sm leading-relaxed" style={{ color: '#0D2447', opacity: 0.75 }}>
+                  <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/70">
                     250+ companies in the natural products industry already partner with Teen Health.
                     Donate product, fund operations, or lend strategic expertise — and help essentials
                     reach the youth who need them most.
@@ -206,14 +206,14 @@ export default function GetInvolvedPage() {
         {/* Donate */}
         <section id="donate" className="mt-14 scroll-mt-24">
           <Reveal>
-            <div className="rounded-3xl p-8 sm:p-10" style={{ backgroundColor: '#4A9AD9', color: '#0D2447' }}>
-              <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#0D2447', opacity: 0.6 }}>
+            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                 Donate
               </p>
               <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl">
                 Fund essentials that move fast
               </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed" style={{ color: '#0D2447', opacity: 0.75 }}>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
                 Every dollar goes toward packing and shipping essentials kits to youth
                 through our partner agencies. Donate once or set up a monthly gift to keep
                 kits moving.
@@ -223,7 +223,7 @@ export default function GetInvolvedPage() {
                 <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
                   Donate now
                 </Button>
-                <Button href="#partner" variant="ghost" style={{ color: '#0D2447' }} className="hover:bg-black/5">
+                <Button href="#partner" variant="ghost" className="text-white hover:bg-white/10">
                   Partner with us
                 </Button>
               </div>
@@ -244,9 +244,9 @@ export default function GetInvolvedPage() {
                   },
                 ].map((item, index) => (
                   <Reveal key={item.amount} delay={index * 0.06}>
-                    <div className="rounded-2xl border p-5" style={{ borderColor: 'rgba(13,36,71,0.15)', backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                       <div className="text-sm font-normal">{item.amount}</div>
-                      <div className="mt-2 text-sm" style={{ color: '#0D2447', opacity: 0.75 }}>{item.desc}</div>
+                      <div className="mt-2 text-sm text-white/80">{item.desc}</div>
                     </div>
                   </Reveal>
                 ))}
