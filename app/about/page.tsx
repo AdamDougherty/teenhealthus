@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeading } from "@/components/SectionHeading";
+
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
@@ -12,27 +12,50 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-transparent">
-      <Container className="py-14 sm:py-16">
-        <Reveal>
-          <SectionHeading
-            eyebrow="About"
-            title="A simple mission with real-world logistics"
-            description="Teen Health focuses on practical essentials for vulnerable youth — delivered through partners that already have trust in the community."
+      {/* ─── HERO ─── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/youth/IMG_1205.jpeg"
+            alt="Teen Health team holding banner with backpack kits"
+            fill
+            priority
+            className="object-cover object-[50%_20%] opacity-80"
+            sizes="100vw"
           />
-        </Reveal>
-
-        <Reveal>
-          <div className="mt-10 relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/6" }}>
-            <Image
-              src="/images/youth/IMG_1205.jpeg"
-              alt="Teen Health team holding banner with backpack kits"
-              fill
-              className="object-cover object-[50%_20%]"
-              sizes="100vw"
-              priority
-            />
+        </div>
+        {/* Dark bottom gradient for text readability */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 40%, transparent 70%)",
+          }}
+        />
+        <Container className="relative z-10 flex min-h-[70vh] items-center">
+          <div className="max-w-3xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                About
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                A simple mission with{"\u00A0"}real&#8209;world logistics
+              </h1>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
+                Teen Health focuses on practical essentials for vulnerable youth — delivered
+                through partners that already have trust in the community.
+              </p>
+            </Reveal>
           </div>
-        </Reveal>
+        </Container>
+      </section>
+
+      <Container className="py-14 sm:py-16">
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
