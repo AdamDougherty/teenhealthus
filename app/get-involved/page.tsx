@@ -38,58 +38,6 @@ export default function GetInvolvedPage() {
       </section>
 
       <Container className="py-14 sm:py-16">
-        {/* Donate */}
-        <section id="donate" className="mt-12 scroll-mt-24">
-          <Reveal>
-            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
-                Donate
-              </p>
-              <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl">
-                Fund essentials that move fast
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
-                Every dollar goes toward packing and shipping essentials kits to youth
-                through our partner agencies. Donate once or set up a monthly gift to keep
-                kits moving.
-              </p>
-
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
-                  Donate now
-                </Button>
-                <Button href="#partner" variant="ghost" className="text-white hover:bg-white/10">
-                  Partner with us
-                </Button>
-              </div>
-
-              <div className="mt-8 grid gap-4 md:grid-cols-3">
-                {[
-                  {
-                    amount: "$25",
-                    desc: "Helps assemble a basic essentials kit.",
-                  },
-                  {
-                    amount: "$100",
-                    desc: "Supports bulk shipping and distribution.",
-                  },
-                  {
-                    amount: "$500",
-                    desc: "Helps move emergency supplies quickly.",
-                  },
-                ].map((item, index) => (
-                  <Reveal key={item.amount} delay={index * 0.06}>
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <div className="text-sm font-normal">{item.amount}</div>
-                      <div className="mt-2 text-sm text-white/80">{item.desc}</div>
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </section>
-
         {/* Volunteer */}
         <section id="volunteer" className="mt-14 scroll-mt-24">
           <Reveal>
@@ -230,10 +178,10 @@ export default function GetInvolvedPage() {
           </div>
 
           <Reveal delay={0.12}>
-            <div className="mt-6 rounded-3xl border border-border bg-ink p-8 text-white shadow-soft sm:p-10">
+            <div className="mt-6 rounded-3xl border border-border p-8 text-white shadow-soft sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                     Corporate partnerships
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl">
@@ -250,6 +198,58 @@ export default function GetInvolvedPage() {
                     Learn more &amp; apply
                   </Button>
                 </div>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+        {/* Donate */}
+        <section id="donate" className="mt-14 scroll-mt-24">
+          <Reveal>
+            <div className="rounded-3xl p-8 text-white sm:p-10" style={{ backgroundColor: '#4A9AD9' }}>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+                Donate
+              </p>
+              <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl">
+                Fund essentials that move fast
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
+                Every dollar goes toward packing and shipping essentials kits to youth
+                through our partner agencies. Donate once or set up a monthly gift to keep
+                kits moving.
+              </p>
+
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
+                  Donate now
+                </Button>
+                <Button href="#partner" variant="ghost" className="text-white hover:bg-white/10">
+                  Partner with us
+                </Button>
+              </div>
+
+              <div className="mt-8 grid gap-4 md:grid-cols-3">
+                {[
+                  {
+                    amount: "$25",
+                    desc: "Helps assemble a basic essentials kit.",
+                  },
+                  {
+                    amount: "$100",
+                    desc: "Supports bulk shipping and distribution.",
+                  },
+                  {
+                    amount: "$500",
+                    desc: "Helps move emergency supplies quickly.",
+                  },
+                ].map((item, index) => (
+                  <Reveal key={item.amount} delay={index * 0.06}>
+                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <div className="text-sm font-normal">{item.amount}</div>
+                      <div className="mt-2 text-sm text-white/80">{item.desc}</div>
+                    </div>
+                  </Reveal>
+                ))}
               </div>
             </div>
           </Reveal>
