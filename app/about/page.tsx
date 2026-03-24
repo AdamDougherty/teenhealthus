@@ -87,30 +87,31 @@ export default function AboutPage() {
         </div>
 
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start">
+        {/* Our story — full width */}
+        <Reveal>
+          <section className="mt-14 max-w-3xl space-y-4">
+            <h2 className="text-2xl font-normal tracking-tight text-ink">
+              Our story
+            </h2>
+            <p className="text-base leading-relaxed text-ink/80">
+              We started in 2022 with a simple question: what happens when a young person
+              doesn&apos;t have access to the basics — clean food, water, hygiene products,
+              personal care? The answer wasn&apos;t hard to find, but the solution required
+              a new approach.
+            </p>
+            <p className="text-base leading-relaxed text-ink/80">
+              Today Teen Health rescues surplus product from brands and
+              distributors, assembles essentials kits, and delivers them through a
+              growing network of local agencies that already have trust in the
+              community. Based in Southern California, our reach extends nationally
+              through strategic logistics partnerships.
+            </p>
+          </section>
+        </Reveal>
+
+        {/* Contact + Quick Links — side by side */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
           <Reveal>
-            <section className="space-y-4">
-              <h2 className="text-2xl font-normal tracking-tight text-ink">
-                Our story
-              </h2>
-              <p className="text-base leading-relaxed text-ink/80">
-                We started in 2022 with a simple question: what happens when a young person
-                doesn't have access to the basics — clean food, water, hygiene products,
-                personal care? The answer wasn't hard to find, but the solution required
-                a new approach.
-              </p>
-              <p className="text-base leading-relaxed text-ink/80">
-                Today Teen Health rescues surplus product from brands and
-                distributors, assembles essentials kits, and delivers them through a
-                growing network of local agencies that already have trust in the
-                community. Based in Southern California, our reach extends nationally
-                through strategic logistics partnerships.
-              </p>
-            </section>
-          </Reveal>
-
-
-          <aside className="space-y-6">
             <Card>
               <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -120,24 +121,24 @@ export default function AboutPage() {
                 <ContactForm />
               </div>
             </Card>
+          </Reveal>
 
-            <Reveal delay={0.08}>
-              <Card>
-                <div className="text-sm font-normal tracking-tight text-ink">Quick links</div>
-                <div className="mt-4 space-y-2 text-sm">
-                  <a href="https://www.classy.org/give/665776/#!/donation/checkout" className="block hover:text-ink">
-                    Donate
-                  </a>
-                  <a href="/get-involved#volunteer" className="block hover:text-ink">
-                    Volunteer
-                  </a>
-                  <a href="/our-why" className="block hover:text-ink">
-                    Learn hub
-                  </a>
-                </div>
-              </Card>
-            </Reveal>
-          </aside>
+          <Reveal delay={0.08}>
+            <Card>
+              <div className="text-sm font-normal tracking-tight text-ink">Quick links</div>
+              <div className="mt-4 space-y-2 text-sm">
+                <a href="https://www.classy.org/give/665776/#!/donation/checkout" className="block hover:text-ink">
+                  Donate
+                </a>
+                <a href="/get-involved#volunteer" className="block hover:text-ink">
+                  Volunteer
+                </a>
+                <a href="/our-why" className="block hover:text-ink">
+                  Learn hub
+                </a>
+              </div>
+            </Card>
+          </Reveal>
         </div>
       </Container>
     </div>
