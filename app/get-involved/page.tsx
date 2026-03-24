@@ -12,15 +12,31 @@ export const metadata = {
 export default function GetInvolvedPage() {
   return (
     <div className="bg-transparent">
-      <Container className="py-14 sm:py-16">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Get involved"
-            title="There are lots of ways to help"
-            description="This page combines donation, volunteering, and partnerships in one place (instead of many smaller pages)."
-          />
-        </Reveal>
+      {/* ─── HERO ─── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+        <Container className="relative z-10 flex min-h-[70vh] items-center">
+          <div className="max-w-3xl">
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                Get Involved
+              </p>
+              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                There are lots of ways<br />to&nbsp;help
+              </h1>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
+                Donate, volunteer, or partner with us — everything you need to make an impact, all in one place.
+              </p>
+              <div className="mt-8">
+                <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF6B00', color: '#fff' }}>
+                  Start giving
+                </Button>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
 
+      <Container className="py-14 sm:py-16">
         {/* Donate */}
         <section id="donate" className="mt-12 scroll-mt-24">
           <Reveal>
