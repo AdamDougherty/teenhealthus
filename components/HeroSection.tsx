@@ -60,7 +60,7 @@ export function HeroSection() {
 
         <motion.h1
           {...anim(0.4)}
-          className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl"
+          className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl"
         >
           Healthy Essentials.
           <br />
