@@ -314,21 +314,17 @@ export default function GiveMonthlyPage() {
             </section>
 
             {/* Final CTA */}
-            <section style={{ backgroundColor: '#FAF3EB' }}>
-                <Container className="py-16 text-center sm:py-20">
-                    <Reveal>
-                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
+            <Container className="py-16 sm:py-20">
+                <Reveal>
+                    <div className="rounded-3xl p-8 text-center text-white sm:p-10" style={{ backgroundColor: '#3578B2' }}>
+                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
                             <span style={{ color: "#FF6B00" }}>Help us change that.</span>
                         </h2>
-                    </Reveal>
-                    <Reveal delay={0.1}>
-                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
+                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/80">
                             Join the community of monthly supporters keeping essentials kits
                             flowing to youth who need them — every single month.
                         </p>
-                    </Reveal>
-                    <Reveal delay={0.2}>
                         <div className="mt-8">
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout"
@@ -338,9 +334,9 @@ export default function GiveMonthlyPage() {
                                 Give monthly now
                             </Button>
                         </div>
-                    </Reveal>
-                </Container>
-            </section>
+                    </div>
+                </Reveal>
+            </Container>
         </div>
     );
 }
