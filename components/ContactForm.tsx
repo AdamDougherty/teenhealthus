@@ -78,7 +78,7 @@ export function ContactForm() {
       </label>
 
       <div className="flex items-center gap-3">
-        <Button variant="primary" type="submit" disabled={status === "sending"}>
+        <Button variant="primary" type="submit" disabled={status === "sending"} style={{ backgroundColor: '#FF6B00', color: 'white' }}>
           {status === "sending" ? "Sending…" : "Send message"}
         </Button>
 
