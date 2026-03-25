@@ -39,7 +39,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
         <Reveal>
-          <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] text-white/60 sm:block">
+          <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] text-white/80 sm:block">
             Essential support · Youth-centered · Built to scale
           </p>
         </Reveal>
@@ -53,7 +53,7 @@ export function HeroSection() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base">
+          <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/90 sm:text-base">
             Teen Health supports vulnerable youth and young adults with nourishing
             food, hydration, and personal care — plus a next step through trusted
             local partners.
