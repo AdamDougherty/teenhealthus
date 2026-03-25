@@ -87,7 +87,7 @@ export default function GiveMonthlyPage() {
                         alt="Volunteers preparing essentials kits"
                         fill
                         priority
-                        className="object-cover object-[center_25%] opacity-80"
+                        className="object-cover object-[center_75%] opacity-80"
                         sizes="100vw"
                     />
                 </div>
