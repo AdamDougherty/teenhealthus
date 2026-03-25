@@ -127,26 +127,26 @@ export default function ProgramsPage() {
 
 
         <Reveal delay={0.1}>
-          <div className="mt-12 rounded-3xl bg-ink p-8 text-white sm:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+          <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
               Go deeper
             </p>
-            <h2 className="mt-4 text-3xl font-normal tracking-tight sm:text-4xl">
+            <h2 className="mx-auto max-w-2xl mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               Every kit starts with a conversation.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
+            <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-ink/70">
               Our programs are built on relationships — with the brands that donate, the
               volunteers that pack, and the agencies that distribute. Learn more about the
               issues youth face or find a way to help.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button href="/our-why" variant="primary">
                 Learn more
               </Button>
               <Button
                 href="/get-involved"
                 variant="ghost"
-                className="text-white hover:bg-white/10"
+                className="text-ink hover:bg-ink/10"
               >
                 Ways to help
               </Button>

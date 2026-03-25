@@ -10,14 +10,14 @@ export function LandInitiativeCard() {
     return (
         <Card className="flex h-full flex-col overflow-hidden p-0">
             {/* Header band */}
-            <div className="bg-ink px-8 py-6">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+            <div className="px-8 py-6" style={{ backgroundColor: '#E5EEFB' }}>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
                     Signature Campaign
                 </p>
-                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-white">
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
                     The California Regenerative Youth Land&nbsp;Initiative
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/75">
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">
                     We are acquiring two working ranch properties in Southern California
                     where unhoused young adults ages 18–29 live on-site, earn wages,
                     build real skills, and prepare for permanent housing — at their own
