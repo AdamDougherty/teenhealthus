@@ -64,7 +64,7 @@ export default function VolunteerPage() {
           />
         </div>
 
-        <Container className="relative z-10 flex min-h-[70vh] items-center">
+        <div className="relative z-10 flex min-h-[70vh] items-center pl-6 sm:pl-10 lg:pl-16">
           <div className="max-w-2xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
@@ -92,7 +92,7 @@ export default function VolunteerPage() {
               </div>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ─── VOLUNTEER ROLES ─── */}
