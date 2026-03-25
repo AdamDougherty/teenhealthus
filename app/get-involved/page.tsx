@@ -179,21 +179,19 @@ export default function GetInvolvedPage() {
 
           <Reveal delay={0.12}>
             <div className="mt-6 rounded-3xl border border-border p-8 shadow-soft sm:p-10" style={{ backgroundColor: '#E5EEFB', color: '#000000' }}>
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#000000', opacity: 0.6 }}>
-                    Corporate partnerships
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl" style={{ color: '#000000' }}>
-                    Become a corporate partner
-                  </h3>
-                  <p className="mt-3 max-w-lg text-sm leading-relaxed" style={{ color: '#000000', opacity: 0.7 }}>
-                    250+ companies in the natural products industry already partner with Teen Health.
-                    Donate product, fund operations, or lend strategic expertise — and help essentials
-                    reach the youth who need them most.
-                  </p>
-                </div>
-                <div className="shrink-0">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#000000', opacity: 0.6 }}>
+                  Corporate partnerships
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight sm:text-3xl" style={{ color: '#000000' }}>
+                  Become a corporate partner
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed" style={{ color: '#000000', opacity: 0.7 }}>
+                  250+ companies in the natural products industry already partner with Teen Health.
+                  Donate product, fund operations, or lend strategic expertise — and help essentials
+                  reach the youth who need them most.
+                </p>
+                <div className="mt-6">
                   <Button href="/partner#become-a-partner" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                     Learn more &amp; apply
                   </Button>
