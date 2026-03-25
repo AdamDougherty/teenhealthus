@@ -101,7 +101,7 @@ export default function GiveMonthlyPage() {
                     }}
                 />
                 <Container className="relative z-10 flex min-h-[70vh] items-center">
-                    <div className="ml-auto max-w-2xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+                    <div className="ml-auto max-w-xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Give monthly
