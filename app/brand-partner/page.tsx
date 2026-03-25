@@ -77,7 +77,7 @@ export default function BrandPartnerPage() {
       {/* ——— HERO ——— */}
       <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         <Image
-          src="/images/shared/Newer Pictures/IMG_8668.jpeg"
+          src="/images/shared/Newer Pictures/two-women-volunteering.jpeg"
           alt="Teen Health youth partnership event"
           fill
           priority
