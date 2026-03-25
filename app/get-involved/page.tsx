@@ -51,7 +51,7 @@ export default function GetInvolvedPage() {
           <Reveal delay={0.05}>
             <div className="relative mt-8 mb-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
               <Image
-                src="/images/shared/IMG_2274.jpeg"
+                src="/images/shared/teen-health-table.jpeg"
                 alt="Volunteers sorting and preparing supplies"
                 fill
                 className="object-cover" style={{ objectPosition: "center 15%" }}
