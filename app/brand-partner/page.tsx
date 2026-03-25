@@ -201,12 +201,13 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "4/3" }}>
                 <Image
                   src="/images/shared/IMG_3800.jpeg"
                   alt="Products ready for youth distribution"
                   fill
                   className="object-cover"
+                  style={{ objectPosition: 'center 85%' }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
