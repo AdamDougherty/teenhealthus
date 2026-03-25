@@ -110,7 +110,7 @@ export default function GiveMonthlyPage() {
                         <Reveal delay={0.1}>
                             <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.0 }}>
                                 Give essentials to youth{" "}
-                                <span className="whitespace-nowrap" style={{ color: "#FF6B00" }}>every month</span>
+                                <span className="whitespace-nowrap" style={{ color: "#FF8005" }}>every month</span>
                             </h1>
                         </Reveal>
                         <Reveal delay={0.2}>
@@ -125,7 +125,7 @@ export default function GiveMonthlyPage() {
                                 <Button
                                     href="https://www.classy.org/give/665776/#!/donation/checkout"
                                     variant="primary"
-                                    style={{ backgroundColor: '#FF6B00', color: 'white' }}
+                                    style={{ backgroundColor: '#FF8005', color: 'white' }}
                                 >
                                     Start giving monthly
                                 </Button>
@@ -217,7 +217,7 @@ export default function GiveMonthlyPage() {
                                     <p className="mt-3 text-sm leading-relaxed text-ink/70">
                                         {tier.impact}
                                     </p>
-                                    <div className="mt-4 text-sm font-semibold opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#FF6B00' }}>
+                                    <div className="mt-4 text-sm font-semibold opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#FF8005' }}>
                                         Give {tier.amount}/mo →
                                     </div>
                                 </a>
@@ -230,7 +230,7 @@ export default function GiveMonthlyPage() {
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout"
                                 variant="primary"
-                                style={{ backgroundColor: '#FF6B00', color: 'white' }}
+                                style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
                                 Start giving monthly
                             </Button>
@@ -319,7 +319,7 @@ export default function GiveMonthlyPage() {
                     <div className="rounded-3xl p-8 text-center text-white sm:p-10" style={{ backgroundColor: '#3578B2' }}>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
-                            <span style={{ color: "#FF6B00" }}>Help us change that.</span>
+                            <span style={{ color: "#FF8005" }}>Help us change that.</span>
                         </h2>
                         <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/80">
                             Join the community of monthly supporters keeping essentials kits
@@ -329,7 +329,7 @@ export default function GiveMonthlyPage() {
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout"
                                 variant="primary"
-                                style={{ backgroundColor: '#FF6B00', color: 'white' }}
+                                style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
                                 Give monthly now
                             </Button>
