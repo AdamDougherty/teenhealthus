@@ -44,13 +44,13 @@ export default function VolunteerPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#1a2a6e' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/shared/Newer Pictures/volunteer-gu-stroopwafel.jpg"
             alt="Teen Health volunteers at an event"
             fill
-            className="object-cover opacity-45" style={{ objectPosition: 'center 15%' }}
+            className="object-cover" style={{ objectPosition: 'center 15%' }}
             sizes="100vw"
             priority
           />
@@ -59,7 +59,7 @@ export default function VolunteerPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, rgba(26,42,110,0.72) 0%, rgba(30,58,138,0.68) 40%, rgba(37,99,200,0.62) 100%)",
+                "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 50%, transparent 100%)",
             }}
           />
         </div>
