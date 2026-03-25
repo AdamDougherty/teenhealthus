@@ -203,7 +203,7 @@ export default function BrandPartnerPage() {
             <Reveal delay={0.1}>
               <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
                 <Image
-                  src="/images/shared/IMG_3800.jpeg"
+                  src="/images/shared/yerba-mate-pallet.jpeg"
                   alt="Products ready for youth distribution"
                   fill
                   className="object-cover"
@@ -273,7 +273,7 @@ export default function BrandPartnerPage() {
                 num: "01",
                 title: "Tell us what you have",
                 desc: "Share product details, quantities, and any timing constraints. We'll confirm what fits our current needs. We work with a wide range of products across food, hydration, supplements, and personal care, so don't hesitate to reach out even if you're unsure.",
-                image: "/images/shared/IMG_5296.jpeg",
+                image: "/images/shared/teen-health-supplements.jpeg",
                 imageAlt: "Teen Health products ready to help youth",
                 imagePosition: "center 45%",
               },
@@ -281,7 +281,7 @@ export default function BrandPartnerPage() {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/Newer Pictures/IMG_8609_edited.jpg",
+                image: "/images/shared/Newer Pictures/body-armor-pallet.jpg",
                 imageAlt: "Warehouse stocked with health and wellness products ready for donation",
                 imagePosition: "center 60%",
               },
@@ -289,7 +289,7 @@ export default function BrandPartnerPage() {
                 num: "03",
                 title: "Products reach youth fast",
                 desc: "Donated products are kitted and distributed through our partner agencies to at-risk youth ages 13–29 across California. Every item goes directly to someone who needs it.",
-                image: "/images/partnerships/IMG_4664.jpg",
+                image: "/images/shared/young-people-products.jpg",
                 imageAlt: "Teen Health delivering kits to youth",
               },
             ].map((step) => (

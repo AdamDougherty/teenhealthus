@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/Public/Desktop/INSTRUCTIONS.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Welcome — Teen Health Website Editor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .steps {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      padding: 0.6rem 0 0.6rem 2.8rem;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 2rem;
+      height: 2rem;
+      background: #334155;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .phrase {
+      display: inline-block;
+      background: linear-gradient(135deg, #1e3a5f, #1e293b);
+      border: 1px solid #38bdf8;
+      border-radius: 8px;
+      padding: 0.3rem 0.75rem;
+      color: #7dd3fc;
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .phrase-block {
+      background: linear-gradient(135deg, #1e3a5f, #1e293b);
+      border: 1px solid #38bdf8;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      margin: 0.75rem 0;
+      text-align: center;
+    }
+
+    .phrase-block .phrase {
+      font-size: 1.1rem;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    .warning {
+      background: #2d1b0e;
+      border: 1px solid #f59e0b;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      color: #fcd34d;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .warning::before {
+      content: "⚠️  ";
+    }
+
+    .success {
+      background: #0d2818;
+      border: 1px solid #22c55e;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      color: #86efac;
+    }
+
+    .success::before {
+      content: "✅  ";
+    }
+
+    ul.tips {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.tips li {
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      position: relative;
+    }
+
+    ul.tips li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #818cf8;
+      font-weight: 700;
+    }
+
+    .examples {
+      background: #1a1a2e;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    .examples p {
+      padding: 0.3rem 0;
+      color: #a5b4fc;
+      font-style: italic;
+    }
+
+    .examples p::before {
+      content: '"';
+    }
+
+    .examples p::after {
+      content: '"';
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-note {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Welcome!</h1>
+    <p class="subtitle">This is your tool for editing the Teen Health website. Just talk to the AI — it does the hard
+      part for you.</p>
+
+    <h2>How It Works</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>You type what you want changed <strong>in plain English</strong></li>
+        <li>The AI makes the changes for you</li>
+        <li>You <strong>check your browser</strong> to see if you like it</li>
+        <li>If you like it → keep going or <span class="phrase">make it live</span></li>
+        <li>If you don't → say <span class="phrase">undo that</span> and it's reversed</li>
+      </ol>
+    </div>
+
+    <h2>Getting Started Each Session</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Antigravity (the AI assistant) should already be open — you'll see the chat window on screen</li>
+        <li>Open your browser to <a href="http://localhost:3000/" target="_blank"><strong>localhost:3000</strong></a> —
+          this is your live preview of the website</li>
+        <li>Type what you want changed in the Antigravity chat — and check your browser to see the result!</li>
+      </ol>
+    </div>
+
+    <h2>Example Things You Can Ask</h2>
+    <div class="examples">
+      <p>Change the hero headline to 'Nourishing youth in Orange County'</p>
+      <p>Make the donate button bigger</p>
+      <p>Update the phone number on the contact page</p>
+      <p>Add a new team member photo — I put the image in the project folder</p>
+      <p>Change the background color of the programs section to light blue</p>
+    </div>
+
+    <h2>Don't Like a Change?</h2>
+    <p>No worries — just say any of these:</p>
+    <div class="card" style="text-align:center; padding: 1rem;">
+      <span class="phrase">undo that</span>&nbsp;&nbsp;
+      <span class="phrase">go back</span>&nbsp;&nbsp;
+      <span class="phrase">revert</span>&nbsp;&nbsp;
+      <span class="phrase">I don't like that</span>
+    </div>
+    <p class="section-note">The AI will reverse the last change. Check your browser to confirm it's back to how it was.
+    </p>
+
+    <h2>Ready to Publish?</h2>
+    <p>When you've previewed everything and it looks good, just say:</p>
+    <div class="phrase-block">
+      <span class="phrase">"make it live"</span>
+    </div>
+    <p class="section-note">This pushes your changes to the real website. Always preview first!</p>
+
+    <div class="warning">Never say "make it live" without checking localhost:3000 first. Always preview!</div>
+
+    <h2>Helpful Tips</h2>
+    <div class="card">
+      <ul class="tips">
+        <li>Keep your <strong>browser open</strong> at all times — changes appear there instantly</li>
+        <li>Be specific about what you want: "make the text bigger" is okay, but "make the headline on the homepage 20%
+          bigger" is better</li>
+        <li>You can ask the AI questions too — "what pages does this site have?" or "where is the donate button?"</li>
+        <li>If something looks broken, say <span class="phrase">undo that</span> — it's always safe</li>
+        <li>You <strong>cannot break anything permanently</strong> — every change is saved and can be undone</li>
+      </ul>
+    </div>
+
+    <div class="success">You don't need to understand code. Just describe what you want and the AI handles the rest.
+    </div>
+
+  </div>
+
+
+</body></html>
