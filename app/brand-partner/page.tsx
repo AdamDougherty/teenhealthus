@@ -119,7 +119,7 @@ export default function BrandPartnerPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-start">
-                <Button href="#donate-product-form" variant="primary">
+                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                   Partner With Us
                 </Button>
                 <Button
@@ -170,7 +170,7 @@ export default function BrandPartnerPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="mt-10">
-                <Button href="#donate-product-form" variant="primary">
+                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                   Become a Partner
                 </Button>
               </div>
@@ -508,7 +508,7 @@ export default function BrandPartnerPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="mt-10">
-                <Button href="#donate-product-form" variant="primary">
+                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                   Become a Partner
                 </Button>
               </div>
@@ -662,6 +662,7 @@ export default function BrandPartnerPage() {
                       type="submit"
                       disabled={status === "sending"}
                       className="w-full"
+                      style={{ backgroundColor: '#FF8005', color: 'white' }}
                     >
                       {status === "sending" ? "Sending…" : "Submit donation inquiry"}
                     </Button>
