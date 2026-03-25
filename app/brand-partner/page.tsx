@@ -112,7 +112,7 @@ export default function BrandPartnerPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
-                Since 2022, we&apos;ve teamed up with 250+ companies to turn
+                Since 2022, we’ve teamed up with 250+ companies to turn
                 surplus into life-changing impact—across every aisle,
                 from nutrition to wellness and beyond.
               </p>
@@ -376,7 +376,7 @@ export default function BrandPartnerPage() {
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-ink/60">
                   We ensure these products reach at-risk youth and young adults
-                  (13–29). Unlike a traditional food bank, we&rsquo;re
+                  (13–29). Unlike a traditional food bank, we’re
                   intentional about the food, beverages, hydration, and
                   supplements we provide, raising the level of health and
                   wellness for those we support.
@@ -417,7 +417,7 @@ export default function BrandPartnerPage() {
                   Employee Engagement
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-ink/60">
-                  Host professional &ldquo;Product Kitting&rdquo; events where
+                  Host professional “Product Kitting” events where
                   corporate teams assemble dignity kits for foster youth.
                   These events boost employee morale while making a tangible
                   difference.
@@ -645,7 +645,7 @@ export default function BrandPartnerPage() {
           <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
             <Reveal>
               <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Let&rsquo;s Build a Healthier Future Together
+                Let’s Build a Healthier Future Together
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
