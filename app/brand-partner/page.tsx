@@ -490,7 +490,7 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* â”€â”€â”€ PRODUCT DONATION FORM â”€â”€â”€ */}
-      <section id="donate-product-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
+      <section id="donate-product-form" className="scroll-mt-24 py-20 sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left â€” Text */}
@@ -502,7 +502,7 @@ export default function BrandPartnerPage() {
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
                   Start a product donation.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-white/65">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/60">
                   Tell us about your product and our team will follow up within a
                   few business days to coordinate logistics.
                 </p>
@@ -528,11 +528,11 @@ export default function BrandPartnerPage() {
                     },
                   ].map((step) => (
                     <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-white/20">
+                      <div className="font-serif text-3xl font-normal text-ink/20">
                         {step.num}
                       </div>
                       <div className="mt-3 text-sm font-semibold">{step.title}</div>
-                      <p className="mt-2 text-xs leading-relaxed text-white/50">
+                      <p className="mt-2 text-xs leading-relaxed text-ink/50">
                         {step.desc}
                       </p>
                     </div>
