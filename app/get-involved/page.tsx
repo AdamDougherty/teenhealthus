@@ -13,7 +13,7 @@ export default function GetInvolvedPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563c8" }}>
         <Container className="relative z-10 flex min-h-[70vh] items-center">
           <div className="max-w-3xl">
             <Reveal>
