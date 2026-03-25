@@ -653,7 +653,7 @@ export default function BrandPartnerPage() {
       {/* ——— FINAL CTA ——— */}
       <section className="py-12 sm:py-16">
         <Container>
-          <div className="mx-auto max-w-3xl rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+          <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
             <Reveal>
               <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 Let&rsquo;s Build a Healthier Future Together
