@@ -82,7 +82,7 @@ export default function BrandPartnerPage() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: 'center 35%' }}
+          style={{ objectPosition: 'center 15%' }}
           sizes="100vw"
           quality={90}
         />
@@ -96,7 +96,7 @@ export default function BrandPartnerPage() {
           }}
         />
 
-        <Container className="relative z-10 flex min-h-[70vh] items-center justify-start">
+        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[70vh] items-center">
           <div className="max-w-2xl text-left">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
@@ -132,7 +132,7 @@ export default function BrandPartnerPage() {
               </div>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
 
