@@ -115,7 +115,7 @@ export default function GetInvolvedPage() {
               <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
-                    src="/images/partnerships/IMG_4664.jpg"
+                    src="/images/partnerships/IMG_1710.jpeg"
                     alt="Teen Health delivering kits to the Center for Autism"
                     fill
                     className="object-cover"
@@ -147,7 +147,7 @@ export default function GetInvolvedPage() {
               <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
-                    src="/images/partnerships/IMG_1710.jpeg"
+                    src="/images/partnerships/IMG_4664.jpg"
                     alt="Partnership distribution in action"
                     fill
                     className="object-cover"
