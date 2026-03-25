@@ -489,34 +489,6 @@ export default function BrandPartnerPage() {
         </Container>
       </section>
 
-      {/* â”€â”€â”€ FINAL CTA â”€â”€â”€ */}
-      <section className="py-12 sm:py-16">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <Reveal>
-              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Let&rsquo;s Build a Healthier Future Together
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-6 text-base leading-relaxed text-ink/60">
-                More at-risk youth with access to nutritious food and wellness
-                products means more young people thriving. More teens and young
-                adults with the support they need to focus on education, personal
-                growth, and building a bright future.
-              </p>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="mt-10">
-                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
-                  Become a Partner
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
       {/* â”€â”€â”€ PRODUCT DONATION FORM â”€â”€â”€ */}
       <section id="donate-product-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
@@ -673,6 +645,34 @@ export default function BrandPartnerPage() {
                   </form>
                 </Card>
               )}
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* ——— FINAL CTA ——— */}
+      <section className="py-12 sm:py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+            <Reveal>
+              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                Let&rsquo;s Build a Healthier Future Together
+              </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-6 text-base leading-relaxed text-ink/60">
+                More at-risk youth with access to nutritious food and wellness
+                products means more young people thriving. More teens and young
+                adults with the support they need to focus on education, personal
+                growth, and building a bright future.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="mt-10">
+                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
+                  Become a Partner
+                </Button>
+              </div>
             </Reveal>
           </div>
         </Container>
