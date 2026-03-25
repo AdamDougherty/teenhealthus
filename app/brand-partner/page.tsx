@@ -485,7 +485,7 @@ export default function BrandPartnerPage() {
             {/* Left â€” Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
                   Get started
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
