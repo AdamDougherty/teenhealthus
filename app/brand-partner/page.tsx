@@ -82,7 +82,7 @@ export default function BrandPartnerPage() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: 'center 25%' }}
+          style={{ objectPosition: 'center 35%' }}
           sizes="100vw"
           quality={90}
         />
@@ -96,8 +96,8 @@ export default function BrandPartnerPage() {
           }}
         />
 
-        <Container className="relative z-10 flex min-h-[70vh] items-center justify-end">
-          <div className="max-w-2xl text-right">
+        <Container className="relative z-10 flex min-h-[70vh] items-center justify-start">
+          <div className="max-w-2xl text-left">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Brand Partner
@@ -111,14 +111,14 @@ export default function BrandPartnerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white ml-auto">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
                 Since 2022, we&apos;ve teamed up with 250+ companies to turn
                 surplus into life-changing impact—across every aisle,
                 from nutrition to wellness and beyond.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-start">
                 <Button href="#donate-product-form" variant="primary">
                   Partner With Us
                 </Button>
