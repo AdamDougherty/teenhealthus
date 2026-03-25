@@ -36,9 +36,9 @@ export default function ProgramsPage() {
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Built around what youth <br />actually&nbsp;need
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                Fund a program that puts healthy essentials directly into the hands of youth
-                <br />who need them most — and help keep every kit stocked and ready.
+              <p className="mt-6 text-base leading-relaxed text-white" style={{ maxWidth: '34em' }}>
+                Fund a program that puts healthy essentials directly into the hands of youth<br />
+                who need them most — and help keep every kit stocked and ready.
               </p>
             </Reveal>
           </div>
