@@ -114,7 +114,7 @@ export default function GiveMonthlyPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.2}>
-                            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+                            <p className="mt-6 max-w-xl text-base leading-relaxed text-white">
                                 Healthy food, hydration, and personal care are not one-time needs.
                                 Your monthly gift keeps essentials kits moving to vulnerable youth
                                 and young adults — consistently, reliably, and with dignity.
