@@ -317,7 +317,7 @@ export default function GiveMonthlyPage() {
             <Container className="py-16 sm:py-20">
                 <Reveal>
                     <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
-                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
+                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
                             <span style={{ color: "#FF8005" }}>Help us change that.</span>
                         </h2>
