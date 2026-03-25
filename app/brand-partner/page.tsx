@@ -81,7 +81,8 @@ export default function BrandPartnerPage() {
           alt="Teen Health youth partnership event"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: 'center 25%' }}
           sizes="100vw"
           quality={90}
         />
