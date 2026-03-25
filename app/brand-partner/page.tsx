@@ -313,8 +313,8 @@ export default function BrandPartnerPage() {
                       fill
                       className="object-cover"
                       style={{ objectPosition: (step as any).imagePosition ?? 'top' }}
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      quality={90}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={100}
                     />
                   </div>
                 </div>
