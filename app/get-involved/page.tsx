@@ -28,7 +28,7 @@ export default function GetInvolvedPage() {
                 an impact, all in one place.
               </p>
               <div className="mt-8">
-                <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+                <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Start giving
                 </Button>
               </div>
@@ -94,7 +94,7 @@ export default function GetInvolvedPage() {
           </div>
 
           <div className="mt-8">
-            <Button href="/volunteer#volunteer-form" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+            <Button href="/volunteer#volunteer-form" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
               Volunteer interest form
             </Button>
           </div>
@@ -135,7 +135,7 @@ export default function GetInvolvedPage() {
                     <div>• Natural personal care</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/brand-partner#donate-product-form" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+                    <Button href="/brand-partner#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                       Start a product donation
                     </Button>
                   </div>
@@ -168,7 +168,7 @@ export default function GetInvolvedPage() {
                     <div>• Schools & community orgs</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/distribute#distribution-form" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+                    <Button href="/distribute#distribution-form" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                       Become a distribution partner
                     </Button>
                   </div>
@@ -194,7 +194,7 @@ export default function GetInvolvedPage() {
                   </p>
                 </div>
                 <div className="shrink-0">
-                  <Button href="/partner#become-a-partner" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+                  <Button href="/partner#become-a-partner" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                     Learn more &amp; apply
                   </Button>
                 </div>
@@ -220,7 +220,7 @@ export default function GetInvolvedPage() {
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF7919', color: '#fff' }}>
+                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Donate now
                 </Button>
                 <Button href="#partner" variant="ghost" style={{ color: '#000000', borderColor: '#000000' }} className="hover:bg-[#000000]/10">
