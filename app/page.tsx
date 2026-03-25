@@ -30,7 +30,7 @@ export default function HomePage() {
             <div className="mt-10 mb-10 grid grid-cols-2 gap-4">
               <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/images/shared/kids_nighttime_sharpened.jpg"
+                  src="/images/shared/kids_nighttime.jpeg"
                   alt="Youth supported by Teen Health at night"
                   fill
                   className="object-cover"
