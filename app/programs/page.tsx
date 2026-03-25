@@ -17,7 +17,7 @@ export default function ProgramsPage() {
       <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         {/* Background image */}
         <Image
-          src="/images/shared/83.png"
+          src="/images/shared/program-sponsor-hero-banner-young-girl.png"
           alt="Program Sponsor hero"
           fill
           priority
