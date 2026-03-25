@@ -62,7 +62,7 @@ export function HeroSection() {
 
         <Reveal delay={0.3}>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF6B00', color: 'white' }}>
+            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
               Give today
             </Button>
             <Button
