@@ -105,8 +105,8 @@ export default function ProgramsPage() {
                     experiencing homelessness across Los Angeles. Each backpack
                     costs just $25 to assemble but delivers $50 in retail value —
                     doubling every dollar you give. It&apos;s immediate
-                    nourishment, dignity, and stability for youth who need it
-                    most.
+                    nourishment, dignity, and stability for the youth who
+                    need it the most.
                   </p>
                   <div className="mt-6">
                     <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/5X9ZLPQV7M" variant="primary" target="_blank" rel="noopener noreferrer">
