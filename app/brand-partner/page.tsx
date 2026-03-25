@@ -281,7 +281,7 @@ export default function BrandPartnerPage() {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/warehouse_health_products.png",
+                image: "/images/shared/Newer Pictures/IMG_8585_edited.jpg",
                 imageAlt: "Warehouse stocked with health and wellness products ready for donation",
                 imagePosition: "center 60%",
               },
