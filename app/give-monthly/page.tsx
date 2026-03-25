@@ -83,7 +83,7 @@ export default function GiveMonthlyPage() {
             <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/shared/vista teen trace pe.jpeg"
+                        src="/images/shared/teen-health-powerpaks.jpeg"
                         alt="Volunteers preparing essentials kits"
                         fill
                         priority
