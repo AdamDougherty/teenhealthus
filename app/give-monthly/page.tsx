@@ -316,12 +316,12 @@ export default function GiveMonthlyPage() {
             {/* Final CTA */}
             <Container className="py-16 sm:py-20">
                 <Reveal>
-                    <div className="rounded-3xl p-8 text-center text-white sm:p-10" style={{ backgroundColor: '#3578B2' }}>
-                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl">
+                    <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl md:text-5xl">
                             Essentials shouldn&rsquo;t be a luxury.{" "}
                             <span style={{ color: "#FF8005" }}>Help us change that.</span>
                         </h2>
-                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/80">
+                        <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
                             Join the community of monthly supporters keeping essentials kits
                             flowing to youth who need them — every single month.
                         </p>
