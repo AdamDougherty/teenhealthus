@@ -77,7 +77,7 @@ export default function BrandPartnerPage() {
       {/* ——— HERO ——— */}
       <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         <Image
-          src="/images/partnerships/IMG_5265.jpeg"
+          src="/images/shared/Newer Pictures/IMG_8668.jpeg"
           alt="Teen Health youth partnership event"
           fill
           priority
@@ -110,7 +110,7 @@ export default function BrandPartnerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70 ml-auto">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white ml-auto">
                 Since 2022, we&apos;ve teamed up with 250+ companies to turn
                 surplus into life-changing impact—across every aisle,
                 from nutrition to wellness and beyond.
