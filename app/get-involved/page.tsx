@@ -119,7 +119,7 @@ export default function GetInvolvedPage() {
                     alt="Teen Health delivering kits to the Center for Autism"
                     fill
                     className="object-cover"
-                    style={{ objectPosition: "center 30%" }}
+                    style={{ objectPosition: "center 70%" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
