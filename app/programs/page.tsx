@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -13,7 +14,17 @@ export default function ProgramsPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+        {/* Background image */}
+        <Image
+          src="/images/shared/83.png"
+          alt="Program Sponsor hero"
+          fill
+          priority
+          className="object-cover"
+        />
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
         {/* Text overlay */}
         <Container className="relative z-10 flex min-h-[70vh] items-center">
