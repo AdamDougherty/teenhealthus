@@ -50,7 +50,7 @@ export default function VolunteerPage() {
             src="/images/shared/Newer Pictures/volunteer-gu-stroopwafel.jpg"
             alt="Teen Health volunteers at an event"
             fill
-            className="object-cover" style={{ objectPosition: 'center 15%' }}
+            className="object-cover" style={{ objectPosition: 'center 40%' }}
             sizes="100vw"
             priority
           />
