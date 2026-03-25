@@ -214,9 +214,7 @@ export default function GetInvolvedPage() {
                 Fund essentials that move fast
               </h2>
               <p className="mt-3 text-sm leading-relaxed" style={{ color: '#000000', opacity: 0.7 }}>
-                Every dollar goes toward packing and shipping essentials kits to youth
-                through our partner agencies. Donate once or set up a monthly gift to keep
-                kits moving.
+                Every dollar goes directly toward packing and shipping essentials kits to youth through our partner agencies. Donate once or set up a monthly gift to keep kits moving.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
