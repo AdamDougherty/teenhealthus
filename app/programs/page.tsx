@@ -61,7 +61,7 @@ export default function ProgramsPage() {
             </p>
           </Reveal>
 
-          <div className="mx-auto mt-10 flex max-w-4xl flex-col gap-6">
+          <div className="mt-10 flex flex-col gap-6">
             {/* Top row — two smaller campaigns side by side */}
             <div className="grid gap-6 sm:grid-cols-2">
               {/* Campaign 0 — Easter Gift Bag Project */}
@@ -127,7 +127,7 @@ export default function ProgramsPage() {
 
 
         <Reveal delay={0.1}>
-          <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+          <div className="mt-16 rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
               Go deeper
             </p>
