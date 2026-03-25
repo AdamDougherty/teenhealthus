@@ -100,8 +100,8 @@ export default function GiveMonthlyPage() {
                             "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 40%, transparent 70%)",
                     }}
                 />
-                <Container className="relative z-10 flex min-h-[70vh] items-center justify-end">
-                    <div className="ml-auto max-w-xl text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+                <Container className="relative z-10 flex min-h-[70vh] items-center justify-end pr-0">
+                    <div className="ml-auto max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Give monthly
