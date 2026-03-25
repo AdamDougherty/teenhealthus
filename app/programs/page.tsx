@@ -24,11 +24,11 @@ export default function ProgramsPage() {
           className="object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/50 to-transparent" />
 
         {/* Text overlay */}
-        <Container className="relative z-10 flex min-h-[70vh] items-center">
-          <div className="max-w-3xl">
+        <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
+          <div className="max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Program Sponsor
@@ -42,7 +42,7 @@ export default function ProgramsPage() {
               </p>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       <Container className="py-14 sm:py-16">
