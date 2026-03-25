@@ -100,8 +100,8 @@ export default function GiveMonthlyPage() {
                             "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 40%, transparent 70%)",
                     }}
                 />
-                <Container className="relative z-10 flex min-h-[70vh] items-center justify-end pr-0">
-                    <div className="ml-auto max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+                <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
+                    <div className="max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Give monthly
@@ -132,7 +132,7 @@ export default function GiveMonthlyPage() {
                             </div>
                         </Reveal>
                     </div>
-                </Container>
+                </div>
             </section>
 
             {/* Impact stats bar */}
