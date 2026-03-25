@@ -23,7 +23,7 @@ export default function GetInvolvedPage() {
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 There are many ways to&nbsp;help
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                 Donate, volunteer, or partner with us — everything you need to make<br />
                 an impact, all in one place.
               </p>
