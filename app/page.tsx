@@ -229,7 +229,7 @@ export default function HomePage() {
                   {[
                     {
                       title: "Donate funds",
-                      desc: "Fund shipping, packing, and kits.",
+                      desc: "Fund shipping, packing, and kits where needed.",
                     },
                     {
                       title: "Donate product",
@@ -237,7 +237,7 @@ export default function HomePage() {
                     },
                     {
                       title: "Partner locally",
-                      desc: "Distribute kits directly to local youth.",
+                      desc: "Distribute kits directly to the youth they serve.",
                     },
                     {
                       title: "Share the story",
