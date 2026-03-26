@@ -169,7 +169,7 @@ export default function HomePage() {
                       Give essentials. Reduce waste.
                     </h2>
                     <p className="mt-4 text-base leading-relaxed text-ink/70">
-                      Every contribution helps youth stabilize today and plan for tomorrow.
+                      Every contribution helps youth stabilize today and plan for a better tomorrow.
                     </p>
 
                     <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
