@@ -67,7 +67,7 @@ export default function VolunteerPage() {
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 pt-32 sm:pt-40 pb-16 min-h-[70vh]">
           <div className="max-w-2xl">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FF8005" }}>
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
               </p>
             </Reveal>
