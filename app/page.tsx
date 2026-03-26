@@ -154,7 +154,7 @@ export default function HomePage() {
                   src="/images/shared/Newer Pictures/long-tent-2.jpg"
                   alt="Teen Health team with backpack kits ready for distribution"
                   fill
-                  className="object-cover object-bottom"
+                  className="object-cover object-left"
                   sizes="50vw"
                 />
               </div>
