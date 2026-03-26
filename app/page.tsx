@@ -30,7 +30,7 @@ export default function HomePage() {
             <div className="mt-10 mb-10 grid grid-cols-2 gap-4">
               <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/images/shared/kids_nighttime.jpeg"
+                  src="/images/shared/boys-nighttime.jpeg"
                   alt="Youth supported by Teen Health at night"
                   fill
                   className="object-cover"
@@ -39,7 +39,7 @@ export default function HomePage() {
               </div>
               <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/images/shared/kids_sunset.jpeg"
+                  src="/images/shared/girls-sunset.jpeg"
                   alt="Youth supported by Teen Health at sunset"
                   fill
                   className="object-cover"
@@ -195,7 +195,7 @@ export default function HomePage() {
             <div className="grid gap-0 lg:grid-cols-2 lg:items-stretch">
               <div className="relative hidden lg:block bg-mist" style={{ minHeight: "400px" }}>
                 <Image
-                  src="/images/shared/IMG_5283.jpeg"
+                  src="/images/shared/teen-health-bags.jpeg"
                   alt="Teen Health team with backpack kits ready for distribution"
                   fill
                   className="object-contain"

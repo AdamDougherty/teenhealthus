@@ -23,7 +23,7 @@ export const programs: Program[] = [
       "Packaged with dignity and consistency",
     ],
     image: {
-      src: "/images/shared/IMG_7098.jpeg",
+      src: "/images/shared/teen-health-protein-products.jpeg",
       alt: "Essential kits laid out and ready for distribution",
       position: "bottom",
     },
@@ -42,7 +42,7 @@ export const programs: Program[] = [
       "Reaches youth through local programs",
     ],
     image: {
-      src: "/images/shared/YMCA TAY2.jpeg",
+      src: "/images/shared/ymca.jpeg",
       alt: "Food rescue delivery at the Orangewood Foundation",
     },
   },
