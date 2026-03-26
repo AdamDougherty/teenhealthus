@@ -144,14 +144,13 @@ export default function HomePage() {
       </section>
 
       {/* Impact */}
-      <section className="section-dark py-16 text-white sm:py-20">
+      <section className="bg-transparent py-16 sm:py-20">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="Impact"
               title="Make it easy to trust the work"
               description="Real numbers. Real results. Real lives changed."
-              className="text-white [&_h2]:text-white [&_p]:text-white/80"
             />
           </Reveal>
 
@@ -179,8 +178,7 @@ export default function HomePage() {
             </Button>
             <Button
               href="/about"
-              variant="ghost"
-              className="text-white hover:bg-white/10"
+              variant="secondary"
             >
               Transparency & story
             </Button>
