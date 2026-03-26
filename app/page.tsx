@@ -195,7 +195,7 @@ export default function HomePage() {
             <div className="grid gap-0 lg:grid-cols-2 lg:items-stretch">
               <div className="relative hidden lg:block bg-mist" style={{ minHeight: "400px" }}>
                 <Image
-                  src="/images/shared/olive-crest-table.jpeg"
+                  src="/images/shared/olive-crest.jpeg"
                   alt="Teen Health team with backpack kits ready for distribution"
                   fill
                   className="object-contain"
