@@ -196,7 +196,7 @@ export default function HomePage() {
                   src="/images/shared/olive-crest.jpeg"
                   alt="Teen Health team with backpack kits ready for distribution"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="50vw"
                 />
               </div>
