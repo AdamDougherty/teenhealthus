@@ -268,7 +268,7 @@ export default function VolunteerPage() {
                   src="/images/shared/Newer Pictures/long-tent-2.jpg"
                   alt="Teen Health volunteers at an event"
                   fill
-                  className="object-cover"
+                  className="object-cover" style={{ objectPosition: 'center 25%' }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
