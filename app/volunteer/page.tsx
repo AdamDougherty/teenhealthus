@@ -194,6 +194,7 @@ export default function VolunteerPage() {
                 desc: "Join a packing session, delivery run, or project — and see firsthand how your time helps youth in need.",
                 image: "/images/events/IMG_0476.jpeg",
                 imageAlt: "Teen Health event with volunteers",
+                imagePosition: "30% 20%",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
@@ -215,6 +216,7 @@ export default function VolunteerPage() {
                       alt={step.imageAlt}
                       fill
                       className="object-cover"
+                      style={(step as any).imagePosition ? { objectPosition: (step as any).imagePosition } : undefined}
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
