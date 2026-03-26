@@ -187,6 +187,7 @@ export default function VolunteerPage() {
                 desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
                 image: "/images/shared/Newer Pictures/long-tent-2.jpg",
                 imageAlt: "Volunteers packing essentials kits",
+                imagePosition: "center bottom",
               },
               {
                 num: "03",
@@ -215,6 +216,7 @@ export default function VolunteerPage() {
                       alt={step.imageAlt}
                       fill
                       className="object-cover"
+                      style={step.imagePosition ? { objectPosition: step.imagePosition } : undefined}
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
