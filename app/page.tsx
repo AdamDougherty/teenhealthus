@@ -211,8 +211,7 @@ export default function HomePage() {
                       Give essentials. Reduce waste. Help youth take the next step.
                     </h2>
                     <p className="mt-4 text-base leading-relaxed text-ink/70">
-                      Whether you’re donating funds, donating product, or volunteering time,
-                      your support helps youth stabilize today and plan for tomorrow.
+                      Your support helps youth stabilize today and plan for tomorrow.
                     </p>
 
                     <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
@@ -230,7 +229,7 @@ export default function HomePage() {
                   {[
                     {
                       title: "Donate funds",
-                      desc: "Support shipping, packing, and kits where they’re needed most.",
+                      desc: "Fund shipping, packing, and kits.",
                     },
                     {
                       title: "Donate product",
@@ -238,7 +237,7 @@ export default function HomePage() {
                     },
                     {
                       title: "Partner locally",
-                      desc: "Agencies distribute kits directly to youth they serve.",
+                      desc: "Distribute kits directly to local youth.",
                     },
                     {
                       title: "Share the story",
