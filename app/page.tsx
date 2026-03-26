@@ -208,10 +208,11 @@ export default function HomePage() {
                       Ready to take action?
                     </p>
                     <h2 className="mt-4 text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                      Give essentials. Reduce waste. Help youth take the next step.
+                      Give essentials. Reduce waste.
                     </h2>
                     <p className="mt-4 text-base leading-relaxed text-ink/70">
-                      Help youth stabilize today and plan for tomorrow.
+                      Whether you’re donating funds, donating product, or volunteering time,
+                      your support helps youth stabilize today and plan for tomorrow.
                     </p>
 
                     <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
