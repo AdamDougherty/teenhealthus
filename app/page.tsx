@@ -149,12 +149,12 @@ export default function HomePage() {
         <Container>
           <div className="rounded-3xl border border-border bg-white overflow-hidden shadow-soft sm:p-0">
             <div className="grid gap-0 lg:grid-cols-2 lg:items-stretch">
-              <div className="relative hidden lg:block bg-mist" style={{ minHeight: "400px" }}>
+              <div className="relative hidden lg:block bg-mist">
                 <Image
                   src="/images/shared/Newer Pictures/long-tent.jpg"
                   alt="Teen Health team with backpack kits ready for distribution"
                   fill
-                  className="object-contain"
+                  className="object-cover object-bottom"
                   sizes="50vw"
                 />
               </div>
