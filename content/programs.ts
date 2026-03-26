@@ -23,7 +23,7 @@ export const programs: Program[] = [
       "Packaged with dignity and consistency",
     ],
     image: {
-      src: "/images/shared/teen-health-protein-products.jpeg",
+      src: "/images/shared/teen-health-bags.jpeg",
       alt: "Essential kits laid out and ready for distribution",
       position: "bottom",
     },
