@@ -78,7 +78,7 @@ export default function VolunteerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/80">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
                 Whether you can give a few hours or a few days, your skills and
                 energy help Teen Health sort, kit, and deliver essentials to
                 youth across the country.
