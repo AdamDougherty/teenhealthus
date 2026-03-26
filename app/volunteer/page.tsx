@@ -86,7 +86,7 @@ export default function VolunteerPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="mt-10">
-                <Button href="#volunteer-form" variant="primary">
+                <Button href="#volunteer-form" variant="primary" style={{ color: 'white' }}>
                   Sign up to volunteer
                 </Button>
               </div>
@@ -433,6 +433,7 @@ export default function VolunteerPage() {
                       type="submit"
                       disabled={status === "sending"}
                       className="w-full"
+                      style={{ color: 'white' }}
                     >
                       {status === "sending" ? "Sending…" : "Submit interest form"}
                     </Button>
