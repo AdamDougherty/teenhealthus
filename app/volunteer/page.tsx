@@ -185,7 +185,7 @@ export default function VolunteerPage() {
                 num: "02",
                 title: "We'll match you",
                 desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
-                image: "/images/programs/essential-kits/IMG_5111 2.jpeg",
+                image: "/images/shared/Newer Pictures/long-tent-2.jpg",
                 imageAlt: "Volunteers packing essentials kits",
               },
               {
