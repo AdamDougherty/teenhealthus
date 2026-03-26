@@ -249,7 +249,7 @@ export default function HomePage() {
                         <div className="text-sm font-normal tracking-tight text-ink">
                           {item.title}
                         </div>
-                        <p className="mt-2 text-sm text-ink/70">{item.desc}</p>
+                        <p className="mt-2 text-xs text-ink/70">{item.desc}</p>
                       </Card>
                     </Reveal>
                   ))}
