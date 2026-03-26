@@ -59,7 +59,7 @@ export default function VolunteerPage() {
             className="absolute inset-0"
             style={{
               background:
-                "rgba(0,0,0,0.15)",
+                "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 50%, transparent 100%)",
             }}
           />
         </div>
