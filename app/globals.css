@@ -7,7 +7,8 @@
   --font-serif: "Kazimir Text", "Kazmir Text", Georgia, serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -30,6 +31,7 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 ::selection {
   background: rgba(243, 170, 50, 0.45);
 }
@@ -39,20 +41,24 @@ a {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
 
 /* Hero highlight text */
 .hero-highlight {
-  background: linear-gradient(
-    135deg,
-    #FF6B00 0%,
-    #FF8533 40%,
-    #FF6B00 70%,
-    #E85E00 100%
-  );
+  background: linear-gradient(135deg,
+      #FDCF6A 0%,
+      #FFE08A 40%,
+      #FDCF6A 70%,
+      #E8B84A 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -61,8 +67,15 @@ a {
 }
 
 @keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Dark sections — deep navy with subtle light flare from bottom-right */
