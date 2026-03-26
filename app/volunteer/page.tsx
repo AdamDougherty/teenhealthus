@@ -65,7 +65,7 @@ export default function VolunteerPage() {
         </div>
 
         <div className="relative z-10 flex min-h-[70vh] items-center pl-6 sm:pl-10 lg:pl-16">
-          <div className="max-w-2xl rounded-2xl px-8 py-6" style={{ backgroundColor: 'rgba(0,0,0,0.25)', backdropFilter: 'blur(6px)' }}>
+          <div className="max-w-2xl rounded-2xl px-8 py-6" style={{ backgroundColor: 'rgba(0,0,0,0.15)', backdropFilter: 'blur(6px)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
