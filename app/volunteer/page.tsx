@@ -263,12 +263,12 @@ export default function VolunteerPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/2" }}>
+              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
                 <Image
                   src="/images/shared/Newer Pictures/long-tent.jpg"
                   alt="Teen Health volunteers at an event"
                   fill
-                  className="object-cover" style={{ objectPosition: 'center 35%' }}
+                  className="object-cover" style={{ objectPosition: 'center top' }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
