@@ -143,48 +143,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Impact */}
-      <section className="bg-transparent py-16 sm:py-20">
-        <Container>
-          <Reveal>
-            <SectionHeading
-              eyebrow="Impact"
-              title="Make it easy to trust the work"
-              description="Real numbers. Real results. Real lives changed."
-            />
-          </Reveal>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <Reveal delay={0.05}>
-              <Stat label="kits distributed" value="800" />
-            </Reveal>
-            <Reveal delay={0.13}>
-              <Stat
-                label="partner agencies"
-                value="—"
-              />
-            </Reveal>
-            <Reveal delay={0.21}>
-              <Stat
-                label="products rescued"
-                value="—"
-              />
-            </Reveal>
-          </div>
-
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
-              Donate
-            </Button>
-            <Button
-              href="/about"
-              variant="secondary"
-            >
-              Transparency & story
-            </Button>
-          </div>
-        </Container>
-      </section>
 
       {/* CTA */}
       <section className="bg-transparent py-16 sm:py-20">
