@@ -64,8 +64,8 @@ export default function VolunteerPage() {
           />
         </div>
 
-        <div className="relative z-10 flex min-h-[70vh] items-center pl-6 sm:pl-10 lg:pl-16">
-          <div className="max-w-2xl">
+        <div className="relative z-10 flex min-h-[70vh] items-end pl-6 sm:pl-10 lg:pl-16 pb-12 sm:pb-16">
+          <div className="max-w-2xl rounded-2xl px-8 py-6" style={{ backgroundColor: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(6px)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
@@ -78,7 +78,7 @@ export default function VolunteerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/70">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white/80">
                 Whether you can give a few hours or a few days, your skills and
                 energy help Teen Health sort, kit, and deliver essentials to
                 youth across the country.
