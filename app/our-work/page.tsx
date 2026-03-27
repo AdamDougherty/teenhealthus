@@ -231,7 +231,19 @@ export default function OurWorkPage() {
                                 Research &amp; Evidence Based
                             </h2>
                         </Reveal>
-                        <Reveal delay={0.06}>
+                        <Reveal delay={0.04}>
+                            <div className="mt-8 max-w-[52rem] overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+                                <Image
+                                    src="/images/shared/teen-health-powerpak-trace-supplements.jpeg"
+                                    alt="Teen Health Powerpak and trace supplements"
+                                    width={1200}
+                                    height={675}
+                                    className="h-full w-full object-cover"
+                                    sizes="(max-width: 896px) 100vw, 896px"
+                                />
+                            </div>
+                        </Reveal>
+                        <Reveal delay={0.08}>
                             <h3 className="mt-6 text-lg font-semibold text-ink/80">
                                 Nutrition, Mental Health, and Youth Stability in California
                             </h3>
