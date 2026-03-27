@@ -64,6 +64,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s ease-in-out infinite;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes shimmer {
