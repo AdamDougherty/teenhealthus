@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
@@ -310,7 +311,20 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        <Reveal delay={0.08}>
+                        <Reveal delay={0.06}>
+                            <div className="mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+                                <Image
+                                    src="/images/shared/elementary-kids.jpeg"
+                                    alt="Elementary school kids"
+                                    width={1200}
+                                    height={675}
+                                    className="h-full w-full object-cover"
+                                    sizes="(max-width: 896px) 100vw, 896px"
+                                />
+                            </div>
+                        </Reveal>
+
+                        <Reveal delay={0.1}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
                                 So many young people today are fighting battles no one can
                                 see — stress that never shuts off, moods that swing without
