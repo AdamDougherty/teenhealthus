@@ -28,7 +28,7 @@ export default function GetInvolvedPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
+              "linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)",
           }}
         />
         <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
