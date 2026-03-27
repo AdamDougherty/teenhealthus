@@ -13,22 +13,21 @@ export default function AboutPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
-        <div className="absolute inset-0 bg-white/[0.04]" />
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#E5EEFB" }}>
         <Container className="relative z-10 flex min-h-[70vh] items-center">
           <div className="max-w-3xl">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FF8005" }}>
                 About
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 A simple mission with<br />real-world logistics
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/65">
                 Teen Health focuses on practical essentials for vulnerable youth —<br />
                 delivered through partners that already have trust in the community.
               </p>
