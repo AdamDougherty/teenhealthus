@@ -136,7 +136,7 @@ export default function OurStoryPage() {
                                     alt="Yerba mate cart loaded with product for distribution"
                                     width={3000}
                                     height={2000}
-                                    className="h-96 w-full object-cover sm:h-[32rem]"
+                                    className="h-96 w-full object-cover object-top sm:h-[32rem]"
                                 />
                             </div>
                         </Reveal>
