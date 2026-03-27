@@ -121,7 +121,7 @@ export default function OurWorkPage() {
                                     </div>
                                     <div className="border-b border-border p-8">
                                         <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">200,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 12�24 experience homelessness each year</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 12�24 experience homelessness each year</p>
                                     </div>
                                 </div>
                                 {/* Row 2 */}
