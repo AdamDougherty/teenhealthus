@@ -100,9 +100,57 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        {/* Hero stat */}
+                        {/* ─── Youth Homelessness ─── */}
                         <Reveal delay={0.08}>
-                            <div className="mt-12 rounded-2xl border border-border bg-white p-10 shadow-sm">
+                            <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                                {/* Column headers */}
+                                <div className="grid grid-cols-2">
+                                    <div className="border-b border-r border-border px-6 py-3">
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">National</p>
+                                    </div>
+                                    <div className="border-b border-border px-6 py-3">
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">California</p>
+                                    </div>
+                                </div>
+                                {/* Row 1 */}
+                                <div className="grid grid-cols-2">
+                                    <div className="border-b border-r border-border p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">4.2 million</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 13–25 experience homelessness each year</p>
+                                    </div>
+                                    <div className="border-b border-border p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">~200,000</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under age 18 experience homelessness each year</p>
+                                    </div>
+                                </div>
+                                {/* Row 2 */}
+                                <div className="grid grid-cols-2">
+                                    <div className="border-r border-border p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">~150,000</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under 18 experience homelessness on any given night</p>
+                                    </div>
+                                    <div className="p-8">
+                                        <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">~9,900</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth under age 25 experience homelessness on any given night</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Reveal>
+
+                        {/* Divider */}
+                        <Reveal delay={0.14}>
+                            <div className="my-10 flex items-center gap-4">
+                                <div className="h-px flex-1 bg-border" />
+                                <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
+                                    Foster Care
+                                </p>
+                                <div className="h-px flex-1 bg-border" />
+                            </div>
+                        </Reveal>
+
+                        {/* Hero stat */}
+                        <Reveal delay={0.18}>
+                            <div className="rounded-2xl border border-border bg-white p-10 shadow-sm">
                                 <p className="font-serif text-5xl font-normal tracking-tight text-ink sm:text-6xl">
                                     40%
                                 </p>
@@ -115,7 +163,7 @@ export default function OurWorkPage() {
 
                         {/* Sub-stats */}
                         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <Reveal delay={0.14}>
+                            <Reveal delay={0.22}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                         27%
@@ -126,7 +174,7 @@ export default function OurWorkPage() {
                                     </p>
                                 </div>
                             </Reveal>
-                            <Reveal delay={0.18}>
+                            <Reveal delay={0.26}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                         14%
@@ -140,7 +188,7 @@ export default function OurWorkPage() {
                         </div>
 
                         {/* Divider */}
-                        <Reveal delay={0.2}>
+                        <Reveal delay={0.3}>
                             <div className="my-10 flex items-center gap-4">
                                 <div className="h-px flex-1 bg-border" />
                                 <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">
@@ -152,7 +200,7 @@ export default function OurWorkPage() {
 
                         {/* National / state stats */}
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                            <Reveal delay={0.22}>
+                            <Reveal delay={0.32}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         376,900
@@ -162,7 +210,7 @@ export default function OurWorkPage() {
                                     </p>
                                 </div>
                             </Reveal>
-                            <Reveal delay={0.26}>
+                            <Reveal delay={0.34}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
                                         44,400
