@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -14,29 +13,21 @@ export default function ProgramsPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
-        {/* Background image */}
-        <Image
-          src="/images/shared/program-sponsor-hero-banner-young-girl.png"
-          alt="Program Sponsor hero"
-          fill
-          priority
-          className="object-cover"
-        />
-        {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black/35 via-black/20 to-transparent" />
-
-        {/* Text overlay */}
-        <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
-          <div className="max-w-2xl text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
+          <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Program Sponsor
               </p>
-              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Built around what youth <br />actually&nbsp;need
               </h1>
-              <p className="mt-6 text-base leading-relaxed text-white">
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                 Fund a program that puts healthy essentials directly into the hands of youth<br />
                 who need them most — and help keep every kit stocked and ready.
               </p>
