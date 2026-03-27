@@ -55,10 +55,10 @@ a {
 /* Hero highlight text */
 .hero-highlight {
   background: linear-gradient(135deg,
-      #FF8005 0%,
-      #FF9B33 40%,
-      #FF8005 70%,
-      #E07000 100%);
+      #FDCF6A 0%,
+      #FFE08A 40%,
+      #FDCF6A 70%,
+      #E5B84D 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;

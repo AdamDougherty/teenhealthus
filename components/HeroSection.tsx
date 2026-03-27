@@ -32,7 +32,7 @@ export function HeroSection() {
           <h1 className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
             Healthy Essentials.
             <br />
-            <span className="hero-highlight" style={{ color: "#FF8005" }}>Delivered with Dignity.</span>
+            <span className="hero-highlight" style={{ color: "#FDCF6A" }}>Delivered with Dignity.</span>
           </h1>
         </Reveal>
 
