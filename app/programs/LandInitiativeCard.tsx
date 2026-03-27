@@ -78,14 +78,11 @@ export function LandInitiativeCard() {
                                     { phase: "Senior Apprentice", months: "Months 10–15", desc: "Crop planning, team leadership & enterprise management." },
                                     { phase: "Graduate", months: "When Ready", desc: "Job placement, housing navigation & alumni support." },
                                 ].map(({ phase, months, desc }) => (
-                                    <div key={phase} className="flex gap-3 rounded-lg border border-ink/10 p-4">
-                                        <div className="mt-1 h-2 w-2 shrink-0 rounded-full bg-sun" />
-                                        <div>
-                                            <p className="text-sm font-bold text-ink">
-                                                {phase} <span className="font-normal text-ink/50">· {months}</span>
-                                            </p>
-                                            <p className="mt-1 text-sm leading-snug text-ink/60">{desc}</p>
-                                        </div>
+                                    <div key={phase} className="rounded-lg border border-ink/10 p-4">
+                                        <p className="text-sm font-bold text-ink">
+                                            {phase} <span className="font-normal text-ink/50">· {months}</span>
+                                        </p>
+                                        <p className="mt-1 text-sm leading-snug text-ink/60">{desc}</p>
                                     </div>
                                 ))}
                             </div>
