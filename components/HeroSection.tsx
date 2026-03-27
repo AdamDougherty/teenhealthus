@@ -19,6 +19,15 @@ export function HeroSection() {
       />
 
 
+      {/* Subtle dark gradient for text readability */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)",
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
