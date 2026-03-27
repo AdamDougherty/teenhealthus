@@ -20,15 +20,6 @@ export function HeroSection() {
 
 
 
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(46,157,247,0.25) 0%, transparent 50%, rgba(255,201,7,0.2) 100%)",
-        }}
-      />
-
       {/* Content */}
       <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
         <Reveal>
