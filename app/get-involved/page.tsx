@@ -142,7 +142,7 @@ export default function GetInvolvedPage() {
                     alt="Supplements, personal care, hydration, and food products"
                     fill
                     className="object-cover"
-                    style={{ objectPosition: "center center" }}
+                    style={{ objectPosition: "center bottom" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
