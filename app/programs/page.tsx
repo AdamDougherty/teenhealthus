@@ -83,7 +83,7 @@ export default function ProgramsPage() {
                     community to at-risk youth who need it most.
                   </p>
                   <div className="mt-6">
-                    <Button href="#" variant="primary">
+                    <Button href="#" variant="primary" style={{ color: 'white' }}>
                       Sponsor This Program
                     </Button>
                   </div>
@@ -109,7 +109,7 @@ export default function ProgramsPage() {
                     need it the most.
                   </p>
                   <div className="mt-6">
-                    <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/5X9ZLPQV7M" variant="primary" target="_blank" rel="noopener noreferrer">
+                    <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/5X9ZLPQV7M" variant="primary" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
                       Sponsor This Program
                     </Button>
                   </div>
@@ -140,7 +140,7 @@ export default function ProgramsPage() {
               issues youth face or find a way to help.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Button href="/our-why" variant="primary">
+              <Button href="/our-why" variant="primary" style={{ color: 'white' }}>
                 Learn more
               </Button>
               <Button
