@@ -74,14 +74,11 @@ export default function ProgramsPage() {
                     Youth Nutrition Initiative
                   </h3>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                    Many youth in education, workforce development, housing, and
-                    community programs face food insecurity — causing energy to
-                    drop and engagement to suffer. Our initiative partners with
+                    Food insecurity undermines the programs youth depend on for
+                    education, job training, and housing support. We partner with
                     youth-serving organizations to provide consistent, allergen-friendly
-                    snack distribution through tutoring programs, workforce development,
-                    housing transitions, and community wellness programs. Designed to
-                    scale rapidly through new partnerships and corporate sponsors, the
-                    initiative delivers reliable nutrition to youth who need it most.
+                    snacks — keeping energy up and engagement strong. Built to scale
+                    through corporate sponsors and community partners.
                   </p>
                   <div className="mt-6">
                     <Button href="#" variant="primary" style={{ color: 'white' }}>
