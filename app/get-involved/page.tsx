@@ -15,7 +15,7 @@ export default function GetInvolvedPage() {
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         <Image
-          src="/images/shared/Newer Pictures/volunteers-mother-daughter.jpg"
+          src="/images/shared/Newer%20Pictures/volunteers-mother-daughter.jpg"
           alt="Volunteers — mother and daughter helping at Teen Health"
           fill
           priority
