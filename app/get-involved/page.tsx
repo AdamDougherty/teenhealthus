@@ -138,8 +138,8 @@ export default function GetInvolvedPage() {
               <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
-                    src="/images/shared/gu-gerber.jpg"
-                    alt="GU and Gerber products donated to Teen Health"
+                    src="/images/shared/supplements-personal-care-hydration-food.jpeg"
+                    alt="Supplements, personal care, hydration, and food products"
                     fill
                     className="object-cover"
                     style={{ objectPosition: "center 90%" }}
