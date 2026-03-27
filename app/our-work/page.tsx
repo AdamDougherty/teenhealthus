@@ -292,7 +292,7 @@ export default function OurWorkPage() {
                         {/* Closing statement */}
                         <Reveal delay={0.3}>
                             <p className="mt-8 text-lg font-semibold leading-relaxed text-ink">
-                                Mental wellness and violence prevention start with meeting basic biological needs.
+                                Mental wellness and homelessness/violence prevention start with meeting basic biological needs.
                             </p>
                         </Reveal>
                     </div>
