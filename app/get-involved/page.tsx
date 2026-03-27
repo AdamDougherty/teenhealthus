@@ -28,11 +28,11 @@ export default function GetInvolvedPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
+              "linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
           }}
         />
-        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[70vh] items-center">
-          <div className="max-w-2xl text-left">
+        <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
+          <div className="max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Get Involved
@@ -44,13 +44,13 @@ export default function GetInvolvedPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
-                Donate, volunteer, or partner with us — everything you need to make<br />
-                an impact, all in one place.
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-white">
+                Donate, volunteer, or partner with us — everything you need to<br />
+                make an impact, all in one place.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Start giving
                 </Button>
