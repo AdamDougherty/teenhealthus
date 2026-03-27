@@ -25,7 +25,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)",
+            "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)",
         }}
       />
 
