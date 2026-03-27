@@ -10,12 +10,9 @@ export default function OurWorkPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
-                <div className="absolute inset-0 bg-white/[0.04]" />
-
-                {/* Text overlay */}
-                <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
-                    <div className="max-w-4xl">
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+                <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
+                    <div className="max-w-3xl">
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 Our Work
@@ -27,12 +24,12 @@ export default function OurWorkPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                                 Too many young people are navigating life without proper nutrition,<br />mental health resources, or stable housing. Together, we&apos;re creating<br />pathways to stability and well-being.
                             </p>
                         </Reveal>
                     </div>
-                </Container>
+                </div>
             </section>
 
             {/* ─── OUR GROWING IMPACT ─── */}
