@@ -13,7 +13,24 @@ export default function GetInvolvedPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563c8" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+        <Image
+          src="/images/shared/Newer Pictures/volunteers-mother-daughter.jpg"
+          alt="Volunteers — mother and daughter helping at Teen Health"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Dark overlay for text readability */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
+          }}
+        />
         <Container className="relative z-10 flex min-h-[70vh] items-center">
           <div className="max-w-3xl">
             <Reveal>
