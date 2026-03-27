@@ -24,7 +24,7 @@ export default function ProgramsPage() {
           className="object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/50 via-black/30 to-transparent" />
 
         {/* Text overlay */}
         <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
