@@ -430,37 +430,31 @@ export default function OurWorkPage() {
             </section>
 
             {/* ─── CTA ─── */}
-            <section className="bg-ink py-16 text-white sm:py-20">
-                <Container>
-                    <div className="mx-auto max-w-3xl text-center">
-                        <Reveal>
-                            <h2 className="font-serif text-3xl font-normal tracking-tight sm:text-4xl">
-                                Help Us Expand Our Impact
-                            </h2>
-                        </Reveal>
-                        <Reveal delay={0.08}>
-                            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/65">
-                                Every contribution helps us reach more young people with the
-                                essentials they need to stabilize and thrive.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.16}>
-                            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
-                                    Donate
-                                </Button>
-                                <Button
-                                    href="/get-involved"
-                                    variant="ghost"
-                                    className="text-white hover:bg-white/10"
-                                >
-                                    Get Involved
-                                </Button>
-                            </div>
-                        </Reveal>
+            <Container className="py-16 sm:py-20">
+                <Reveal>
+                    <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+                        <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                            Help Us Expand Our Impact
+                        </h2>
+                        <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink/70">
+                            Every contribution helps us reach more young people with the
+                            essentials they need to stabilize and thrive.
+                        </p>
+                        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ color: 'white' }}>
+                                Donate
+                            </Button>
+                            <Button
+                                href="/get-involved"
+                                variant="ghost"
+                                className="text-ink hover:bg-ink/10"
+                            >
+                                Get Involved
+                            </Button>
+                        </div>
                     </div>
-                </Container>
-            </section>
+                </Reveal>
+            </Container>
         </div>
     );
 }
