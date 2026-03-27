@@ -13,8 +13,8 @@ export default function HowWeWorkPage() {
                 <div className="absolute inset-0 bg-white/[0.04]" />
 
                 {/* Text overlay */}
-                <Container className="relative z-10 flex min-h-[70vh] items-center pb-0">
-                    <div className="max-w-4xl">
+                <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
+                    <div className="max-w-3xl">
                         <Reveal>
                             <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                                 How We Work
@@ -29,7 +29,7 @@ export default function HowWeWorkPage() {
                             </p>
                         </Reveal>
                     </div>
-                </Container>
+                </div>
             </section>
 
             {/* ─── WHERE TEEN HEALTH STEPS IN ─── */}
