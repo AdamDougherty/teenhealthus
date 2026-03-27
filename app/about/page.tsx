@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563c8" }}>
-        <Container className="relative z-10 flex min-h-[70vh] items-center">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 pt-32 sm:pt-40 pb-16 min-h-[70vh] flex items-center">
           <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
@@ -33,7 +33,7 @@ export default function AboutPage() {
               </p>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       <Container className="py-14 sm:py-16">
