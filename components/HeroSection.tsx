@@ -32,7 +32,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
         <Reveal>
-          <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] text-white/80 sm:block">
+          <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] sm:block" style={{ color: "#FDCF6A" }}>
             Essential support · Youth-centered · Built to scale
           </p>
         </Reveal>
