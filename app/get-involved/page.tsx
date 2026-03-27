@@ -31,19 +31,25 @@ export default function GetInvolvedPage() {
               "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, transparent 80%)",
           }}
         />
-        <Container className="relative z-10 flex min-h-[70vh] items-center">
-          <div className="max-w-3xl">
+        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[70vh] items-center">
+          <div className="max-w-2xl text-left">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Get Involved
               </p>
+            </Reveal>
+            <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 There are many ways to&nbsp;help
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
                 Donate, volunteer, or partner with us — everything you need to make<br />
                 an impact, all in one place.
               </p>
+            </Reveal>
+            <Reveal delay={0.3}>
               <div className="mt-8">
                 <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Start giving
@@ -51,7 +57,7 @@ export default function GetInvolvedPage() {
               </div>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       <Container className="py-14 sm:py-16">
