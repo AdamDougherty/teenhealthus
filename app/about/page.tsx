@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       <Container className="py-14 sm:py-16">
         <Reveal>
-          <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/6" }}>
+          <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
             <Image
               src="/images/youth/IMG_1205.jpeg"
               alt="Teen Health team holding banner with backpack kits"
