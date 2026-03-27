@@ -129,6 +129,17 @@ export default function OurStoryPage() {
                                 responding.
                             </p>
                         </Reveal>
+                        <Reveal delay={0.16}>
+                            <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
+                                <Image
+                                    src="/images/shared/yerba-mate-cart.png"
+                                    alt="Yerba mate cart loaded with product for distribution"
+                                    width={3000}
+                                    height={2000}
+                                    className="h-72 w-full object-cover sm:h-96"
+                                />
+                            </div>
+                        </Reveal>
                     </div>
                 </Container>
             </section>
