@@ -320,7 +320,7 @@ export default function GiveMonthlyPage() {
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                             Essentials shouldn&rsquo;t be a luxury.
                             <br />
-                            <span style={{ color: "#FF8005" }}>Help us change that.</span>
+                            <span>Help us change that.</span>
                         </h2>
                         <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
                             Join the community of monthly supporters keeping essentials kits
