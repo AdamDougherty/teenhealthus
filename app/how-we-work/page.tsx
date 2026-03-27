@@ -56,9 +56,9 @@ export default function HowWeWorkPage() {
                                 </h3>
                                 <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/80">
                                     We provide essential vitamins and healthy food that support brain
-                                    function, emotional regulation, and stress management. When youth
-                                    are nourished, they&apos;re better equipped to engage in care, make
-                                    safer decisions, and resist high-risk survival pathways.
+                                    function, emotional regulation, and stress management — helping
+                                    youth engage in care, make safer decisions, and resist high-risk
+                                    pathways.
                                 </p>
                                 <div className="mx-auto mt-6 inline-flex h-14 w-14 items-center justify-center rounded-full bg-sky/10">
                                     <svg className="h-7 w-7 text-sky" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
