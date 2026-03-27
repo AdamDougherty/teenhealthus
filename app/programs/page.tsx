@@ -77,8 +77,10 @@ export default function ProgramsPage() {
                     Food insecurity undermines the programs youth depend on for
                     education, job training, and housing support. We partner with
                     youth-serving organizations to provide consistent, allergen-friendly
-                    snacks — keeping energy up and engagement strong. Built to scale
-                    through corporate sponsors and community partners.
+                    snacks that keep energy up and engagement strong throughout the
+                    day. The initiative is designed to scale rapidly through
+                    corporate sponsors and community partners — delivering reliable
+                    nutrition across multiple cities to the youth who need it most.
                   </p>
                   <div className="mt-6">
                     <Button href="#" variant="primary" style={{ color: 'white' }}>
