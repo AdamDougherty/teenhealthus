@@ -59,13 +59,13 @@ export default function VolunteerPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 50%, transparent 100%)",
+                "linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.05) 75%, transparent 100%)",
             }}
           />
         </div>
 
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 pt-32 sm:pt-40 pb-16 min-h-[70vh]">
-          <div className="max-w-lg rounded-2xl px-8 py-6" style={{ backgroundColor: 'rgba(0,0,0,0.2)', backdropFilter: 'blur(4px)' }}>
+          <div className="max-w-lg px-8 py-6">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
