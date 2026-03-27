@@ -152,7 +152,7 @@ export default function OurWorkPage() {
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.18}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
                                         376,900
                                     </p>
                                     <p className="mt-4 text-sm leading-relaxed text-ink/60">
@@ -162,7 +162,7 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.22}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-4xl font-normal tracking-tight text-ink sm:text-5xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
                                         44,400
                                     </p>
                                     <p className="mt-4 text-sm leading-relaxed text-ink/60">
