@@ -144,23 +144,6 @@ export default function OurStoryPage() {
                 </Container>
             </section>
 
-            {/* ─── WAREHOUSE PHOTO ─── */}
-            <section className="pb-8">
-                <Container>
-                    <Reveal>
-                        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl shadow-sm">
-                            <Image
-                                src="/images/shared/warehouse_shelves.jpg"
-                                alt="Pallets of product in our warehouse"
-                                width={3000}
-                                height={2000}
-                                className="h-72 w-full object-cover object-bottom sm:h-96"
-                            />
-                        </div>
-                    </Reveal>
-                </Container>
-            </section>
-
             {/* ─── THE MISSION AHEAD ─── */}
             <section className="bg-mist py-12 sm:py-16">
                 <Container>
