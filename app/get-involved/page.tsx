@@ -136,7 +136,7 @@ export default function GetInvolvedPage() {
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <Reveal className="h-full">
               <Card className="h-full overflow-hidden p-0">
-                <div className="relative" style={{ aspectRatio: "16/9" }}>
+                <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
                     src="/images/shared/supplements-personal-care-hydration-food.jpeg"
                     alt="Supplements, personal care, hydration, and food products"
