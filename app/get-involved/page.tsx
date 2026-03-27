@@ -19,7 +19,7 @@ export default function GetInvolvedPage() {
           alt="Volunteers — mother and daughter helping at Teen Health"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-top"
           sizes="100vw"
         />
         {/* Dark overlay for text readability */}
