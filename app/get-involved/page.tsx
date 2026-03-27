@@ -45,8 +45,8 @@ export default function GetInvolvedPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-white">
-                Donate, volunteer, or partner with us — everything you need to<br />
-                make an impact, all in one place.
+                Donate, volunteer, or partner with us — everything you<br />
+                need to make an impact, all in one place.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
