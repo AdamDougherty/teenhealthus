@@ -312,7 +312,7 @@ export default function OurWorkPage() {
                         </Reveal>
 
                         <Reveal delay={0.06}>
-                            <div className="mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+                            <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
                                 <Image
                                     src="/images/shared/elementary-kids.jpeg"
                                     alt="Elementary school kids"
