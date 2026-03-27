@@ -120,14 +120,14 @@ export default function OurWorkPage() {
                                     </div>
                                     <div className="border-b border-border p-8">
                                         <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">200,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under age 18 experience homelessness each year</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under age 18 experience homelessness each year</p>
                                     </div>
                                 </div>
                                 {/* Row 2 */}
                                 <div className="grid grid-cols-2">
                                     <div className="border-r border-border p-8">
                                         <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">150,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under 18 experience homelessness on any given night</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under 18 experience homelessness on any given night</p>
                                     </div>
                                     <div className="p-8">
                                         <p className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">9,900</p>
