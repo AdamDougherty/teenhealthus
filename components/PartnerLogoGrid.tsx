@@ -13,7 +13,7 @@ const PARTNERS: Partner[] = [
   { name: "Betty Lou's", logo: "/partners/bettylous.png" },
   { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
   { name: "Google", logo: "/partners/google.svg" },
-  { name: "Salesforce", logo: "/partners/salesforce.svg" },
+  { name: "Salesforce", logo: "/images/shared/salesforce-logo.jpg" },
   { name: "Marquis", logo: "/partners/marquis.svg" },
   { name: "Oceanblue", logo: "/partners/oceanblue.jpg" },
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
