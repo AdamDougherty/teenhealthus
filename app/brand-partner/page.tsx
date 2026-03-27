@@ -92,7 +92,7 @@ export default function BrandPartnerPage() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(35,31,32,0.88) 0%, rgba(35,31,32,0.45) 50%, rgba(35,31,32,0.18) 100%)",
+              "linear-gradient(to right, rgba(35,31,32,0.60) 0%, rgba(35,31,32,0.10) 100%)",
           }}
         />
 
