@@ -64,23 +64,24 @@ export default function ProgramsPage() {
           <div className="mt-10 flex flex-col gap-6">
             {/* Top row — two smaller campaigns side by side */}
             <div className="grid gap-6 sm:grid-cols-2">
-              {/* Campaign 0 — Easter Gift Bag Project */}
+              {/* Campaign 0 — Youth Nutrition Initiative */}
               <Reveal delay={0.08}>
                 <Card className="flex h-full flex-col p-8">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
                     Campaign
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                    Easter Gift Bag Project
+                    Youth Nutrition Initiative
                   </h3>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                    Running through March and into the first week of April, our
-                    Easter Gift Bag Project delivers nourishing products and a
-                    message of care to youth and young adults across Southern
-                    California. We are actively seeking product and monetary
-                    donations — especially wholesome snacks, functional beverages,
-                    vitamins, and supplements — to bring health, wellness, and
-                    community to at-risk youth who need it most.
+                    Many youth in education, workforce development, housing, and
+                    community programs face food insecurity — causing energy to
+                    drop and engagement to suffer. Our initiative partners with
+                    youth-serving organizations to provide consistent, allergen-friendly
+                    snack distribution through tutoring programs, workforce development,
+                    housing transitions, and community wellness programs. Designed to
+                    scale rapidly through new partnerships and corporate sponsors, the
+                    initiative delivers reliable nutrition to youth who need it most.
                   </p>
                   <div className="mt-6">
                     <Button href="#" variant="primary" style={{ color: 'white' }}>
