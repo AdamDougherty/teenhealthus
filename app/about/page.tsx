@@ -108,37 +108,37 @@ export default function AboutPage() {
           </section>
         </Reveal>
 
-        {/* Contact + Quick Links — side by side */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
-          <Reveal>
-            <Card>
-              <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                Use this form for partners, volunteers, and general inquiries.
-              </p>
-              <div className="mt-6">
-                <ContactForm />
+        {/* Contact + Quick Links — footer box */}
+        <Reveal>
+          <div className="mt-16 rounded-3xl p-8 sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+            <div className="grid gap-10 lg:grid-cols-[1fr_280px] lg:items-start">
+              <div>
+                <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                  Use this form for partners, volunteers, and general inquiries.
+                </p>
+                <div className="mt-6">
+                  <ContactForm />
+                </div>
               </div>
-            </Card>
-          </Reveal>
 
-          <Reveal delay={0.08}>
-            <Card>
-              <div className="text-sm font-normal tracking-tight text-ink">Quick links</div>
-              <div className="mt-4 space-y-2 text-sm">
-                <a href="https://www.classy.org/give/665776/#!/donation/checkout" className="block hover:text-ink">
-                  Donate
-                </a>
-                <a href="/get-involved#volunteer" className="block hover:text-ink">
-                  Volunteer
-                </a>
-                <a href="/our-why" className="block hover:text-ink">
-                  Learn hub
-                </a>
+              <div>
+                <div className="text-sm font-normal tracking-tight text-ink">Quick links</div>
+                <div className="mt-4 space-y-2 text-sm">
+                  <a href="https://www.classy.org/give/665776/#!/donation/checkout" className="block hover:text-ink">
+                    Donate
+                  </a>
+                  <a href="/get-involved#volunteer" className="block hover:text-ink">
+                    Volunteer
+                  </a>
+                  <a href="/our-why" className="block hover:text-ink">
+                    Learn hub
+                  </a>
+                </div>
               </div>
-            </Card>
-          </Reveal>
-        </div>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </div>
   );
