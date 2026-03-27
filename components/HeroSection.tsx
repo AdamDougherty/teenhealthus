@@ -18,15 +18,8 @@ export function HeroSection() {
         quality={90}
       />
 
-      {/* Gradient overlays */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to top, rgba(26,58,110,0.75) 0%, rgba(26,58,110,0.35) 45%, rgba(26,58,110,0.08) 100%)",
-        }}
-      />
+
+
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"
