@@ -180,38 +180,32 @@ export default function OurStoryPage() {
             </section>
 
             {/* ─── CTA ─── */}
-            <section className="section-dark py-20 text-white sm:py-28">
-                <Container>
-                    <div className="mx-auto max-w-3xl text-center">
-                        <Reveal>
-                            <h2 className="font-serif text-3xl font-normal tracking-tight sm:text-4xl">
-                                Be Part of the Story
-                            </h2>
-                        </Reveal>
-                        <Reveal delay={0.08}>
-                            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/65">
-                                Whether you&apos;re a brand, an agency, or an individual —
-                                there&apos;s a way to help youth access the essentials they
-                                deserve.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.16}>
-                            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                                <Button href="/brand-partner" variant="primary">
-                                    Partner With Us
-                                </Button>
-                                <Button
-                                    href="/get-involved"
-                                    variant="ghost"
-                                    className="text-white hover:bg-white/10"
-                                >
-                                    Get Involved
-                                </Button>
-                            </div>
-                        </Reveal>
+            <Container className="py-16 sm:py-20">
+                <Reveal>
+                    <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+                        <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                            Be Part of the Story
+                        </h2>
+                        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink/65">
+                            Whether you&apos;re a brand, an agency, or an individual —
+                            there&apos;s a way to help youth access the essentials they
+                            deserve.
+                        </p>
+                        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                            <Button href="/brand-partner" variant="primary" style={{ color: '#fff' }}>
+                                Partner With Us
+                            </Button>
+                            <Button
+                                href="/get-involved"
+                                variant="ghost"
+                                className="text-ink hover:bg-ink/10"
+                            >
+                                Get Involved
+                            </Button>
+                        </div>
                     </div>
-                </Container>
-            </section>
+                </Reveal>
+            </Container>
         </div>
     );
 }
