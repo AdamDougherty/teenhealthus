@@ -304,6 +304,22 @@ export default function LearnPage() {
         </Container>
       </div>
 
+      {/* Visual divider — sidewalk tents */}
+      <Reveal>
+        <div className="mx-auto max-w-5xl px-6 sm:px-10">
+          <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
+            <Image
+              src="/images/shared/sidewalk-tents.jpg"
+              alt="Tents lining a sidewalk — a reality for too many young people"
+              width={1400}
+              height={600}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
+          </div>
+        </div>
+      </Reveal>
+
       {/* Why This Matters to Society */}
       <Container className="py-16 text-center sm:py-20">
         <Reveal>
