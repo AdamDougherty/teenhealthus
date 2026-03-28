@@ -27,7 +27,7 @@ export default function OurStoryPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                                 From a simple question about access to essentials, to a growing
                                 network of partners, brands, and agencies serving youth across
                                 the country.
