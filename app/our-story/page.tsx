@@ -136,7 +136,8 @@ export default function OurStoryPage() {
                                     alt="Truck unloading product for distribution"
                                     width={3000}
                                     height={2000}
-                                    className="h-[28rem] w-full object-cover object-top sm:h-[42rem]"
+                                    className="h-[28rem] w-full object-cover sm:h-[42rem]"
+                                    style={{ objectPosition: "center 15%" }}
                                 />
                             </div>
                         </Reveal>
