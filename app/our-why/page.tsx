@@ -33,7 +33,7 @@ export default function LearnPage() {
               <h1 className="mt-4 max-w-3xl font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Survive{" "}
                 <span className="mx-2 inline-block sm:mx-4" style={{ color: "#FF8005" }}>→</span>{" "}
-                <span className="hero-highlight" style={{ color: "#FFA10A" }}>Thrive</span>
+                <span style={{ color: "#FFA10A" }}>Thrive</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
