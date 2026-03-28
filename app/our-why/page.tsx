@@ -21,8 +21,8 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "linear-gradient(135deg, #1a2a6e 0%, #1e3a8a 40%, #2563c8 100%)" }}>
-        <Container className="relative z-10 flex min-h-[70vh] items-center">
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
           <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
@@ -32,17 +32,17 @@ export default function LearnPage() {
             <Reveal delay={0.1}>
               <h1 className="mt-4 max-w-3xl font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Survive{" "}
-                <span className="mx-2 inline-block text-sun sm:mx-4">→</span>{" "}
+                <span className="mx-2 inline-block sm:mx-4" style={{ color: "#FF8005" }}>→</span>{" "}
                 <span className="hero-highlight" style={{ color: "#FFA10A" }}>Thrive</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                 Every young person deserves more than survival. We exist to<br />close the gap between getting by and growing up with dignity.
               </p>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Mission statement */}
