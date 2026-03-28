@@ -24,7 +24,7 @@ export default function HowWeWorkPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                                 From food rescue to essential kits to mental health support, our programs<br />address the whole person — meeting youth where they are and building<br />toward lasting stability.
                             </p>
                         </Reveal>
