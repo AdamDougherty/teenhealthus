@@ -307,7 +307,7 @@ export default function LearnPage() {
       {/* Visual divider — sidewalk tents */}
       <Reveal>
         <div className="mx-auto max-w-5xl px-6 sm:px-10">
-          <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
+          <div className="overflow-hidden rounded-2xl">
             <Image
               src="/images/shared/tents-sidewalk.jpg"
               alt="Tents lining a sidewalk — a reality for too many young people"
