@@ -154,8 +154,8 @@ export default function LearnPage() {
                 style={{ aspectRatio: "4/3" }}
               >
                 <Image
-                  src="/images/shared/younggirl5.jpg"
-                  alt="Young girl experiencing food insecurity"
+                  src="/images/shared/young-guy.jpg"
+                  alt="Young man supported by Teen Health"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 50vw"
