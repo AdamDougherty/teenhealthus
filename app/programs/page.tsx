@@ -39,7 +39,7 @@ export default function ProgramsPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
+              <p className="mt-6 text-base leading-relaxed text-white">
                 Fund a program that puts healthy essentials directly into the hands of youth<br />
                 who need them most — and help keep every kit stocked and ready.
               </p>
