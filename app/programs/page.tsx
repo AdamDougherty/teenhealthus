@@ -24,7 +24,7 @@ export default function ProgramsPage() {
           className="object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black/35 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-black/30" />
 
         <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
           <div className="max-w-2xl text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
