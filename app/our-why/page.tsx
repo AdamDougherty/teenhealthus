@@ -309,7 +309,7 @@ export default function LearnPage() {
         <div className="mx-auto max-w-5xl px-6 sm:px-10">
           <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
             <Image
-              src="/images/shared/sidewalk-tents.jpg"
+              src="/images/shared/tents-sidewalk.jpg"
               alt="Tents lining a sidewalk — a reality for too many young people"
               width={1400}
               height={600}
