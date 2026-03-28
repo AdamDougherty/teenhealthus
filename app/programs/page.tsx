@@ -26,8 +26,8 @@ export default function ProgramsPage() {
         {/* Dark gradient overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-l from-black/35 via-black/20 to-transparent" />
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
-          <div className="max-w-3xl">
+        <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
+          <div className="max-w-lg text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Program Sponsor
@@ -39,7 +39,7 @@ export default function ProgramsPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
                 Fund a program that puts healthy essentials directly into the hands of youth<br />
                 who need them most — and help keep every kit stocked and ready.
               </p>
