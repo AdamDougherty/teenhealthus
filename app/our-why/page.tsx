@@ -272,16 +272,14 @@ export default function LearnPage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
                   Unmet biological and emotional needs have lasting effects on life
-                  outcomes. Deficiencies in key nutrients like vitamin B12, B6, and
-                  omega-3 fatty acids can lead to cognitive impairments, emotional
-                  dysregulation, and increased risk of mental health challenges.
-                  Children exposed to Adverse Childhood Experiences (ACEs),
-                  including poverty and trauma, face elevated risks of depression
-                  and anxiety. Without a stable biological foundation, youth may
-                  struggle with focus, school performance, and emotional
-                  resilience&mdash;leading to a higher risk of dropout,
-                  unemployment, housing instability, and justice system
-                  involvement.
+                  outcomes. Deficiencies in nutrients like vitamin B12, B6, and
+                  omega-3 fatty acids can impair cognition, emotional regulation,
+                  and mental health. Youth exposed to Adverse Childhood Experiences
+                  (ACEs)&mdash;including poverty and trauma&mdash;face elevated
+                  risks of depression and anxiety, often struggling with focus,
+                  school performance, and resilience. Without a stable biological
+                  foundation, these challenges compound into higher rates of
+                  dropout, unemployment, and housing instability.
                 </p>
               </div>
             </Reveal>
@@ -294,10 +292,11 @@ export default function LearnPage() {
                   When basic needs go unmet, young people often seek safety and
                   belonging wherever they can find it. Homelessness raises exposure
                   to gang recruitment and street violence. Gangs can appear to
-                  offer food, protection, and community&mdash;needs the system no
-                  longer provides. Without intervention, these pathways increase
-                  the risk of trauma, substance use, incarceration, and long-term
-                  instability.
+                  offer food, protection, and community&mdash;needs the system
+                  no longer provides. Without early intervention, these pathways
+                  dramatically increase the risk of trauma, substance use,
+                  incarceration, and long-term instability&mdash;making it
+                  critical to reach youth before crisis becomes the norm.
                 </p>
               </div>
             </Reveal>
