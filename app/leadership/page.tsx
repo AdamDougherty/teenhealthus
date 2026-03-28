@@ -25,7 +25,7 @@ export default function LeadershipPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65">
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                                 Meet the passionate people driving our mission — leaders and advisors<br />who bring deep expertise, lived experience, and a shared commitment<br />to youth well-being.
                             </p>
                         </Reveal>
