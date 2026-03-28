@@ -132,7 +132,7 @@ export default function OurStoryPage() {
                         <Reveal delay={0.16}>
                             <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
                                 <Image
-                                    src="/images/shared/yerba-mate-cart.png"
+                                    src="/images/shared/yerba-mate-cart.jpg"
                                     alt="Yerba mate cart loaded with product for distribution"
                                     width={3000}
                                     height={2000}
