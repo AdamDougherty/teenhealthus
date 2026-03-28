@@ -52,8 +52,8 @@ export default function LeadershipPage() {
                                 <div className="w-full flex-shrink-0 md:w-72">
                                     <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
                                         <Image
-                                            src="/images/shared/Scott.png"
-                                            alt="Scott Swift"
+                                            src="/images/shared/scott-swift-founder.png"
+                                            alt="Scott Swift, President"
                                             width={1080}
                                             height={1080}
                                             className="h-full w-full object-cover"
@@ -67,7 +67,7 @@ export default function LeadershipPage() {
                                     <h3 className="mt-1 font-serif text-2xl font-normal tracking-tight text-ink">
                                         Scott Swift
                                     </h3>
-                                    <div className="mt-4 space-y-4 text-sm leading-relaxed text-ink/80">
+                                    <div className="mt-4 space-y-4 text-base leading-relaxed text-ink/80">
                                         <p>
                                             Scott Swift co-founded Teen Health after realizing that the problem
                                             wasn&apos;t a lack of products — it was a lack of systems to get them to
@@ -97,8 +97,8 @@ export default function LeadershipPage() {
                                 <div className="w-full flex-shrink-0 md:w-72">
                                     <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
                                         <Image
-                                            src="/images/shared/Lisa.png"
-                                            alt="Lisa Carlson"
+                                            src="/images/shared/lisa-carlson-founder.png"
+                                            alt="Lisa Carlson, Vice-President"
                                             width={1080}
                                             height={1080}
                                             className="h-full w-full object-cover"
@@ -112,7 +112,7 @@ export default function LeadershipPage() {
                                     <h3 className="mt-1 font-serif text-2xl font-normal tracking-tight text-ink">
                                         Lisa Carlson
                                     </h3>
-                                    <div className="mt-4 space-y-4 text-sm leading-relaxed text-ink/80">
+                                    <div className="mt-4 space-y-4 text-base leading-relaxed text-ink/80">
                                         <p>
                                             Lisa Carlson co-founded Teen Health after seeing firsthand how
                                             foundational health support affects daily functioning and emotional
