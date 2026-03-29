@@ -60,9 +60,9 @@ export default function DistributePage() {
             </Reveal>
             <Reveal delay={0.15}>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                If your agency serves vulnerable youth, partner with Teen Health
-                to distribute essential kits — healthy food, hydration, personal
-                care, and more — directly to the young people in your community.
+                If your agency serves vulnerable youth, partner with Teen Health to<br />
+                distribute essential kits — healthy food, hydration, personal care, and more<br />
+                — directly to the young people in your community.
               </p>
             </Reveal>
             <Reveal delay={0.25}>
