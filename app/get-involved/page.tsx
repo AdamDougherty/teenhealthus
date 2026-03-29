@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -129,7 +129,7 @@ export default function GetInvolvedPage() {
             <SectionHeading
               eyebrow="Partner"
               title="Brands, distributors, and agencies"
-              description="Partnerships make it possible to rescue quality products and distribute them where they’re needed most."
+              description={<>Partnerships make it possible to rescue quality products and<br />distribute them where they’re needed most.</>}
             />
           </Reveal>
 
