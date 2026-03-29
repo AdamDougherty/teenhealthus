@@ -54,7 +54,7 @@ export default function DistributePage() {
                 Distribution partners
               </p>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Get Essentials to the{" "}
+                Get Essentials to the<br />
                 <span style={{ color: "#FFA10A" }}>Youth You Serve</span>
               </h1>
             </Reveal>
@@ -67,7 +67,7 @@ export default function DistributePage() {
             </Reveal>
             <Reveal delay={0.25}>
               <div className="mt-8">
-                <Button href="#distribution-form" variant="primary">
+                <Button href="#distribution-form" variant="primary" style={{ color: "white" }}>
                   Apply to distribute
                 </Button>
               </div>
