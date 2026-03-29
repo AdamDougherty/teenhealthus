@@ -61,7 +61,7 @@ export default function HomePage() {
               },
               {
                 title: "Safety",
-                desc: "Basics reduce urgent vulnerabilities.",
+                desc: "Basics reduce everyday risks.",
               },
               {
                 title: "Stability",
