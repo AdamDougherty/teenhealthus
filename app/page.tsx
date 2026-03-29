@@ -23,7 +23,7 @@ export default function HomePage() {
               eyebrow="Why it matters"
               title="Because access changes everything"
               description="When youth have stable essentials, they can focus on school, work, safety, and long-term health."
-              className="max-w-3xl"
+              className="max-w-4xl"
             />
           </Reveal>
 
