@@ -146,13 +146,13 @@ export default function DistributePage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="section-dark py-20 text-white sm:py-28">
+      <section className="py-20 sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
               How it works
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               From application to distribution.
             </h2>
           </Reveal>
@@ -182,15 +182,15 @@ export default function DistributePage() {
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
+                <div className="grid items-center gap-10 border-t border-border py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                  <div className="font-serif text-6xl font-normal text-ink/15 lg:text-7xl">
                     {step.num}
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-normal tracking-tight">
+                    <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
                       {step.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-ink/70">
                       {step.desc}
                     </p>
                   </div>
