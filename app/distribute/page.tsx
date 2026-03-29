@@ -197,15 +197,26 @@ export default function DistributePage() {
                       {step.desc}
                     </p>
                   </div>
-                  <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "16/10" }}>
-                    <Image
-                      src={step.image}
-                      alt={step.imageAlt}
-                      fill
-                      className={`rounded-3xl ${(step as any).imageContain ? "object-contain" : "object-cover"}`}
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                    />
-                  </div>
+                  {(step as any).imageContain ? (
+                    <div className="flex items-center justify-center" style={{ aspectRatio: "16/10" }}>
+                      <img
+                        src={step.image}
+                        alt={step.imageAlt}
+                        className="rounded-3xl"
+                        style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "16/10" }}>
+                      <Image
+                        src={step.image}
+                        alt={step.imageAlt}
+                        fill
+                        className="object-cover rounded-3xl"
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                      />
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
