@@ -170,8 +170,8 @@ export default function DistributePage() {
                 num: "02",
                 title: "Onboarding & planning",
                 desc: "Once approved, we work together to establish your distribution plan — frequency, kit types, quantities, and delivery logistics.",
-                image: "/images/programs/essential-kits/IMG_5280.jpeg",
-                imageAlt: "Essential kits prepared for partner agencies",
+                image: "/images/shared/gu-gerber.jpg",
+                imageAlt: "GU and Gerber products ready for kit assembly",
               },
               {
                 num: "03",
