@@ -96,25 +96,14 @@ export default function DistributePage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/events/IMG_4150.jpeg"
-                    alt="Volunteers sorting and preparing supplies"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
-                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
-                  <Image
-                    src="/images/partnerships/IMG_5266.jpeg"
-                    alt="Teen Health team at partnership distribution"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                </div>
+              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
+                <Image
+                  src="/images/events/IMG_4150.jpeg"
+                  alt="Volunteers sorting and preparing supplies"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </Reveal>
           </div>
