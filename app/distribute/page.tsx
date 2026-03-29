@@ -163,8 +163,9 @@ export default function DistributePage() {
                 num: "01",
                 title: "Apply to become a partner",
                 desc: "Tell us about your organization, the population you serve, and your distribution capacity. We review every application carefully.",
-                image: "/images/team/IMG_5106.jpeg",
-                imageAlt: "Teen Health team reviewing applications",
+                image: "/images/shared/olive-crest.jpeg",
+                imageAlt: "Teen Health distributing kits at Olive Crest",
+                imageContain: true,
               },
               {
                 num: "02",
@@ -178,8 +179,8 @@ export default function DistributePage() {
                 num: "03",
                 title: "Distribute to youth",
                 desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
-                image: "/images/shared/olive-crest.jpeg",
-                imageAlt: "Teen Health distributing kits to youth at Olive Crest",
+                image: "/images/shared/volunteer-holding-products.jpeg",
+                imageAlt: "Volunteer holding products for youth distribution",
                 imageContain: true,
               },
             ].map((step) => (
