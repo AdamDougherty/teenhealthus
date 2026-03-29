@@ -161,7 +161,7 @@ export default function GiveMonthlyPage() {
                     <SectionHeading
                         eyebrow="Why monthly?"
                         title="Recurring gifts change the game"
-                        description="One-time donations help in the moment. Monthly gifts build the foundation for sustained, scalable impact — month after month."
+                        description={<>One-time donations help in the moment. Monthly gifts build the<br />foundation for sustained, scalable impact — month after month.</>}
                     />
                 </Reveal>
 
