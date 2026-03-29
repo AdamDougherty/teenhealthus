@@ -179,8 +179,8 @@ export default function DistributePage() {
                 num: "03",
                 title: "Distribute to youth",
                 desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
-                image: "/images/shared/volunteer-holding-products.jpeg",
-                imageAlt: "Volunteer holding products for youth distribution",
+                image: "/images/shared/volunteer-holding-gu-products.jpg",
+                imageAlt: "Volunteer holding GU products for youth distribution",
                 imageContain: true,
               },
             ].map((step) => (
