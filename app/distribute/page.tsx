@@ -44,55 +44,36 @@ export default function DistributePage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden section-dark" style={{ minHeight: "85vh" }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/images/partnerships/IMG_4664.jpg"
-            alt="Teen Health delivering kits to partner agency"
-            fill
-            className="object-cover opacity-30"
-            sizes="100vw"
-            priority
-          />
-          <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(160deg, rgba(26,58,110,0.92) 0%, rgba(26,58,110,0.7) 50%, rgba(26,58,110,0.4) 100%)",
-            }}
-          />
-        </div>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+        <div className="absolute inset-0 bg-white/[0.04]" />
 
-        <Container className="relative z-10 flex min-h-[85vh] items-center">
-          <div className="max-w-2xl py-20">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
+          <div className="max-w-3xl">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
+              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Distribution partners
               </p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Get essentials to the{" "}
-                <span className="hero-highlight" style={{ color: "#FFA10A" }}>youth you serve.</span>
+              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                Get Essentials to the{" "}
+                <span style={{ color: "#FFA10A" }}>Youth You Serve</span>
               </h1>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
+            <Reveal delay={0.15}>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
                 If your agency serves vulnerable youth, partner with Teen Health
                 to distribute essential kits — healthy food, hydration, personal
                 care, and more — directly to the young people in your community.
               </p>
             </Reveal>
-            <Reveal delay={0.3}>
-              <div className="mt-10">
+            <Reveal delay={0.25}>
+              <div className="mt-8">
                 <Button href="#distribution-form" variant="primary">
                   Apply to distribute
                 </Button>
               </div>
             </Reveal>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ─── WHO WE PARTNER WITH ─── */}
