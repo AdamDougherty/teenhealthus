@@ -91,7 +91,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="What we do"
               title="Three ways we show up"
-              description="Direct support, rescued resources, and rapid response — built around partners who know their communities."
+              description={<>Direct support, rescued resources, and rapid response —<br />built around partners who know their communities.</>}
             />
           </Reveal>
 
