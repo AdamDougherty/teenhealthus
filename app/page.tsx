@@ -208,7 +208,7 @@ export default function HomePage() {
                   <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                     Give today
                   </Button>
-                  <Button href="/get-involved#volunteer" variant="ghost" className="text-ink hover:bg-ink/10">
+                  <Button href="/volunteer" variant="ghost" className="text-ink hover:bg-ink/10">
                     Volunteer
                   </Button>
                 </div>
