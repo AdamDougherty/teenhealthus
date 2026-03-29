@@ -216,7 +216,7 @@ export default function GetInvolvedPage() {
                   reach the youth who need them most.
                 </p>
                 <div className="mt-6">
-                  <Button href="/partner#become-a-partner" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
+                  <Button href="/brand-partner" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                     Learn more &amp; apply
                   </Button>
                 </div>

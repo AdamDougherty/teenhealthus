@@ -20,7 +20,6 @@ A modern, donation-forward website for Teen Health — supporting vulnerable you
 | `/learn/[slug]` | Individual articles |
 | `/get-involved` | Donate, volunteer, product donations, partnerships |
 | `/about` | Mission, story, team, contact form |
-| `/partner` | Corporate partnership inquiry + form |
 | `/donate-product` | Product donation inquiry + form |
 | `/distribute` | Distribution partner application + form |
 | `/volunteer` | Volunteer interest + form |
