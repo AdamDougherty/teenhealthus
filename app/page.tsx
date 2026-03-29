@@ -171,15 +171,6 @@ export default function HomePage() {
                     <p className="mt-4 text-base leading-relaxed text-ink/70">
                       Every contribution helps youth stabilize today and plan for a better tomorrow.
                     </p>
-
-                    <div className="mt-7 mb-8 flex flex-col gap-3 sm:flex-row">
-                      <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
-                        Give today
-                      </Button>
-                      <Button href="/get-involved#volunteer" variant="secondary">
-                        Volunteer
-                      </Button>
-                    </div>
                   </div>
                 </Reveal>
 
@@ -211,6 +202,15 @@ export default function HomePage() {
                       </Card>
                     </Reveal>
                   ))}
+                </div>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
+                    Give today
+                  </Button>
+                  <Button href="/get-involved#volunteer" variant="secondary">
+                    Volunteer
+                  </Button>
                 </div>
               </div>
             </div>
