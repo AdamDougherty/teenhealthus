@@ -172,6 +172,7 @@ export default function DistributePage() {
                 desc: "Once approved, we work together to establish your distribution plan — frequency, kit types, quantities, and delivery logistics.",
                 image: "/images/shared/gu-gerber.jpg",
                 imageAlt: "GU and Gerber products ready for kit assembly",
+                imageContain: true,
               },
               {
                 num: "03",
