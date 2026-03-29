@@ -22,8 +22,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Why it matters"
               title="Because access changes everything"
-              description="When youth have stable essentials, they can focus on school, work, safety, and long-term health."
-              className="max-w-4xl"
+              description={<>When youth have stable essentials, they can focus on school,<br />work, safety, and long-term health.</>}
             />
           </Reveal>
 
