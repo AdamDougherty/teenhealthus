@@ -121,9 +121,11 @@ export default function ProgramsPage() {
             </div>{/* end top 2-col grid */}
 
             {/* Campaign 2 — California Regenerative Youth Land Initiative */}
-            <Reveal delay={0.16}>
-              <LandInitiativeCard />
-            </Reveal>
+            <div id="land-initiative">
+              <Reveal delay={0.16}>
+                <LandInitiativeCard />
+              </Reveal>
+            </div>
           </div>
         </div>
 

@@ -50,6 +50,7 @@ export const programs: Program[] = [
     title: "Regenerative Farm",
     slug: "regenerative-farm",
     eyebrow: "Land + livelihood",
+    href: "/programs#land-initiative",
     description:
       "Working ranch properties in Southern California where unhoused young adults live on-site, earn wages in regenerative agriculture, and prepare for permanent housing when ready.",
     bullets: [
