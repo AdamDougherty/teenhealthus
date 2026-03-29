@@ -183,8 +183,8 @@ export default function GetInvolvedPage() {
                     Agency distribution
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                    If you serve vulnerable youth and want to distribute kits, this is the
-                    intake path: location, population served, distribution plan, and reporting.
+                    If you serve vulnerable youth and want to distribute essentials kits, this
+                    is the intake path: location, population served, distribution plan, and reporting.
                   </p>
                   <div className="mt-5 space-y-2 text-sm text-ink/70">
                     <div>• Youth-serving nonprofits</div>
