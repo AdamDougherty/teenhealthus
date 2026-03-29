@@ -48,7 +48,7 @@ export function HeroSection() {
         <Reveal delay={0.2}>
           <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/90 sm:text-base">
             Teen Health supports vulnerable youth and young adults with nourishing
-            food, hydration, and personal care — plus a next step through trusted
+            food, hydration, and personal care — delivered through trusted
             local partners.
           </p>
         </Reveal>
