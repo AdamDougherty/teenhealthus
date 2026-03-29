@@ -202,7 +202,7 @@ export default function DistributePage() {
                       src={step.image}
                       alt={step.imageAlt}
                       fill
-                      className={(step as any).imageContain ? "object-contain" : "object-cover"}
+                      className={`rounded-3xl ${(step as any).imageContain ? "object-contain" : "object-cover"}`}
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
