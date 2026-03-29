@@ -239,12 +239,9 @@ export default function GetInvolvedPage() {
                 Every dollar funds packing and shipping essentials kits to youth through our partner agencies. Donate once or give monthly to keep kits moving.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-7">
                 <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Donate now
-                </Button>
-                <Button href="#partner" variant="ghost" style={{ color: '#000000', borderColor: '#000000' }} className="hover:bg-[#000000]/10">
-                  Partner with us
                 </Button>
               </div>
 
