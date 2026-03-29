@@ -123,7 +123,7 @@ export default function GiveMonthlyPage() {
                         <Reveal delay={0.3}>
                             <div className="mt-10">
                                 <Button
-                                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                    href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
                                     variant="primary"
                                     style={{ backgroundColor: '#FF8005', color: 'white' }}
                                 >
@@ -205,7 +205,7 @@ export default function GiveMonthlyPage() {
                         {impactTiers.map((tier, i) => (
                             <Reveal key={tier.amount} delay={i * 0.08}>
                                 <a
-                                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                    href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
                                     className="group block rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
@@ -228,7 +228,7 @@ export default function GiveMonthlyPage() {
                     <Reveal delay={0.4}>
                         <div className="mt-10 text-center">
                             <Button
-                                href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
@@ -328,7 +328,7 @@ export default function GiveMonthlyPage() {
                         </p>
                         <div className="mt-8">
                             <Button
-                                href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
