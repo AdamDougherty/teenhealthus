@@ -14,22 +14,26 @@ export const metadata = {
 const impactTiers = [
     {
         amount: "$500",
+        value: 500,
         label: "/month",
         impact:
             "Sponsors a full month of kits for an agency — reaching dozens of youth, consistently.",
     },
     {
         amount: "$100",
+        value: 100,
         label: "/month",
         impact: "Funds bulk distribution to an entire partner agency every month.",
     },
     {
         amount: "$50",
+        value: 50,
         label: "/month",
         impact: "Covers kit assembly, shipping, and partner coordination for two youth monthly.",
     },
     {
         amount: "$25",
+        value: 25,
         label: "/month",
         impact: "Assembles and ships a full essentials kit to a youth in need every month.",
     },
@@ -205,7 +209,7 @@ export default function GiveMonthlyPage() {
                         {impactTiers.map((tier, i) => (
                             <Reveal key={tier.amount} delay={i * 0.08}>
                                 <a
-                                    href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
+                                    href={`https://www.classy.org/give/665776/#!/donation/checkout?recurring=1&amount=${tier.value}`}
                                     className="group block rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
