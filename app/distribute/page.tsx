@@ -284,8 +284,8 @@ export default function DistributePage() {
                       <div className="font-serif text-3xl font-normal text-ink/20">
                         {step.num}
                       </div>
-                      <div className="mt-3 text-sm font-semibold text-ink">{step.title}</div>
-                      <p className="mt-2 text-xs leading-relaxed text-ink/50">
+                      <div className="mt-3 text-lg font-semibold text-ink">{step.title}</div>
+                      <p className="mt-2 text-sm leading-relaxed text-ink/50">
                         {step.desc}
                       </p>
                     </div>
