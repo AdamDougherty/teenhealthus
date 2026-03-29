@@ -177,8 +177,8 @@ export default function DistributePage() {
                 num: "03",
                 title: "Distribute to youth",
                 desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
-                image: "/images/partnerships/IMG_5265.jpeg",
-                imageAlt: "Teen Health team with backpack kits",
+                image: "/images/shared/olive-crest.jpeg",
+                imageAlt: "Teen Health distributing kits to youth at Olive Crest",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
