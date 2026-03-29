@@ -174,7 +174,7 @@ export default function HomePage() {
                   </div>
                 </Reveal>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="mt-7 grid gap-4 sm:grid-cols-2">
                   {[
                     {
                       title: "Donate funds",
