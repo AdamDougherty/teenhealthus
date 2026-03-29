@@ -179,6 +179,7 @@ export default function DistributePage() {
                 desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
                 image: "/images/shared/olive-crest.jpeg",
                 imageAlt: "Teen Health distributing kits to youth at Olive Crest",
+                imageContain: true,
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
@@ -199,7 +200,7 @@ export default function DistributePage() {
                       src={step.image}
                       alt={step.imageAlt}
                       fill
-                      className="object-cover"
+                      className={(step as any).imageContain ? "object-contain" : "object-cover"}
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
