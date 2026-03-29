@@ -243,26 +243,26 @@ export default function DistributePage() {
       </section>
 
       {/* ─── DISTRIBUTION PARTNER FORM ─── */}
-      <section id="distribution-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
+      <section id="distribution-form" className="scroll-mt-24 py-20 sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-eyebrow">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
                   Get started
                 </p>
-                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
+                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                   Become a distribution partner.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-white/65">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/70">
                   Fill out the form and our partnerships team will follow up
                   within a few business days to discuss how we can work together.
                 </p>
               </Reveal>
 
               <Reveal delay={0.1}>
-                <div className="mt-12 grid gap-8 sm:grid-cols-3">
+                <div className="mt-12 grid gap-8">
                   {[
                     {
                       num: "01",
@@ -281,11 +281,11 @@ export default function DistributePage() {
                     },
                   ].map((step) => (
                     <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-white/20">
+                      <div className="font-serif text-3xl font-normal text-ink/20">
                         {step.num}
                       </div>
-                      <div className="mt-3 text-sm font-semibold">{step.title}</div>
-                      <p className="mt-2 text-xs leading-relaxed text-white/50">
+                      <div className="mt-3 text-sm font-semibold text-ink">{step.title}</div>
+                      <p className="mt-2 text-xs leading-relaxed text-ink/50">
                         {step.desc}
                       </p>
                     </div>
@@ -395,6 +395,7 @@ export default function DistributePage() {
                       type="submit"
                       disabled={status === "sending"}
                       className="w-full"
+                      style={{ backgroundColor: "#FF8005", color: "white" }}
                     >
                       {status === "sending" ? "Sending…" : "Submit application"}
                     </Button>
