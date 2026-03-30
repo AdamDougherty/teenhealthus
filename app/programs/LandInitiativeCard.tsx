@@ -27,7 +27,7 @@ export function LandInitiativeCard() {
                 {/* 4 Pillars — always visible */}
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                     {[
-                        { icon: "🌱", label: "Regenerative Agriculture", sub: <>Soil-first production,<br />orchards & livestock</> },
+                        { icon: "🌱", label: "Regenerative Agriculture", sub: <>Soil-first production,<br />orchards, & livestock</> },
                         { icon: "💼", label: "Paid Apprenticeships", sub: <>12–18 month structured<br />workforce track</> },
                         { icon: "📈", label: "Enterprise Revenue", sub: <>CSA, farmers markets,<br />& agritourism</> },
                         { icon: "🏡", label: "Permanent Housing", sub: <>Graduate when<br />genuinely ready</> },
