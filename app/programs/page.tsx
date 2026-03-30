@@ -35,7 +35,7 @@ export default function ProgramsPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Built around what youth <br />actually&nbsp;need
+                Built Around What Youth <br /><span style={{ color: "#FFA10A" }}>Actually&nbsp;Need</span>
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
