@@ -126,7 +126,7 @@ export default function HowWeWorkPage() {
                         <Reveal delay={0.08}>
                             <div className="relative overflow-hidden rounded-2xl" style={{ height: "420px" }}>
                                 <Image
-                                    src="/images/shared/young-people-supplements-opt.jpeg"
+                                    src="/images/shared/young-people-supplements-opt2.jpeg"
                                     alt="Young people receiving supplements"
                                     fill
                                     className="object-cover" style={{ objectPosition: "center 15%" }}
@@ -137,7 +137,7 @@ export default function HowWeWorkPage() {
                         <Reveal delay={0.16}>
                             <div className="relative overflow-hidden rounded-2xl" style={{ height: "420px" }}>
                                 <Image
-                                    src="/images/shared/young-man-supplements-2-opt.jpg"
+                                    src="/images/shared/young-man-supplements-2-opt2.jpg"
                                     alt="Young man with supplements"
                                     fill
                                     className="object-cover" style={{ objectPosition: "center 15%" }}
