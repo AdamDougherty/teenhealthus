@@ -129,7 +129,7 @@ export default function HowWeWorkPage() {
                                     src="/images/shared/young-people-supplements-opt.jpeg"
                                     alt="Young people receiving supplements"
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover" style={{ objectPosition: "center 15%" }}
                                     sizes="(max-width: 640px) 100vw, 50vw"
                                 />
                             </div>
@@ -140,7 +140,7 @@ export default function HowWeWorkPage() {
                                     src="/images/shared/young-man-supplements-2-opt.jpg"
                                     alt="Young man with supplements"
                                     fill
-                                    className="object-cover object-top"
+                                    className="object-cover" style={{ objectPosition: "center 15%" }}
                                     sizes="(max-width: 640px) 100vw, 50vw"
                                 />
                             </div>
