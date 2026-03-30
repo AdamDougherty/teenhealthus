@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 
 export function HeroSection() {
   return (
-    <section className="hero-section relative flex min-h-[90vh] items-end overflow-hidden">
+    <section className="hero-section relative flex min-h-[90vh] items-center overflow-hidden">
       {/* Full-width background image */}
       <Image
         src="/hero.jpg"
