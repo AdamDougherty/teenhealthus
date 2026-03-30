@@ -27,12 +27,12 @@ export function LandInitiativeCard() {
                 {/* 4 Pillars — always visible */}
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                     {[
-                        { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
-                        { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
-                        { icon: "📈", label: "Enterprise Revenue", sub: "CSA, farmers markets, & agritourism" },
-                        { icon: "🏡", label: "Permanent Housing", sub: "Graduate when genuinely ready" },
-                    ].map(({ icon, label, sub }) => (
-                        <div key={label} className="rounded-xl bg-mist p-4 text-center">
+                        { icon: "🌱", label: "Regenerative Agriculture", sub: <>Soil-first production,<br />orchards & livestock</> },
+                        { icon: "💼", label: "Paid Apprenticeships", sub: <>12–18 month structured<br />workforce track</> },
+                        { icon: "📈", label: "Enterprise Revenue", sub: <>CSA, farmers markets,<br />& agritourism</> },
+                        { icon: "🏡", label: "Permanent Housing", sub: <>Graduate when<br />genuinely ready</> },
+                    ].map(({ icon, label, sub }, i) => (
+                        <div key={i} className="rounded-xl bg-mist p-4 text-center">
                             <div className="text-2xl">{icon}</div>
                             <p className="mt-2 text-sm font-bold leading-tight text-ink">{label}</p>
                             <p className="mt-1 text-sm leading-snug text-ink/60">{sub}</p>
