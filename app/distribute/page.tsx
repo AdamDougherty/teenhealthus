@@ -44,36 +44,55 @@ export default function DistributePage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
-        <div className="absolute inset-0 bg-white/[0.04]" />
+      <section className="relative overflow-hidden section-dark" style={{ minHeight: "85vh" }}>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/partnerships/IMG_4664.jpg"
+            alt="Teen Health delivering kits to partner agency"
+            fill
+            className="object-cover opacity-30"
+            sizes="100vw"
+            priority
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(160deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.2) 100%)",
+            }}
+          />
+        </div>
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
-          <div className="max-w-3xl">
+        <Container className="relative z-10 flex min-h-[85vh] items-center">
+          <div className="max-w-2xl py-20">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                 Distribution partners
               </p>
-              <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Get Essentials to the<br />
-                <span style={{ color: "#FFA10A" }}>Youth You Serve</span>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
+                Get essentials to the{" "}
+                <span className="hero-highlight">youth you serve.</span>
               </h1>
             </Reveal>
-            <Reveal delay={0.15}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                If your agency serves vulnerable youth, partner with Teen Health to<br />
-                distribute essential kits — healthy food, hydration, personal care, and<br />
-                more — directly to the young people in your community.
+            <Reveal delay={0.2}>
+              <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
+                If your agency serves vulnerable youth, partner with Teen Health
+                to distribute essential kits — healthy food, hydration, personal
+                care, and more — directly to the young people in your community.
               </p>
             </Reveal>
-            <Reveal delay={0.25}>
-              <div className="mt-8">
-                <Button href="#distribution-form" variant="primary" style={{ color: "white" }}>
+            <Reveal delay={0.3}>
+              <div className="mt-10">
+                <Button href="#distribution-form" variant="primary">
                   Apply to distribute
                 </Button>
               </div>
             </Reveal>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ─── WHO WE PARTNER WITH ─── */}
@@ -96,14 +115,25 @@ export default function DistributePage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
-                <Image
-                  src="/images/events/IMG_4150.jpeg"
-                  alt="Volunteers sorting and preparing supplies"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/events/IMG_4150.jpeg"
+                    alt="Volunteers sorting and preparing supplies"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/partnerships/IMG_5266.jpeg"
+                    alt="Teen Health team at partnership distribution"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -146,13 +176,13 @@ export default function DistributePage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
               How it works
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
               From application to distribution.
             </h2>
           </Reveal>
@@ -162,61 +192,47 @@ export default function DistributePage() {
               {
                 num: "01",
                 title: "Apply to become a partner",
-                desc: "Tell us about your organization, the population you serve, and your distribution capacity. We review every application carefully.",
-                image: "/images/shared/olive-crest.jpeg",
-                imageAlt: "Teen Health distributing kits at Olive Crest",
-                imageContain: true,
+                desc: "Tell us about your organization, the population you serve, and your distribution capacity. We review every application.",
+                image: "/images/team/IMG_5106.jpeg",
+                imageAlt: "Teen Health team reviewing applications",
               },
               {
                 num: "02",
                 title: "Onboarding & planning",
-                desc: "Once approved, we work together to establish your distribution plan — frequency, kit types, quantities, and delivery logistics.",
-                image: "/images/shared/gu-gerber.jpg",
-                imageAlt: "GU and Gerber products ready for kit assembly",
-                imageContain: true,
+                desc: "Once approved, we work together to establish your distribution plan — frequency, kit types, quantities, and logistics.",
+                image: "/images/programs/essential-kits/IMG_5280.jpeg",
+                imageAlt: "Essential kits prepared for partner agencies",
               },
               {
                 num: "03",
                 title: "Distribute to youth",
-                desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
-                image: "/images/shared/volunteer-holding-gu-products.jpg",
-                imageAlt: "Volunteer holding GU products for youth distribution",
-                imageContain: true,
+                desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact together.",
+                image: "/images/partnerships/IMG_5265.jpeg",
+                imageAlt: "Teen Health team with backpack kits",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-border py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-ink/15 lg:text-7xl">
+                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
                     {step.num}
                   </div>
                   <div>
-                    <h3 className="font-serif text-2xl font-normal tracking-tight text-ink">
+                    <h3 className="font-serif text-2xl font-normal tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-ink/70">
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
                       {step.desc}
                     </p>
                   </div>
-                  {(step as any).imageContain ? (
-                    <div className="flex items-center justify-center" style={{ aspectRatio: "16/10" }}>
-                      <img
-                        src={step.image}
-                        alt={step.imageAlt}
-                        className="rounded-3xl"
-                        style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "16/10" }}>
-                      <Image
-                        src={step.image}
-                        alt={step.imageAlt}
-                        fill
-                        className="object-cover rounded-3xl"
-                        sizes="(max-width: 768px) 100vw, 40vw"
-                      />
-                    </div>
-                  )}
+                  <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -257,26 +273,26 @@ export default function DistributePage() {
       </section>
 
       {/* ─── DISTRIBUTION PARTNER FORM ─── */}
-      <section id="distribution-form" className="scroll-mt-24 py-20 sm:py-28">
+      <section id="distribution-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                   Get started
                 </p>
-                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
                   Become a distribution partner.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/70">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-white/65">
                   Fill out the form and our partnerships team will follow up
                   within a few business days to discuss how we can work together.
                 </p>
               </Reveal>
 
               <Reveal delay={0.1}>
-                <div className="mt-12 grid gap-8">
+                <div className="mt-12 grid gap-8 sm:grid-cols-3">
                   {[
                     {
                       num: "01",
@@ -295,11 +311,11 @@ export default function DistributePage() {
                     },
                   ].map((step) => (
                     <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-ink/20">
+                      <div className="font-serif text-3xl font-normal text-white/20">
                         {step.num}
                       </div>
-                      <div className="mt-3 text-lg font-semibold text-ink">{step.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/50">
+                      <div className="mt-3 text-sm font-semibold">{step.title}</div>
+                      <p className="mt-2 text-xs leading-relaxed text-white/50">
                         {step.desc}
                       </p>
                     </div>
@@ -409,7 +425,6 @@ export default function DistributePage() {
                       type="submit"
                       disabled={status === "sending"}
                       className="w-full"
-                      style={{ backgroundColor: "#FF8005", color: "white" }}
                     >
                       {status === "sending" ? "Sending…" : "Submit application"}
                     </Button>

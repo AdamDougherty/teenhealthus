@@ -44,13 +44,13 @@ export default function VolunteerPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "85vh", backgroundColor: '#1a2a6e' }}>
         <div className="absolute inset-0">
           <Image
-            src="/images/shared/volunteer-giving-products.jpg"
-            alt="Teen Health volunteers giving products"
+            src="/images/events/IMG_4154.jpeg"
+            alt="Teen Health volunteers at an event"
             fill
-            className="object-cover" style={{ objectPosition: 'center center' }}
+            className="object-cover opacity-45" style={{ objectPosition: 'center 15%' }}
             sizes="100vw"
             priority
           />
@@ -59,26 +59,26 @@ export default function VolunteerPage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%)",
+                "linear-gradient(160deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.2) 100%)",
             }}
           />
         </div>
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 pt-32 sm:pt-40 pb-16 min-h-[70vh]">
-          <div className="max-w-lg">
+        <Container className="relative z-10 flex min-h-[85vh] items-center">
+          <div className="max-w-2xl py-20">
             <Reveal>
-              <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                 Volunteer
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+              <h1 className="mt-6 font-serif text-5xl font-normal leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Your time makes a{" "}
-                <br /><span className="hero-highlight" style={{ color: "#FDCF6A" }}>real difference</span>
+                <span className="hero-highlight">real difference.</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
+              <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/70">
                 Whether you can give a few hours or a few days, your skills and
                 energy help Teen Health sort, kit, and deliver essentials to
                 youth across the country.
@@ -86,13 +86,13 @@ export default function VolunteerPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="mt-10">
-                <Button href="#volunteer-form" variant="primary" style={{ color: 'white' }}>
+                <Button href="#volunteer-form" variant="primary">
                   Sign up to volunteer
                 </Button>
               </div>
             </Reveal>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* ─── VOLUNTEER ROLES ─── */}
@@ -161,13 +161,13 @@ export default function VolunteerPage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="py-20 sm:py-28">
+      <section className="section-dark py-20 text-white sm:py-28">
         <Container>
           <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
               How it works
             </p>
-            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight sm:text-4xl">
               From sign-up to impact.
             </h2>
           </Reveal>
@@ -185,8 +185,8 @@ export default function VolunteerPage() {
                 num: "02",
                 title: "We'll match you",
                 desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
-                image: "/images/shared/volunteer-products-table.jpg",
-                imageAlt: "Volunteer products laid out on a table",
+                image: "/images/programs/essential-kits/IMG_5111 2.jpeg",
+                imageAlt: "Volunteers packing essentials kits",
               },
               {
                 num: "03",
@@ -194,19 +194,18 @@ export default function VolunteerPage() {
                 desc: "Join a packing session, delivery run, or project — and see firsthand how your time helps youth in need.",
                 image: "/images/events/IMG_0476.jpeg",
                 imageAlt: "Teen Health event with volunteers",
-                imagePosition: "30% 20%",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
-                <div className="grid items-center gap-10 border-t border-ink/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
+                <div className="grid items-center gap-10 border-t border-white/10 py-14 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
+                  <div className="font-serif text-6xl font-normal text-white/15 lg:text-7xl">
                     {step.num}
                   </div>
                   <div>
                     <h3 className="font-serif text-2xl font-normal tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-ink/60">
+                    <p className="mt-4 max-w-md text-base leading-relaxed text-white/65">
                       {step.desc}
                     </p>
                   </div>
@@ -216,7 +215,6 @@ export default function VolunteerPage() {
                       alt={step.imageAlt}
                       fill
                       className="object-cover"
-                      style={(step as any).imagePosition ? { objectPosition: (step as any).imagePosition } : undefined}
                       sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
@@ -263,14 +261,25 @@ export default function VolunteerPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
-                <Image
-                  src="/images/shared/long-tent.jpg"
-                  alt="Teen Health volunteers at an event"
-                  fill
-                  className="object-cover" style={{ objectPosition: 'center bottom' }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/team/IMG_5362.jpeg"
+                    alt="Teen Health volunteer"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/events/IMG_0566.jpeg"
+                    alt="Volunteers at a Teen Health event"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
@@ -278,19 +287,19 @@ export default function VolunteerPage() {
       </section>
 
       {/* ─── VOLUNTEER FORM ─── */}
-      <section id="volunteer-form" className="scroll-mt-24 py-20 sm:py-28">
+      <section id="volunteer-form" className="scroll-mt-24 section-dark py-20 text-white sm:py-28">
         <Container>
           <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
             {/* Left — Text */}
             <div>
               <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sun">
                   Get started
                 </p>
-                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
                   Volunteer interest form.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/60">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-white/65">
                   Tell us a bit about yourself and how you'd like to help. We'll
                   reach out with opportunities that match your interests and
                   availability.
@@ -298,7 +307,7 @@ export default function VolunteerPage() {
               </Reveal>
 
               <Reveal delay={0.1}>
-                <div className="mt-12 grid gap-8">
+                <div className="mt-12 grid gap-8 sm:grid-cols-3">
                   {[
                     {
                       num: "01",
@@ -317,11 +326,11 @@ export default function VolunteerPage() {
                     },
                   ].map((step) => (
                     <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-ink/20">
+                      <div className="font-serif text-3xl font-normal text-white/20">
                         {step.num}
                       </div>
-                      <div className="mt-3 text-lg font-semibold">{step.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/50">
+                      <div className="mt-3 text-sm font-semibold">{step.title}</div>
+                      <p className="mt-2 text-xs leading-relaxed text-white/50">
                         {step.desc}
                       </p>
                     </div>
@@ -424,7 +433,6 @@ export default function VolunteerPage() {
                       type="submit"
                       disabled={status === "sending"}
                       className="w-full"
-                      style={{ color: 'white' }}
                     >
                       {status === "sending" ? "Sending…" : "Submit interest form"}
                     </Button>

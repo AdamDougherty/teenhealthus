@@ -7,8 +7,7 @@
   --font-serif: "Kazimir Text", "Kazmir Text", Georgia, serif;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -16,20 +15,6 @@ body {
   @apply text-ink antialiased;
   background-color: #faf9f6;
   position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image:
-    linear-gradient(120deg, rgba(46, 157, 247, 0.08) 0%, rgba(243, 170, 50, 0.07) 48%, rgba(139, 209, 203, 0.08) 100%),
-    radial-gradient(900px 520px at 10% 12%, rgba(46, 157, 247, 0.14), transparent 60%),
-    radial-gradient(900px 520px at 92% 18%, rgba(243, 170, 50, 0.12), transparent 60%);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 ::selection {
@@ -41,24 +26,20 @@ a {
 }
 
 @layer base {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
 }
 
 /* Hero highlight text */
 .hero-highlight {
-  background: linear-gradient(135deg,
-      #FFA10A 0%,
-      #FFB840 40%,
-      #FFA10A 70%,
-      #E08D00 100%);
+  background: linear-gradient(
+    135deg,
+    #F3AA32 0%,
+    #F7C364 40%,
+    #F3AA32 70%,
+    #E89D1E 100%
+  );
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -67,30 +48,19 @@ a {
 }
 
 @keyframes shimmer {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* Dark sections — deep navy with subtle light flare from bottom-right */
+/* Dark sections — deep navy */
 .section-dark {
   position: relative;
   background-color: #1a3a6e;
-  background-image:
-    radial-gradient(ellipse 1000px 700px at 90% 100%, rgba(46, 157, 247, 0.30), transparent 60%),
-    radial-gradient(ellipse 800px 600px at 95% 85%, rgba(139, 209, 203, 0.18), transparent 50%),
-    linear-gradient(160deg, rgba(46, 157, 247, 0.10) 0%, transparent 40%);
 }
 
 /* Hero section */
 .hero-section {
-  background-color: transparent;
+  background-color: #2c2c2c;
 }
 
 .hero-eyebrow {
