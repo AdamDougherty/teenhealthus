@@ -1,23 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { motion, useReducedMotion } from "motion/react";
+import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 
-const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
 export function HeroSection() {
-  const reduceMotion = useReducedMotion();
-
-  const anim = (delay: number) =>
-    reduceMotion
-      ? {}
-      : {
-        initial: { opacity: 0, y: 30, filter: "blur(8px)" },
-        animate: { opacity: 1, y: 0, filter: "blur(0px)" },
-        transition: { duration: 1.1, ease, delay },
-      };
-
   return (
     <section className="hero-section relative flex min-h-[90vh] items-end overflow-hidden">
       {/* Full-width background image */}
@@ -43,46 +28,42 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
-        <motion.p
-          {...anim(0.2)}
-          className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] text-white/60 sm:block"
-        >
-          Essential support · Youth-centered · Built to scale
-        </motion.p>
+        <Reveal>
+          <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] text-white/60 sm:block">
+            Essential support · Youth-centered · Built to scale
+          </p>
+        </Reveal>
 
-        <motion.h1
-          {...anim(0.4)}
-          className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl"
-        >
-          Healthy essentials.
-          <br />
-          <span className="hero-highlight">Delivered with Dignity.</span>
-        </motion.h1>
+        <Reveal delay={0.15}>
+          <h1 className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Healthy essentials.
+            <br />
+            <span className="hero-highlight">Delivered with Dignity.</span>
+          </h1>
+        </Reveal>
 
-        <motion.p
-          {...anim(0.65)}
-          className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base"
-        >
-          Teen Health supports vulnerable youth and young adults with nourishing
-          food, hydration, and personal care — plus a next step through trusted
-          local partners.
-        </motion.p>
+        <Reveal delay={0.3}>
+          <p className="mt-6 max-w-lg text-sm leading-relaxed text-white/75 sm:text-base">
+            Teen Health supports vulnerable youth and young adults with nourishing
+            food, hydration, and personal care — plus a next step through trusted
+            local partners.
+          </p>
+        </Reveal>
 
-        <motion.div
-          {...anim(0.85)}
-          className="mt-8 flex flex-col gap-3 sm:flex-row"
-        >
-          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
-            Give today
-          </Button>
-          <Button
-            href="/programs"
-            variant="ghost"
-            className="text-white hover:bg-white/10"
-          >
-            Explore programs
-          </Button>
-        </motion.div>
+        <Reveal delay={0.45}>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+              Give today
+            </Button>
+            <Button
+              href="/programs"
+              variant="ghost"
+              className="text-white hover:bg-white/10"
+            >
+              Explore programs
+            </Button>
+          </div>
+        </Reveal>
       </div>
 
       {/* Decorative bottom edge */}
