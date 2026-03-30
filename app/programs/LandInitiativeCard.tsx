@@ -91,9 +91,9 @@ export function LandInitiativeCard() {
                             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">5-Year Plan</p>
                             <div className="flex flex-col gap-2 sm:flex-row">
                                 {[
-                                    { phase: "Phase I", detail: "80-acre Fallbrook ranch · 8–12 beds · CSA launch" },
-                                    { phase: "Phase II", detail: "Second 100+ acre ranch · 30–40 combined beds" },
-                                    { phase: "Phase III", detail: "60–80 beds · $3.5–4M annual enterprise revenue" },
+                                    { phase: "Phase I", detail: "80-acre Fallbrook ranch · 8–12 beds · CSA\u00a0launch" },
+                                    { phase: "Phase II", detail: "Second 100+ acre ranch · 30–40 combined\u00a0beds" },
+                                    { phase: "Phase III", detail: "60–80 beds · $3.5–4M annual enterprise\u00a0revenue" },
                                 ].map(({ phase, detail }) => (
                                     <div key={phase} className="flex-1 rounded-lg bg-sun/10 px-4 py-3">
                                         <p className="text-sm font-bold text-ink">{phase}</p>
