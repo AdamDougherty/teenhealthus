@@ -23,7 +23,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                A simple mission with<br />real-world logistics
+                A Simple Mission with<br />Real-World Logistics
               </h1>
             </Reveal>
             <Reveal delay={0.15}>

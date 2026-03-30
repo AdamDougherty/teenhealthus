@@ -40,7 +40,7 @@ export default function GetInvolvedPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                There are many ways to&nbsp;help
+                There Are Many Ways to&nbsp;Help
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
