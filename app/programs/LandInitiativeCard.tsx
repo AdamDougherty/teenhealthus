@@ -29,7 +29,7 @@ export function LandInitiativeCard() {
                     {[
                         { icon: "🌱", label: "Regenerative Agriculture", sub: "Soil-first production, orchards & livestock" },
                         { icon: "💼", label: "Paid Apprenticeships", sub: "12–18 month structured workforce track" },
-                        { icon: "📈", label: "Enterprise Revenue", sub: "CSA, farmers markets & agritourism" },
+                        { icon: "📈", label: "Enterprise Revenue", sub: "CSA, farmers markets, & agritourism" },
                         { icon: "🏡", label: "Permanent Housing", sub: "Graduate when genuinely ready" },
                     ].map(({ icon, label, sub }) => (
                         <div key={label} className="rounded-xl bg-mist p-4 text-center">
