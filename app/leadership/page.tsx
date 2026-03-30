@@ -50,7 +50,7 @@ export default function LeadershipPage() {
                         <Reveal delay={0.08}>
                             <div className="flex flex-col items-start gap-8 md:flex-row">
                                 <div className="w-full flex-shrink-0 md:w-72">
-                                    <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
+                                    <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-sm">
                                         <Image
                                             src="/images/shared/scott-swift-founder.png"
                                             alt="Scott Swift, President"
@@ -95,7 +95,7 @@ export default function LeadershipPage() {
                         <Reveal delay={0.16}>
                             <div className="flex flex-col items-start gap-8 md:flex-row">
                                 <div className="w-full flex-shrink-0 md:w-72">
-                                    <div className="aspect-square w-full overflow-hidden rounded-2xl shadow-sm">
+                                    <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-sm">
                                         <Image
                                             src="/images/shared/lisa-carlson-founder.png"
                                             alt="Lisa Carlson, Vice-President"
