@@ -185,8 +185,8 @@ export default function VolunteerPage() {
                 num: "02",
                 title: "We'll match you",
                 desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
-                image: "/images/shared/teen-health-powerpak-trace-supplements.jpeg",
-                imageAlt: "Teen Health PowerPak Trace supplements",
+                image: "/images/shared/volunteer-products-table.jpg",
+                imageAlt: "Volunteer products laid out on a table",
               },
               {
                 num: "03",
