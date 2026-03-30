@@ -69,12 +69,12 @@ export function LandInitiativeCard() {
                         {/* Apprenticeship Track */}
                         <div>
                             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">The Apprenticeship Track</p>
-                            <div className="grid gap-2 sm:grid-cols-2">
+                            <div className="grid gap-2 sm:grid-cols-4">
                                 {[
-                                    { phase: "Foundation", months: "Months 1–3", desc: "On-site housing, life skills & farm orientation." },
+                                    { phase: "Foundation", months: "Months 1–3", desc: "On-site housing, life skills, & farm orientation." },
                                     { phase: "Apprentice", months: "Months 4–9", desc: "Hands-on work in produce, livestock, or sales." },
-                                    { phase: "Senior Apprentice", months: "Months 10–15", desc: "Crop planning, team leadership & enterprise management." },
-                                    { phase: "Graduate", months: "When Ready", desc: "Job placement, housing navigation & alumni support." },
+                                    { phase: "Senior Apprentice", months: "Months 10–15", desc: "Crop planning, team leadership, & enterprise management." },
+                                    { phase: "Graduate", months: "When Ready", desc: "Job placement, housing navigation, & alumni support." },
                                 ].map(({ phase, months, desc }) => (
                                     <div key={phase} className="rounded-lg border border-ink/10 p-4">
                                         <p className="text-sm font-bold text-ink">
