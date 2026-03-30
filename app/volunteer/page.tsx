@@ -47,7 +47,7 @@ export default function VolunteerPage() {
       <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
         <div className="absolute inset-0">
           <Image
-            src="/images/shared/Newer Pictures/volunteer-giving-products.jpg"
+            src="/images/shared/volunteer-giving-products.jpg"
             alt="Teen Health volunteers giving products"
             fill
             className="object-cover" style={{ objectPosition: 'center center' }}
