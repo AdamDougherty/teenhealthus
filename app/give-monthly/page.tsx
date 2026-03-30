@@ -199,8 +199,8 @@ export default function GiveMonthlyPage() {
                             </h2>
                             <p className="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
                                 Pick a monthly amount that works for you.<br />
-                                Every gift — no matter the size — goes directly toward<br />
-                                assembling, shipping, and distributing kits to youth who need them.
+                                Every gift — no matter the size — goes directly toward assembling,<br />
+                                shipping, and distributing kits to youth who need them.
                             </p>
                         </div>
                     </Reveal>
