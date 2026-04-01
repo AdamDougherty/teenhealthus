@@ -16,6 +16,17 @@ const nextConfig = {
   // ── Powered-by header removal ──
   poweredByHeader: false,
 
+  // ── Redirects ──
+  async redirects() {
+    return [
+      {
+        source: "/programs",
+        destination: "/program-sponsor",
+        permanent: true,
+      },
+    ];
+  },
+
   // ── Security & caching headers ──
   async headers() {
     return [

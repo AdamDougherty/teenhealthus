@@ -7,7 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes = [
     "",
-    "/programs",
+    "/program-sponsor",
+    "/program-sponsor/youth-nutrition-initiative",
+    "/program-sponsor/dignity-kit-program",
+    "/program-sponsor/land-initiative",
     "/our-why",
     "/get-involved",
     "/about",

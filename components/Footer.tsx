@@ -23,7 +23,7 @@ export function Footer() {
                 Explore
               </div>
               <div className="space-y-2">
-                <Link href="/programs" className="block hover:text-ink">
+                <Link href="/program-sponsor" className="block hover:text-ink">
                   Programs
                 </Link>
                 <Link href="/our-why" className="block hover:text-ink">

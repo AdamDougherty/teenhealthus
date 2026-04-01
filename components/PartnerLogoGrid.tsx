@@ -1,17 +1,20 @@
+"use client";
+
+import { useState, useCallback } from "react";
 import Image from "next/image";
-import { Reveal } from "@/components/Reveal";
 import { Container } from "@/components/Container";
+import { Reveal } from "@/components/Reveal";
 
 interface Partner {
   name: string;
   logo: string;
-  invertLogo?: boolean;
+  skipBlend?: boolean;
 }
 
 const PARTNERS: Partner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png" },
   { name: "Betty Lou's", logo: "/partners/bettylous.png" },
-  { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
+  { name: "Intake", logo: "/partners/intake.png", skipBlend: true },
   { name: "Google", logo: "/partners/google.svg" },
   { name: "Salesforce", logo: "/images/shared/salesforce-logo.jpg" },
   { name: "Marquis", logo: "/partners/marquis.svg" },
@@ -35,9 +38,35 @@ const PARTNERS: Partner[] = [
   { name: "Anthropic", logo: "/partners/anthropic.png" },
 ];
 
+const LOGOS_PER_PAGE = 15; // 5 columns × 3 rows
+const TOTAL_PAGES = Math.ceil(PARTNERS.length / LOGOS_PER_PAGE);
+
 export function PartnerLogoGrid() {
+  const [page, setPage] = useState(0);
+
+  const next = useCallback(
+    () => setPage((p) => (p + 1) % TOTAL_PAGES),
+    [],
+  );
+  const prev = useCallback(
+    () => setPage((p) => (p - 1 + TOTAL_PAGES) % TOTAL_PAGES),
+    [],
+  );
+
+  const pagePartners = PARTNERS.slice(
+    page * LOGOS_PER_PAGE,
+    page * LOGOS_PER_PAGE + LOGOS_PER_PAGE,
+  );
+
+  // Split into 3 rows of 5
+  const rows = [
+    pagePartners.slice(0, 5),
+    pagePartners.slice(5, 10),
+    pagePartners.slice(10, 15),
+  ];
+
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-[#f5f0eb] py-20 sm:py-28">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -52,21 +81,74 @@ export function PartnerLogoGrid() {
           </div>
         </Reveal>
 
-        {/* Responsive logo grid */}
-        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-          {PARTNERS.map((partner, i) => (
-            <Reveal key={partner.name} delay={i * 0.04}>
-              <div className="group flex h-[11rem] items-center justify-center rounded-xl bg-white p-4 opacity-[0.92] shadow-[0_1px_4px_rgba(0,0,0,0.06)] ring-1 ring-ink/[0.05] transition-all duration-[250ms] ease-out hover:opacity-100 hover:-translate-y-0.5 hover:shadow-lg">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={160}
-                  height={160}
-                  className={`h-auto w-auto max-h-[65px] max-w-[75%] object-contain transition-all duration-[250ms] ease-out group-hover:scale-[1.03] ${partner.name === "Oceanblue" ? "rounded-lg" : ""} ${partner.invertLogo ? "invert" : ""} ${partner.name === "Anthropic" ? "!max-h-[120px] !max-w-[90%]" : ""}`}
-                />
+        {/* Logo slider */}
+        <div className="mx-auto mt-16 max-w-5xl">
+          {rows.map((row, rowIdx) => (
+            <div
+              key={`${page}-${rowIdx}`}
+              className="relative flex items-center justify-center"
+            >
+              {/* Left arrow — only on middle row */}
+              {rowIdx === 1 && (
+                <button
+                  onClick={prev}
+                  aria-label="Previous page"
+                  className="absolute -left-4 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70 sm:-left-12"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                  </svg>
+                </button>
+              )}
+
+              {/* Logo cells */}
+              <div className="grid w-full grid-cols-3 sm:grid-cols-5">
+                {row.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="flex h-24 items-center justify-center px-4 sm:h-28"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={140}
+                      height={60}
+                      className={`h-auto w-auto max-h-[66px] max-w-[145px] object-contain opacity-90 transition-opacity duration-200 hover:opacity-100 ${
+                        partner.skipBlend ? "invert" : "mix-blend-multiply"
+                      } ${partner.name === "Oceanblue" ? "rounded-md" : ""} ${partner.name === "Anthropic" ? "!max-h-[106px] !max-w-[172px]" : ""}`}
+                    />
+                  </div>
+                ))}
               </div>
-            </Reveal>
+
+              {/* Right arrow — only on middle row */}
+              {rowIdx === 1 && (
+                <button
+                  onClick={next}
+                  aria-label="Next page"
+                  className="absolute -right-4 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70 sm:-right-12"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
+              )}
+            </div>
           ))}
+
+          {/* Pagination dots */}
+          <div className="mt-8 flex items-center justify-center gap-2.5">
+            {Array.from({ length: TOTAL_PAGES }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i)}
+                aria-label={`Go to page ${i + 1}`}
+                className={`h-2 w-2 rounded-full transition-colors duration-200 ${
+                  i === page ? "bg-ink/70" : "bg-ink/20 hover:bg-ink/40"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </Container>
     </section>

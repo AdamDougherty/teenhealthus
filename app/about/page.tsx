@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563c8" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
           <div className="max-w-3xl">
             <Reveal>

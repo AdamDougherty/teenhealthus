@@ -10,7 +10,7 @@ export default function HowWeWorkPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
                 <div className="absolute inset-0 bg-white/[0.04]" />
 
                 {/* Text overlay */}

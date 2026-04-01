@@ -44,7 +44,7 @@ export default function DistributePage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#2563C8" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
         <div className="absolute inset-0 bg-white/[0.04]" />
 
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
@@ -55,7 +55,7 @@ export default function DistributePage() {
               </p>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                 Get Essentials to the<br />
-                <span style={{ color: "#FFA10A" }}>Youth You Serve</span>
+                <span style={{ color: "#FFFFFF" }}>Youth You Serve</span>
               </h1>
             </Reveal>
             <Reveal delay={0.15}>

@@ -17,17 +17,17 @@ export default function ProgramsPage() {
       <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
         {/* Background image */}
         <Image
-          src="/images/shared/program-sponsor-hero-banner-young-girl.png"
+          src="/images/shared/program-sponsor-hero-banner-young-girl.jpg"
           alt="Program Sponsor hero"
           fill
           priority
           className="object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
 
-        <div className="absolute inset-0 z-10 flex items-center justify-end px-6 sm:px-10 lg:px-16">
-          <div className="max-w-2xl text-right" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[70vh] flex items-center">
+          <div className="max-w-2xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Become a Program Sponsor
@@ -35,13 +35,13 @@ export default function ProgramsPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Built Around What Youth <br /><span style={{ color: "#FFA10A" }}>Actually&nbsp;Need</span>
+                Built Around What Youth<br /><span style={{ color: "#FFA10A" }}>Actually Need</span>
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
               <p className="mt-6 text-base leading-relaxed text-white">
-                Fund a program that puts healthy essentials directly into the hands of youth<br />
-                who need them most — and help keep every kit stocked and ready.
+                Fund a program that puts healthy essentials directly into the hands of<br />
+                youth who need them most — and help keep every kit stocked and ready.
               </p>
             </Reveal>
           </div>
@@ -86,8 +86,8 @@ export default function ProgramsPage() {
                     nutrition across multiple cities to the youth who need it most.
                   </p>
                   <div className="mt-6">
-                    <Button href="#" variant="primary" style={{ color: 'white' }}>
-                      Sponsor This Program
+                    <Button href="/program-sponsor/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
+                      Learn More
                     </Button>
                   </div>
                 </Card>
@@ -112,8 +112,8 @@ export default function ProgramsPage() {
                     need it the most.
                   </p>
                   <div className="mt-6">
-                    <Button href="https://mygoodness.benevity.org/community/cause/840-874628884/project/5X9ZLPQV7M" variant="primary" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
-                      Sponsor This Program
+                    <Button href="/program-sponsor/dignity-kit-program" variant="primary" style={{ color: 'white' }}>
+                      Learn More
                     </Button>
                   </div>
                 </Card>

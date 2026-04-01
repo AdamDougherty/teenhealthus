@@ -56,7 +56,7 @@ export function HeroSection() {
               Give today
             </Button>
             <Button
-              href="/programs"
+              href="/program-sponsor"
               variant="ghost"
               className="text-white hover:bg-white/10"
             >

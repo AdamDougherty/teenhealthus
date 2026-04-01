@@ -39,6 +39,12 @@ Teen Health is a nonprofit website supporting vulnerable youth with food, hydrat
 1. Show last commit: `git log -1 --pretty=format:"%s"`
 2. `git revert HEAD --no-edit`
 
+## Browser Testing
+
+- **ALWAYS use Playwright** (via `npx playwright`) to automate Chrome for any browser testing, screenshots, or visual checks.
+- **NEVER use the Chrome MCP plugin** (preview_start, preview_screenshot, preview_click, etc.) — always use Playwright directly instead.
+- Playwright is installed globally (v1.59.0). Run tests with `npx playwright test` or use the Playwright API via Node scripts.
+
 ## Development Rules
 
 - Always preview changes at localhost:3000 before deploying
