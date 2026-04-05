@@ -7,7 +7,7 @@ export function HeroSection() {
     <section className="hero-section relative flex min-h-[90vh] items-center overflow-hidden">
       {/* Full-width background image */}
       <Image
-        src="/hero.jpg"
+        src="/images/shared/homepage-hero-banner.png"
         alt="Young person supported by Teen Health"
         fill
         priority
@@ -22,7 +22,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)",
+            "linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%)",
         }}
       />
 
@@ -44,9 +44,9 @@ export function HeroSection() {
 
         <Reveal delay={0.3}>
           <p className="mt-6 max-w-lg text-sm leading-relaxed text-white sm:text-base">
-            Teen Health supports vulnerable youth and young adults with nourishing
-            food, hydration, and personal care — plus a next step through trusted
-            local partners.
+            Teen Health supports vulnerable youth and young adults<br />
+            with nourishing food, hydration, and personal care<br />
+            — plus a next step through trusted local partners.
           </p>
         </Reveal>
 

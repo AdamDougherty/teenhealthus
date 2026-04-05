@@ -11,25 +11,47 @@ export default function LeadershipPage() {
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
             <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
-                <div className="absolute inset-0 bg-white/[0.04]" />
-
-                {/* Text overlay */}
-                <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
-                    <div className="max-w-3xl">
-                        <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
-                                Leadership &amp; Advisors
-                            </p>
-                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                A Huge-Hearted, Innovative Team
-                            </h1>
-                        </Reveal>
-                        <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                Meet the passionate people driving our mission — leaders and advisors<br />who bring deep expertise, lived experience, and a shared commitment<br />to youth well-being.
-                            </p>
-                        </Reveal>
+                <div className="relative z-10 flex min-h-[70vh] items-center">
+                    <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
+                        <div className="max-w-3xl">
+                            <Reveal>
+                                <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                                    Leadership &amp; Advisors
+                                </p>
+                            </Reveal>
+                            <Reveal delay={0.1}>
+                                <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                    A Huge-Hearted, Innovative Team
+                                </h1>
+                            </Reveal>
+                            <Reveal delay={0.15}>
+                                <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+                                    Meet the passionate people driving our mission — leaders and advisors<br />who bring deep expertise, lived experience, and a shared commitment<br />to youth well-being.
+                                </p>
+                            </Reveal>
+                        </div>
                     </div>
+                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
+                        <Image
+                            src="/images/shared/conscious-step-purely-elizabeth.jpg"
+                            alt="Conscious Step and Purely Elizabeth products"
+                            fill
+                            className="object-cover object-center"
+                            sizes="50vw"
+                            priority
+                        />
+                        <div
+                            aria-hidden
+                            className="pointer-events-none absolute inset-0 z-10"
+                            style={{ background: "rgba(61,117,208,0.2)" }}
+                        />
+                    </div>
+                    {/* Gradient from blue background into image */}
+                    <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
+                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
+                    />
                 </div>
             </section>
 

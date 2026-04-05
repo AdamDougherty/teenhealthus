@@ -12,24 +12,47 @@ export default function OurWorkPage() {
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
             <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
-                <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
-                    <div className="max-w-3xl">
-                        <Reveal>
-                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
-                                Our Work
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.1}>
-                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                Impact &amp; Insights:<br />Youth Health &amp; Stability
-                            </h1>
-                        </Reveal>
-                        <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                Too many young people are navigating life without proper nutrition,<br />mental health resources, or stable housing. Together, we&apos;re creating<br />pathways to stability and well-being.
-                            </p>
-                        </Reveal>
+                <div className="relative z-10 flex min-h-[70vh] items-center">
+                    <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
+                        <div className="max-w-3xl">
+                            <Reveal>
+                                <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                                    Our Work
+                                </p>
+                            </Reveal>
+                            <Reveal delay={0.1}>
+                                <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                    Impact &amp; Insights:<br />Youth Health &amp; Stability
+                                </h1>
+                            </Reveal>
+                            <Reveal delay={0.15}>
+                                <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+                                    Too many young people are navigating life without proper nutrition,<br />mental health resources, or stable housing. Together, we&apos;re creating<br />pathways to stability and well-being.
+                                </p>
+                            </Reveal>
+                        </div>
                     </div>
+                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
+                        <Image
+                            src="/images/shared/gu-stroopwafel-boxes.jpg"
+                            alt="GU Stroopwafel energy products"
+                            fill
+                            className="object-cover object-bottom"
+                            sizes="50vw"
+                            priority
+                        />
+                        <div
+                            aria-hidden
+                            className="pointer-events-none absolute inset-0 z-10"
+                            style={{ background: "rgba(61,117,208,0.2)" }}
+                        />
+                    </div>
+                    {/* Gradient from blue background into image */}
+                    <div
+                        aria-hidden
+                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
+                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
+                    />
                 </div>
             </section>
 
@@ -47,7 +70,7 @@ export default function OurWorkPage() {
                         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.08}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-sky sm:text-3xl">
                                         50,000+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -57,7 +80,7 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.12}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-sun sm:text-3xl">
                                         250+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -67,7 +90,7 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.16}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-slate-600 sm:text-3xl">
                                         100
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -77,7 +100,7 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.2}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                    <p className="font-serif text-2xl font-normal tracking-tight text-indigo-500 sm:text-3xl">
                                         $1 million+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
@@ -101,42 +124,41 @@ export default function OurWorkPage() {
                             </h2>
                         </Reveal>
 
-                        {/* ─── Youth Homelessness ─── */}
-                        <Reveal delay={0.08}>
-                            <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                                {/* Column headers */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-b border-r border-border px-6 py-3">
-                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">National</p>
+                        {/* ─── Youth Homelessness — colored accent columns ─── */}
+                        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            {/* National column — blue accent */}
+                            <Reveal delay={0.08}>
+                                <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                                    <div className="px-6 py-3" style={{ borderBottom: "3px solid #2E9DF7" }}>
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-sky">National</p>
                                     </div>
-                                    <div className="border-b border-border px-6 py-3">
-                                        <p className="text-xs font-semibold uppercase tracking-widest text-ink/40">California</p>
-                                    </div>
-                                </div>
-                                {/* Row 1 */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-b border-r border-border p-8">
+                                    <div className="border-b border-border p-8">
                                         <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">4.2 million</p>
                                         <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 13–25 experience homelessness each year</p>
                                     </div>
-                                    <div className="border-b border-border p-8">
-                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">200,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 12–24 experience homelessness each year</p>
+                                    <div className="p-8">
+                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">34,700</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">unaccompanied youth under age 25 experience homelessness on any given night</p>
                                     </div>
                                 </div>
-                                {/* Row 2 */}
-                                <div className="grid grid-cols-2">
-                                    <div className="border-r border-border p-8">
-                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">150,000</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">children under 18 experience homelessness on any given night</p>
+                            </Reveal>
+                            {/* California column — orange accent */}
+                            <Reveal delay={0.12}>
+                                <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                                    <div className="px-6 py-3" style={{ borderBottom: "3px solid #FF8005" }}>
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-sun">California</p>
+                                    </div>
+                                    <div className="border-b border-border p-8">
+                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">200,000</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth ages 12–24 experience homelessness each year</p>
                                     </div>
                                     <div className="p-8">
                                         <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">9,900</p>
-                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">youth under age 25 experience homelessness on any given night</p>
+                                        <p className="mt-3 text-sm leading-relaxed text-ink/60">unaccompanied youth under age 25 experience homelessness on any given night</p>
                                     </div>
                                 </div>
-                            </div>
-                        </Reveal>
+                            </Reveal>
+                        </div>
 
                         {/* Divider: Foster Care Population */}
                         <Reveal delay={0.14}>
@@ -149,26 +171,36 @@ export default function OurWorkPage() {
                             </div>
                         </Reveal>
 
-                        {/* National / state population stats */}
+                        {/* Foster Care Population — tinted number backgrounds */}
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             <Reveal delay={0.18}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
-                                        376,900
-                                    </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        individuals in foster care in the US
-                                    </p>
+                                <div className="relative h-full overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center select-none font-sans text-[7rem] font-bold leading-none text-sky/[0.06] sm:text-[8rem]">
+                                        376K
+                                    </span>
+                                    <div className="relative">
+                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                            376,900
+                                        </p>
+                                        <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                            individuals in foster care in the US
+                                        </p>
+                                    </div>
                                 </div>
                             </Reveal>
                             <Reveal delay={0.22}>
-                                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
-                                    <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
-                                        44,400
-                                    </p>
-                                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
-                                        individuals in foster care in California alone
-                                    </p>
+                                <div className="relative h-full overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <span aria-hidden="true" className="pointer-events-none absolute inset-0 flex items-center justify-center select-none font-sans text-[7rem] font-bold leading-none text-sun/[0.06] sm:text-[8rem]">
+                                        44K
+                                    </span>
+                                    <div className="relative">
+                                        <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                                            44,400
+                                        </p>
+                                        <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                                            individuals in foster care in California alone
+                                        </p>
+                                    </div>
                                 </div>
                             </Reveal>
                         </div>
@@ -184,10 +216,15 @@ export default function OurWorkPage() {
                             </div>
                         </Reveal>
 
-                        {/* 3-column outcomes grid */}
+                        {/* 3-column outcomes grid with icons */}
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
                             <Reveal delay={0.3}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-sun/10">
+                                        <svg className="h-5 w-5 text-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                                        </svg>
+                                    </div>
                                     <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
                                         40%
                                     </p>
@@ -198,6 +235,11 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.34}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-sky/10">
+                                        <svg className="h-5 w-5 text-sky" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                        </svg>
+                                    </div>
                                     <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
                                         27%
                                     </p>
@@ -208,6 +250,11 @@ export default function OurWorkPage() {
                             </Reveal>
                             <Reveal delay={0.38}>
                                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm">
+                                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-mint/20">
+                                        <svg className="h-5 w-5 text-mint" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                        </svg>
+                                    </div>
                                     <p className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
                                         14%
                                     </p>
