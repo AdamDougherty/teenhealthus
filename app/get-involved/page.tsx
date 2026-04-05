@@ -171,7 +171,7 @@ export default function GetInvolvedPage() {
               <Card className="h-full overflow-hidden p-0">
                 <div className="relative" style={{ aspectRatio: "3/2" }}>
                   <Image
-                    src="/images/partnerships/IMG_4664.jpg"
+                    src="/images/shared/dream-center-teen-health.jpeg"
                     alt="Partnership distribution in action"
                     fill
                     className="object-cover"

@@ -10,49 +10,41 @@ export default function HowWeWorkPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
-                <div className="absolute inset-0 bg-white/[0.04]" />
-
-                {/* Text + image */}
-                <div className="relative z-10 flex min-h-[70vh] items-center">
-                    <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
-                        <div className="max-w-3xl">
-                            <Reveal>
-                                <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
-                                    How We Work
-                                </p>
-                                <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                    Fueling Youth Well-Being<br />and Stability
-                                </h1>
-                            </Reveal>
-                            <Reveal delay={0.15}>
-                                <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                    From food rescue to essential kits to mental health support, our programs<br />address the whole person — meeting youth where they are and building<br />toward lasting stability.
-                                </p>
-                            </Reveal>
-                        </div>
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+                <Image
+                    src="/images/shared/how-we-work-hero-banner-conscious-step-purely-elizabeth-hero-section.jpg"
+                    alt="Conscious Step and Purely Elizabeth products for youth distribution"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                    sizes="100vw"
+                />
+                <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                        background:
+                            "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)",
+                    }}
+                />
+                <div className="absolute inset-0 z-10 flex items-center justify-start px-6 sm:px-10 lg:px-16">
+                    <div className="max-w-3xl text-left" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+                        <Reveal>
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                                How We Work
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.1}>
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                Fueling Youth Well-Being<br />and Stability
+                            </h1>
+                        </Reveal>
+                        <Reveal delay={0.15}>
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+                                From food rescue to essential kits to mental health support, our programs<br />address the whole person — meeting youth where they are and building<br />toward lasting stability.
+                            </p>
+                        </Reveal>
                     </div>
-                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-                        <Image
-                            src="/images/shared/humanity-heroes-purely-elizabeth.jpg"
-                            alt="Humanity Heroes and Simply Elizabeth products"
-                            fill
-                            className="object-cover object-bottom"
-                            sizes="50vw"
-                            priority
-                        />
-                        <div
-                            aria-hidden
-                            className="pointer-events-none absolute inset-0 z-10"
-                            style={{ background: "rgba(61,117,208,0.2)" }}
-                        />
-                    </div>
-                    {/* Gradient from blue background into image */}
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
-                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
-                    />
                 </div>
             </section>
 
@@ -163,7 +155,7 @@ export default function HowWeWorkPage() {
                                     src="/images/shared/young-man-supplements-2-opt2.jpg"
                                     alt="Young man with supplements"
                                     fill
-                                    className="object-cover" style={{ objectPosition: "center 15%" }}
+                                    className="object-cover" style={{ objectPosition: "center 40%" }}
                                     sizes="(max-width: 640px) 100vw, 50vw"
                                 />
                             </div>

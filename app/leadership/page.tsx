@@ -31,27 +31,6 @@ export default function LeadershipPage() {
                             </Reveal>
                         </div>
                     </div>
-                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-                        <Image
-                            src="/images/shared/conscious-step-purely-elizabeth.jpg"
-                            alt="Conscious Step and Purely Elizabeth products"
-                            fill
-                            className="object-cover object-center"
-                            sizes="50vw"
-                            priority
-                        />
-                        <div
-                            aria-hidden
-                            className="pointer-events-none absolute inset-0 z-10"
-                            style={{ background: "rgba(61,117,208,0.2)" }}
-                        />
-                    </div>
-                    {/* Gradient from blue background into image */}
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
-                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
-                    />
                 </div>
             </section>
 

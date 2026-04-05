@@ -35,27 +35,6 @@ export default function AboutPage() {
               </Reveal>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-            <Image
-              src="/images/shared/purely-elizabeth-pallets.jpg"
-              alt="Stacked boxes of donated products"
-              fill
-              className="object-cover object-[center_20%]"
-              sizes="50vw"
-              priority
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 z-10"
-              style={{ background: "rgba(61,117,208,0.2)" }}
-            />
-          </div>
-          {/* Gradient from blue background into image */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
-            style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
-          />
         </div>
       </section>
 
@@ -128,6 +107,30 @@ export default function AboutPage() {
               community. Based in Southern California, our reach extends nationally
               through strategic logistics partnerships.
             </p>
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
+                <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
+                  <Image
+                    src="/images/shared/gu-stroopwafel-boxes.jpg"
+                    alt="GU Stroopwafel energy products ready for distribution"
+                    fill
+                    className="object-cover object-left"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
+                <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
+                  <Image
+                    src="/images/shared/humanity-heroes-purely-elizabeth.jpg"
+                    alt="Humanity Heroes and Purely Elizabeth products"
+                    fill
+                    className="object-cover object-left"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
           </section>
         </Reveal>
 

@@ -32,27 +32,6 @@ export default function OurWorkPage() {
                             </Reveal>
                         </div>
                     </div>
-                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-                        <Image
-                            src="/images/shared/gu-stroopwafel-boxes.jpg"
-                            alt="GU Stroopwafel energy products"
-                            fill
-                            className="object-cover object-bottom"
-                            sizes="50vw"
-                            priority
-                        />
-                        <div
-                            aria-hidden
-                            className="pointer-events-none absolute inset-0 z-10"
-                            style={{ background: "rgba(61,117,208,0.2)" }}
-                        />
-                    </div>
-                    {/* Gradient from blue background into image */}
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
-                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
-                    />
                 </div>
             </section>
 

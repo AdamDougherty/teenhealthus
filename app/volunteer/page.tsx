@@ -73,8 +73,8 @@ export default function VolunteerPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Your time makes a{" "}
-                <br /><span className="hero-highlight" style={{ color: "#FDCF6A" }}>real difference</span>
+                Your Time Makes a{" "}
+                <br /><span className="hero-highlight" style={{ color: "#FDCF6A" }}>Real Difference</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>

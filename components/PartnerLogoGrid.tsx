@@ -8,17 +8,20 @@ import { Reveal } from "@/components/Reveal";
 interface Partner {
   name: string;
   logo: string;
-  skipBlend?: boolean;
+  skipBlend?: boolean;  // skip mix-blend-multiply (for logos with intentional colored backgrounds)
+  invertLogo?: boolean; // invert colors (for white-on-transparent logos)
+  rounded?: boolean;    // apply rounded corners
+  size?: "lg" | "xl";   // "lg" = ~45% larger, "xl" = ~75% larger
 }
 
 const PARTNERS: Partner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png" },
-  { name: "Betty Lou's", logo: "/partners/bettylous.png" },
-  { name: "Intake", logo: "/partners/intake.png", skipBlend: true },
+  { name: "Betty Lou's", logo: "/partners/bettylous.png", size: "lg" },
+  { name: "Intake", logo: "/partners/intake.png", skipBlend: true, invertLogo: true },
   { name: "Google", logo: "/partners/google.svg" },
   { name: "Salesforce", logo: "/images/shared/salesforce-logo.jpg" },
   { name: "Marquis", logo: "/partners/marquis.svg" },
-  { name: "Oceanblue", logo: "/partners/oceanblue.jpg" },
+  { name: "Oceanblue", logo: "/partners/oceanblue.jpg", skipBlend: true, rounded: true },
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
   { name: "Primal Kitchen", logo: "/partners/primalkitchen.png" },
   { name: "Purely Elizabeth", logo: "/partners/purelyelizabeth.png" },
@@ -35,7 +38,7 @@ const PARTNERS: Partner[] = [
   { name: "VenturePal", logo: "/partners/venturepal.png" },
   { name: "Zahler", logo: "/partners/zahler.png" },
   { name: "Earth Harmony", logo: "/partners/earthharmony.png" },
-  { name: "Anthropic", logo: "/partners/anthropic.png" },
+  { name: "Anthropic", logo: "/partners/anthropic.png", size: "xl" },
 ];
 
 const LOGOS_PER_PAGE = 15; // 5 columns × 3 rows
@@ -113,9 +116,11 @@ export function PartnerLogoGrid() {
                       alt={partner.name}
                       width={140}
                       height={60}
-                      className={`h-auto w-auto max-h-[66px] max-w-[145px] object-contain opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                        partner.skipBlend ? "invert" : "mix-blend-multiply"
-                      } ${partner.name === "Oceanblue" ? "rounded-md" : ""} ${partner.name === "Anthropic" ? "!max-h-[106px] !max-w-[172px]" : ""}`}
+                      className={`h-auto w-auto object-contain opacity-90 transition-opacity duration-200 hover:opacity-100 ${
+                        partner.size === "xl" ? "max-h-[115px] max-w-[210px]" : partner.size === "lg" ? "max-h-[96px] max-w-[180px]" : "max-h-[66px] max-w-[145px]"
+                      } ${partner.skipBlend ? "" : "mix-blend-multiply"} ${
+                        partner.invertLogo ? "invert" : ""
+                      } ${partner.rounded ? "rounded-md" : ""}`}
                     />
                   </div>
                 ))}

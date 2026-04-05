@@ -11,52 +11,43 @@ export default function OurStoryPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
-
-                {/* Text + image */}
-                <div className="relative z-10 flex min-h-[70vh] items-center">
-                    <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
-                        <div className="max-w-3xl">
-                            <Reveal>
-                                <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
-                                    Our Story
-                                </p>
-                            </Reveal>
-                            <Reveal delay={0.1}>
-                                <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                    How Teen Health Started —<br />and Where We&apos;re Going
-                                </h1>
-                            </Reveal>
-                            <Reveal delay={0.15}>
-                                <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                    From a simple question about access to essentials, to a growing
-                                    network of partners, brands, and agencies serving youth across
-                                    the country.
-                                </p>
-                            </Reveal>
-                        </div>
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+                <Image
+                    src="/images/shared/dream-center-natures-turn.jpg"
+                    alt="Dream Center and Nature's Turn partnership"
+                    fill
+                    priority
+                    className="object-cover object-[center_28%]"
+                    sizes="100vw"
+                />
+                <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0"
+                    style={{
+                        background:
+                            "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)",
+                    }}
+                />
+                <div className="absolute inset-0 z-10 flex items-center justify-start px-6 sm:px-10 lg:px-16">
+                    <div className="max-w-3xl text-left" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
+                        <Reveal>
+                            <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
+                                Our Story
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.1}>
+                            <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
+                                How Teen Health Started —<br />and Where We&apos;re Going
+                            </h1>
+                        </Reveal>
+                        <Reveal delay={0.15}>
+                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+                                From a simple question about access to essentials, to a growing
+                                network of partners, brands, and agencies serving youth across
+                                the country.
+                            </p>
+                        </Reveal>
                     </div>
-                    <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-                        <Image
-                            src="/images/shared/dream-center.jpg"
-                            alt="Dream Center partnership"
-                            fill
-                            className="object-cover object-center"
-                            sizes="50vw"
-                            priority
-                        />
-                        <div
-                            aria-hidden
-                            className="pointer-events-none absolute inset-0 z-10"
-                            style={{ background: "rgba(61,117,208,0.3)" }}
-                        />
-                    </div>
-                    {/* Gradient from blue background into image */}
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-y-0 left-1/2 hidden w-32 lg:block"
-                        style={{ background: "linear-gradient(to right, #3D75D0, transparent)" }}
-                    />
                 </div>
             </section>
 
@@ -132,6 +123,18 @@ export default function OurStoryPage() {
                                 and young adults (ages 13–29) need holistic support integrating
                                 health, nutrition, stability, and opportunity.
                             </p>
+                        </Reveal>
+                        <Reveal delay={0.12}>
+                            <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
+                                <Image
+                                    src="/images/shared/center-for-autism-teen-health-2.jpg"
+                                    alt="Center for Autism and Teen Health"
+                                    width={3000}
+                                    height={2000}
+                                    className="w-full object-cover"
+                                    style={{ aspectRatio: "4/3", objectPosition: "center 15%" }}
+                                />
+                            </div>
                         </Reveal>
                     </div>
                 </Container>
@@ -210,6 +213,28 @@ export default function OurStoryPage() {
                                 barriers — empowering the next generation to lead healthier,
                                 safer, and more fulfilling lives.
                             </p>
+                        </Reveal>
+                        <Reveal delay={0.16}>
+                            <div className="mt-8 grid grid-cols-2 gap-4">
+                                <div className="overflow-hidden rounded-2xl shadow-sm" style={{ aspectRatio: "2/3" }}>
+                                    <Image
+                                        src="/images/shared/man-supplements-2.jpg"
+                                        alt="Man with supplements"
+                                        width={1500}
+                                        height={2250}
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div className="overflow-hidden rounded-2xl shadow-sm" style={{ aspectRatio: "2/3" }}>
+                                    <Image
+                                        src="/images/shared/young-man-supplements.jpg"
+                                        alt="Young man with supplements"
+                                        width={1500}
+                                        height={2250}
+                                        className="h-full w-full object-cover"
+                                    />
+                                </div>
+                            </div>
                         </Reveal>
                     </div>
                 </Container>
