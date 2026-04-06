@@ -10,7 +10,16 @@ export default function LeadershipPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
+            <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+                <Image
+                    src="/images/shared/volunteers-earth-harmony-boxes.jpeg"
+                    alt="Volunteers with Earth Harmony boxes"
+                    fill
+                    priority
+                    className="object-cover"
+                    style={{ objectPosition: 'center 20%' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
                 <div className="relative z-10 flex min-h-[70vh] items-center">
                     <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
                         <div className="max-w-3xl">

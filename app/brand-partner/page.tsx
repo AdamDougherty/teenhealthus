@@ -142,8 +142,8 @@ export default function BrandPartnerPage() {
       {/* ——— FULL-WIDTH PHOTO ——— */}
       <section className="relative overflow-hidden" style={{ minHeight: "65vh" }}>
         <Image
-          src="/images/shared/ch-la.jpeg"
-          alt="Teen Health delivering kits to youth"
+          src="/images/youth/IMG_1205.jpeg"
+          alt="Teen Health team holding banner with backpack kits"
           fill
           className="object-cover"
           style={{ objectPosition: 'center 25%' }}

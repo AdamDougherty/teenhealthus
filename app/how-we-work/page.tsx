@@ -336,6 +336,38 @@ export default function HowWeWorkPage() {
                     </div>
                 </Container>
             </section>
+
+            {/* ─── PHOTO BREAK ─── */}
+            <section className="py-12 sm:py-16">
+                <Container>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <Reveal delay={0.08}>
+                            <div className="relative overflow-hidden rounded-2xl" style={{ height: "560px" }}>
+                                <Image
+                                    src="/images/shared/gu-stroopwafel-2.jpg"
+                                    alt="GU Stroopwafel boxes ready for distribution"
+                                    fill
+                                    className="object-cover"
+                                    style={{ objectPosition: 'center 10%' }}
+                                    sizes="(max-width: 640px) 100vw, 50vw"
+                                />
+                            </div>
+                        </Reveal>
+                        <Reveal delay={0.16}>
+                            <div className="relative overflow-hidden rounded-2xl" style={{ height: "560px" }}>
+                                <Image
+                                    src="/images/shared/apple-cinnamon-pallet.jpg"
+                                    alt="Apple cinnamon pallet ready for distribution"
+                                    fill
+                                    className="object-cover"
+                                    style={{ objectPosition: 'center 10%' }}
+                                    sizes="(max-width: 640px) 100vw, 50vw"
+                                />
+                            </div>
+                        </Reveal>
+                    </div>
+                </Container>
+            </section>
         </div>
     );
 }

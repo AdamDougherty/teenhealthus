@@ -21,7 +21,16 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+        <Image
+          src="/images/shared/girls-lavelle-mod-marathon.jpeg"
+          alt="Girls at Lavelle Mod Marathon"
+          fill
+          priority
+          className="object-cover"
+          style={{ objectPosition: 'center 45%' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
           <div className="max-w-3xl">
             <Reveal>
@@ -88,7 +97,7 @@ export default function LearnPage() {
                 style={{ aspectRatio: "4/3" }}
               >
                 <Image
-                  src="/images/our-why/staggering_poverty.jpg"
+                  src="/images/shared/young-guy-2.jpg"
                   alt="Children living in persistent poverty"
                   fill
                   className="object-cover"
