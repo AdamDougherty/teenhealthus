@@ -8,20 +8,16 @@ import { Reveal } from "@/components/Reveal";
 interface Partner {
   name: string;
   logo: string;
-  skipBlend?: boolean;  // skip mix-blend-multiply (for logos with intentional colored backgrounds)
-  invertLogo?: boolean; // invert colors (for white-on-transparent logos)
-  rounded?: boolean;    // apply rounded corners
-  size?: "lg" | "xl";   // "lg" = ~45% larger, "xl" = ~75% larger
+  invertLogo?: boolean;
+  size?: "md" | "lg";  // for logos with excessive whitespace in source image
 }
 
 const PARTNERS: Partner[] = [
   { name: "Whole Foods Market", logo: "/partners/wholefood.png" },
-  { name: "Betty Lou's", logo: "/partners/bettylous.png", size: "lg" },
-  { name: "Intake", logo: "/partners/intake.png", skipBlend: true, invertLogo: true },
-  { name: "Google", logo: "/partners/google.svg" },
-  { name: "Salesforce", logo: "/images/shared/salesforce-logo.jpg" },
+  { name: "Betty Lou's", logo: "/partners/bettylous.png", size: "md" },
+  { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
   { name: "Marquis", logo: "/partners/marquis.svg" },
-  { name: "Oceanblue", logo: "/partners/oceanblue.jpg", skipBlend: true, rounded: true },
+  { name: "Oceanblue", logo: "/partners/oceanblue.jpg" },
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
   { name: "Primal Kitchen", logo: "/partners/primalkitchen.png" },
   { name: "Purely Elizabeth", logo: "/partners/purelyelizabeth.png" },
@@ -38,10 +34,18 @@ const PARTNERS: Partner[] = [
   { name: "VenturePal", logo: "/partners/venturepal.png" },
   { name: "Zahler", logo: "/partners/zahler.png" },
   { name: "Earth Harmony", logo: "/partners/earthharmony.png" },
-  { name: "Anthropic", logo: "/partners/anthropic.png", size: "xl" },
+  { name: "Food for Life", logo: "/images/shared/food-for-life-logo.jpg" },
+  { name: "Ancient Nutrition", logo: "/images/shared/ancient-nutrition-logo.png", size: "lg" },
+  { name: "Giboard by Gibbon", logo: "/images/shared/giboard-by-gibson-logo.png" },
+  { name: "Nui Snacks", logo: "/images/shared/nui-snacks-logo.png", size: "md" },
+  { name: "Orgain", logo: "/images/shared/orgain-logo-transparent.png" },
+  { name: "Orzax", logo: "/images/shared/orzax-logo.jpg" },
+  { name: "Anthropic", logo: "/partners/anthropic.png", size: "lg" },
+  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+  { name: "Google", logo: "/partners/google.svg" },
 ];
 
-const LOGOS_PER_PAGE = 15; // 5 columns × 3 rows
+const LOGOS_PER_PAGE = 15;
 const TOTAL_PAGES = Math.ceil(PARTNERS.length / LOGOS_PER_PAGE);
 
 export function PartnerLogoGrid() {
@@ -61,7 +65,6 @@ export function PartnerLogoGrid() {
     page * LOGOS_PER_PAGE + LOGOS_PER_PAGE,
   );
 
-  // Split into 3 rows of 5
   const rows = [
     pagePartners.slice(0, 5),
     pagePartners.slice(5, 10),
@@ -84,14 +87,12 @@ export function PartnerLogoGrid() {
           </div>
         </Reveal>
 
-        {/* Logo slider */}
         <div className="mx-auto mt-16 max-w-5xl">
           {rows.map((row, rowIdx) => (
             <div
               key={`${page}-${rowIdx}`}
               className="relative flex items-center justify-center"
             >
-              {/* Left arrow — only on middle row */}
               {rowIdx === 1 && (
                 <button
                   onClick={prev}
@@ -104,7 +105,6 @@ export function PartnerLogoGrid() {
                 </button>
               )}
 
-              {/* Logo cells */}
               <div className="grid w-full grid-cols-3 sm:grid-cols-5">
                 {row.map((partner) => (
                   <div
@@ -116,17 +116,14 @@ export function PartnerLogoGrid() {
                       alt={partner.name}
                       width={140}
                       height={60}
-                      className={`h-auto w-auto object-contain opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                        partner.size === "xl" ? "max-h-[115px] max-w-[210px]" : partner.size === "lg" ? "max-h-[96px] max-w-[180px]" : "max-h-[66px] max-w-[145px]"
-                      } ${partner.skipBlend ? "" : "mix-blend-multiply"} ${
-                        partner.invertLogo ? "invert" : ""
-                      } ${partner.rounded ? "rounded-md" : ""}`}
+                      className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
+                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : "max-h-[66px] max-w-[145px]"
+                      } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                     />
                   </div>
                 ))}
               </div>
 
-              {/* Right arrow — only on middle row */}
               {rowIdx === 1 && (
                 <button
                   onClick={next}
@@ -141,7 +138,6 @@ export function PartnerLogoGrid() {
             </div>
           ))}
 
-          {/* Pagination dots */}
           <div className="mt-8 flex items-center justify-center gap-2.5">
             {Array.from({ length: TOTAL_PAGES }).map((_, i) => (
               <button

@@ -52,3 +52,11 @@ Teen Health is a nonprofit website supporting vulnerable youth with food, hydrat
 - Content edits go in `/content/*.ts` files
 - All forms POST to `/api/contact`
 - Image optimization: AVIF + WebP with 30-day cache configured in next.config.mjs
+
+## PartnerLogoGrid (components/PartnerLogoGrid.tsx)
+
+**Do not revert this component during merge conflict resolution.** The correct version uses:
+- Paginated slider (arrows + dots), NOT a flat grid with card boxes
+- `mix-blend-multiply` on beige `#f5f0eb` background — no white card wrappers, no shadows, no rings
+- Uniform `max-h-[66px]` for standard logos; `size: "lg"` only for logos with excessive whitespace in their source image (Anthropic, Salesforce)
+- No `skipBlend` or `rounded` flags — all logos use `mix-blend-multiply`
