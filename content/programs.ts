@@ -60,8 +60,8 @@ export const programs: Program[] = [
       "Graduate to permanent housing when ready",
     ],
     image: {
-      src: "/images/shared/regen-farm.png",
-      alt: "Regenerative farm with crops and young adult worker in Southern California",
+      src: "/images/shared/community-garden.jpg",
+      alt: "Community garden with workers tending crops",
     },
   },
 ];

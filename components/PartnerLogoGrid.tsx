@@ -9,7 +9,7 @@ interface Partner {
   name: string;
   logo: string;
   invertLogo?: boolean;
-  size?: "md" | "lg";  // for logos with excessive whitespace in source image
+  size?: "sm-lg" | "md" | "lg";  // for logos with excessive whitespace in source image
 }
 
 const PARTNERS: Partner[] = [
@@ -40,9 +40,15 @@ const PARTNERS: Partner[] = [
   { name: "Nui Snacks", logo: "/images/shared/nui-snacks-logo.png", size: "md" },
   { name: "Orgain", logo: "/images/shared/orgain-logo-transparent.png" },
   { name: "Orzax", logo: "/images/shared/orzax-logo.jpg" },
+  { name: "Nordic Naturals", logo: "/images/shared/nordic-naturals-logo.png" },
+  { name: "Melin", logo: "/images/shared/melin-logo.png" },
+  { name: "LightStim", logo: "/images/shared/lightstim-logo.png" },
+  { name: "Nature's Turn", logo: "/images/shared/natures-turn-logo.jpg", size: "sm-lg" },
   { name: "Anthropic", logo: "/partners/anthropic.png", size: "lg" },
   { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
   { name: "Google", logo: "/partners/google.svg" },
+  { name: "Slack", logo: "/images/shared/slack-logo.png" },
+  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
 ];
 
 const LOGOS_PER_PAGE = 15;
@@ -72,7 +78,7 @@ export function PartnerLogoGrid() {
   ];
 
   return (
-    <section className="bg-[#f5f0eb] py-20 sm:py-28">
+    <section className="bg-[#f9f6f2] py-20 sm:py-28">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -117,7 +123,7 @@ export function PartnerLogoGrid() {
                       width={140}
                       height={60}
                       className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : "max-h-[66px] max-w-[145px]"
+                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
                       } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                     />
                   </div>

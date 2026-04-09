@@ -185,8 +185,9 @@ export default function VolunteerPage() {
                 num: "02",
                 title: "We'll match you",
                 desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
-                image: "/images/shared/volunteer-products-table.jpg",
-                imageAlt: "Volunteer products laid out on a table",
+                image: "/images/shared/dream-center-volunteers.jpeg",
+                imageAlt: "Volunteers at the Dream Center",
+                imagePosition: "center 100%",
               },
               {
                 num: "03",
@@ -217,7 +218,8 @@ export default function VolunteerPage() {
                       fill
                       className="object-cover"
                       style={(step as any).imagePosition ? { objectPosition: (step as any).imagePosition } : undefined}
-                      sizes="(max-width: 768px) 100vw, 40vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      quality={85}
                     />
                   </div>
                 </div>
@@ -265,8 +267,8 @@ export default function VolunteerPage() {
             <Reveal delay={0.1}>
               <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
                 <Image
-                  src="/images/shared/long-tent.jpg"
-                  alt="Teen Health volunteers at an event"
+                  src="/images/shared/humanity-heroes-booth-2.jpeg"
+                  alt="Humanity Heroes booth at a volunteer event"
                   fill
                   className="object-cover" style={{ objectPosition: 'center bottom' }}
                   sizes="(max-width: 768px) 100vw, 50vw"

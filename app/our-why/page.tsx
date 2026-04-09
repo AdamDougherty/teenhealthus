@@ -318,8 +318,8 @@ export default function LearnPage() {
         <div className="mx-auto max-w-5xl px-6 sm:px-10">
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/images/shared/tents-sidewalk.jpg"
-              alt="Tents lining a sidewalk — a reality for too many young people"
+              src="/images/shared/carey-kitchen.jpeg"
+              alt="Carey kitchen supporting youth with meals"
               width={1400}
               height={600}
               className="h-full w-full object-cover"
