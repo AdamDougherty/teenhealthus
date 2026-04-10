@@ -127,8 +127,8 @@ export default function OurStoryPage() {
                         <Reveal delay={0.12}>
                             <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
                                 <Image
-                                    src="/images/shared/center-for-autism-teen-health-2.jpg"
-                                    alt="Center for Autism and Teen Health"
+                                    src="/images/shared/uci-health-center-for-autism.jpeg"
+                                    alt="UCI Health Center for Autism"
                                     width={3000}
                                     height={2000}
                                     className="w-full object-cover"

@@ -67,33 +67,7 @@ export default function ProgramsPage() {
           <div className="mt-10 flex flex-col gap-6">
             {/* Top row — two smaller campaigns side by side */}
             <div className="grid gap-6 sm:grid-cols-2">
-              {/* Campaign 0 — Youth Nutrition Initiative */}
-              <Reveal delay={0.08}>
-                <Card className="flex h-full flex-col p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
-                    Campaign
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                    Youth Nutrition Initiative
-                  </h3>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                    Food insecurity undermines the programs youth depend on for
-                    education, job training, and housing support. We partner with
-                    youth-serving organizations to provide consistent, allergen-friendly
-                    snacks that keep energy up and engagement strong throughout the
-                    day. The initiative is designed to scale rapidly through
-                    corporate sponsors and community partners — delivering reliable
-                    nutrition across multiple cities to the youth who need it most.
-                  </p>
-                  <div className="mt-6">
-                    <Button href="/program-sponsor/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
-                      Learn More
-                    </Button>
-                  </div>
-                </Card>
-              </Reveal>
-
-              {/* Campaign 1 — The Dignity Kit Program */}
+              {/* Campaign 0 — The Dignity Kit Program */}
               <Reveal delay={0.08}>
                 <Card className="flex h-full flex-col p-8">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
@@ -113,6 +87,32 @@ export default function ProgramsPage() {
                   </p>
                   <div className="mt-6">
                     <Button href="/program-sponsor/dignity-kit-program" variant="primary" style={{ color: 'white' }}>
+                      Learn More
+                    </Button>
+                  </div>
+                </Card>
+              </Reveal>
+
+              {/* Campaign 1 — Youth Nutrition Initiative */}
+              <Reveal delay={0.08}>
+                <Card className="flex h-full flex-col p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                    Campaign
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                    Youth Nutrition Initiative
+                  </h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                    Food insecurity undermines the programs youth depend on for
+                    education, job training, and housing support. We partner with
+                    youth-serving organizations to provide consistent, allergen-friendly
+                    snacks that keep energy up and engagement strong throughout the
+                    day. The initiative is designed to scale rapidly through
+                    corporate sponsors and community partners — delivering reliable
+                    nutrition across multiple cities to the youth who need it most.
+                  </p>
+                  <div className="mt-6">
+                    <Button href="/program-sponsor/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
                       Learn More
                     </Button>
                   </div>

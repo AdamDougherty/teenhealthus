@@ -193,9 +193,9 @@ export default function VolunteerPage() {
                 num: "03",
                 title: "Show up & make an impact",
                 desc: "Join a packing session, delivery run, or project — and see firsthand how your time helps youth in need.",
-                image: "/images/events/IMG_0476.jpeg",
-                imageAlt: "Teen Health event with volunteers",
-                imagePosition: "30% 20%",
+                image: "/images/shared/nav-center-2.jpeg",
+                imageAlt: "Teen Health navigation center distribution",
+                imagePosition: "center 42%",
               },
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>

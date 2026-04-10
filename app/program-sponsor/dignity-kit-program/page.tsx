@@ -13,8 +13,16 @@ export default function DignityKitProgramPage() {
       {/* ─── HERO ─── */}
       <section
         className="relative overflow-hidden"
-        style={{ minHeight: "70vh", background: "#3D75D0" }}
+        style={{ minHeight: "70vh" }}
       >
+        <Image
+          src="/images/shared/humanity-heroes-booth-6.jpeg"
+          alt="Humanity Heroes booth at community event"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
           <div className="max-w-3xl">
             <Reveal>
@@ -105,25 +113,23 @@ export default function DignityKitProgramPage() {
       <section className="pb-16 sm:pb-20">
         <Container>
           <div className="mx-auto max-w-4xl grid gap-4 sm:grid-cols-2">
-            <Reveal>
-              <div className="overflow-hidden rounded-2xl">
+            <Reveal className="h-full">
+              <div className="overflow-hidden rounded-2xl h-full relative" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/images/shared/humanity-heroes-backpacks.jpg"
+                  src="/images/shared/humanity-heroes-backpacks-2.jpg"
                   alt="Backpacks filled with essentials ready for distribution"
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </Reveal>
-            <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-2xl">
+            <Reveal delay={0.1} className="h-full">
+              <div className="overflow-hidden rounded-2xl h-full relative" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/images/shared/humanity-heroes-booth-4.jpeg"
-                  alt="Humanity Heroes volunteers at a community distribution booth"
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover"
+                  src="/images/shared/humanity-heroes-booth-backpacks.jpg"
+                  alt="Humanity Heroes booth with backpacks ready for distribution"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </Reveal>

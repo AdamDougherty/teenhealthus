@@ -265,6 +265,23 @@ export default function LearnPage() {
         </div>
       </Container>
 
+      {/* Visual divider — carey kitchen */}
+      <Container>
+        <Reveal>
+          <div className="mx-auto max-w-5xl">
+            <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+              <Image
+                src="/images/shared/carey-kitchen.jpeg"
+                alt="Carey kitchen supporting youth with meals"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </div>
+        </Reveal>
+      </Container>
+
       {/* Health → Life Outcomes */}
       <div className="bg-sun/5">
         <Container className="py-16 sm:py-20">
@@ -313,21 +330,33 @@ export default function LearnPage() {
         </Container>
       </div>
 
-      {/* Visual divider — sidewalk tents */}
-      <Reveal>
-        <div className="mx-auto max-w-5xl px-6 sm:px-10">
-          <div className="overflow-hidden rounded-2xl">
-            <Image
-              src="/images/shared/carey-kitchen.jpeg"
-              alt="Carey kitchen supporting youth with meals"
-              width={1400}
-              height={600}
-              className="h-full w-full object-cover"
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
+      {/* Visual divider — product photos */}
+      <Container className="pt-16 sm:pt-20">
+        <Reveal>
+          <div className="mx-auto max-w-5xl">
+            <div className="grid gap-8 sm:grid-cols-2">
+            <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/images/shared/body-armor-pallet.jpg"
+                alt="Pallet of Body Armor drinks ready for distribution"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/images/shared/teen-health-protein-products.jpeg"
+                alt="Teen Health team with protein products"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+            </div>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </Container>
 
       {/* Why This Matters to Society */}
       <Container className="py-16 text-center sm:py-20">

@@ -140,10 +140,10 @@ export default function BrandPartnerPage() {
       <PartnerLogoGrid />
 
       {/* ——— FULL-WIDTH PHOTO ——— */}
-      <section className="relative overflow-hidden" style={{ minHeight: "65vh" }}>
+      <section className="relative overflow-hidden" style={{ minHeight: "95vh" }}>
         <Image
-          src="/images/youth/IMG_1205.jpeg"
-          alt="Teen Health team holding banner with backpack kits"
+          src="/images/shared/mural.jpeg"
+          alt="Mural artwork"
           fill
           className="object-cover"
           style={{ objectPosition: 'center 25%' }}
@@ -281,7 +281,7 @@ export default function BrandPartnerPage() {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/yerba-mate-cart.jpg",
+                image: "/images/shared/yerba-mate-cart.jpeg",
                 imageAlt: "Warehouse stocked with health and wellness products ready for donation",
                 imagePosition: "center 60%",
               },

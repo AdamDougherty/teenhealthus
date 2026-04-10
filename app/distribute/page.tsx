@@ -163,8 +163,8 @@ export default function DistributePage() {
                 num: "01",
                 title: "Apply to become a partner",
                 desc: "Tell us about your organization, the population you serve, and your distribution capacity. We review every application carefully.",
-                image: "/images/shared/olive-crest.jpeg",
-                imageAlt: "Teen Health distributing kits at Olive Crest",
+                image: "/images/shared/oc-united.jpeg",
+                imageAlt: "OC United distribution partnership",
                 imageContain: true,
               },
               {
@@ -179,8 +179,8 @@ export default function DistributePage() {
                 num: "03",
                 title: "Distribute to youth",
                 desc: "Receive kits and distribute them directly to the youth you serve. We provide ongoing support and track impact as a team.",
-                image: "/images/shared/volunteer-holding-gu-products.jpg",
-                imageAlt: "Volunteer holding GU products for youth distribution",
+                image: "/images/shared/olive-crest-2.jpeg",
+                imageAlt: "Teen Health distributing kits at Olive Crest",
                 imageContain: true,
               },
             ].map((step) => (
@@ -198,12 +198,12 @@ export default function DistributePage() {
                     </p>
                   </div>
                   {(step as any).imageContain ? (
-                    <div className="flex items-center justify-center" style={{ aspectRatio: "16/10" }}>
+                    <div className="flex items-center justify-center overflow-hidden rounded-3xl" style={{ aspectRatio: "16/10" }}>
                       <img
                         src={step.image}
                         alt={step.imageAlt}
                         className="rounded-3xl"
-                        style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
+                        style={{ maxHeight: "100%", maxWidth: (step as any).maxWidth || "100%", objectFit: (step as any).objectFit || "contain", objectPosition: (step as any).imagePosition || "center", width: (step as any).objectFit === "cover" ? "100%" : undefined, height: (step as any).objectFit === "cover" ? "100%" : undefined }}
                       />
                     </div>
                   ) : (

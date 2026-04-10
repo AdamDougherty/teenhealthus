@@ -290,6 +290,20 @@ export default function GiveMonthlyPage() {
                 </div>
             </Container>
 
+            {/* Photo break */}
+            <Container className="py-10">
+                <Reveal>
+                    <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "3/2" }}>
+                        <Image
+                            src="/images/shared/hopics-gift-bags.jpeg"
+                            alt="Gift bags lined up at HOPICS community center"
+                            fill
+                            className="object-cover" style={{ objectPosition: "center 85%" }}
+                        />
+                    </div>
+                </Reveal>
+            </Container>
+
             {/* Testimonials */}
             <section className="border-y border-border bg-white/40">
                 <Container className="py-16 sm:py-20">
