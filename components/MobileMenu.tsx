@@ -61,6 +61,7 @@ export function MobileMenu() {
             ["/about", "About"],
             ["/leadership", "Leadership & Advisors"],
             ["/our-why", "Our Why"],
+            ["/youth-nutrition-initiative", "Youth Nutrition"],
           ].map(([href, label]) => (
             <Link
               key={href}

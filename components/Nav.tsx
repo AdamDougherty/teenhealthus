@@ -71,6 +71,9 @@ export function Nav() {
           <Link href="/our-why" className="hover:text-ink">
             Our Why
           </Link>
+          <Link href="/youth-nutrition-initiative" className="hover:text-ink">
+            Youth Nutrition
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
