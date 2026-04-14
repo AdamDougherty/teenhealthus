@@ -64,7 +64,7 @@ export default function VolunteerPage() {
           />
         </div>
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 pt-32 sm:pt-40 pb-16 min-h-[70vh]">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[70vh] flex items-center">
           <div className="max-w-lg">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
