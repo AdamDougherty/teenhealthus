@@ -96,6 +96,17 @@ export default function BrandPartnerPage() {
           }}
         />
 
+        {/* Location label */}
+        <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+          <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            Skid Row, Los Angeles, CA
+          </span>
+        </div>
+
         <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[70vh] items-center">
           <div className="max-w-2xl text-left">
             <Reveal>
@@ -111,13 +122,6 @@ export default function BrandPartnerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
-                Since 2022, we’ve teamed up with 250+ companies to turn
-                surplus into life-changing impact—across every aisle,
-                from nutrition to wellness and beyond.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-start">
                 <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                   Partner With Us
@@ -150,6 +154,15 @@ export default function BrandPartnerPage() {
           sizes="100vw"
           quality={85}
         />
+        <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+          <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            Ruth&apos;s Place, Los Angeles, CA
+          </span>
+        </div>
       </section>
 
       {/* ——— PHOTO CTA TEXT ——— */}

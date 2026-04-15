@@ -85,9 +85,12 @@ export function PartnerLogoGrid() {
               In good company
             </h2>
             <p className="mt-6 text-base leading-relaxed text-ink/60">
-              Our partnerships are as unique as every company in our community.
-              Whether you&apos;re a national brand or a local artisan,
-              it&apos;s never been easier to make generosity on&#8209;brand.
+              Since 2022, we&apos;ve teamed up with 250+ companies to turn
+              surplus into life-changing impact—across every aisle,
+              from nutrition to wellness and beyond. Our partnerships are as
+              unique as every company in our community. Whether you&apos;re a
+              national brand or a local artisan, it&apos;s never been easier to
+              make generosity on&#8209;brand.
             </p>
           </div>
         </Reveal>

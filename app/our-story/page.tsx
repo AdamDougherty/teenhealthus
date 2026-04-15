@@ -28,6 +28,15 @@ export default function OurStoryPage() {
                             "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)",
                     }}
                 />
+                <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                    <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        Dream Center, Los Angeles, CA
+                    </span>
+                </div>
                 <div className="absolute inset-0 z-10 flex items-center justify-start px-6 sm:px-10 lg:px-16">
                     <div className="max-w-3xl text-left" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
                         <Reveal>
@@ -39,13 +48,6 @@ export default function OurStoryPage() {
                             <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
                                 How Teen Health Started —<br />and Where We&apos;re Going
                             </h1>
-                        </Reveal>
-                        <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                From a simple question about access to essentials, to a growing
-                                network of partners, brands, and agencies serving youth across
-                                the country.
-                            </p>
                         </Reveal>
                     </div>
                 </div>

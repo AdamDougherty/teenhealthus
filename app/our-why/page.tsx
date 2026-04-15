@@ -28,7 +28,7 @@ export default function LearnPage() {
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: 'center 45%' }}
+          style={{ objectPosition: 'center 50%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
@@ -45,12 +45,16 @@ export default function LearnPage() {
                 <span style={{ color: "#FFA10A" }}>Thrive</span>
               </h1>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                Every young person deserves more than survival. We exist to<br />close the gap between getting by and growing up with dignity.
-              </p>
-            </Reveal>
           </div>
+        </div>
+        <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+          <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            Lavelle School for the Blind, Bronx, NY
+          </span>
         </div>
       </section>
 
@@ -277,6 +281,15 @@ export default function LearnPage() {
                 className="object-cover object-top"
                 sizes="(max-width: 1280px) 100vw, 1280px"
               />
+              <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  Dream Center, Los Angeles, CA
+                </span>
+              </div>
             </div>
           </div>
         </Reveal>

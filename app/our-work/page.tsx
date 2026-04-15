@@ -34,11 +34,6 @@ export default function OurWorkPage() {
                                     Impact &amp; Insights:<br />Youth Health &amp; Stability
                                 </h1>
                             </Reveal>
-                            <Reveal delay={0.15}>
-                                <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                    Too many young people are navigating life without proper nutrition,<br />mental health resources, or stable housing. Together, we&apos;re creating<br />pathways to stability and well-being.
-                                </p>
-                            </Reveal>
                         </div>
                     </div>
                 </div>
@@ -53,6 +48,9 @@ export default function OurWorkPage() {
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Our Growing Impact
                             </h2>
+                            <p className="mt-6 text-balance text-base leading-relaxed text-ink/60">
+                                Too many young people are navigating life without proper nutrition, mental health resources, or stable housing. Together, we&apos;re creating pathways to stability and well-being.
+                            </p>
                         </Reveal>
 
                         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -266,18 +264,32 @@ export default function OurWorkPage() {
                                 Research &amp; Evidence Based
                             </h2>
                         </Reveal>
-                        <Reveal delay={0.04}>
-                            <div className="mt-8 max-w-[52rem] overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
-                                <Image
-                                    src="/images/shared/teen-health-powerpak-trace-supplements.jpeg"
-                                    alt="Teen Health Powerpak and trace supplements"
-                                    width={1200}
-                                    height={675}
-                                    className="h-full w-full object-cover"
-                                    sizes="(max-width: 896px) 100vw, 896px"
-                                />
-                            </div>
-                        </Reveal>
+                        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                            <Reveal delay={0.04}>
+                                <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                                    <Image
+                                        src="/images/shared/girl-sunset.jpeg"
+                                        alt="Young woman at sunset"
+                                        width={600}
+                                        height={800}
+                                        className="h-full w-full object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                    />
+                                </div>
+                            </Reveal>
+                            <Reveal delay={0.08}>
+                                <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: "3/4" }}>
+                                    <Image
+                                        src="/images/shared/young-man-supplements-3.jpg"
+                                        alt="Young man with supplements"
+                                        width={600}
+                                        height={800}
+                                        className="h-full w-full object-cover object-top"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                    />
+                                </div>
+                            </Reveal>
+                        </div>
                         <Reveal delay={0.08}>
                             <h3 className="mt-6 text-lg font-semibold text-ink/80">
                                 Nutrition, Mental Health, and Youth Stability in California
