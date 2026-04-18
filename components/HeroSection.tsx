@@ -4,7 +4,7 @@ import { Button } from "@/components/Button";
 
 export function HeroSection() {
   return (
-    <section className="hero-section relative flex min-h-[90vh] items-center overflow-hidden">
+    <section className="hero-section relative flex min-h-[50vh] items-center overflow-hidden sm:min-h-[90vh]">
       {/* Full-width background image */}
       <Image
         src="/images/shared/homepage-hero-banner.png"
@@ -43,14 +43,6 @@ export function HeroSection() {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <p className="mt-6 max-w-lg text-sm leading-relaxed text-white sm:text-base">
-            Teen Health supports vulnerable youth and young adults<br />
-            with nourishing food, hydration, and personal care<br />
-            — plus a next step through trusted local partners.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.45}>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
               Give today

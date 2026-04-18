@@ -10,7 +10,7 @@ export default function HowWeWorkPage() {
     return (
         <div className="bg-transparent">
             {/* ─── HERO ─── */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+            <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
                 <Image
                     src="/images/shared/how-we-work-hero-banner-conscious-step-purely-elizabeth-hero-section.jpg"
                     alt="Conscious Step and Purely Elizabeth products for youth distribution"
@@ -19,6 +19,15 @@ export default function HowWeWorkPage() {
                     className="object-cover object-center"
                     sizes="100vw"
                 />
+                <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                    <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        Skid Row, Los Angeles, CA
+                    </span>
+                </div>
                 <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0"
@@ -39,11 +48,6 @@ export default function HowWeWorkPage() {
                                 Fueling Youth Well-Being<br />and Stability
                             </h1>
                         </Reveal>
-                        <Reveal delay={0.15}>
-                            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                                From food rescue to essential kits to mental health support, our programs<br />address the whole person — meeting youth where they are and building<br />toward lasting stability.
-                            </p>
-                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -57,6 +61,9 @@ export default function HowWeWorkPage() {
                             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                                 Where Teen Health Steps&nbsp;In
                             </h2>
+                            <p className="mt-4 text-base leading-relaxed text-ink/60">
+                                From food rescue to essential kits to mental health support, our programs address the whole person — meeting youth where they are and building toward lasting stability.
+                            </p>
                         </Reveal>
                     </div>
 
@@ -167,7 +174,7 @@ export default function HowWeWorkPage() {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                             </svg>
-                            Living Word of Upland, CA
+                            Living Word of Upland, Upland, CA
                         </span>
                     </div>
                 </Container>

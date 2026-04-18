@@ -13,7 +13,7 @@ export default function GetInvolvedPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
           src="/images/shared/volunteers-mother-daughter.jpg"
           alt="Volunteers — mother and daughter helping at Teen Health"
@@ -44,12 +44,6 @@ export default function GetInvolvedPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-white">
-                Donate, volunteer, or partner with us — everything you<br />
-                need to make an impact, all in one place.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
               <div className="mt-10">
                 <Button href="#donate" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Start giving
@@ -80,6 +74,15 @@ export default function GetInvolvedPage() {
                 className="object-cover" style={{ objectPosition: "center 15%" }}
                 sizes="(max-width: 768px) 100vw, 1200px"
               />
+              <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  YMCA TAY Center of San Diego County, Escondido, CA
+                </span>
+              </div>
             </div>
           </Reveal>
 

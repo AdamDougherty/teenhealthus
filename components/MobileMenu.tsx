@@ -7,6 +7,7 @@ import { Button } from "@/components/Button";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -15,6 +16,10 @@ export function MobileMenu() {
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
+
+  function toggleSection(section: string) {
+    setExpandedSection((prev) => (prev === section ? null : section));
+  }
 
   return (
     <div className="md:hidden">
@@ -55,23 +60,112 @@ export function MobileMenu() {
           </button>
         </div>
 
-        <nav className="mt-6 space-y-2 text-sm font-semibold">
-          {[
-            ["/get-involved", "Get Involved"],
-            ["/about", "About"],
-            ["/leadership", "Leadership & Advisors"],
-            ["/our-why", "Our Why"],
-            ["/youth-nutrition-initiative", "Youth Nutrition"],
-          ].map(([href, label]) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setOpen(false)}
-              className="block rounded-xl px-3 py-3 text-ink hover:bg-black/5"
+        <nav className="mt-6 space-y-1 text-sm font-semibold">
+          {/* Get Involved — expandable */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection("get-involved")}
+              className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-ink hover:bg-black/5"
             >
-              {label}
-            </Link>
-          ))}
+              Get Involved
+              <svg
+                className={cn(
+                  "h-3.5 w-3.5 opacity-50 transition-transform",
+                  expandedSection === "get-involved" && "rotate-180"
+                )}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-200",
+                expandedSection === "get-involved" ? "max-h-60" : "max-h-0"
+              )}
+            >
+              <div className="space-y-1 pb-1 pl-3">
+                {[
+                  ["/get-involved", "Overview"],
+                  ["/give-monthly", "Give Monthly"],
+                  ["/program-sponsor", "Become a Program Sponsor"],
+                  ["/brand-partner", "Become a Brand Partner"],
+                  ["/volunteer", "Volunteer"],
+                ].map(([href, label]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-ink/70 hover:bg-black/5 hover:text-ink"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* About — expandable */}
+          <div>
+            <button
+              type="button"
+              onClick={() => toggleSection("about")}
+              className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-ink hover:bg-black/5"
+            >
+              About
+              <svg
+                className={cn(
+                  "h-3.5 w-3.5 opacity-50 transition-transform",
+                  expandedSection === "about" && "rotate-180"
+                )}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div
+              className={cn(
+                "overflow-hidden transition-all duration-200",
+                expandedSection === "about" ? "max-h-60" : "max-h-0"
+              )}
+            >
+              <div className="space-y-1 pb-1 pl-3">
+                {[
+                  ["/about", "Overview"],
+                  ["/our-work", "Our Work"],
+                  ["/how-we-work", "How We Work"],
+                  ["/our-story", "Our Story"],
+                  ["/leadership", "Leadership & Advisors"],
+                ].map(([href, label]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-xl px-3 py-2.5 text-sm font-medium text-ink/70 hover:bg-black/5 hover:text-ink"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Standalone links */}
+          <Link
+            href="/our-why"
+            onClick={() => setOpen(false)}
+            className="block rounded-xl px-3 py-3 text-ink hover:bg-black/5"
+          >
+            Our Why
+          </Link>
+          <Link
+            href="/youth-nutrition-initiative"
+            onClick={() => setOpen(false)}
+            className="block rounded-xl px-3 py-3 text-ink hover:bg-black/5"
+          >
+            Youth Nutrition
+          </Link>
         </nav>
 
         <div className="mt-8">
@@ -79,10 +173,6 @@ export function MobileMenu() {
             Donate
           </Button>
         </div>
-
-        <p className="mt-6 text-xs text-ink/60">
-          Tip: keep mobile nav short and action-oriented.
-        </p>
       </div>
     </div>
   );

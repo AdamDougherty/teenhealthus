@@ -75,7 +75,7 @@ export default function BrandPartnerPage() {
   return (
     <div className="bg-white">
       {/* ——— HERO ——— */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
           src="/images/shared/two-women-volunteering.jpeg"
           alt="Teen Health youth partnership event"
@@ -107,7 +107,7 @@ export default function BrandPartnerPage() {
           </span>
         </div>
 
-        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[70vh] items-center">
+        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24 flex min-h-[50vh] items-center sm:min-h-[70vh]">
           <div className="max-w-2xl text-left">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>

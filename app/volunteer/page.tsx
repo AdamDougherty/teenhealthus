@@ -44,7 +44,7 @@ export default function VolunteerPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]" style={{ backgroundColor: '#111' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/shared/volunteer-giving-products.jpg"
@@ -54,6 +54,15 @@ export default function VolunteerPage() {
             sizes="100vw"
             priority
           />
+          <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+            <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+              Skid Row, Los Angeles, CA
+            </span>
+          </div>
           <div
             aria-hidden
             className="absolute inset-0"
@@ -64,7 +73,7 @@ export default function VolunteerPage() {
           />
         </div>
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[70vh] flex items-center">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[50vh] flex items-center sm:min-h-[70vh]">
           <div className="max-w-lg">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
@@ -78,13 +87,6 @@ export default function VolunteerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-white">
-                Whether you can give a few hours or a few days, your skills and
-                energy help Teen Health sort, kit, and deliver essentials to
-                youth across the country.
-              </p>
-            </Reveal>
-            <Reveal delay={0.3}>
               <div className="mt-10">
                 <Button href="#volunteer-form" variant="primary" style={{ color: 'white' }}>
                   Sign up to volunteer

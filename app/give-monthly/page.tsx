@@ -84,7 +84,7 @@ export default function GiveMonthlyPage() {
     return (
         <div className="bg-transparent">
             {/* Hero */}
-            <section className="relative overflow-hidden" style={{ minHeight: "70vh", backgroundColor: '#111' }}>
+            <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]" style={{ backgroundColor: '#111' }}>
                 <div className="absolute inset-0">
                     <Image
                         src="/images/shared/give-monthly-hero-banner-powerpaks.jpeg"
@@ -96,6 +96,15 @@ export default function GiveMonthlyPage() {
                     />
                 </div>
                 {/* Dark bottom gradient — no blue tint, just darkens behind the text */}
+                <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                    <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        Vista Teen Outreach, Vista, CA
+                    </span>
+                </div>
                 <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0"
@@ -118,13 +127,6 @@ export default function GiveMonthlyPage() {
                             </h1>
                         </Reveal>
                         <Reveal delay={0.2}>
-                            <p className="mt-6 max-w-xl text-base leading-relaxed text-white">
-                                Healthy food, hydration, and personal care are not one-time needs.
-                                Your monthly gift keeps essentials kits moving to vulnerable youth
-                                and young adults — consistently, reliably, and with dignity.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={0.3}>
                             <div className="mt-10">
                                 <Button
                                     href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
@@ -165,7 +167,7 @@ export default function GiveMonthlyPage() {
                     <SectionHeading
                         eyebrow="Why monthly?"
                         title="Recurring gifts change the game"
-                        description={<>One-time donations help in the moment. Monthly gifts build the<br />foundation for sustained, scalable impact — month after month.</>}
+                        description={<>One-time donations help in the moment. Monthly gifts keep essentials<br />kits moving to vulnerable youth — consistently, reliably, and with dignity.</>}
                     />
                 </Reveal>
 
@@ -300,6 +302,15 @@ export default function GiveMonthlyPage() {
                             fill
                             className="object-cover" style={{ objectPosition: "center 85%" }}
                         />
+                        <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                            <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                                HOPICS NAVIG8 Center, Los Angeles, CA
+                            </span>
+                        </div>
                     </div>
                 </Reveal>
             </Container>

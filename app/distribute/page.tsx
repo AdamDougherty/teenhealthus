@@ -44,11 +44,26 @@ export default function DistributePage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh", background: "#3D75D0" }}>
-        <div className="absolute inset-0 bg-white/[0.04]" />
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
+        <Image
+          src="/images/shared/gatorade-kates-real-food.jpeg"
+          alt="Gatorade and Kate's Real Food products for youth distribution"
+          fill
+          priority
+          className="object-cover object-[center_18%]"
+          sizes="100vw"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 50%, transparent 80%)",
+          }}
+        />
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
-          <div className="max-w-3xl">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[50vh] flex items-center sm:min-h-[70vh]">
+          <div className="max-w-3xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Distribution partners
@@ -59,13 +74,6 @@ export default function DistributePage() {
               </h1>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
-                If your agency serves vulnerable youth, partner with Teen Health to<br />
-                distribute essential kits — healthy food, hydration, personal care, and<br />
-                more — directly to the young people in your community.
-              </p>
-            </Reveal>
-            <Reveal delay={0.25}>
               <div className="mt-8">
                 <Button href="#distribution-form" variant="primary" style={{ color: "white" }}>
                   Apply to distribute
@@ -89,9 +97,10 @@ export default function DistributePage() {
                   Agencies that know their communities best.
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-ink/70">
-                  We work with nonprofits, schools, shelters, community centers,
-                  faith-based organizations, and social service agencies that
-                  directly serve vulnerable youth and young adults.
+                  We partner with nonprofits, schools, shelters, and community
+                  organizations that directly serve vulnerable youth —
+                  distributing essential kits with healthy food, hydration, and
+                  personal care to the young people who need them most.
                 </p>
               </div>
             </Reveal>

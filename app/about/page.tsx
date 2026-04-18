@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="bg-transparent">
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
           src="/images/shared/triumph-foundation.jpeg"
           alt="Triumph Foundation"
@@ -23,7 +23,7 @@ export default function AboutPage() {
           style={{ objectPosition: 'center 32%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
-        <div className="relative z-10 flex min-h-[70vh] items-center">
+        <div className="relative z-10 flex min-h-[50vh] items-center sm:min-h-[70vh]">
           <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
             <div className="max-w-3xl">
               <Reveal>

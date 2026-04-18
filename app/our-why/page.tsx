@@ -21,7 +21,7 @@ export default function LearnPage() {
   return (
     <div className="bg-transparent">
       {/* Hero banner */}
-      <section className="relative overflow-hidden" style={{ minHeight: "70vh" }}>
+      <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
           src="/images/shared/girls-lavelle-mod-marathon.jpeg"
           alt="Girls at Lavelle Mod Marathon"
@@ -31,7 +31,7 @@ export default function LearnPage() {
           style={{ objectPosition: 'center 50%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[70vh] flex items-center">
+        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 py-16 min-h-[50vh] flex items-center sm:min-h-[70vh]">
           <div className="max-w-3xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
