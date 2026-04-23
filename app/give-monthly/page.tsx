@@ -253,7 +253,7 @@ export default function GiveMonthlyPage() {
                 <Reveal>
                     <SectionHeading
                         eyebrow="How it works"
-                        title="From your gift to their hands"
+                        title="How your gift reaches youth"
                     />
                 </Reveal>
 

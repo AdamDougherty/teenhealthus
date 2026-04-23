@@ -159,13 +159,6 @@ export function MobileMenu() {
           >
             Our Why
           </Link>
-          <Link
-            href="/youth-nutrition-initiative"
-            onClick={() => setOpen(false)}
-            className="block rounded-xl px-3 py-3 text-ink hover:bg-black/5"
-          >
-            Youth Nutrition
-          </Link>
         </nav>
 
         <div className="mt-8">

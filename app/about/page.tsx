@@ -123,7 +123,7 @@ export default function AboutPage() {
               a new approach.
             </p>
             <p className="text-base leading-relaxed text-ink/80">
-              Today Teen Health rescues surplus product from brands and
+              Today, Teen Health rescues surplus product from brands and
               distributors, assembles essentials kits, and delivers them through a
               growing network of local agencies that already have trust in the
               community. Based in Southern California, our reach extends nationally

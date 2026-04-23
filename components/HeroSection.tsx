@@ -36,7 +36,7 @@ export function HeroSection() {
 
         <Reveal delay={0.15}>
           <h1 className="mt-5 font-serif text-3xl font-normal leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Healthy essentials.
+            Healthy Essentials.
             <br />
             <span className="hero-highlight">Delivered with Dignity.</span>
           </h1>

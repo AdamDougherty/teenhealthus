@@ -46,11 +46,11 @@ export default function DistributePage() {
       {/* ─── HERO ─── */}
       <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
-          src="/images/shared/gatorade-kates-real-food.jpeg"
-          alt="Gatorade and Kate's Real Food products for youth distribution"
+          src="/images/shared/kates-real-food-purely-elizabeth-trace.jpeg"
+          alt="Kate's Real Food, Purely Elizabeth, and Trace products for youth distribution"
           fill
           priority
-          className="object-cover object-[center_18%]"
+          className="object-cover object-[center_48%]"
           sizes="100vw"
         />
         <div

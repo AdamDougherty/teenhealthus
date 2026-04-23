@@ -106,9 +106,9 @@ export default function VolunteerPage() {
                 Ways to help
               </p>
               <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Find the role that fits your strengths.
+                Find a role that fits your strengths.
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink/60">
+              <p className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-ink/60">
                 We welcome volunteers of all backgrounds and skill levels. Here
                 are some of the ways you can contribute.
               </p>

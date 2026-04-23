@@ -391,6 +391,33 @@ export default function LearnPage() {
           </p>
         </Reveal>
       </Container>
+
+      {/* Visual divider — North County San Diego distribution */}
+      <Container>
+        <Reveal>
+          <div className="mx-auto max-w-5xl">
+            <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "11/8" }}>
+              <Image
+                src="/images/shared/distribution-north-county-san-diego.jpg"
+                alt="Teen Health volunteer handing a beverage to a young man during distribution"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+              <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+                <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  North County, San Diego, CA
+                </span>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </Container>
+
       <Container className="py-14 sm:py-16">
         <Reveal delay={0.08}>
           <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
