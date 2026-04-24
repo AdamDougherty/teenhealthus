@@ -43,11 +43,6 @@ const PARTNERS: Partner[] = [
   { name: "Nordic Naturals", logo: "/images/shared/nordic-naturals-logo.png" },
   { name: "Melin", logo: "/images/shared/melin-logo.png" },
   { name: "LightStim", logo: "/images/shared/lightstim-logo.png" },
-  { name: "Anthropic", logo: "/partners/anthropic.png", size: "lg" },
-  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
-  { name: "Google", logo: "/partners/google.svg" },
-  { name: "Slack", logo: "/images/shared/slack-logo.png" },
-  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
 ];
 
 const LOGOS_PER_PAGE = 15;
@@ -77,7 +72,7 @@ export function PartnerLogoGrid() {
   ];
 
   return (
-    <section className="bg-[#f9f6f2] py-20 sm:py-28">
+    <section className="bg-[#f0e9dc] py-20 sm:py-28">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">

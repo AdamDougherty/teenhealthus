@@ -294,9 +294,9 @@ export default function BrandPartnerPage() {
                 num: "02",
                 title: "We coordinate logistics",
                 desc: "We arrange pickup or provide shipping guidance. Our team handles intake, quality checks, and sorting — your products arrive organized and ready to be put to use. We handle the heavy lifting.",
-                image: "/images/shared/yerba-mate-cart.jpeg",
-                imageAlt: "Warehouse stocked with health and wellness products ready for donation",
-                imagePosition: "center 60%",
+                image: "/images/shared/purely-elizabeth-granola.jpg",
+                imageAlt: "Purely Elizabeth granola ready for donation",
+                imagePosition: "30% 35%",
               },
               {
                 num: "03",
@@ -379,6 +379,35 @@ export default function BrandPartnerPage() {
             <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               Why Partner With Us?
             </h2>
+          </Reveal>
+
+          <Reveal delay={0.05}>
+            <div className="mt-12 rounded-3xl bg-[#f8f7f5] px-6 py-10 sm:px-10 sm:py-12">
+              <div className="mx-auto grid max-w-4xl grid-cols-3 items-center gap-6 sm:grid-cols-5">
+                {[
+                  { name: "Anthropic", logo: "/partners/anthropic.png", size: "lg" },
+                  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+                  { name: "Google", logo: "/partners/google.svg" },
+                  { name: "Slack", logo: "/images/shared/slack-logo.png" },
+                  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
+                ].map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="flex h-20 items-center justify-center px-2 sm:h-24"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={140}
+                      height={60}
+                      className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 ${
+                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : "max-h-[66px] max-w-[145px]"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </Reveal>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2">
