@@ -87,8 +87,8 @@ export default function DistributePage() {
       {/* ─── WHO WE PARTNER WITH ─── */}
       <section className="py-20 sm:py-28">
         <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <Reveal>
+          <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
+            <Reveal className="lg:col-span-2">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
                   Who we partner with
@@ -104,15 +104,26 @@ export default function DistributePage() {
                 </p>
               </div>
             </Reveal>
-            <Reveal delay={0.1}>
-              <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10" }}>
-                <Image
-                  src="/images/events/IMG_4150.jpeg"
-                  alt="Volunteers sorting and preparing supplies"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+            <Reveal delay={0.1} className="lg:col-span-3">
+              <div className="grid grid-cols-2 gap-4 sm:gap-5">
+                <div className="relative overflow-hidden rounded-2xl aspect-square">
+                  <Image
+                    src="/images/shared/dr-bronners-owyn-gift-bags.jpeg?v=3"
+                    alt="Dr. Bronner's and OWYN gift bags prepared for distribution"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 360px"
+                  />
+                </div>
+                <div className="relative overflow-hidden rounded-2xl aspect-square">
+                  <Image
+                    src="/images/shared/humanity-heroes-booth-7.jpeg?v=3"
+                    alt="Humanity Heroes booth distributing essentials to youth"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 50vw, 360px"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>
