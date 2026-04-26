@@ -66,7 +66,7 @@ export default function GetInvolvedPage() {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <div className="relative mt-8 mb-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
+            <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
               <Image
                 src="/images/shared/teen-health-table.jpeg"
                 alt="Volunteers sorting and preparing supplies"
@@ -74,7 +74,7 @@ export default function GetInvolvedPage() {
                 className="object-cover" style={{ objectPosition: "center 15%" }}
                 sizes="(max-width: 768px) 100vw, 1200px"
               />
-              <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
+              <div className="absolute bottom-4 right-4 z-10 hidden sm:bottom-6 sm:right-6 sm:block">
                 <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
                   <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -84,6 +84,16 @@ export default function GetInvolvedPage() {
                 </span>
               </div>
             </div>
+            <div className="mt-4 mb-8 flex justify-center sm:hidden">
+              <span className="rounded-full bg-black/5 px-3 py-1 text-center text-xs font-medium tracking-wide text-ink/50">
+                <svg className="mr-1 inline-block h-3.5 w-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+                YMCA TAY Center of San Diego County, Escondido,&nbsp;CA
+              </span>
+            </div>
+            <div className="hidden sm:block sm:mb-8" />
           </Reveal>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -132,7 +142,7 @@ export default function GetInvolvedPage() {
             <SectionHeading
               eyebrow="Partner"
               title="Brands, distributors, and agencies"
-              description={<>Partnerships make it possible to rescue quality products and<br />distribute them where they’re needed most.</>}
+              description={<>Partnerships make it possible to rescue quality products and<br className="hidden md:inline" /> distribute them where they’re needed most.</>}
             />
           </Reveal>
 

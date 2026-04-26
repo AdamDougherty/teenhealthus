@@ -106,7 +106,7 @@ export function LandInitiativeCard() {
                         {/* Giving ladder */}
                         <div>
                             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ink/50">Your Contribution</p>
-                            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                                 {[
                                     { amount: "$100", desc: "Tools & supplies for one apprentice's first month" },
                                     { amount: "$500", desc: "One week of on-farm housing & meals" },

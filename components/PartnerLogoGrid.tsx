@@ -91,55 +91,100 @@ export function PartnerLogoGrid() {
         </Reveal>
 
         <div className="mx-auto mt-16 max-w-5xl">
-          {rows.map((row, rowIdx) => (
-            <div
-              key={`${page}-${rowIdx}`}
-              className="relative flex items-center justify-center"
+          {/* Mobile: single 3-col grid for all 15 logos, arrows centered vertically */}
+          <div className="relative sm:hidden">
+            <button
+              onClick={prev}
+              aria-label="Previous page"
+              className="absolute -left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center text-ink/30 transition-colors hover:text-ink/70"
             >
-              {rowIdx === 1 && (
-                <button
-                  onClick={prev}
-                  aria-label="Previous page"
-                  className="absolute -left-4 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70 sm:-left-12"
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M19 12H5M12 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              )}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
 
-              <div className="grid w-full grid-cols-3 sm:grid-cols-5">
-                {row.map((partner) => (
-                  <div
-                    key={partner.name}
-                    className="flex h-24 items-center justify-center px-4 sm:h-28"
-                  >
-                    <Image
-                      src={partner.logo}
-                      alt={partner.name}
-                      width={140}
-                      height={60}
-                      className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
-                      } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {rowIdx === 1 && (
-                <button
-                  onClick={next}
-                  aria-label="Next page"
-                  className="absolute -right-4 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70 sm:-right-12"
+            <div key={`m-${page}`} className="grid grid-cols-3 gap-x-2 gap-y-6 px-10">
+              {pagePartners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="flex h-20 items-center justify-center"
                 >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </button>
-              )}
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={140}
+                    height={60}
+                    className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
+                      partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
+                    } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+
+            <button
+              onClick={next}
+              aria-label="Next page"
+              className="absolute -right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center text-ink/30 transition-colors hover:text-ink/70"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Desktop: 3 rows × 5 cols with arrows on the middle row */}
+          <div className="hidden sm:block">
+            {rows.map((row, rowIdx) => (
+              <div
+                key={`d-${page}-${rowIdx}`}
+                className="relative flex items-center justify-center"
+              >
+                {rowIdx === 1 && (
+                  <button
+                    onClick={prev}
+                    aria-label="Previous page"
+                    className="absolute -left-12 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                )}
+
+                <div className="grid w-full grid-cols-5">
+                  {row.map((partner) => (
+                    <div
+                      key={partner.name}
+                      className="flex h-28 items-center justify-center px-4"
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={140}
+                        height={60}
+                        className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
+                          partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
+                        } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                {rowIdx === 1 && (
+                  <button
+                    onClick={next}
+                    aria-label="Next page"
+                    className="absolute -right-12 z-10 flex h-10 w-10 items-center justify-center text-ink/30 transition-colors hover:text-ink/70"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
 
           <div className="mt-8 flex items-center justify-center gap-2.5">
             {Array.from({ length: TOTAL_PAGES }).map((_, i) => (

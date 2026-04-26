@@ -22,7 +22,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Why it matters"
               title="Because access changes everything"
-              description={<>When youth have stable essentials, they can focus on school,<br />work, safety, and long-term health.</>}
+              description={<>When youth have stable essentials, they can focus on school,<br className="hidden md:inline" /> work, safety, and long-term health.</>}
             />
           </Reveal>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="What we do"
               title="Three ways we show up"
-              description={<>Direct support, rescued resources, and regenerative land —<br />built around partners who know their communities.</>}
+              description={<>Direct support, rescued resources, and regenerative land —<br className="hidden md:inline" /> built around partners who know their communities.</>}
             />
           </Reveal>
 

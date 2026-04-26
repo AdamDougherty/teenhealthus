@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/Button";
@@ -8,6 +9,11 @@ import { Button } from "@/components/Button";
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -21,21 +27,11 @@ export function MobileMenu() {
     setExpandedSection((prev) => (prev === section ? null : section));
   }
 
-  return (
-    <div className="md:hidden">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-white text-ink hover:bg-black/5"
-        aria-label={open ? "Close menu" : "Open menu"}
-        aria-expanded={open}
-      >
-        <span className="text-xl leading-none">{open ? "×" : "≡"}</span>
-      </button>
-
+  const overlay = (
+    <>
       <div
         className={cn(
-          "fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition",
+          "fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition md:hidden",
           open ? "opacity-100" : "pointer-events-none opacity-0"
         )}
         onClick={() => setOpen(false)}
@@ -44,7 +40,7 @@ export function MobileMenu() {
 
       <div
         className={cn(
-          "fixed right-0 top-0 z-[60] h-full w-[86vw] max-w-sm border-l border-border bg-white p-6 shadow-soft transition-transform",
+          "fixed right-0 top-0 z-[60] h-screen w-[86vw] max-w-sm border-l border-border bg-[#faf9f6] p-6 shadow-soft transition-transform md:hidden",
           open ? "translate-x-0" : "translate-x-full"
         )}
         aria-hidden={!open}
@@ -167,6 +163,21 @@ export function MobileMenu() {
           </Button>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <div className="md:hidden">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-white text-ink hover:bg-black/5"
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+      >
+        <span className="text-xl leading-none">{open ? "×" : "≡"}</span>
+      </button>
+      {mounted ? createPortal(overlay, document.body) : null}
     </div>
   );
 }

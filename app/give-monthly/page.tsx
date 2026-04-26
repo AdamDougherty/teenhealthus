@@ -167,7 +167,7 @@ export default function GiveMonthlyPage() {
                     <SectionHeading
                         eyebrow="Why monthly?"
                         title="Recurring gifts change the game"
-                        description={<>One-time donations help in the moment. Monthly gifts keep essentials<br />kits moving to vulnerable youth — consistently, reliably, and with dignity.</>}
+                        description={<>One-time donations help in the moment. Monthly gifts keep essentials<br className="hidden md:inline" /> kits moving to vulnerable youth — consistently, reliably, and with dignity.</>}
                     />
                 </Reveal>
 
@@ -200,9 +200,9 @@ export default function GiveMonthlyPage() {
                                 Every dollar funds essentials
                             </h2>
                             <p className="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
-                                Pick a monthly amount that works for you. Every gift,<br />
-                                no matter the size, goes directly toward assembling,<br />
-                                shipping, and distributing kits to youth who need them.
+                                Pick a monthly amount that works for you. Every gift,<br className="hidden md:inline" />
+                                {" "}no matter the size, goes directly toward assembling,<br className="hidden md:inline" />
+                                {" "}shipping, and distributing kits to youth who need them.
                             </p>
                         </div>
                     </Reveal>

@@ -383,7 +383,7 @@ export default function BrandPartnerPage() {
 
           <Reveal delay={0.05}>
             <div className="mt-12 rounded-3xl bg-[#f8f7f5] px-6 py-10 sm:px-10 sm:py-12">
-              <div className="mx-auto grid max-w-4xl grid-cols-3 items-center gap-6 sm:grid-cols-5">
+              <div className="mx-auto grid max-w-4xl grid-cols-3 items-center gap-x-3 gap-y-6 sm:grid-cols-5 sm:gap-6">
                 {[
                   { name: "Anthropic", logo: "/partners/anthropic.png", size: "lg" },
                   { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
@@ -393,16 +393,16 @@ export default function BrandPartnerPage() {
                 ].map((partner) => (
                   <div
                     key={partner.name}
-                    className="flex h-20 items-center justify-center px-2 sm:h-24"
+                    className="flex h-24 items-center justify-center sm:px-2"
                   >
                     <Image
                       src={partner.logo}
                       alt={partner.name}
                       width={140}
                       height={60}
-                      className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 ${
-                        partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : "max-h-[66px] max-w-[145px]"
-                      }`}
+                      className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 ${
+                        partner.size === "lg" ? "max-h-[100px] sm:max-h-[140px] sm:max-w-[250px]" : "max-h-[60px] sm:max-h-[66px] sm:max-w-[145px]"
+                      } ${partner.name === "Google" ? "max-w-[75%] sm:max-w-[145px]" : ""}`}
                     />
                   </div>
                 ))}

@@ -46,7 +46,7 @@ export default function OurStoryPage() {
                         </Reveal>
                         <Reveal delay={0.1}>
                             <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                How Teen Health Started —<br />and Where We&apos;re Going
+                                How Teen Health Started —<br className="hidden md:inline" /> and Where We&apos;re Going
                             </h1>
                         </Reveal>
                     </div>
@@ -147,8 +147,8 @@ export default function OurStoryPage() {
                                 />
                             </div>
                             <div className="mt-4 flex justify-center">
-                                <span className="flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-xs font-medium tracking-wide text-ink/50">
-                                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <span className="rounded-full bg-black/5 px-3 py-1 text-center text-xs font-medium tracking-wide text-ink/50">
+                                    <svg className="mr-1 inline-block h-3.5 w-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                                     </svg>

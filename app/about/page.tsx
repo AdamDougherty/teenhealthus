@@ -15,11 +15,18 @@ export default function AboutPage() {
       {/* ─── HERO ─── */}
       <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
+          src="/images/shared/triumph-foundation-gift-bags-mobile.jpg"
+          alt="Triumph Foundation"
+          fill
+          priority
+          className="object-cover sm:hidden"
+        />
+        <Image
           src="/images/shared/triumph-foundation.jpeg"
           alt="Triumph Foundation"
           fill
           priority
-          className="object-cover"
+          className="hidden object-cover sm:block"
           style={{ objectPosition: 'center 32%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
