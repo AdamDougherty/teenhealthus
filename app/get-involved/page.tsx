@@ -193,11 +193,11 @@ export default function GetInvolvedPage() {
                 </div>
                 <div className="flex flex-col p-6">
                   <h3 className="text-xl font-normal tracking-tight text-ink">
-                    Agency distribution
+                    Where the kits go
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                    If you serve vulnerable youth and want to distribute essentials kits, this
-                    is the intake path: location, population served, distribution plan, and reporting.
+                    Teen Health works with 100+ partner agencies across Southern California
+                    to put essentials directly in the hands of youth who need them most.
                   </p>
                   <div className="mt-5 space-y-2 text-sm text-ink/70">
                     <div>• Youth-serving nonprofits</div>
@@ -205,8 +205,8 @@ export default function GetInvolvedPage() {
                     <div>• Schools & community orgs</div>
                   </div>
                   <div className="mt-auto pt-6">
-                    <Button href="/distribute#distribution-form" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
-                      Become a distribution partner
+                    <Button href="/our-work" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
+                      See our work
                     </Button>
                   </div>
                 </div>

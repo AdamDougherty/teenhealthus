@@ -9,6 +9,8 @@ interface Partner {
   name: string;
   logo: string;
   invertLogo?: boolean;
+  darken?: boolean;
+  highQuality?: boolean;
   size?: "sm-lg" | "md" | "lg";  // for logos with excessive whitespace in source image
 }
 
@@ -17,7 +19,7 @@ const PARTNERS: Partner[] = [
   { name: "Betty Lou's", logo: "/partners/bettylous.png", size: "md" },
   { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
   { name: "Marquis", logo: "/partners/marquis.svg" },
-  { name: "Oceanblue", logo: "/partners/oceanblue.jpg" },
+  { name: "Oceanblue", logo: "/images/shared/oceanblue-logo.png", size: "lg" },
   { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
   { name: "Primal Kitchen", logo: "/partners/primalkitchen.png" },
   { name: "Purely Elizabeth", logo: "/partners/purelyelizabeth.png" },
@@ -43,6 +45,15 @@ const PARTNERS: Partner[] = [
   { name: "Nordic Naturals", logo: "/images/shared/nordic-naturals-logo.png" },
   { name: "Melin", logo: "/images/shared/melin-logo.png" },
   { name: "LightStim", logo: "/images/shared/lightstim-logo.png" },
+  { name: "Flax4Life", logo: "/images/shared/flax4life-logo.png" },
+  { name: "Koia", logo: "/images/shared/koia-logo.png" },
+  { name: "Laird Superfood", logo: "/images/shared/laird-superfood-logo.png", darken: true },
+  { name: "Conscious Step", logo: "/images/shared/conscious-step-logo-v2.png" },
+  { name: "Bosu", logo: "/images/shared/bosu-logo.png" },
+  { name: "Mellanmal Inc.", logo: "/images/shared/mellanmal-inc-logo.png" },
+  { name: "Hito Pak", logo: "/images/shared/hito-pak-logo.png", highQuality: true },
+  { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
+  { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
 ];
 
 const LOGOS_PER_PAGE = 15;
@@ -72,7 +83,7 @@ export function PartnerLogoGrid() {
   ];
 
   return (
-    <section className="bg-[#f0e9dc] py-20 sm:py-28">
+    <section className="bg-[#f9f6f2] py-20 sm:py-28">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -114,9 +125,11 @@ export function PartnerLogoGrid() {
                     alt={partner.name}
                     width={140}
                     height={60}
+                    quality={partner.highQuality ? 100 : 75}
+                    unoptimized={partner.highQuality}
                     className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
                       partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
-                    } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                   />
                 </div>
               ))}
@@ -163,9 +176,11 @@ export function PartnerLogoGrid() {
                         alt={partner.name}
                         width={140}
                         height={60}
+                        quality={partner.highQuality ? 100 : 75}
+                        unoptimized={partner.highQuality}
                         className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
                           partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
-                        } ${partner.invertLogo ? "invert" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                        } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                       />
                     </div>
                   ))}

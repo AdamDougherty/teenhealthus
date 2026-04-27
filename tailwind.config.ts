@@ -14,6 +14,8 @@ const config: Config = {
         sky: "#2E9DF7",
         sun: "#FF8005",
         mint: "#8BD1CB",
+        mintDark: "#4D9D93",
+        navy: "#2A4D8A",
         border: "rgba(35,31,32,0.12)"
       },
       fontFamily: {

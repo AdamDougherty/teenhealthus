@@ -12,41 +12,31 @@ export default function YouthNutritionInitiativeLandingPage() {
   return (
     <div className="bg-transparent">
       {/* ═══ HERO ═══ */}
-      <section className="relative overflow-hidden bg-[#1B2A4A]" style={{ minHeight: "90vh" }}>
-        {/* subtle radial accents */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(43,159,224,0.15) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(245,146,27,0.1) 0%, transparent 60%)",
-          }}
-        />
-
+      <section className="relative overflow-hidden bg-[#E5EEFB]" style={{ minHeight: "90vh" }}>
         <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:py-32">
           {/* Left */}
           <div>
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-sun">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-sun" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-mintDark/50 bg-mintDark/20 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-ink/75">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-mintDark" />
                 ADA-Aligned Nutrition Intervention
               </span>
             </Reveal>
 
             <Reveal delay={0.1}>
               <h1
-                className="mt-7 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl"
+                className="mt-7 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl lg:text-5xl"
                 style={{ lineHeight: 1.1 }}
               >
                 Expanding Access to{" "}
-                <span className="bg-gradient-to-r from-sun to-[#FFB347] bg-clip-text text-transparent">
+                <span className="text-mintDark">
                   Healthy Nutrition
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
                 A 20-day daily intervention delivering low-glycemic, whole-food
                 snacks to 50,000 at-risk youth across San Diego County — through
                 schools, nonprofits, and community programs.
@@ -56,16 +46,16 @@ export default function YouthNutritionInitiativeLandingPage() {
             <Reveal delay={0.2}>
               <div className="mt-10 flex gap-10">
                 <div>
-                  <p className="font-serif text-4xl font-normal text-sun">50K</p>
-                  <p className="mt-1 text-xs text-white/50">At-Risk Youth Served</p>
+                  <p className="font-serif text-4xl font-normal text-mintDark">50K</p>
+                  <p className="mt-1 text-xs text-ink/50">At-Risk Youth Served</p>
                 </div>
                 <div>
                   <p className="font-serif text-4xl font-normal text-sky">1M</p>
-                  <p className="mt-1 text-xs text-white/50">Total Servings</p>
+                  <p className="mt-1 text-xs text-ink/50">Total Servings</p>
                 </div>
                 <div>
-                  <p className="font-serif text-4xl font-normal text-white">20</p>
-                  <p className="mt-1 text-xs text-white/50">Days of Daily Access</p>
+                  <p className="font-serif text-4xl font-normal text-navy">20</p>
+                  <p className="mt-1 text-xs text-ink/50">Days of Daily Access</p>
                 </div>
               </div>
             </Reveal>
@@ -73,27 +63,27 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           {/* Right — impact card */}
           <Reveal delay={0.25}>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-8 backdrop-blur-xl sm:p-10">
-              <h3 className="font-serif text-xl font-normal tracking-tight text-white">
+            <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
+              <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
                 Designed for Measurable Impact
               </h3>
 
-              <div className="mt-6 space-y-0 divide-y divide-white/[0.06]">
+              <div className="mt-6 space-y-0 divide-y divide-border">
                 {[
-                  { icon: "↑", color: "sun", text: <><strong className="text-white">Sustained energy</strong> throughout program hours</> },
-                  { icon: "↓", color: "sky", text: <><strong className="text-white">Mid-day crashes</strong> and hunger-related disruptions</> },
-                  { icon: "↑", color: "sun", text: <><strong className="text-white">Focus, participation</strong> and cognitive engagement</> },
-                  { icon: "↓", color: "sky", text: <><strong className="text-white">Long-term diabetes risk</strong> through metabolic stability</> },
+                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Sustained energy</strong> throughout program hours</> },
+                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Mid-day crashes</strong> and hunger-related disruptions</> },
+                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Focus, participation</strong> and cognitive engagement</> },
+                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Long-term diabetes risk</strong> through metabolic stability</> },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center gap-4 py-4">
                     <span
                       className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-base ${
-                        row.color === "sun" ? "bg-sun/15" : "bg-sky/15"
+                        row.color === "mintDark" ? "bg-mintDark/20" : "bg-sky/15"
                       }`}
                     >
                       {row.icon}
                     </span>
-                    <p className="text-sm leading-snug text-white/80">{row.text}</p>
+                    <p className="text-sm leading-snug text-ink/80">{row.text}</p>
                   </div>
                 ))}
               </div>
@@ -124,12 +114,12 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {[
-              { stat: "1 in 5", color: "text-sun", title: "Youth Face Food Insecurity", desc: "Millions of young people lack reliable access to nutritious meals, creating a foundation for poor health outcomes." },
+              { stat: "1 in 5", color: "text-mintDark", title: "Youth Face Food Insecurity", desc: "Millions of young people lack reliable access to nutritious meals, creating a foundation for poor health outcomes." },
               { stat: "1 in 3", color: "text-sky", title: "Youth Face Metabolic Risk", desc: "High-sugar, low-fiber environments lead to blood sugar spikes, energy crashes, and reduced cognitive performance." },
-              { stat: "100K+", color: "text-ink", title: "At Elevated Risk in San Diego", desc: "Over 500,000 students in the county, ~60% qualify for Free & Reduced Lunch, and 30%+ face overweight or obesity risk." },
+              { stat: "100K+", color: "text-navy", title: "At Elevated Risk in San Diego", desc: "Over 500,000 students in the county, ~60% qualify for Free & Reduced Lunch, and 30%+ face overweight or obesity risk." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
-                <div className="rounded-2xl border border-border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+                <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
                   <p className={`font-serif text-4xl font-normal tracking-tight ${card.color}`}>
                     {card.stat}
                   </p>
@@ -166,9 +156,9 @@ export default function YouthNutritionInitiativeLandingPage() {
             {/* Features */}
             <div className="space-y-5">
               {[
-                { emoji: "🌾", bg: "bg-sun/10", title: "Whole-Food Snacks", desc: "Nutritious, plant-based products delivering measurable energy and focus benefits in youth programs." },
+                { emoji: "🌾", bg: "bg-mintDark/15", title: "Whole-Food Snacks", desc: "Nutritious, plant-based products delivering measurable energy and focus benefits in youth programs." },
                 { emoji: "📦", bg: "bg-sky/10", title: "Simple Daily Distribution", desc: "Shelf-stable, ready-to-eat snacks that remove prep and refrigeration barriers for any program site." },
-                { emoji: "⚖️", bg: "bg-sun/10", title: "Portion Controlled", desc: "Pre-portioned to prevent waste and manage calorie intake for optimal daily nutrition." },
+                { emoji: "⚖️", bg: "bg-mintDark/15", title: "Portion Controlled", desc: "Pre-portioned to prevent waste and manage calorie intake for optimal daily nutrition." },
                 { emoji: "📊", bg: "bg-sky/10", title: "Balanced for Blood Sugar", desc: "Low-glycemic design supports steady glucose levels and prevents energy crashes that affect concentration." },
               ].map((f) => (
                 <Reveal key={f.title} delay={0.05}>
@@ -234,9 +224,9 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { emoji: "🏠", bg: "bg-sun/10", title: "Vulnerable Youth", desc: "Youth ages 13–18 facing food insecurity, housing instability, or limited access to daily support." },
+              { emoji: "🏠", bg: "bg-mintDark/15", title: "Vulnerable Youth", desc: "Youth ages 13–18 facing food insecurity, housing instability, or limited access to daily support." },
               { emoji: "💙", bg: "bg-sky/10", title: "Foster Care", desc: "Youth ages 12–18 in foster care who need stable nutrition, support, and a reliable foundation." },
-              { emoji: "🤝", bg: "bg-sun/10", title: "System-Impacted", desc: "Teens and young adults (13–24) exiting the justice system who benefit from structure and stability." },
+              { emoji: "🤝", bg: "bg-mintDark/15", title: "System-Impacted", desc: "Teens and young adults (13–24) exiting the justice system who benefit from structure and stability." },
               { emoji: "🏫", bg: "bg-sky/10", title: "Schools", desc: "Students in Special Ed or with mental health challenges who benefit from consistent nutrition." },
             ].map((pop) => (
               <Reveal key={pop.title} delay={0.05}>
@@ -254,19 +244,19 @@ export default function YouthNutritionInitiativeLandingPage() {
       </section>
 
       {/* ═══ COST + ROI ═══ */}
-      <section className="bg-[#1B2A4A] py-16 sm:py-24">
+      <section className="bg-[#E5EEFB] py-16 sm:py-24">
         <Container>
           <Reveal>
-            <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-sun">
-              <span className="inline-block h-[2px] w-6 bg-sun" />
+            <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-sky">
+              <span className="inline-block h-[2px] w-6 bg-sky" />
               Cost + ROI
             </p>
-            <h2 className="font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl">
+            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               A High-Impact, Cost-Efficient
               <br />
               Prevention Model
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
               Early intervention significantly reduces long-term cost burden.
               Phase 1 collects reach, adherence, engagement, and health impact
               metrics.
@@ -275,28 +265,28 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {[
-              { num: "$40", color: "text-sun", title: "Per Child", desc: "Covers the full 20-day intervention — all-inclusive with no additional implementation costs." },
+              { num: "$40", color: "text-mintDark", title: "Per Child", desc: "Covers the full 20-day intervention — all-inclusive with no additional implementation costs." },
               { num: "$2M", color: "text-sky", title: "Total Phase 1", desc: "Full funding for 50,000 youth across 10–30+ distribution sites over 20 days." },
-              { num: "20", color: "text-white", title: "Daily Servings Per Youth", desc: "Consistent daily exposure — not one-time consumption. Consistency drives outcomes." },
+              { num: "20", color: "text-navy", title: "Daily Servings Per Youth", desc: "Consistent daily exposure — not one-time consumption. Consistency drives outcomes." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
-                <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur-sm">
+                <div className="h-full rounded-2xl border border-border bg-white p-8 text-center shadow-sm">
                   <p className={`font-serif text-5xl font-normal tracking-tight ${card.color}`}>
                     {card.num}
                   </p>
-                  <h4 className="mt-2 text-sm font-semibold text-white/90">{card.title}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-white/50">{card.desc}</p>
+                  <h4 className="mt-2 text-sm font-semibold text-ink">{card.title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/60">{card.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
 
           <Reveal delay={0.15}>
-            <div className="mt-10 rounded-2xl border border-sun/20 bg-sun/[0.08] p-6 text-center">
-              <p className="text-base font-medium text-white/85">
-                <strong className="text-sun">$40 per child</strong> for
+            <div className="mt-10 rounded-2xl border border-mintDark/40 bg-mintDark/15 p-6 text-center">
+              <p className="text-base font-medium text-ink">
+                <strong className="text-navy">$40 per child</strong> for
                 prevention &nbsp;vs.&nbsp;{" "}
-                <strong className="text-sun">$10,000+</strong> annually per
+                <strong className="text-navy">$10,000+</strong> annually per
                 diabetes patient for treatment
               </p>
             </div>
@@ -326,7 +316,7 @@ export default function YouthNutritionInitiativeLandingPage() {
           <div className="mt-14 grid items-center gap-6 sm:grid-cols-[1fr_auto_1fr]">
             <Reveal delay={0.05}>
               <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                <span className="inline-block rounded-full bg-sun/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-sun">
+                <span className="inline-block rounded-full bg-mintDark/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-mintDark">
                   Phase 1 — Now
                 </span>
                 <h4 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
@@ -361,12 +351,12 @@ export default function YouthNutritionInitiativeLandingPage() {
           </div>
 
           <Reveal delay={0.15}>
-            <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-gradient-to-r from-sky to-sky/80 p-8 text-center">
-              <p className="font-serif text-4xl font-normal tracking-tight text-white">
+            <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-mint/40 p-8 text-center">
+              <p className="font-serif text-4xl font-normal tracking-tight text-ink">
                 2.5–3.5M+
               </p>
-              <p className="mt-2 text-base text-white/80">
-                youth at elevated metabolic risk statewide in California
+              <p className="mt-2 text-base text-ink">
+                Youth at elevated metabolic risk statewide in California
               </p>
             </div>
           </Reveal>
@@ -395,7 +385,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             <Reveal delay={0.1}>
               <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
                 <div className="rounded-2xl border border-border bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-                  <p className="text-xs font-bold uppercase tracking-wide text-sun">
+                  <p className="text-xs font-bold uppercase tracking-wide text-mintDark">
                     Teen Health Inc.
                   </p>
                   <h4 className="mt-3 font-serif text-lg font-normal text-ink">
@@ -403,11 +393,18 @@ export default function YouthNutritionInitiativeLandingPage() {
                   </h4>
                   <a
                     href="mailto:sswift@teenhealth.us"
-                    className="mt-1 block text-sm font-medium text-sky hover:underline"
+                    className="mt-1 block text-sm font-medium text-ink/70 hover:underline"
                   >
                     sswift@teenhealth.us
                   </a>
-                  <span className="mt-1 block text-sm text-ink/50">teenhealth.us</span>
+                  <a
+                    href="https://teenhealth.us"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-sm text-ink/50 hover:underline"
+                  >
+                    teenhealth.us
+                  </a>
                 </div>
 
                 <div className="rounded-2xl border border-border bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
@@ -419,11 +416,18 @@ export default function YouthNutritionInitiativeLandingPage() {
                   </h4>
                   <a
                     href="mailto:daron@nuifoundation.org"
-                    className="mt-1 block text-sm font-medium text-sky hover:underline"
+                    className="mt-1 block text-sm font-medium text-ink/70 hover:underline"
                   >
                     daron@nuifoundation.org
                   </a>
-                  <span className="mt-1 block text-sm text-ink/50">nuifoundation.org</span>
+                  <a
+                    href="https://nuifoundation.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-sm text-ink/50 hover:underline"
+                  >
+                    nuifoundation.org
+                  </a>
                 </div>
               </div>
             </Reveal>
@@ -433,7 +437,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <Button
                   href="https://www.classy.org/give/665776/#!/donation/checkout"
                   variant="primary"
-                  style={{ backgroundColor: "#FF8005", color: "#fff" }}
+                  style={{ backgroundColor: "#2E9DF7", color: "#fff" }}
                 >
                   Donate Now
                 </Button>

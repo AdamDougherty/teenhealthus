@@ -21,7 +21,6 @@ A modern, donation-forward website for Teen Health — supporting vulnerable you
 | `/get-involved` | Donate, volunteer, product donations, partnerships |
 | `/about` | Mission, story, team, contact form |
 | `/donate-product` | Product donation inquiry + form |
-| `/distribute` | Distribution partner application + form |
 | `/volunteer` | Volunteer interest + form |
 | `/contact` | General contact |
 
@@ -184,7 +183,6 @@ All forms POST to `/api/contact`. Connect to a real email provider (Resend, Send
 - **Contact** — `/about`
 - **Partner inquiry** — `/partner`
 - **Product donation** — `/donate-product`
-- **Distribution partner** — `/distribute`
 - **Volunteer interest** — `/volunteer`
 
 ## SEO

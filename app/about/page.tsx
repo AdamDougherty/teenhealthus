@@ -119,24 +119,35 @@ export default function AboutPage() {
 
         {/* Our story — full width */}
         <Reveal>
-          <section className="mt-14 space-y-4">
-            <h2 className="text-2xl font-normal tracking-tight text-ink">
-              Our story
-            </h2>
-            <p className="text-base leading-relaxed text-ink/80">
-              We started in 2022 with a simple question: what happens when a young person
-              doesn&apos;t have access to the basics — clean food, water, hygiene products,
-              personal care? The answer wasn&apos;t hard to find, but the solution required
-              a new approach.
-            </p>
-            <p className="text-base leading-relaxed text-ink/80">
-              Today, Teen Health rescues surplus product from brands and
-              distributors, assembles essentials kits, and delivers them through a
-              growing network of local agencies that already have trust in the
-              community. Based in Southern California, our reach extends nationally
-              through strategic logistics partnerships.
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <section className="mt-14 space-y-10">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-normal tracking-tight text-ink">
+                Our Story
+              </h2>
+
+              {/* Our beginning */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-normal tracking-tight text-ink">
+                  Our Beginning
+                </h3>
+                <p className="text-base leading-relaxed text-ink/80">
+                  We launched Teen Health in 2022 with a simple question: what happens when a
+                  young person lacks access to basic essentials—healthy food, water, hygiene,
+                  and personal care? The answer was clear. Without these, everything else
+                  begins to unravel. But solving it required a new approach.
+                </p>
+                <p className="text-base leading-relaxed text-ink/80">
+                  Today, we rescue surplus product from brands and distributors, assemble
+                  essential kits, and deliver them through trusted local agencies. What might
+                  otherwise go to waste becomes something vital—reaching young people who are
+                  too often overlooked. Based in Southern California, we&apos;ve built a model
+                  to scale nationally through strategic logistics partnerships, delivering
+                  critical resources efficiently and with dignity.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
                 <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
                   <Image
@@ -160,12 +171,57 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Who we serve */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-normal tracking-tight text-ink">
+                Who We Serve
+              </h3>
+              <p className="text-base leading-relaxed text-ink/80">
+                We founded Teen Health to ensure at-risk youth and young adults have
+                consistent access to the basics—so they can stabilize their lives, build
+                resilience, and begin to see a path forward.
+              </p>
+              <p className="text-base leading-relaxed text-ink/80">
+                We serve youth ages 13–24 including those experiencing food insecurity,
+                homelessness, foster care transitions, justice system involvement, and
+                mental health challenges. Many are navigating circumstances they
+                didn&apos;t choose, without the support systems they need. We believe
+                access to basic needs isn&apos;t just about survival—it&apos;s the
+                foundation for health, safety, confidence, and opportunity.
+              </p>
+            </div>
+
+            {/* How we work */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-normal tracking-tight text-ink">
+                How We Work
+              </h3>
+              <p className="text-base leading-relaxed text-ink/80">
+                Our approach is both practical and deeply human. We work with more than
+                250 natural products companies to source high-quality food, hydration, and
+                personal care essentials, ensuring what we provide supports real
+                well-being—not just temporary relief. Through a network of 100+ trusted
+                community partners, we reach youth where they are, when they need it most.
+              </p>
+              <p className="text-base leading-relaxed text-ink/80">
+                But this work goes beyond meeting immediate needs. We are committed to
+                helping young people move forward—through workforce development,
+                partnerships, and pathways that lead to stability, independence, and hope.
+              </p>
+              <p className="text-base leading-relaxed text-ink/80">
+                As we grow, we&apos;re expanding into new markets—building a national,
+                partnership-driven platform that transforms surplus into measurable impact
+                and gives more young people the chance not just to get by, but to truly
+                thrive.
+              </p>
+            </div>
           </section>
         </Reveal>
 
         {/* Contact + Quick Links — footer box */}
         <Reveal>
-          <div className="mt-16 rounded-3xl p-8 sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
+          <div id="contact" className="mt-16 scroll-mt-24 rounded-3xl p-8 sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
             <div className="grid gap-10 lg:grid-cols-[1fr_280px] lg:items-start">
               <div>
                 <div className="text-sm font-normal tracking-tight text-ink">Contact</div>
