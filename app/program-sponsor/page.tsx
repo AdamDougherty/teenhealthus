@@ -123,7 +123,21 @@ export default function ProgramsPage() {
           </div>
         </div>
 
-
+        {/* Visual divider — Olive Crest partnership */}
+        <Reveal delay={0.05}>
+          <div className="mx-auto mt-16 max-w-5xl">
+            <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+              <Image
+                src="/images/shared/olive-crest-2.jpeg"
+                alt="Teen Health partners distributing kits with Olive Crest"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "center 10%" }}
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </div>
+        </Reveal>
 
         <Reveal delay={0.1}>
           <div className="mt-16 rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>

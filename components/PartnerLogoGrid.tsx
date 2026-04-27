@@ -54,6 +54,12 @@ const PARTNERS: Partner[] = [
   { name: "Hito Pak", logo: "/images/shared/hito-pak-logo.png", highQuality: true },
   { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
+  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
+  { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.png", highQuality: true },
+  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+  { name: "Google", logo: "/partners/google.svg" },
+  { name: "Slack", logo: "/images/shared/slack-logo.png" },
+  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
 ];
 
 const LOGOS_PER_PAGE = 15;
@@ -129,7 +135,7 @@ export function PartnerLogoGrid() {
                     unoptimized={partner.highQuality}
                     className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
                       partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
-                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""} ${partner.name === "Dr. Bronner's" ? "scale-[1.6]" : ""}`}
                   />
                 </div>
               ))}
