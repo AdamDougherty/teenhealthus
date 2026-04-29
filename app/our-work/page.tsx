@@ -13,22 +13,13 @@ export default function OurWorkPage() {
             {/* ─── HERO ─── */}
             <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
                 <Image
-                    src="/images/shared/humanity-heroes-booth.jpeg"
-                    alt="Humanity Heroes booth"
+                    src="/images/shared/young-girl-2.jpg"
+                    alt="Young girl supported by Teen Health"
                     fill
                     priority
                     className="object-cover"
-                    style={{ objectPosition: 'center 26%' }}
+                    style={{ objectPosition: 'center 12%' }}
                 />
-                <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
-                    <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
-                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                        </svg>
-                        Skid Row, Los Angeles, CA
-                    </span>
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
                 <div className="relative z-10 flex min-h-[50vh] items-center sm:min-h-[70vh]">
                     <div className="w-full pl-6 sm:pl-10 lg:w-1/2 lg:pl-16 py-16">
