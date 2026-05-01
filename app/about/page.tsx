@@ -15,7 +15,7 @@ export default function AboutPage() {
       {/* ─── HERO ─── */}
       <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
         <Image
-          src="/images/shared/triumph-foundation-gift-bags-mobile.jpg"
+          src="/images/shared/triumph-foundation-mobile.jpg"
           alt="Triumph Foundation"
           fill
           priority
