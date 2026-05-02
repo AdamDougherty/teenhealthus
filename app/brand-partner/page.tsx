@@ -139,6 +139,39 @@ export default function BrandPartnerPage() {
         </div>
       </section>
 
+      {/* ——— SEO LEDE + CREDIBILITY ——— */}
+      <section className="py-12 sm:py-16">
+        <Container>
+          <Reveal>
+            <h2 className="mx-auto max-w-3xl text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Strategic CSR Partnerships for Food &amp; Beverage Brands: Join the Youth Nutrition Initiative
+            </h2>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-ink/70 sm:text-lg">
+              A measurable ESG (Environmental, Social, and Governance) and ROI-on-social-impact opportunity for purpose-driven brands — placing your products inside a credentialed nutrition program with vetted distribution at scale.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { label: "ADA Better Choices for Life Designated", sub: "American Dietetic Association nutrition framework" },
+                { label: "USDA Smart Snack Compliant", sub: "Federal nutrition standard for youth programs" },
+                { label: "250+ Food & Beverage Partners", sub: "Active brand donor network since 2022" },
+                { label: "100+ Nonprofit Agency Partners", sub: "Trusted distribution into communities" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl border border-border bg-white p-6">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-navy to-navy/80 text-xs font-bold text-white">
+                    ✓
+                  </span>
+                  <p className="mt-4 min-h-[3rem] text-lg font-semibold leading-snug text-ink">{item.label}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/80">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* ——— IN GOOD COMPANY — Logo Grid ——— */}
       <PartnerLogoGrid />
@@ -175,7 +208,7 @@ export default function BrandPartnerPage() {
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-6 text-balance text-base leading-relaxed text-ink/60">
+              <p className="mt-6 text-balance text-base leading-relaxed text-ink/80">
                 We help you move closeout, distressed, mislabeled, and
                 short-dated products quickly—turning your excess inventory
                 into meaningful impact for at-risk youth.
@@ -308,7 +341,7 @@ export default function BrandPartnerPage() {
             ].map((step) => (
               <Reveal key={step.num} delay={0.05}>
                 <div className="grid items-center gap-10 border-t border-ink/10 py-5 lg:grid-cols-[100px_1fr_1fr] lg:gap-16">
-                  <div className="font-serif text-6xl font-normal text-ink/10 lg:text-7xl">
+                  <div className="font-serif text-6xl font-normal text-navy/40 lg:text-7xl">
                     {step.num}
                   </div>
                   <div>
@@ -381,6 +414,35 @@ export default function BrandPartnerPage() {
             </h2>
           </Reveal>
 
+          <Reveal delay={0.05}>
+            <div className="mt-12 rounded-3xl bg-[#f8f7f5] px-6 py-10 sm:px-10 sm:py-12">
+              <div className="mx-auto grid max-w-4xl grid-cols-3 items-center gap-x-3 gap-y-6 sm:grid-cols-5 sm:gap-6">
+                {[
+                  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
+                  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+                  { name: "Google", logo: "/partners/google.svg" },
+                  { name: "Slack", logo: "/images/shared/slack-logo.png" },
+                  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
+                ].map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="flex h-24 items-center justify-center sm:px-2"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={140}
+                      height={60}
+                      className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 ${
+                        partner.size === "lg" ? "max-h-[100px] sm:max-h-[140px] sm:max-w-[250px]" : "max-h-[60px] sm:max-h-[66px] sm:max-w-[145px]"
+                      } ${partner.name === "Google" ? "max-w-[75%] sm:max-w-[145px]" : ""}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
           <div className="mt-14 grid gap-8 md:grid-cols-2">
             <Reveal delay={0.08} className="h-full">
               <div className="h-full rounded-3xl bg-[#f8f7f5] p-8 sm:p-10">
@@ -435,6 +497,70 @@ export default function BrandPartnerPage() {
                   These events boost employee morale while making a tangible
                   difference.
                 </p>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* ——— DELIVERABLES ——— */}
+      <section className="border-t border-ink/5 py-12 sm:py-16">
+        <Container>
+          <Reveal>
+            <h2 className="text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Doing Good is Good Business
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-ink/70">
+              Concrete deliverables for every brand partner — built for marketing, ESG reporting, and corporate finance teams.
+            </p>
+          </Reveal>
+          <div className="mx-auto mt-12 max-w-4xl divide-y divide-border">
+            {[
+              { num: "01", title: "Brand Integration", desc: <>Product sampling in 50,000+ youth nutrition packs across <a href="/youth-nutrition-initiative" className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink">the Youth Nutrition Initiative</a> — measurable reach with the audiences your purpose-driven marketing is built to serve.</> },
+              { num: "02", title: "Data Insights", desc: "Quarterly impact reports formatted for your ESG and CSR filings — units distributed, youth reached, and geographies served, ready to drop into your annual disclosures." },
+              { num: "03", title: "Content Assets", desc: "Professional photography and “Social Impact” stories from the field, licensed for brand use across owned and earned channels." },
+              { num: "04", title: "Tax-Deductible Contributions", desc: "Formal 501(c)(3) acknowledgment letter for every donation — a clean documentation trail for your corporate finance and accounting teams." },
+            ].map((item, i) => (
+              <Reveal key={item.num} delay={i * 0.06}>
+                <div className="grid grid-cols-[auto_1fr] items-baseline gap-x-6 gap-y-2 py-6 sm:grid-cols-[5rem_14rem_1fr] sm:gap-x-8 sm:py-8">
+                  <span className="font-serif text-2xl text-navy/65 sm:text-3xl">{item.num}</span>
+                  <h3 className="col-span-1 font-serif text-xl font-normal tracking-tight text-ink sm:text-2xl">
+                    {item.title}
+                  </h3>
+                  <p className="col-span-2 text-base leading-relaxed text-ink/70 sm:col-span-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ─── PHOTO BREAK ─── */}
+      <section className="py-12 sm:py-16">
+        <Container>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <Reveal delay={0.08}>
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "560px" }}>
+                <Image
+                  src="/images/shared/gu-box.jpeg"
+                  alt="GU energy boxes staged for distribution alongside other partner products"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <div className="relative overflow-hidden rounded-2xl" style={{ height: "560px" }}>
+                <Image
+                  src="/images/shared/ruths-place-earth-harmony-opt.jpeg"
+                  alt="Plant-based protein donations staged at Ruth's Place"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
               </div>
             </Reveal>
           </div>
@@ -504,7 +630,7 @@ export default function BrandPartnerPage() {
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
                   Start a product donation.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/60">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/80">
                   Tell us about your product and our team will follow up within a
                   few business days to coordinate logistics.
                 </p>
@@ -530,11 +656,11 @@ export default function BrandPartnerPage() {
                     },
                   ].map((step) => (
                     <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-ink/20">
+                      <div className="font-serif text-3xl font-normal text-navy/65">
                         {step.num}
                       </div>
                       <div className="mt-3 text-lg font-semibold">{step.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/50">
+                      <p className="mt-2 text-sm leading-relaxed text-ink/80">
                         {step.desc}
                       </p>
                     </div>
@@ -568,29 +694,58 @@ export default function BrandPartnerPage() {
                   <form onSubmit={onSubmit} className="space-y-5">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                          Contact name <span className="text-sky">*</span>
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                          Contact name <span className="text-navy">*</span>
                         </span>
                         <input required name="contactName" className={inputClass} placeholder="Your name" />
                       </label>
                       <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                          Company <span className="text-sky">*</span>
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                          Company <span className="text-navy">*</span>
                         </span>
                         <input required name="company" className={inputClass} placeholder="Company name" />
                       </label>
                     </div>
 
                     <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                        Email <span className="text-sky">*</span>
+                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                        Email <span className="text-navy">*</span>
                       </span>
                       <input required type="email" name="email" className={inputClass} placeholder="you@example.com" />
                     </label>
 
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <label className="block">
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                          Industry <span className="text-navy">*</span>
+                        </span>
+                        <select required name="industry" className={inputClass} defaultValue="">
+                          <option value="" disabled>Select industry…</option>
+                          <option value="Food & Beverage">Food &amp; Beverage</option>
+                          <option value="Supplements & Nutrition">Supplements &amp; Nutrition</option>
+                          <option value="Personal Care / Hygiene">Personal Care / Hygiene</option>
+                          <option value="Apparel / Lifestyle">Apparel / Lifestyle</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </label>
+                      <label className="block">
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                          Partnership interest <span className="text-navy">*</span>
+                        </span>
+                        <select required name="partnershipInterest" className={inputClass} defaultValue="">
+                          <option value="" disabled>Select interest…</option>
+                          <option value="Product Donation">Product donation (excess inventory)</option>
+                          <option value="Marketing & Brand Integration">Marketing &amp; brand integration</option>
+                          <option value="ESG / CSR Sponsor">ESG / CSR reporting sponsor</option>
+                          <option value="Employee Engagement">Employee engagement / volunteer events</option>
+                          <option value="Other / Multiple">Other / multiple</option>
+                        </select>
+                      </label>
+                    </div>
+
                     <fieldset>
-                      <legend className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                        Product type <span className="text-sky">*</span>
+                      <legend className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                        Product type <span className="text-navy">*</span>
                       </legend>
                       <div className="mt-2 space-y-2">
                         {[
@@ -618,7 +773,7 @@ export default function BrandPartnerPage() {
                     </fieldset>
 
                     <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
                         Tell us about the product
                       </span>
                       <textarea

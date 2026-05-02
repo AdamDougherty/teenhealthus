@@ -433,13 +433,16 @@ export default function YouthNutritionInitiativeLandingPage() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button
                   href="https://www.classy.org/give/665776/#!/donation/checkout"
                   variant="primary"
                   style={{ backgroundColor: "#2E9DF7", color: "#fff" }}
                 >
                   Donate Now
+                </Button>
+                <Button href="/brand-partner" variant="ghost">
+                  Become a Brand Partner
                 </Button>
               </div>
             </Reveal>

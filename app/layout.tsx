@@ -21,6 +21,34 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: site.name,
+  url: site.url,
+  logo: `${site.url}/teenhealthlogohoriz.png`,
+  description: site.description,
+  nonprofitStatus: "Nonprofit501c3",
+  areaServed: [{ "@type": "Country", name: "United States" }],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "Brand Partnership",
+      email: site.contactEmail,
+      url: `${site.url}/brand-partner`,
+      areaServed: "US",
+      availableLanguage: ["English"],
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      email: site.contactEmail,
+      areaServed: "US",
+      availableLanguage: ["English"],
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,6 +69,10 @@ export default function RootLayout({
             gtag('config', 'AW-16724035587');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body>
         <Nav />

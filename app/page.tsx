@@ -22,7 +22,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Why it matters"
               title="Because access changes everything"
-              description="When at-risk youth have stable access to nutritious food, hydration, hygiene, and mental health support, they can focus on school, work, safety, and long‑term health — instead of surviving day to day."
+              description={<>When youth have stable essentials, they can focus on school,<br className="hidden md:inline" /> work, safety, and long-term health.</>}
             />
           </Reveal>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="What we do"
               title="Three ways we show up"
-              description="Direct support and rescued surplus from natural products brands, delivered through trusted community agencies who know the youth they serve — plus a regenerative land project in Southern California."
+              description={<>Direct support, rescued resources, and regenerative land —<br className="hidden md:inline" /> built around partners who know their communities.</>}
             />
           </Reveal>
 

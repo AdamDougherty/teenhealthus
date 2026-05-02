@@ -11,7 +11,7 @@ interface Partner {
   invertLogo?: boolean;
   darken?: boolean;
   highQuality?: boolean;
-  size?: "sm-lg" | "md" | "lg";  // for logos with excessive whitespace in source image
+  size?: "sm-lg" | "sm-md" | "md" | "lg";  // for logos with excessive whitespace in source image
 }
 
 const PARTNERS: Partner[] = [
@@ -20,11 +20,11 @@ const PARTNERS: Partner[] = [
   { name: "Intake", logo: "/partners/intake.png", invertLogo: true },
   { name: "Marquis", logo: "/partners/marquis.svg" },
   { name: "Oceanblue", logo: "/images/shared/oceanblue-logo.png", size: "lg" },
-  { name: "Perfect Hydration", logo: "/partners/perfecthydration.png" },
-  { name: "Primal Kitchen", logo: "/partners/primalkitchen.png" },
+  { name: "Perfect Hydration", logo: "/partners/perfecthydration.png", size: "md" },
+  { name: "Primal Kitchen", logo: "/partners/primalkitchen.png", size: "sm-lg" },
   { name: "Purely Elizabeth", logo: "/partners/purelyelizabeth.png" },
   { name: "Boost Oxygen", logo: "/partners/boostoxygen.png" },
-  { name: "Carlson", logo: "/partners/carlson.png" },
+  { name: "Carlson", logo: "/partners/carlson.png", size: "sm-md" },
   { name: "Emergen-C", logo: "/partners/emergenc.png" },
   { name: "Gatorade", logo: "/partners/gatorade.png" },
   { name: "Guayakí", logo: "/partners/guayaki.png" },
@@ -42,7 +42,7 @@ const PARTNERS: Partner[] = [
   { name: "Nui Snacks", logo: "/images/shared/nui-snacks-logo.png", size: "md" },
   { name: "Orgain", logo: "/images/shared/orgain-logo-transparent.png" },
   { name: "Orzax", logo: "/images/shared/orzax-logo.jpg" },
-  { name: "Nordic Naturals", logo: "/images/shared/nordic-naturals-logo.png" },
+  { name: "Nordic Naturals", logo: "/images/shared/nordic-naturals-logo.png", size: "md" },
   { name: "Melin", logo: "/images/shared/melin-logo.png" },
   { name: "LightStim", logo: "/images/shared/lightstim-logo.png" },
   { name: "Flax4Life", logo: "/images/shared/flax4life-logo.png" },
@@ -54,12 +54,7 @@ const PARTNERS: Partner[] = [
   { name: "Hito Pak", logo: "/images/shared/hito-pak-logo.png", highQuality: true },
   { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
-  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
-  { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.png", highQuality: true },
-  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
-  { name: "Google", logo: "/partners/google.svg" },
-  { name: "Slack", logo: "/images/shared/slack-logo.png" },
-  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
+  { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.jpg", highQuality: true },
 ];
 
 const LOGOS_PER_PAGE = 15;
@@ -96,7 +91,7 @@ export function PartnerLogoGrid() {
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               In good company
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-ink/60">
+            <p className="mt-6 text-base leading-relaxed text-ink/80">
               Since 2022, we&apos;ve teamed up with 250+ companies to turn
               surplus into life-changing impact—across every aisle,
               from nutrition to wellness and beyond. Our partnerships are as
@@ -134,8 +129,8 @@ export function PartnerLogoGrid() {
                     quality={partner.highQuality ? 100 : 75}
                     unoptimized={partner.highQuality}
                     className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                      partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
-                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""} ${partner.name === "Dr. Bronner's" ? "scale-[1.6]" : ""}`}
+                      partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-md" ? "max-h-[64px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
+                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                   />
                 </div>
               ))}
@@ -185,7 +180,7 @@ export function PartnerLogoGrid() {
                         quality={partner.highQuality ? 100 : 75}
                         unoptimized={partner.highQuality}
                         className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                          partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
+                          partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-md" ? "max-h-[91px] max-w-[170px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
                         } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                       />
                     </div>
