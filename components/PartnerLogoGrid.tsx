@@ -55,7 +55,7 @@ const PARTNERS: Partner[] = [
   { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
   { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.jpg", highQuality: true },
-  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
+  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png", size: "md" },
   { name: "Salesforce", logo: "/partners/salesforce.png", size: "xl" },
   { name: "Google", logo: "/partners/google.svg" },
   { name: "Slack", logo: "/images/shared/slack-logo.png" },

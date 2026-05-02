@@ -122,9 +122,9 @@ export default function BrandPartnerPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-start">
+              <div className="mt-10 flex flex-row gap-3 sm:justify-start">
                 <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
-                  Partner With Us
+                  Partner with us
                 </Button>
                 <Button
                   href="#how-it-works"
@@ -143,8 +143,10 @@ export default function BrandPartnerPage() {
       <section className="py-12 sm:py-16">
         <Container>
           <Reveal>
-            <h2 className="mx-auto max-w-3xl text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Strategic CSR Partnerships for Food &amp; Beverage Brands: Join the Youth Nutrition Initiative
+            <h2 className="mx-auto max-w-4xl text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              Strategic CSR Partnerships for Food &amp; Beverage Brands:
+              <br className="hidden lg:block" />{" "}
+              Join the Youth Nutrition Initiative
             </h2>
           </Reveal>
           <Reveal delay={0.05}>
@@ -164,7 +166,7 @@ export default function BrandPartnerPage() {
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-navy to-navy/80 text-xs font-bold text-white">
                     ✓
                   </span>
-                  <p className="mt-4 min-h-[3rem] text-lg font-semibold leading-snug text-ink">{item.label}</p>
+                  <p className="mt-4 text-lg font-semibold leading-snug text-ink sm:min-h-[3rem]">{item.label}</p>
                   <p className="mt-2 text-sm leading-relaxed text-ink/80">{item.sub}</p>
                 </div>
               ))}
@@ -687,7 +689,7 @@ export default function BrandPartnerPage() {
 
                     <div className="grid gap-4 sm:grid-cols-2">
                       <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                        <span className="block min-h-[2lh] text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
                           Industry <span className="text-navy">*</span>
                         </span>
                         <select required name="industry" className={inputClass} defaultValue="">
@@ -700,7 +702,7 @@ export default function BrandPartnerPage() {
                         </select>
                       </label>
                       <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
+                        <span className="block min-h-[2lh] text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
                           Partnership interest <span className="text-navy">*</span>
                         </span>
                         <select required name="partnershipInterest" className={inputClass} defaultValue="">
