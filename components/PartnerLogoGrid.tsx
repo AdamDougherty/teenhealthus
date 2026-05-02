@@ -11,7 +11,7 @@ interface Partner {
   invertLogo?: boolean;
   darken?: boolean;
   highQuality?: boolean;
-  size?: "sm-lg" | "sm-md" | "md" | "lg";  // for logos with excessive whitespace in source image
+  size?: "sm-lg" | "sm-md" | "md" | "lg" | "xl";  // for logos with excessive whitespace in source image
 }
 
 const PARTNERS: Partner[] = [
@@ -27,12 +27,12 @@ const PARTNERS: Partner[] = [
   { name: "Carlson", logo: "/partners/carlson.png", size: "sm-md" },
   { name: "Emergen-C", logo: "/partners/emergenc.png" },
   { name: "Gatorade", logo: "/partners/gatorade.png" },
-  { name: "Guayakí", logo: "/partners/guayaki.png" },
+  { name: "Guayakí", logo: "/partners/guayaki.png", size: "md" },
   { name: "Kate's Real Food", logo: "/partners/katesrealfood.png" },
   { name: "Olyra", logo: "/partners/olyra.png" },
   { name: "OWYN", logo: "/partners/owyn.png" },
   { name: "Nature's Turn", logo: "/images/shared/natures-turn-logo.jpg", size: "sm-lg" },
-  { name: "Trace", logo: "/partners/trace.png" },
+  { name: "Trace", logo: "/partners/trace.png", size: "sm-lg" },
   { name: "VenturePal", logo: "/partners/venturepal.png" },
   { name: "Zahler", logo: "/partners/zahler.png" },
   { name: "Earth Harmony", logo: "/partners/earthharmony.png" },
@@ -56,7 +56,7 @@ const PARTNERS: Partner[] = [
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
   { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.jpg", highQuality: true },
   { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
-  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+  { name: "Salesforce", logo: "/partners/salesforce.png", size: "xl" },
   { name: "Google", logo: "/partners/google.svg" },
   { name: "Slack", logo: "/images/shared/slack-logo.png" },
   { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
@@ -134,7 +134,7 @@ export function PartnerLogoGrid() {
                     quality={partner.highQuality ? 100 : 75}
                     unoptimized={partner.highQuality}
                     className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                      partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-md" ? "max-h-[64px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
+                      partner.size === "xl" ? "max-h-[96px]" : partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-md" ? "max-h-[64px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
                     } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                   />
                 </div>
@@ -185,7 +185,7 @@ export function PartnerLogoGrid() {
                         quality={partner.highQuality ? 100 : 75}
                         unoptimized={partner.highQuality}
                         className={`h-auto w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
-                          partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-md" ? "max-h-[91px] max-w-[170px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
+                          partner.size === "xl" ? "max-h-[170px] max-w-[290px]" : partner.size === "lg" ? "max-h-[140px] max-w-[250px]" : partner.size === "md" ? "max-h-[100px] max-w-[180px]" : partner.size === "sm-md" ? "max-h-[91px] max-w-[170px]" : partner.size === "sm-lg" ? "max-h-[82px] max-w-[160px]" : "max-h-[66px] max-w-[145px]"
                         } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
                       />
                     </div>
