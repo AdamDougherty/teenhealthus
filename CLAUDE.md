@@ -5,7 +5,8 @@
 Teen Health is a nonprofit website supporting vulnerable youth with food, hydration, and personal care. Built with Next.js 14 (App Router, RSC), TypeScript, Tailwind CSS, and Motion for animations.
 
 **GitHub:** github.com/AdamDougherty/teenhealthus
-**Production:** 159.65.75.30 (DigitalOcean droplet, pm2-managed at /var/www/teenhealth-starter)
+**Live site:** https://teenhealth.us (also responds at www.teenhealth.us). Note: the GitHub repo name is `teenhealthus` but the actual domain is `teenhealth.us` — do not guess `teenhealthus.org`, it does not exist.
+**Production:** 159.65.75.30 (DigitalOcean droplet, pm2-managed at /var/www/teenhealth-starter, fronted by Caddy at /etc/caddy/Caddyfile)
 
 ## Environment
 
