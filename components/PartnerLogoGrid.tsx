@@ -55,6 +55,11 @@ const PARTNERS: Partner[] = [
   { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
   { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.jpg", highQuality: true },
+  { name: "Goodstack", logo: "/images/shared/goodstack-logo.png" },
+  { name: "Salesforce", logo: "/partners/salesforce.png", size: "lg" },
+  { name: "Google", logo: "/partners/google.svg" },
+  { name: "Slack", logo: "/images/shared/slack-logo.png" },
+  { name: "NetSuite", logo: "/images/shared/netsuite-logo.png" },
 ];
 
 const LOGOS_PER_PAGE = 15;
