@@ -135,7 +135,7 @@ export function PartnerLogoGrid() {
                     unoptimized={partner.highQuality}
                     className={`h-auto max-w-full object-contain mix-blend-multiply opacity-90 transition-opacity duration-200 hover:opacity-100 ${
                       partner.size === "xl" ? "max-h-[96px]" : partner.size === "lg" ? "max-h-[80px]" : partner.size === "md" ? "max-h-[68px]" : partner.size === "sm-md" ? "max-h-[64px]" : partner.size === "sm-lg" ? "max-h-[60px]" : "max-h-[50px]"
-                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""}`}
+                    } ${partner.invertLogo ? "invert" : ""} ${partner.darken ? "brightness-0" : ""} ${partner.name === "Oceanblue" ? "rounded-md" : ""} ${partner.name === "Dr. Bronner's" ? "scale-[2.1]" : ""}`}
                   />
                 </div>
               ))}

@@ -37,7 +37,7 @@ export default function ProgramsPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Built Around What Youth<br /><span style={{ color: "#FFA10A" }}>Actually Need</span>
+                Built Around<br className="sm:hidden" />{" "}What Youth<br /><span style={{ color: "#FFA10A" }}>Actually Need</span>
               </h1>
             </Reveal>
           </div>
@@ -140,14 +140,19 @@ export default function ProgramsPage() {
               volunteers that pack, and the agencies that distribute. Learn more about the
               issues youth face or find a way to help.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Button href="/our-why" variant="primary" style={{ color: 'white' }}>
+            <div className="mt-8 flex flex-row items-center justify-center gap-3">
+              <Button
+                href="/our-why"
+                variant="primary"
+                style={{ color: 'white' }}
+                className="!text-xs !px-4 sm:!text-sm sm:!px-5"
+              >
                 Learn more
               </Button>
               <Button
                 href="/get-involved"
                 variant="ghost"
-                className="text-ink hover:bg-ink/10"
+                className="text-ink hover:bg-ink/10 !text-xs !px-4 sm:!text-sm sm:!px-5"
               >
                 Ways to help
               </Button>

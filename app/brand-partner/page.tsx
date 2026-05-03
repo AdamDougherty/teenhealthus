@@ -179,13 +179,12 @@ export default function BrandPartnerPage() {
       <PartnerLogoGrid />
 
       {/* ——— FULL-WIDTH PHOTO ——— */}
-      <section className="relative overflow-hidden" style={{ minHeight: "95vh" }}>
+      <section className="relative aspect-[4/3] overflow-hidden sm:aspect-auto sm:min-h-[95vh]">
         <Image
           src="/images/shared/mural.jpeg"
           alt="Mural artwork"
           fill
-          className="object-cover"
-          style={{ objectPosition: 'center 25%' }}
+          className="object-cover object-center sm:[object-position:center_25%]"
           sizes="100vw"
           quality={85}
         />
@@ -295,7 +294,7 @@ export default function BrandPartnerPage() {
                   <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
                     {item.label}
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-ink">{item.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink text-pretty">{item.desc}</p>
                 </Card>
               </Reveal>
             ))}
@@ -399,7 +398,7 @@ export default function BrandPartnerPage() {
               <Reveal key={item.title} delay={i * 0.06}>
                 <Card>
                   <div className="text-sm font-semibold tracking-tight text-ink">{item.title}</div>
-                  <p className="mt-2 text-sm leading-relaxed text-ink">{item.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink text-pretty">{item.desc}</p>
                 </Card>
               </Reveal>
             ))}
