@@ -33,8 +33,13 @@ Teen Health is a nonprofit website supporting vulnerable youth with food, hydrat
 ### "Make it live" (deploy)
 1. Confirm user has previewed at localhost:3000
 2. `git add -A && git commit -m "..." && git push`
-3. `scp -r ./* root@159.65.75.30:/var/www/teenhealth-starter/`
+3. Upload only what's needed at runtime (skips ~377MB of `node_modules` and dev-only artifacts; `npm install` on the server rebuilds dependencies from `package-lock.json`):
+   ```
+   scp -r app components content lib public package.json package-lock.json next.config.mjs next-env.d.ts postcss.config.mjs tailwind.config.ts tsconfig.json root@159.65.75.30:/var/www/teenhealth-starter/
+   ```
 4. `ssh root@159.65.75.30 "cd /var/www/teenhealth-starter && npm install && npm run build && pm2 restart teenhealth"`
+
+If a new top-level file or directory is added that needs to ship (rare), add it to the `scp` list above. New code inside `app/`, `components/`, `content/`, `lib/`, or `public/` ships automatically.
 
 ### "Undo" (revert last commit)
 1. Show last commit: `git log -1 --pretty=format:"%s"`
