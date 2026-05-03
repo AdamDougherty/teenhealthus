@@ -66,7 +66,7 @@ export default function GetInvolvedPage() {
           </Reveal>
 
           <Reveal delay={0.05}>
-            <div className="relative mt-8 overflow-hidden rounded-2xl" style={{ aspectRatio: "21/9" }}>
+            <div className="relative mt-8 overflow-hidden rounded-2xl aspect-[16/11] sm:aspect-[21/9]">
               <Image
                 src="/images/shared/teen-health-table.jpeg"
                 alt="Volunteers sorting and preparing supplies"

@@ -8,9 +8,46 @@ export const metadata = {
     "A 20-day daily intervention delivering low-glycemic, whole-food snacks to 50,000 at-risk youth across San Diego County.",
 };
 
+const faqs = [
+  {
+    q: "How much does the Youth Nutrition Initiative cost per child?",
+    a: "$40 covers the full 20-day intervention for one youth — all-inclusive, with no additional implementation costs for partners or schools.",
+  },
+  {
+    q: "What does the $40 per child include?",
+    a: "It covers all 20 daily snack servings, distribution logistics, and program implementation. There are no separate setup, equipment, or per-site fees.",
+  },
+  {
+    q: "How does the cost of prevention compare to treating diabetes?",
+    a: "$40 per youth for prevention versus $10,000+ annually per patient for ongoing Type 2 diabetes treatment — a roughly 250× cost differential.",
+  },
+  {
+    q: "How many youth does the Phase 1 program serve?",
+    a: "Phase 1 reaches 50,000 at-risk youth across San Diego County through 10–30+ distribution sites over 20 days, with $2M in total funding.",
+  },
+  {
+    q: "What kinds of foods does the program provide?",
+    a: "Plant-based, low-glycemic snacks designed for sustained energy and blood-sugar stability — all ADA Better Choices for Life designated and USDA Smart Snack compliant.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function YouthNutritionInitiativeLandingPage() {
   return (
     <div className="bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ═══ HERO ═══ */}
       <section className="relative overflow-hidden bg-[#E5EEFB]" style={{ minHeight: "90vh" }}>
         <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:py-32">
@@ -25,18 +62,21 @@ export default function YouthNutritionInitiativeLandingPage() {
 
             <Reveal delay={0.1}>
               <h1
-                className="mt-7 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl lg:text-5xl"
+                className="mt-7 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl lg:text-[2.5rem]"
                 style={{ lineHeight: 1.1 }}
               >
-                Expanding Access to{" "}
+                Expanding Access to
+                <br />
                 <span className="text-mintDark">
-                  Healthy Nutrition
+                  Healthy Youth Nutrition
                 </span>
+                <br />
+                in San Diego County
               </h1>
             </Reveal>
 
             <Reveal delay={0.15}>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70">
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80">
                 A 20-day daily intervention delivering low-glycemic, whole-food
                 snacks to 50,000 at-risk youth across San Diego County — through
                 schools, nonprofits, and community programs.
@@ -47,15 +87,15 @@ export default function YouthNutritionInitiativeLandingPage() {
               <div className="mt-10 flex gap-10">
                 <div>
                   <p className="font-serif text-4xl font-normal text-mintDark">50K</p>
-                  <p className="mt-1 text-xs text-ink/50">At-Risk Youth Served</p>
+                  <p className="mt-1 text-xs text-ink/70">At-Risk Youth Served</p>
                 </div>
                 <div>
                   <p className="font-serif text-4xl font-normal text-sky">1M</p>
-                  <p className="mt-1 text-xs text-ink/50">Total Servings</p>
+                  <p className="mt-1 text-xs text-ink/70">Total Servings</p>
                 </div>
                 <div>
                   <p className="font-serif text-4xl font-normal text-navy">20</p>
-                  <p className="mt-1 text-xs text-ink/50">Days of Daily Access</p>
+                  <p className="mt-1 text-xs text-ink/70">Days of Daily Access</p>
                 </div>
               </div>
             </Reveal>
@@ -105,10 +145,11 @@ export default function YouthNutritionInitiativeLandingPage() {
               <br />
               Long-Term Health Outcomes
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               Access — not awareness — is the core issue. Limited access to
               healthy food, high-sugar daily environments, and early dietary
-              habits are driving lifelong metabolic risk.
+              habits are driving lifelong metabolic risk, including Type 2
+              diabetes and reduced insulin sensitivity in teens.
             </p>
           </Reveal>
 
@@ -124,7 +165,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     {card.stat}
                   </p>
                   <h4 className="mt-2 text-sm font-bold text-ink">{card.title}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/60">{card.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/80">{card.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -145,7 +186,7 @@ export default function YouthNutritionInitiativeLandingPage() {
               <br />
               Nutrition Intervention
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               One snack per day, per youth — delivered through existing programs.
               Shelf-stable, portion-controlled, and clinically designed for
               sustained energy.
@@ -154,7 +195,7 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           <div className="mt-14 grid items-start gap-10 lg:grid-cols-2">
             {/* Features */}
-            <div className="space-y-5">
+            <div className="space-y-12">
               {[
                 { emoji: "🌾", bg: "bg-mintDark/15", title: "Whole-Food Snacks", desc: "Nutritious, plant-based products delivering measurable energy and focus benefits in youth programs." },
                 { emoji: "📦", bg: "bg-sky/10", title: "Simple Daily Distribution", desc: "Shelf-stable, ready-to-eat snacks that remove prep and refrigeration barriers for any program site." },
@@ -162,13 +203,13 @@ export default function YouthNutritionInitiativeLandingPage() {
                 { emoji: "📊", bg: "bg-sky/10", title: "Balanced for Blood Sugar", desc: "Low-glycemic design supports steady glucose levels and prevents energy crashes that affect concentration." },
               ].map((f) => (
                 <Reveal key={f.title} delay={0.05}>
-                  <div className="flex gap-5 rounded-2xl border border-border bg-white p-5 transition hover:translate-x-1 hover:shadow-sm">
-                    <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-xl ${f.bg}`}>
+                  <div className="flex gap-6 rounded-2xl border border-border bg-white p-8 transition hover:translate-x-1 hover:shadow-sm">
+                    <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-2xl ${f.bg}`}>
                       {f.emoji}
                     </span>
                     <div>
                       <h4 className="text-sm font-bold text-ink">{f.title}</h4>
-                      <p className="mt-1 text-sm leading-relaxed text-ink/60">{f.desc}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-ink/80">{f.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -177,24 +218,47 @@ export default function YouthNutritionInitiativeLandingPage() {
 
             {/* Credentials */}
             <Reveal delay={0.1}>
-              <div className="rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-10">
+              <div className="rounded-3xl border border-border bg-white px-8 py-5 shadow-soft sm:px-10 sm:py-6">
                 <h3 className="font-serif text-xl font-normal tracking-tight text-ink">
                   Program Credentials
                 </h3>
-                <div className="mt-6 divide-y divide-border">
+                <div className="mt-4 divide-y divide-border">
                   {[
-                    "ADA Better Choices for Life Designated",
-                    "USDA Smart Snack Compliant",
-                    "Shelf-Stable — No Refrigeration Needed",
-                    "250+ Food & Beverage Partners",
-                    "100+ Nonprofit Agency Partners",
-                    "Daily On-Site Services",
+                    {
+                      title: "ADA Better Choices for Life Designated",
+                      desc: "Snacks meet American Diabetes Association nutrition standards for blood-sugar-friendly choices.",
+                    },
+                    {
+                      title: "USDA Smart Snack Compliant",
+                      desc: "Meets the federal USDA Smart Snacks in School nutrition standards for foods sold during the school day.",
+                    },
+                    {
+                      title: "Shelf-Stable — No Refrigeration Needed",
+                      desc: "Removes prep, refrigeration, and cold-chain barriers at any program site.",
+                    },
+                    {
+                      title: "250+ Food & Beverage Partners",
+                      desc: "Established supplier network ensures consistent product availability.",
+                    },
+                    {
+                      title: "100+ Nonprofit Agency Partners",
+                      desc: "Distributed through trusted organizations already serving at-risk youth.",
+                    },
+                    {
+                      title: "Daily On-Site Services",
+                      desc: "Hand-to-hand distribution at schools, community centers, and youth programs.",
+                    },
                   ].map((cred) => (
-                    <div key={cred} className="flex items-center gap-4 py-4">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-sky to-sky/80 text-xs font-bold text-white">
+                    <div key={cred.title} className="flex items-start gap-4 py-4">
+                      <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-sky to-sky/80 text-xs font-bold text-white">
                         ✓
                       </span>
-                      <span className="text-sm font-semibold text-ink/80">{cred}</span>
+                      <div>
+                        <p className="text-sm font-semibold text-ink/80">{cred.title}</p>
+                        {cred.desc && (
+                          <p className="mt-1 text-sm leading-relaxed text-ink/80">{cred.desc}</p>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -215,7 +279,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               Reaching Youth Where They Already Are
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               Teen Health serves vulnerable populations across multiple
               pathways — strengthening outcomes through consistent, reliable
               nutrition access.
@@ -235,7 +299,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     {pop.emoji}
                   </span>
                   <h4 className="mt-5 text-sm font-bold text-ink">{pop.title}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/60">{pop.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/80">{pop.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -256,7 +320,7 @@ export default function YouthNutritionInitiativeLandingPage() {
               <br />
               Prevention Model
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               Early intervention significantly reduces long-term cost burden.
               Phase 1 collects reach, adherence, engagement, and health impact
               metrics.
@@ -275,7 +339,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     {card.num}
                   </p>
                   <h4 className="mt-2 text-sm font-semibold text-ink">{card.title}</h4>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/60">{card.desc}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/80">{card.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -289,6 +353,27 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <strong className="text-navy">$10,000+</strong> annually per
                 diabetes patient for treatment
               </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mx-auto mt-16 max-w-3xl">
+              <h3 className="text-center font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+                Frequently Asked Questions
+              </h3>
+              <div className="mt-8 space-y-4">
+                {faqs.map((faq) => (
+                  <div
+                    key={faq.q}
+                    className="rounded-2xl border border-border bg-white p-6"
+                  >
+                    <h4 className="text-base font-bold text-ink">{faq.q}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                      {faq.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </Container>
@@ -307,7 +392,7 @@ export default function YouthNutritionInitiativeLandingPage() {
               <br />
               Scalable Prevention Model
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/70">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               Phase 1 represents a repeatable intervention model designed to
               scale through programs like Medi-Cal and managed care.
             </p>
@@ -322,7 +407,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <h4 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                   Community Deployment
                 </h4>
-                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                <p className="mt-3 text-sm leading-relaxed text-ink/80">
                   50,000 at-risk youth across San Diego County. Daily
                   distribution through existing school and nonprofit partner
                   sites.
@@ -342,7 +427,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <h4 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                   Population Health Expansion
                 </h4>
-                <p className="mt-3 text-sm leading-relaxed text-ink/60">
+                <p className="mt-3 text-sm leading-relaxed text-ink/80">
                   Scale through Medi-Cal, managed care, and broader healthcare
                   system integration across California.
                 </p>
@@ -375,7 +460,7 @@ export default function YouthNutritionInitiativeLandingPage() {
               <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 A Unique Opportunity to Lead in Preventative Nutrition
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-ink/70">
+              <p className="mt-4 text-base leading-relaxed text-ink/80">
                 We&apos;re seeking mission-aligned partners to launch and scale
                 this initiative. We would welcome the opportunity to explore next
                 steps together.
@@ -393,7 +478,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                   </h4>
                   <a
                     href="mailto:sswift@teenhealth.us"
-                    className="mt-1 block text-sm font-medium text-ink/70 hover:underline"
+                    className="mt-1 block text-sm font-medium text-ink/80 hover:underline"
                   >
                     sswift@teenhealth.us
                   </a>
@@ -401,7 +486,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     href="https://teenhealth.us"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-sm text-ink/50 hover:underline"
+                    className="mt-1 block text-sm text-ink/70 hover:underline"
                   >
                     teenhealth.us
                   </a>
@@ -416,7 +501,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                   </h4>
                   <a
                     href="mailto:daron@nuifoundation.org"
-                    className="mt-1 block text-sm font-medium text-ink/70 hover:underline"
+                    className="mt-1 block text-sm font-medium text-ink/80 hover:underline"
                   >
                     daron@nuifoundation.org
                   </a>
@@ -424,7 +509,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     href="https://nuifoundation.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-sm text-ink/50 hover:underline"
+                    className="mt-1 block text-sm text-ink/70 hover:underline"
                   >
                     nuifoundation.org
                   </a>
@@ -433,16 +518,33 @@ export default function YouthNutritionInitiativeLandingPage() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col items-center justify-center gap-3">
+                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <Button
+                    href="https://mygoodness.benevity.org/community/cause/840-874628884"
+                    variant="primary"
+                    style={{ backgroundColor: "#2E9DF7", color: "#fff" }}
+                  >
+                    Donate Now
+                  </Button>
+                  <Button
+                    href={`mailto:sswift@teenhealth.us?subject=${encodeURIComponent(
+                      "Phase 1 Briefing Request — Youth Nutrition Initiative"
+                    )}`}
+                    variant="primary"
+                    style={{ backgroundColor: "#4D9D93", color: "#fff" }}
+                  >
+                    Request a Phase 1 Briefing
+                  </Button>
+                </div>
                 <Button
-                  href="https://www.classy.org/give/665776/#!/donation/checkout"
+                  href={`mailto:sswift@teenhealth.us?subject=${encodeURIComponent(
+                    "Bring Youth Nutrition Initiative to Our School"
+                  )}`}
                   variant="primary"
-                  style={{ backgroundColor: "#2E9DF7", color: "#fff" }}
+                  style={{ backgroundColor: "#2A4D8A", color: "#fff" }}
                 >
-                  Donate Now
-                </Button>
-                <Button href="/brand-partner" variant="ghost">
-                  Become a Brand Partner
+                  Bring the Program to Your School
                 </Button>
               </div>
             </Reveal>
@@ -450,7 +552,7 @@ export default function YouthNutritionInitiativeLandingPage() {
 
           {/* Footer note */}
           <Reveal delay={0.2}>
-            <p className="mt-16 text-center text-xs text-ink/40">
+            <p className="mt-16 text-center text-xs text-ink/60">
               Teen Health Inc. and the NUI Foundation are registered 501(c)(3)
               nonprofit organizations. Contributions to this program may be
               tax-deductible as allowed by law.

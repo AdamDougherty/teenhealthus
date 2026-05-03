@@ -27,7 +27,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 pb-6 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
+      <div className="relative z-10 w-full px-6 pb-14 pt-32 sm:px-8 sm:pb-20 md:px-12 lg:max-w-3xl lg:px-16 lg:pb-24">
         <Reveal>
           <p className="hero-eyebrow hidden text-xs font-bold uppercase tracking-[0.22em] sm:block" style={{ color: "#FFE08A", textShadow: "0 1px 3px rgba(0,0,0,0.6)" }}>
             Essential support · Youth-centered · Built to scale

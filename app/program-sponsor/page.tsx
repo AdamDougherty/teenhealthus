@@ -24,9 +24,11 @@ export default function ProgramsPage() {
           className="object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
+        <div className="absolute inset-0 hidden sm:block bg-gradient-to-r from-black/30 to-black/10" />
+        {/* Mobile: bottom-darkening gradient so text reads cleanly over the photo */}
+        <div className="absolute inset-0 sm:hidden bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-        <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[50vh] flex items-center sm:min-h-[70vh]">
+        <div className="relative z-10 pl-6 pb-16 sm:pl-10 sm:pb-0 lg:pl-16 min-h-[50vh] flex items-end sm:items-center sm:min-h-[70vh]">
           <div className="max-w-2xl" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>

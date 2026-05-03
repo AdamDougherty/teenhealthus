@@ -470,7 +470,7 @@ export default function OurWorkPage() {
                             Every contribution helps us reach more young people with the
                             essentials they need to stabilize and thrive.
                         </p>
-                        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                        <div className="mt-8 flex flex-row items-center justify-center gap-3">
                             <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ color: 'white' }}>
                                 Donate
                             </Button>

@@ -348,12 +348,14 @@ export default function GiveMonthlyPage() {
                     <div className="rounded-3xl p-8 text-center sm:p-10" style={{ backgroundColor: '#E5EEFB' }}>
                         <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                             Essentials shouldn&rsquo;t be a luxury.
-                            <br />
+                            <br className="hidden sm:inline" />{" "}
                             <span>Help us change that.</span>
                         </h2>
                         <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
                             Join the community of monthly supporters keeping essentials kits
-                            flowing to youth who need them — every single month.
+                            flowing to youth who need them —
+                            <br className="sm:hidden" />
+                            every single month.
                         </p>
                         <div className="mt-8">
                             <Button

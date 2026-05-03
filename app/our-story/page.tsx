@@ -14,7 +14,7 @@ export default function OurStoryPage() {
             <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
                 <Image
                     src="/images/shared/dream-center-natures-turn.jpg"
-                    alt="Dream Center and Nature's Turn partnership"
+                    alt="Teen Health nutrition distribution at the Dream Center, Los Angeles"
                     fill
                     priority
                     className="object-cover object-[center_28%]"
@@ -46,11 +46,51 @@ export default function OurStoryPage() {
                         </Reveal>
                         <Reveal delay={0.1}>
                             <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                How Teen Health Started —<br className="hidden md:inline" /> and Where We&apos;re Going
+                                Empowering At-Risk Youth Through<br className="hidden md:inline" /> Nutrition, Stability, and Dignity
                             </h1>
                         </Reveal>
                     </div>
                 </div>
+            </section>
+
+            {/* ─── THE REALITY WE STARTED FROM ─── */}
+            <section className="bg-[#F4F5F7] py-12 sm:py-16">
+                <Container>
+                    <div className="mx-auto max-w-3xl">
+                        <Reveal>
+                            <div className="mb-4 h-1 w-10 rounded-full bg-sun" />
+                            <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                                The Reality We Started From
+                            </h2>
+                        </Reveal>
+                        <Reveal delay={0.08}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Thousands of teenagers and young adults are growing
+                                up without the basics most people take for granted:
+                                enough nutritious food, stable housing, and the daily
+                                care that makes health possible. They&apos;re
+                                navigating school, work, and adulthood while facing
+                                food insecurity, neurological challenges, and
+                                economic hardship — often all at once.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.10}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                Many are doing it on their own. They&apos;re being
+                                asked to regulate themselves in bodies that are
+                                biologically under-supported, with little margin for
+                                error. The cost compounds quickly — in concentration,
+                                in mood, and in long-term health outcomes that follow
+                                them for decades.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.12}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                These are the young people Teen Health exists to support.
+                            </p>
+                        </Reveal>
+                    </div>
+                </Container>
             </section>
 
             {/* ─── WHERE IT STARTED ─── */}
@@ -94,7 +134,7 @@ export default function OurStoryPage() {
                             <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
                                 <Image
                                     src="/images/shared/soap-lipbalm-electrolytes-supplements.jpeg"
-                                    alt="Soap, lip balm, electrolytes, and supplements"
+                                    alt="Teen Health hygiene and supplement supplies for at-risk youth at YMCA TAY Center, Escondido, CA"
                                     width={3000}
                                     height={2000}
                                     className="w-full object-cover"
@@ -139,7 +179,7 @@ export default function OurStoryPage() {
                             <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
                                 <Image
                                     src="/images/shared/uci-health-center-for-autism.jpeg"
-                                    alt="UCI Health Center for Autism"
+                                    alt="Teen Health partnership with UCI Health Center for Autism & Neurodevelopmental Disorders, Irvine, CA"
                                     width={3000}
                                     height={2000}
                                     className="w-full object-cover"
@@ -172,15 +212,36 @@ export default function OurStoryPage() {
                         </Reveal>
                         <Reveal delay={0.08}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
-                                Today, Teen Health serves homeless, food-insecure, and low-income
-                                youth through nutrition distribution, hygiene and wellness kits,
-                                fitness programming, and partnerships with schools, shelters, and
-                                community organizations. We work alongside nonprofit partners and
-                                local agencies to strengthen the safety net for young people in
-                                poverty or without stable housing.
+                                Today, Teen Health serves homeless, food-insecure, and
+                                low-income youth through three core programs:
                             </p>
                         </Reveal>
-                        <Reveal delay={0.12}>
+                        <Reveal delay={0.10}>
+                            <ul className="mt-6 space-y-4">
+                                {[
+                                    { label: "Distribution", desc: "High-quality nutrition and supplements." },
+                                    { label: "Wellness", desc: "Hygiene and wellness kits for local shelters." },
+                                    { label: "Programs", desc: "Fitness and healthy living initiatives." },
+                                ].map((item) => (
+                                    <li key={item.label} className="flex gap-4 text-lg leading-relaxed text-ink/70">
+                                        <span className="mt-3 h-2 w-2 shrink-0 rounded-full bg-sun" />
+                                        <span>
+                                            <strong className="font-semibold text-ink">{item.label}:</strong>{" "}
+                                            {item.desc}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Reveal>
+                        <Reveal delay={0.14}>
+                            <p className="mt-6 text-lg leading-relaxed text-ink/70">
+                                We work alongside nonprofit partners, schools, shelters,
+                                and community organizations across Los Angeles, Orange
+                                County, and San Diego to strengthen the safety net for
+                                young people in poverty or without stable housing.
+                            </p>
+                        </Reveal>
+                        <Reveal delay={0.16}>
                             <p className="mt-6 text-lg leading-relaxed text-ink/70">
                                 And the momentum is growing. Today, we are taking in product by
                                 the truckload — because the need is real, and the community is
@@ -191,14 +252,17 @@ export default function OurStoryPage() {
                             <div className="mt-8 overflow-hidden rounded-2xl shadow-sm">
                                 <Image
                                     src="/images/shared/truck-unloading.jpg"
-                                    alt="Truck unloading product for distribution"
+                                    alt="Teen Health nutrition distribution truck unloading product at Skid Row, Los Angeles"
                                     width={3000}
                                     height={2000}
                                     className="w-full object-cover"
                                     style={{ aspectRatio: "4/3", objectPosition: "center 15%" }}
                                 />
                             </div>
-                            <div className="mt-4 flex justify-center">
+                            <p className="mt-4 text-center text-sm italic text-ink/70">
+                                Donated supplies arrive by the truckload — fueling Teen Health&apos;s ongoing distribution to vulnerable youth.
+                            </p>
+                            <div className="mt-2 flex justify-center">
                                 <span className="flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-xs font-medium tracking-wide text-ink/50">
                                     <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -206,6 +270,17 @@ export default function OurStoryPage() {
                                         </svg>
                                         Skid Row, Los Angeles, CA
                                     </span>
+                            </div>
+                        </Reveal>
+                        <Reveal delay={0.20}>
+                            <div className="mt-10 flex justify-center">
+                                <Button
+                                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                                    variant="primary"
+                                    style={{ backgroundColor: '#FF8005', color: '#fff' }}
+                                >
+                                    Donate Now
+                                </Button>
                             </div>
                         </Reveal>
                     </div>
@@ -248,7 +323,7 @@ export default function OurStoryPage() {
                                 <div className="overflow-hidden rounded-2xl shadow-sm" style={{ aspectRatio: "2/3" }}>
                                     <Image
                                         src="/images/shared/man-supplements-2.jpg"
-                                        alt="Man with supplements"
+                                        alt="At-risk youth receiving Teen Health nutrition supplements at Living Word of Upland, CA"
                                         width={1500}
                                         height={2250}
                                         className="h-full w-full object-cover"
@@ -257,7 +332,7 @@ export default function OurStoryPage() {
                                 <div className="overflow-hidden rounded-2xl shadow-sm" style={{ aspectRatio: "2/3" }}>
                                     <Image
                                         src="/images/shared/young-man-supplements.jpg"
-                                        alt="Young man with supplements"
+                                        alt="Young adult with Teen Health nutrition supplements at Living Word of Upland, CA"
                                         width={1500}
                                         height={2250}
                                         className="h-full w-full object-cover"
@@ -296,8 +371,8 @@ export default function OurStoryPage() {
                             </Button>
                             <Button
                                 href="/get-involved"
-                                variant="ghost"
-                                className="text-ink hover:bg-ink/10"
+                                variant="primary"
+                                style={{ backgroundColor: 'rgba(255,255,255,0.4)', color: '#231F20' }}
                             >
                                 Get Involved
                             </Button>
