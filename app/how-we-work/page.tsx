@@ -12,11 +12,11 @@ export default function HowWeWorkPage() {
             {/* ─── HERO ─── */}
             <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]">
                 <Image
-                    src="/images/shared/how-we-work-hero-banner-conscious-step-purely-elizabeth-hero-section.jpg"
-                    alt="Conscious Step and Purely Elizabeth products for youth distribution"
+                    src="/images/shared/vista-city-teen-health.jpeg"
+                    alt="Teen Health distribution event at Vista City Hall in Vista, CA"
                     fill
                     priority
-                    className="object-cover object-center"
+                    className="object-cover object-[center_18%]"
                     sizes="100vw"
                 />
                 <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
@@ -25,7 +25,7 @@ export default function HowWeWorkPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                         </svg>
-                        Skid Row, Los Angeles, CA
+                        Vista City Hall, Vista, CA
                     </span>
                 </div>
                 <div

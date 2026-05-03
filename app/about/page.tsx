@@ -147,31 +147,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
-                <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
-                  <Image
-                    src="/images/shared/perfect-hydration-warehouse.jpeg"
-                    alt="Perfect Hydration warehouse"
-                    fill
-                    className="object-cover object-bottom"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-              <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
-                <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
-                  <Image
-                    src="/images/shared/gu-stroopwafel-boxes.jpg"
-                    alt="GU Stroopwafel energy products ready for distribution"
-                    fill
-                    className="object-cover object-left"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Who we serve */}
             <div className="space-y-4">
               <h3 className="text-xl font-normal tracking-tight text-ink">
@@ -183,7 +158,7 @@ export default function AboutPage() {
                 resilience, and begin to see a path forward.
               </p>
               <p className="text-base leading-relaxed text-ink/80">
-                We serve youth ages 13–24 including those experiencing food insecurity,
+                We serve youth ages 13–29 including those experiencing food insecurity,
                 homelessness, foster care transitions, justice system involvement, and
                 mental health challenges. Many are navigating circumstances they
                 didn&apos;t choose, without the support systems they need. We believe
@@ -215,6 +190,31 @@ export default function AboutPage() {
                 and gives more young people the chance not just to get by, but to truly
                 thrive.
               </p>
+
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
+                  <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
+                    <Image
+                      src="/images/shared/perfect-hydration-warehouse.jpeg"
+                      alt="Perfect Hydration warehouse"
+                      fill
+                      className="object-cover object-bottom"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl" style={{ height: "675px" }}>
+                  <div className="absolute inset-0" style={{ top: "-10%", height: "110%" }}>
+                    <Image
+                      src="/images/shared/gu-stroopwafel-boxes.jpg"
+                      alt="GU Stroopwafel energy products ready for distribution"
+                      fill
+                      className="object-cover object-left"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </Reveal>
