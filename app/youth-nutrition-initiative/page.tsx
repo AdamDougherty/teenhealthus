@@ -346,13 +346,30 @@ export default function YouthNutritionInitiativeLandingPage() {
           </div>
 
           <Reveal delay={0.15}>
-            <div className="mt-10 rounded-2xl border border-mintDark/40 bg-mintDark/15 p-6 text-center">
-              <p className="text-base font-medium text-ink">
-                <strong className="text-navy">$40 per child</strong> for
-                prevention &nbsp;vs.&nbsp;{" "}
-                <strong className="text-navy">$10,000+</strong> annually per
-                diabetes patient for treatment
-              </p>
+            <div className="mt-10 rounded-2xl border border-mintDark/40 bg-mintDark/15 p-6 sm:p-8">
+              <div className="grid items-center gap-6 sm:grid-cols-[1fr_auto_1fr] sm:gap-8">
+                <div className="text-center sm:text-right">
+                  <p className="font-serif text-3xl font-normal tracking-tight text-navy sm:text-4xl">
+                    $40
+                  </p>
+                  <p className="mt-2 text-sm leading-snug text-ink/80">
+                    per child for prevention
+                  </p>
+                </div>
+
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-mintDark/40 bg-white text-sm font-semibold uppercase tracking-wider text-ink/70">
+                  vs.
+                </div>
+
+                <div className="text-center sm:text-left">
+                  <p className="font-serif text-3xl font-normal tracking-tight text-navy sm:text-4xl">
+                    $10,000+
+                  </p>
+                  <p className="mt-2 text-sm leading-snug text-ink/80">
+                    annually per diabetes patient for treatment
+                  </p>
+                </div>
+              </div>
             </div>
           </Reveal>
 
@@ -415,9 +432,10 @@ export default function YouthNutritionInitiativeLandingPage() {
               </div>
             </Reveal>
 
-            <span className="hidden text-3xl text-ink/20 sm:block" aria-hidden>
-              →
-            </span>
+            <div className="flex items-center justify-center text-4xl font-semibold text-navy/70" aria-hidden>
+              <span className="sm:hidden">↓</span>
+              <span className="hidden sm:inline">→</span>
+            </div>
 
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
@@ -468,7 +486,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
+              <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="rounded-2xl border border-border bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
                   <p className="text-xs font-bold uppercase tracking-wide text-mintDark">
                     Teen Health Inc.

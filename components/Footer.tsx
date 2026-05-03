@@ -71,7 +71,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col gap-2 border-t border-border pt-6 text-xs text-ink/60 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Teen Health. All rights reserved.</div>
           <div>
-            Built with care by <a href="mailto:adam@blizzfull.com" className="underline hover:text-ink">Adam Dougherty</a>
+            Built with care by <a href="mailto:adam@blizzfull.com" className="underline hover:text-ink">Adam Dougherty</a> and <a href="mailto:mwallen@teenhealth.us" className="underline hover:text-ink">Maya Wallen</a>
           </div>
         </div>
       </Container>

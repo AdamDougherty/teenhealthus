@@ -108,7 +108,7 @@ export default function VolunteerPage() {
               <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 Find a role that fits your strengths.
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-ink/60">
+              <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-ink/80">
                 We welcome volunteers of all backgrounds and skill levels. Here
                 are some of the ways you can contribute.
               </p>
@@ -140,7 +140,7 @@ export default function VolunteerPage() {
               {
                 icon: "📋",
                 label: "Admin & data",
-                desc: "Assist with data entry, donor outreach, filing, and organizational support.",
+                desc: "Assist with data entry, donor outreach, scheduling, filing, and behind-the-scenes organizational support.",
               },
               {
                 icon: "🤝",
@@ -154,7 +154,7 @@ export default function VolunteerPage() {
                   <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
                     {item.label}
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-ink/60">{item.desc}</p>
+                  <p className="mt-2 text-base leading-relaxed text-pretty text-ink/80">{item.desc}</p>
                 </Card>
               </Reveal>
             ))}
@@ -186,7 +186,7 @@ export default function VolunteerPage() {
               {
                 num: "02",
                 title: "We'll match you",
-                desc: "Our team reviews your submission and reaches out with opportunities that fit your schedule and interests.",
+                desc: "Our team reaches out with opportunities that fit your schedule and interests.",
                 image: "/images/shared/dream-center-volunteers.jpeg",
                 imageAlt: "Volunteers at the Dream Center",
                 imagePosition: "center 100%",
@@ -194,7 +194,7 @@ export default function VolunteerPage() {
               {
                 num: "03",
                 title: "Show up & make an impact",
-                desc: "Join a packing session, delivery run, or project — and see firsthand how your time helps youth in need.",
+                desc: "Join a packing session, delivery, or project — and see how your time helps youth.",
                 image: "/images/shared/nav-center-2.jpeg",
                 imageAlt: "Teen Health navigation center distribution",
                 imagePosition: "center 42%",
@@ -209,7 +209,7 @@ export default function VolunteerPage() {
                     <h3 className="font-serif text-2xl font-normal tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="mt-4 max-w-md text-base leading-relaxed text-ink/60">
+                    <p className="mt-4 max-w-md text-lg leading-relaxed text-pretty text-ink/80">
                       {step.desc}
                     </p>
                   </div>
@@ -243,7 +243,7 @@ export default function VolunteerPage() {
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                   It's more than service — it's connection.
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-ink/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/80">
                   Volunteers are the backbone of our operation. You'll work
                   alongside a passionate team, learn about the natural products
                   industry, and directly impact the lives of young people in
@@ -260,7 +260,7 @@ export default function VolunteerPage() {
                       <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sun/15 text-xs text-sun">
                         ✓
                       </span>
-                      <span className="text-sm text-ink/70">{item}</span>
+                      <span className="text-lg text-ink/80">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -294,7 +294,7 @@ export default function VolunteerPage() {
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                   Volunteer interest form.
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/60">
+                <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/80">
                   Tell us a bit about yourself and how you'd like to help. We'll
                   reach out with opportunities that match your interests and
                   availability.
@@ -325,7 +325,7 @@ export default function VolunteerPage() {
                         {step.num}
                       </div>
                       <div className="mt-3 text-lg font-semibold">{step.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/50">
+                      <p className="mt-2 text-base leading-relaxed text-ink/80">
                         {step.desc}
                       </p>
                     </div>
