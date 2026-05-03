@@ -135,7 +135,7 @@ export default function VolunteerPage() {
               {
                 icon: "📸",
                 label: "Events & outreach",
-                desc: "Support community events, capture photos and video, and help spread the word.",
+                desc: "Support community events, capture photos and video, and help spread the word in your community.",
               },
               {
                 icon: "📋",
