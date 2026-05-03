@@ -142,7 +142,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             </p>
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               Nutrition Inequity Is Driving
-              <br />
+              {" "}<br className="hidden sm:inline" />
               Long-Term Health Outcomes
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
@@ -183,7 +183,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             </p>
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               A Daily, Low-Glycemic
-              <br />
+              {" "}<br className="hidden sm:inline" />
               Nutrition Intervention
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
@@ -317,7 +317,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             </p>
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               A High-Impact, Cost-Efficient
-              <br />
+              {" "}<br className="hidden sm:inline" />
               Prevention Model
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
@@ -389,7 +389,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             </p>
             <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
               From Community Initiative to
-              <br />
+              {" "}<br className="hidden sm:inline" />
               Scalable Prevention Model
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
