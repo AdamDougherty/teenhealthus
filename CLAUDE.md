@@ -30,6 +30,12 @@ Teen Health is a nonprofit website supporting vulnerable youth with food, hydrat
 
 ## Workflows
 
+### Always edit on main (never on worktree branches)
+
+**Rule:** All source edits and commits must happen in the main checkout at `C:/Users/agentuser/Dev/teenhealth/` on the `main` branch. Even if a session auto-launches inside a worktree (`.claude/worktrees/<name>/` on branch `claude/<name>`), do NOT commit there.
+
+**Why:** localhost:3000 serves from the main checkout, and the deploy reads from main. Commits on worktree branches that aren't merged silently never reach production, so the user sees changes "disappear" between sessions. Multiple weeks of work were lost this way before being recovered manually on 2026-05-02 and 2026-05-03.
+
 ### "Make it live" (deploy)
 1. Confirm user has previewed at localhost:3000
 2. `git add -A && git commit -m "..." && git push`
