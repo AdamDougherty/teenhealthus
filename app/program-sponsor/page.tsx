@@ -159,6 +159,20 @@ export default function ProgramsPage() {
             </div>
           </div>
         </Reveal>
+
+        <Reveal delay={0.15}>
+          <div className="mt-12 flex justify-center">
+            <div className="relative h-10 w-44 sm:h-12 sm:w-52">
+              <Image
+                src="/images/shared/benevity-logo.png"
+                alt="Benevity"
+                fill
+                className="object-contain"
+                sizes="208px"
+              />
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </div>
   );

@@ -144,39 +144,39 @@ export default function BrandPartnerPage() {
         <Container>
           <Reveal>
             <h2 className="mx-auto max-w-4xl text-center font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              Strategic CSR Partnerships for Food &amp; Beverage Brands:
+              Strategic Partnerships for Food &amp; Beverage Brands:
               <br className="hidden lg:block" />{" "}
               Join the Youth Nutrition Initiative
             </h2>
           </Reveal>
           <Reveal delay={0.05}>
             <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-ink/70 sm:text-lg">
-              A measurable ESG (Environmental, Social, and Governance) and ROI-on-social-impact opportunity for purpose-driven brands — placing your products inside a credentialed nutrition program with vetted distribution at scale.
+              A social impact opportunity for purpose-driven brands. Placing your products inside nutrition programs with vetted distribution at scale.
             </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { label: "ADA Better Choices for Life Designated", sub: "American Dietetic Association nutrition framework" },
-                { label: "USDA Smart Snack Compliant", sub: "Federal nutrition standard for youth programs" },
-                { label: "250+ Food & Beverage Partners", sub: "Active brand donor network since 2022" },
-                { label: "100+ Nonprofit Agency Partners", sub: "Trusted distribution into communities" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-2xl border border-border bg-white p-6">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-navy to-navy/80 text-xs font-bold text-white">
-                    ✓
-                  </span>
-                  <p className="mt-4 text-lg font-semibold leading-snug text-ink sm:min-h-[3rem]">{item.label}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/80">{item.sub}</p>
-                </div>
-              ))}
-            </div>
           </Reveal>
         </Container>
       </section>
 
       {/* ——— IN GOOD COMPANY — Logo Grid ——— */}
       <PartnerLogoGrid />
+
+      {/* ——— PARTNER TESTIMONIAL ——— */}
+      <section className="bg-[#f9f6f2] pb-20 sm:pb-28">
+        <Container>
+          <Reveal>
+            <figure className="mx-auto max-w-3xl border-t border-ink/10 pt-16 text-center sm:pt-20">
+              <blockquote>
+                <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
+                  &ldquo;We&rsquo;re excited to partner with Teen Health! Empowering our youth and nourishing our community are not just acts of kindness; they&rsquo;re investments in a brighter tomorrow. Partnering with Teen Health allows us to turn hope into action and ensure that our at-risk young adults have the support and sustenance they need to flourish. Teen Health exemplifies our core values that Help is Here!&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-semibold uppercase tracking-wide text-ink/60">
+                Joseph Underhill, Boost Oxygen
+              </figcaption>
+            </figure>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* ——— FULL-WIDTH PHOTO ——— */}
       <section className="relative aspect-[4/3] overflow-hidden sm:aspect-auto sm:min-h-[95vh]">

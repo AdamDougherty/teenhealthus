@@ -77,7 +77,7 @@ export default function OurWorkPage() {
                             <Reveal delay={0.16}>
                                 <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
                                     <p className="font-serif text-2xl font-normal tracking-tight text-slate-600 sm:text-3xl">
-                                        100
+                                        100+
                                     </p>
                                     <p className="mt-3 text-base font-medium text-ink/60">
                                         &ldquo;Superhero&rdquo; Social Service Partners
@@ -370,15 +370,24 @@ export default function OurWorkPage() {
                         </Reveal>
 
                         <Reveal delay={0.06}>
-                            <div className="mt-8 max-w-[52rem] overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
+                            <div className="relative mt-8 max-w-[52rem] overflow-hidden rounded-2xl" style={{ aspectRatio: "16/9" }}>
                                 <Image
                                     src="/images/shared/elementary-kids.jpeg"
-                                    alt="Elementary school kids"
+                                    alt="Elementary school kids at Mission Meadows Elementary School, Oceanside, CA"
                                     width={1200}
                                     height={675}
                                     className="h-full w-full object-cover"
                                     sizes="(max-width: 896px) 100vw, 896px"
                                 />
+                                <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
+                                    <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+                                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                        Mission Meadows Elementary School, Oceanside, CA
+                                    </span>
+                                </div>
                             </div>
                         </Reveal>
 

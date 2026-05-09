@@ -46,7 +46,7 @@ export default function OurStoryPage() {
                         </Reveal>
                         <Reveal delay={0.1}>
                             <h1 className="mt-4 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                                Empowering At-Risk Youth Through<br className="hidden md:inline" /> Nutrition, Stability, and Dignity
+                                Our Mission: Health &amp; Wellness<br className="hidden md:inline" /> for At-Risk Youth
                             </h1>
                         </Reveal>
                     </div>

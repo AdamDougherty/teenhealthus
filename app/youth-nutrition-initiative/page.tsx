@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
@@ -5,7 +6,7 @@ import { Button } from "@/components/Button";
 export const metadata = {
   title: "Youth Nutrition Initiative",
   description:
-    "A 20-day daily intervention delivering low-glycemic, whole-food snacks to 50,000 at-risk youth across San Diego County.",
+    "A 20-day daily intervention delivering low-glycemic, whole-food snacks to 50,000 at-risk youth across Southern California.",
 };
 
 const faqs = [
@@ -23,7 +24,7 @@ const faqs = [
   },
   {
     q: "How many youth does the Phase 1 program serve?",
-    a: "Phase 1 reaches 50,000 at-risk youth across San Diego County through 10–30+ distribution sites over 20 days, with $2M in total funding.",
+    a: "Phase 1 reaches 50,000 at-risk youth across Southern California through 10–30+ distribution sites over 20 days, with $2M in total funding.",
   },
   {
     q: "What kinds of foods does the program provide?",
@@ -71,14 +72,14 @@ export default function YouthNutritionInitiativeLandingPage() {
                   Healthy Youth Nutrition
                 </span>
                 <br />
-                in San Diego County
+                in Southern California
               </h1>
             </Reveal>
 
             <Reveal delay={0.15}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80">
                 A 20-day daily intervention delivering low-glycemic, whole-food
-                snacks to 50,000 at-risk youth across San Diego County — through
+                snacks to 50,000 at-risk youth across Southern California — through
                 schools, nonprofits, and community programs.
               </p>
             </Reveal>
@@ -130,6 +131,32 @@ export default function YouthNutritionInitiativeLandingPage() {
             </div>
           </Reveal>
         </div>
+
+        {/* Credential badges */}
+        <Reveal delay={0.3}>
+          <div className="relative z-10 mx-auto -mt-8 flex max-w-6xl justify-center px-6 pb-12 sm:-mt-12 sm:px-10 sm:pb-16 lg:-mt-16 lg:px-16">
+            <div className="flex items-center gap-8 rounded-2xl border border-border bg-white px-8 py-5 shadow-soft sm:gap-12 sm:px-10 sm:py-6">
+              <div className="relative h-28 w-24 sm:h-36 sm:w-28">
+                <Image
+                  src="/images/shared/ada-better-choices-for-life-logo.png"
+                  alt="ADA Better Choices for Life designation"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 96px, 112px"
+                />
+              </div>
+              <div className="relative h-28 w-44 sm:h-36 sm:w-56">
+                <Image
+                  src="/images/shared/usda-smart-snacks-compliant-logo.jpg"
+                  alt="USDA Smart Snacks Compliant"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 176px, 224px"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* ═══ THE PROBLEM ═══ */}
@@ -425,7 +452,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                   Community Deployment
                 </h4>
                 <p className="mt-3 text-sm leading-relaxed text-ink/80">
-                  50,000 at-risk youth across San Diego County. Daily
+                  50,000 at-risk youth across Southern California. Daily
                   distribution through existing school and nonprofit partner
                   sites.
                 </p>
@@ -488,17 +515,17 @@ export default function YouthNutritionInitiativeLandingPage() {
             <Reveal delay={0.1}>
               <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="rounded-2xl border border-border bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-                  <p className="text-xs font-bold uppercase tracking-wide text-mintDark">
+                  <p className="text-xs font-bold uppercase tracking-wide text-sky">
                     Teen Health Inc.
                   </p>
                   <h4 className="mt-3 font-serif text-lg font-normal text-ink">
                     Scott Swift
                   </h4>
                   <a
-                    href="mailto:sswift@teenhealth.us"
+                    href="mailto:info@teenhealth.us"
                     className="mt-1 block text-sm font-medium text-ink/80 hover:underline"
                   >
-                    sswift@teenhealth.us
+                    info@teenhealth.us
                   </a>
                   <a
                     href="https://teenhealth.us"
@@ -511,7 +538,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                 </div>
 
                 <div className="rounded-2xl border border-border bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-                  <p className="text-xs font-bold uppercase tracking-wide text-sky">
+                  <p className="text-xs font-bold uppercase tracking-wide text-mintDark">
                     NUI Foundation
                   </p>
                   <h4 className="mt-3 font-serif text-lg font-normal text-ink">
@@ -536,34 +563,36 @@ export default function YouthNutritionInitiativeLandingPage() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <div className="mt-10 flex flex-col items-center justify-center gap-3">
-                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
+                <div className="flex flex-col items-center gap-4">
                   <Button
                     href="https://mygoodness.benevity.org/community/cause/840-874628884"
                     variant="primary"
+                    className="w-56"
                     style={{ backgroundColor: "#2E9DF7", color: "#fff" }}
+                  >
+                    Sponsor on Benevity
+                  </Button>
+                  <div className="relative h-9 w-36 sm:h-10 sm:w-40">
+                    <Image
+                      src="/images/shared/benevity-logo.png"
+                      alt="Benevity"
+                      fill
+                      className="object-contain"
+                      sizes="160px"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-start justify-center">
+                  <Button
+                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                    variant="primary"
+                    className="w-56"
+                    style={{ backgroundColor: "#4D9D93", color: "#fff" }}
                   >
                     Donate Now
                   </Button>
-                  <Button
-                    href={`mailto:sswift@teenhealth.us?subject=${encodeURIComponent(
-                      "Phase 1 Briefing Request — Youth Nutrition Initiative"
-                    )}`}
-                    variant="primary"
-                    style={{ backgroundColor: "#4D9D93", color: "#fff" }}
-                  >
-                    Request a Phase 1 Briefing
-                  </Button>
                 </div>
-                <Button
-                  href={`mailto:sswift@teenhealth.us?subject=${encodeURIComponent(
-                    "Bring Youth Nutrition Initiative to Our School"
-                  )}`}
-                  variant="primary"
-                  style={{ backgroundColor: "#2A4D8A", color: "#fff" }}
-                >
-                  Bring the Program to Your School
-                </Button>
               </div>
             </Reveal>
           </div>
