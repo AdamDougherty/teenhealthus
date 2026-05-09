@@ -136,7 +136,13 @@ export default function YouthNutritionInitiativeLandingPage() {
         <Reveal delay={0.3}>
           <div className="relative z-10 mx-auto -mt-8 flex max-w-6xl justify-center px-6 pb-12 sm:-mt-12 sm:px-10 sm:pb-16 lg:-mt-16 lg:px-16">
             <div className="flex items-center gap-8 rounded-2xl border border-border bg-white px-8 py-5 shadow-soft sm:gap-12 sm:px-10 sm:py-6">
-              <div className="relative h-28 w-24 sm:h-36 sm:w-28">
+              <a
+                href="https://diabetes.org/health-wellness/better-choices-for-life"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Learn about ADA Better Choices for Life designation"
+                className="relative block h-28 w-24 transition hover:opacity-80 sm:h-36 sm:w-28"
+              >
                 <Image
                   src="/images/shared/ada-better-choices-for-life-logo.png"
                   alt="ADA Better Choices for Life designation"
@@ -144,8 +150,14 @@ export default function YouthNutritionInitiativeLandingPage() {
                   className="object-contain"
                   sizes="(max-width: 640px) 96px, 112px"
                 />
-              </div>
-              <div className="relative h-28 w-44 sm:h-36 sm:w-56">
+              </a>
+              <a
+                href="https://www.fns.usda.gov/school-meals/nutrition-standards/smartsnacks"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Learn about USDA Smart Snacks Compliant designation"
+                className="relative block h-28 w-44 transition hover:opacity-80 sm:h-36 sm:w-56"
+              >
                 <Image
                   src="/images/shared/usda-smart-snacks-compliant-logo.jpg"
                   alt="USDA Smart Snacks Compliant"
@@ -153,7 +165,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                   className="object-contain"
                   sizes="(max-width: 640px) 176px, 224px"
                 />
-              </div>
+              </a>
             </div>
           </div>
         </Reveal>
