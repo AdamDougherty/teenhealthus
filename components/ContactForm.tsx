@@ -37,6 +37,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">
+      <input type="hidden" name="formType" value="contact" />
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">

@@ -664,6 +664,7 @@ export default function BrandPartnerPage() {
               ) : (
                 <Card className="bg-white text-ink">
                   <form onSubmit={onSubmit} className="space-y-5">
+                    <input type="hidden" name="formType" value="brand-partner" />
                     <div className="grid gap-4 sm:grid-cols-2">
                       <label className="block">
                         <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
