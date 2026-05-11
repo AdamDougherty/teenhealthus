@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/Container";
 
 export function Footer() {
@@ -15,6 +16,22 @@ export function Footer() {
             <p className="mt-4 text-xs text-ink/60">
               Teen Health is a 501(c)(3) nonprofit. EIN: 87-4628884.
             </p>
+            <div className="mt-5">
+              <a
+                href="https://app.candid.org/profile/14074133/teen-health-inc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Teen Health's Candid profile (opens in new tab)"
+              >
+                <Image
+                  src="/images/shared/candid-silver-transparency.jpg"
+                  alt="Candid Silver Transparency 2026 seal"
+                  width={96}
+                  height={96}
+                  className="h-24 w-24"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-6 text-sm md:grid-cols-3">
