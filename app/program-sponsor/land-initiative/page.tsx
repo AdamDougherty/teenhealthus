@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "The California Regenerative Youth Land Initiative",
 };
@@ -108,33 +110,44 @@ const pageStyles = `
   .li-hero-sub strong { color: var(--li-ink); font-weight: 500; }
   .li-hero-actions {
     display: flex;
-    gap: 14px;
+    gap: 32px;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
-  .li-btn-hero-primary {
-    background: var(--rust);
-    color: white;
+  .li-button-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .li-btn-benevity, .li-btn-donate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    color: #fff;
     font-size: 14px;
-    font-weight: 500;
-    padding: 14px 32px;
+    font-weight: 600;
+    padding: 13px 24px;
     border-radius: 100px;
     text-decoration: none;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(192,90,42,0.30);
+    transition: filter 0.2s, transform 0.15s, box-shadow 0.2s;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(26,23,16,0.12);
   }
-  .li-btn-hero-primary:hover { background: #a04820; transform: translateY(-2px); box-shadow: 0 6px 28px rgba(192,90,42,0.35); }
-  .li-btn-hero-outline {
-    background: transparent;
-    color: var(--li-ink);
-    font-size: 14px;
-    font-weight: 400;
-    padding: 13px 28px;
-    border-radius: 100px;
-    border: 1.5px solid var(--li-border);
-    text-decoration: none;
-    transition: border-color 0.2s, background 0.2s;
+  .li-btn-benevity { background: #2E9DF7; }
+  .li-btn-benevity:hover { filter: brightness(0.95); transform: translateY(-1px); }
+  .li-btn-donate { background: #4D9D93; }
+  .li-btn-donate:hover { filter: brightness(0.95); transform: translateY(-1px); }
+  .li-benevity-logo {
+    position: relative;
+    height: 36px;
+    width: 144px;
   }
-  .li-btn-hero-outline:hover { border-color: var(--li-ink); background: rgba(26,23,16,0.04); }
+  @media (min-width: 640px) {
+    .li-benevity-logo { height: 40px; width: 160px; }
+  }
 
   .li-hero-card {
     background: var(--li-white);
@@ -699,17 +712,35 @@ export default function LandInitiativePage() {
               — at their own pace, with real support behind them.
             </p>
             <div className="li-hero-actions">
-              <a
-                href="https://mygoodness.benevity.org/community/cause/840-874628884"
-                className="li-btn-hero-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Donate on Benevity
-              </a>
-              <a href="mailto:info@teenhealth.us" className="li-btn-hero-outline">
-                Become a Sponsor
-              </a>
+              <div className="li-button-col">
+                <a
+                  href="https://mygoodness.benevity.org/community/cause/840-874628884/project/62XL70NG8P"
+                  className="li-btn-benevity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sponsor on Benevity
+                </a>
+                <div className="li-benevity-logo">
+                  <Image
+                    src="/images/shared/benevity-logo.png"
+                    alt="Benevity"
+                    fill
+                    className="object-contain"
+                    sizes="160px"
+                  />
+                </div>
+              </div>
+              <div className="li-button-col">
+                <a
+                  href="https://www.classy.org/give/665776/#!/donation/checkout"
+                  className="li-btn-donate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Donate Now
+                </a>
+              </div>
             </div>
           </div>
           <div>
