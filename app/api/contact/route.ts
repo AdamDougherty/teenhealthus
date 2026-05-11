@@ -130,7 +130,7 @@ export async function POST(req: Request) {
   sgMail.setApiKey(apiKey);
 
   try {
-    await sgMail.send({
+    const [response] = await sgMail.send({
       to: toEmail,
       from: fromEmail,
       replyTo: email,
@@ -138,9 +138,16 @@ export async function POST(req: Request) {
       text: textBody,
       html: htmlBody,
     });
+    console.log(
+      `[contact] sent formType=${formType} email=${email} status=${response.statusCode} msgId=${response.headers["x-message-id"] ?? "?"}`
+    );
   } catch (err) {
     const detail = err instanceof Error ? err.message : "unknown error";
-    console.error("[contact] sendgrid error:", detail);
+    const body =
+      err && typeof err === "object" && "response" in err
+        ? JSON.stringify((err as { response?: { body?: unknown } }).response?.body)
+        : "";
+    console.error("[contact] sendgrid error:", detail, body);
     return NextResponse.json(
       { ok: false, message: "Could not send your message. Please try again." },
       { status: 502 }
