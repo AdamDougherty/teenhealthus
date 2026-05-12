@@ -99,7 +99,29 @@ export default function AboutPage() {
             {
               title: "Transparency",
               body: "Teen Health is a 501(c)(3) nonprofit organization. EIN: 87-4628884.",
-              foot: "View our 990 and annual reports at teenhealth.org.",
+              foot: (
+                <>
+                  At Teen Health, we believe trust starts with transparency. You can learn more about our organization and impact on{" "}
+                  <a
+                    href="https://app.candid.org/profile/14074133/teen-health-inc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+                  >
+                    Candid.org
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://mygoodness.benevity.org/community/cause/840-874628884"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+                  >
+                    Benevity.com
+                  </a>{" "}
+                  — two trusted platforms dedicated to nonprofit accountability.
+                </>
+              ),
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>

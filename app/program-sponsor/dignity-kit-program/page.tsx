@@ -466,12 +466,16 @@ const pageStyles = `
   }
   .dk-hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
   .dk-hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
+  @keyframes dkFadeInFallback {
+    to { opacity: 1; transform: none; }
+  }
   .dk-fade-in {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 0.65s ease, transform 0.65s ease;
+    animation: dkFadeInFallback 0.4s ease 1.2s forwards;
   }
-  .dk-fade-in.visible { opacity: 1; transform: none; }
+  .dk-fade-in.visible { opacity: 1; transform: none; animation: none; }
 `;
 
 const inlineScript = `

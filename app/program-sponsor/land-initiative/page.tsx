@@ -650,12 +650,16 @@ const pageStyles = `
   }
   .li-hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
   .li-hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
+  @keyframes liFadeInFallback {
+    to { opacity: 1; transform: none; }
+  }
   .li-fade-in {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 0.65s ease, transform 0.65s ease;
+    animation: liFadeInFallback 0.4s ease 1.2s forwards;
   }
-  .li-fade-in.visible { opacity: 1; transform: none; }
+  .li-fade-in.visible { opacity: 1; transform: none; animation: none; }
 `;
 
 const inlineScript = `
@@ -855,12 +859,6 @@ export default function LandInitiativePage() {
               className="li-impact-card li-fade-in"
               style={{ borderTop: "3px solid var(--sage-deep)" }}
             >
-              <div
-                className="li-impact-num"
-                style={{ fontSize: 32, marginBottom: 16 }}
-              >
-                🌿
-              </div>
               <div className="li-impact-label">Youth Impact</div>
               <div
                 className="li-impact-desc"
@@ -878,12 +876,6 @@ export default function LandInitiativePage() {
               className="li-impact-card li-fade-in"
               style={{ borderTop: "3px solid var(--rust)" }}
             >
-              <div
-                className="li-impact-num"
-                style={{ fontSize: 32, marginBottom: 16, color: "var(--rust)" }}
-              >
-                🏘️
-              </div>
               <div className="li-impact-label">Community Impact</div>
               <div
                 className="li-impact-desc"
@@ -901,12 +893,6 @@ export default function LandInitiativePage() {
               className="li-impact-card li-fade-in"
               style={{ borderTop: "3px solid var(--gold)" }}
             >
-              <div
-                className="li-impact-num"
-                style={{ fontSize: 32, marginBottom: 16, color: "var(--gold)" }}
-              >
-                📈
-              </div>
               <div className="li-impact-label">Organizational Impact</div>
               <div
                 className="li-impact-desc"

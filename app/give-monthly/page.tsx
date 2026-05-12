@@ -48,19 +48,16 @@ const stats = [
 
 const reasons = [
     {
-        icon: "📦",
         title: "Consistent supply",
         description:
             "Monthly gifts let us plan ahead — pre-ordering products, scheduling shipments, and keeping shelves stocked at partner agencies year-round.",
     },
     {
-        icon: "🤝",
         title: "Deeper partnerships",
         description:
             "Reliable funding means we can commit to long-term distribution partnerships with agencies serving the most vulnerable youth.",
     },
     {
-        icon: "⚡",
         title: "Faster response",
         description:
             "When urgent needs arise — a new shelter opening, a disaster, a surge in demand — monthly funds let us move immediately.",
@@ -175,8 +172,7 @@ export default function GiveMonthlyPage() {
                     {reasons.map((reason, i) => (
                         <Reveal key={reason.title} delay={i * 0.08}>
                             <Card className="h-full">
-                                <div className="text-3xl">{reason.icon}</div>
-                                <h3 className="mt-4 text-xl font-normal tracking-tight text-ink">
+                                <h3 className="text-xl font-normal tracking-tight text-ink">
                                     {reason.title}
                                 </h3>
                                 <p className="mt-3 text-sm leading-relaxed text-ink/70">

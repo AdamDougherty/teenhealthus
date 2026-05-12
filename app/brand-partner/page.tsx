@@ -199,6 +199,24 @@ export default function BrandPartnerPage() {
         </div>
       </section>
 
+      {/* ——— PARTNER TESTIMONIAL — OceanBlue ——— */}
+      <section className="bg-[#f8f7f4] pt-20 sm:pt-28">
+        <Container>
+          <Reveal>
+            <figure className="mx-auto max-w-3xl text-center">
+              <blockquote>
+                <p className="font-serif text-xl font-normal italic leading-relaxed text-ink sm:text-2xl">
+                  &ldquo;Partnering with Teen Health allows OceanBlue to help vulnerable teens and young adults access high-quality omega-3 nutrition so they can thrive. Turning our commitment to giving into real-world impact for at-risk youth is deeply meaningful for our team and our community.&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-semibold uppercase tracking-wide text-ink/60">
+                Sarah Syed, OceanBlue
+              </figcaption>
+            </figure>
+          </Reveal>
+        </Container>
+      </section>
+
       {/* ——— PHOTO CTA TEXT ——— */}
       <section className="bg-[#f8f7f4] py-20 sm:py-28">
         <Container>
@@ -488,7 +506,7 @@ export default function BrandPartnerPage() {
           </Reveal>
           <div className="mx-auto mt-12 max-w-4xl divide-y divide-border">
             {[
-              { num: "01", title: "Brand Integration", desc: <>Product sampling in 50,000+ youth nutrition packs across <a href="/youth-nutrition-initiative" className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink">the Youth Nutrition Initiative</a> — measurable reach with the audiences your purpose-driven marketing is built to serve.</> },
+              { num: "01", title: "Brand Integration", desc: <>Product sampling in youth nutrition packs across <a href="/youth-nutrition-initiative" className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink">the Youth Nutrition Initiative</a> — measurable reach with the audiences your purpose-driven marketing is built to serve.</> },
               { num: "02", title: "Data Insights", desc: "Quarterly impact reports formatted for your ESG and CSR filings — units distributed, youth reached, and geographies served, ready to drop into your annual disclosures." },
               { num: "03", title: "Content Assets", desc: "Professional photography and “Social Impact” stories from the field, licensed for brand use across owned and earned channels." },
               { num: "04", title: "Tax-Deductible Contributions", desc: "Formal 501(c)(3) acknowledgment letter for every donation — a clean documentation trail for your corporate finance and accounting teams." },
