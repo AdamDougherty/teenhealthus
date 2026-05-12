@@ -15,11 +15,11 @@ export default function VolunteerPage() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formEl = e.currentTarget;
     setStatus("sending");
     setMessage("");
 
-    const form = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(form.entries());
+    const payload = Object.fromEntries(new FormData(formEl).entries());
 
     try {
       const res = await fetch("/api/contact", {
@@ -31,7 +31,7 @@ export default function VolunteerPage() {
       if (!res.ok) throw new Error("Request failed");
       setStatus("sent");
       setMessage("Thanks for your interest in volunteering! We'll be in touch soon.");
-      e.currentTarget.reset();
+      formEl.reset();
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");

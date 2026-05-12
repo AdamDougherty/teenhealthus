@@ -11,11 +11,11 @@ export function ContactForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formEl = e.currentTarget;
     setStatus("sending");
     setMessage("");
 
-    const form = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(form.entries());
+    const payload = Object.fromEntries(new FormData(formEl).entries());
 
     try {
       const res = await fetch("/api/contact", {
@@ -28,7 +28,7 @@ export function ContactForm() {
       const data = (await res.json()) as { ok: boolean; message?: string };
       setStatus("sent");
       setMessage(data.message ?? "Thanks! We’ll be in touch.");
-      e.currentTarget.reset();
+      formEl.reset();
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
