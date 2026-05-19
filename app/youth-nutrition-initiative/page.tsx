@@ -50,8 +50,8 @@ export default function YouthNutritionInitiativeLandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* ═══ HERO ═══ */}
-      <section className="relative overflow-hidden bg-[#E5EEFB]" style={{ minHeight: "90vh" }}>
-        <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:py-32">
+      <section className="relative overflow-hidden bg-[#F2F6FC]">
+        <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-20 lg:px-16 lg:py-24">
           {/* Left */}
           <div>
             <Reveal>
@@ -132,43 +132,6 @@ export default function YouthNutritionInitiativeLandingPage() {
           </Reveal>
         </div>
 
-        {/* Credential badges */}
-        <Reveal delay={0.3}>
-          <div className="relative z-10 mx-auto -mt-8 flex max-w-6xl justify-center px-6 pb-12 sm:-mt-12 sm:px-10 sm:pb-16 lg:-mt-16 lg:px-16">
-            <div className="flex items-center gap-8 rounded-2xl border border-border bg-white px-8 py-5 shadow-soft sm:gap-12 sm:px-10 sm:py-6">
-              <a
-                href="https://diabetes.org/health-wellness/better-choices-for-life"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Learn about ADA Better Choices for Life designation"
-                className="relative block h-28 w-24 transition hover:opacity-80 sm:h-36 sm:w-28"
-              >
-                <Image
-                  src="/images/shared/ada-better-choices-for-life-logo.png"
-                  alt="ADA Better Choices for Life designation"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 96px, 112px"
-                />
-              </a>
-              <a
-                href="https://www.fns.usda.gov/school-meals/nutrition-standards/smartsnacks"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Learn about USDA Smart Snacks Compliant designation"
-                className="relative block h-28 w-44 transition hover:opacity-80 sm:h-36 sm:w-56"
-              >
-                <Image
-                  src="/images/shared/usda-smart-snacks-compliant-logo.jpg"
-                  alt="USDA Smart Snacks Compliant"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 176px, 224px"
-                />
-              </a>
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       {/* ═══ THE PROBLEM ═══ */}
@@ -230,6 +193,19 @@ export default function YouthNutritionInitiativeLandingPage() {
               Shelf-stable, portion-controlled, and clinically designed for
               sustained energy.
             </p>
+          </Reveal>
+
+          <Reveal delay={0.05}>
+            <div className="mt-12 flex justify-center">
+              <Image
+                src="/images/shared/nui-ada-usda.png"
+                alt="USDA Smart Snack and ADA Better Choices for Life — NUI Snacks product line"
+                width={2858}
+                height={1200}
+                className="h-auto w-full max-w-3xl rounded-2xl shadow-soft"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+            </div>
           </Reveal>
 
           <div className="mt-14 grid items-start gap-10 lg:grid-cols-2">
@@ -308,7 +284,7 @@ export default function YouthNutritionInitiativeLandingPage() {
       </section>
 
       {/* ═══ WHO WE SERVE ═══ */}
-      <section className="py-16 sm:py-24">
+      <section className="py-12 sm:py-16">
         <Container>
           <Reveal>
             <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-sky">
@@ -325,19 +301,16 @@ export default function YouthNutritionInitiativeLandingPage() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { emoji: "🏠", bg: "bg-mintDark/15", title: "Vulnerable Youth", desc: "Youth ages 13–18 facing food insecurity, housing instability, or limited access to daily support." },
-              { emoji: "💙", bg: "bg-sky/10", title: "Foster Care", desc: "Youth ages 12–18 in foster care who need stable nutrition, support, and a reliable foundation." },
-              { emoji: "🤝", bg: "bg-mintDark/15", title: "System-Impacted", desc: "Teens and young adults (13–24) exiting the justice system who benefit from structure and stability." },
-              { emoji: "🏫", bg: "bg-sky/10", title: "Schools", desc: "Students in Special Ed or with mental health challenges who benefit from consistent nutrition." },
+              { title: "Vulnerable Youth", desc: "Youth ages 13–18 facing food insecurity, housing instability, or limited access to daily support." },
+              { title: "Foster Care", desc: "Youth ages 12–18 in foster care who need stable nutrition, support, and a reliable foundation." },
+              { title: "System-Impacted", desc: "Teens and young adults (13–24) exiting the justice system who benefit from structure and stability." },
+              { title: "Schools", desc: "Students in Special Ed or with mental health challenges who benefit from consistent nutrition." },
             ].map((pop) => (
               <Reveal key={pop.title} delay={0.05}>
-                <div className="rounded-2xl border border-border bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-soft">
-                  <span className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-2xl ${pop.bg}`}>
-                    {pop.emoji}
-                  </span>
-                  <h4 className="mt-5 text-sm font-bold text-ink">{pop.title}</h4>
+                <div className="rounded-2xl border border-border bg-white p-6 text-center transition hover:-translate-y-1 hover:shadow-soft">
+                  <h4 className="text-sm font-bold text-ink">{pop.title}</h4>
                   <p className="mt-2 text-sm leading-relaxed text-ink/80">{pop.desc}</p>
                 </div>
               </Reveal>
@@ -347,7 +320,7 @@ export default function YouthNutritionInitiativeLandingPage() {
       </section>
 
       {/* ═══ COST + ROI ═══ */}
-      <section className="bg-[#E5EEFB] py-16 sm:py-24">
+      <section className="bg-[#F2F6FC] py-16 sm:py-24">
         <Container>
           <Reveal>
             <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-sky">
@@ -595,7 +568,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     />
                   </div>
                 </div>
-                <div className="flex items-start justify-center">
+                <div className="flex flex-col items-center gap-4">
                   <Button
                     href="https://www.classy.org/give/665776/#!/donation/checkout"
                     variant="primary"
@@ -604,6 +577,15 @@ export default function YouthNutritionInitiativeLandingPage() {
                   >
                     Donate Now
                   </Button>
+                  <div className="relative h-9 w-12 sm:h-10 sm:w-14">
+                    <Image
+                      src="/images/shared/nui-company-logo.png"
+                      alt="NUI Company"
+                      fill
+                      className="object-contain"
+                      sizes="56px"
+                    />
+                  </div>
                 </div>
               </div>
             </Reveal>
