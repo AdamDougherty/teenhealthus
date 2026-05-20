@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food as Medicine · Teen Health</title>
+<!-- Match site: serif for headings, system sans for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── EXACT SITE TOKENS ── */
+  :root {
+    --sun:    #FF8005;   /* orange CTA — exact match */
+    --sky:    #2E9DF7;   /* blue accent — exact match */
+    --ink:    #1a1a2e;   /* dark text */
+    --ink-70: rgba(26,26,46,0.70);
+    --ink-60: rgba(26,26,46,0.60);
+    --ink-50: rgba(26,26,46,0.50);
+    --ink-40: rgba(26,26,46,0.40);
+    --border: #e5e7eb;
+    --mist:   #f1f5f9;   /* section bg */
+    --cta-bg: #E5EEFB;   /* CTA block bg — exact match */
+    --white:  #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px; line-height: 1.6;
+    color: var(--ink); background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* serif = site's font-serif class */
+  .serif {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── NAV — matches site exactly ── */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.80);
+    backdrop-filter: blur(8px);
+  }
+  .nav-inner {
+    max-width: 72rem; margin: 0 auto;
+    padding: 0 1rem; height: 5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo img { height: 1.75rem; width: auto; }
+  .nav-logo-text {
+    font-size: 1.1rem; font-weight: 800;
+    letter-spacing: -0.02em; color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: none; align-items: center; gap: 2rem;
+    font-size: 1.125rem; font-weight: 600; color: rgba(26,26,46,0.80);
+  }
+  @media(min-width:768px){ .nav-links { display: flex; } }
+  .nav-links a { color: inherit; text-decoration: none; transition: color .15s; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-donate {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: .5rem; padding: .625rem 1.5rem;
+    border-radius: 9999px; font-size: .875rem; font-weight: 600;
+    background: var(--sun); color: white;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    transition: filter .15s;
+  }
+  .nav-donate:hover { filter: brightness(.95); }
+
+  /* ── HERO — full bleed with gradient overlay ── */
+  .hero {
+    position: relative; min-height: 70vh; overflow: hidden;
+    display: flex; align-items: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #E5EEFB 0%, #fdf6ee 50%, #e8f5ef 100%);
+  }
+  /* soft blobs */
+  .hero-blob {
+    position: absolute; border-radius: 50%;
+    filter: blur(80px); pointer-events: none;
+  }
+  .blob-blue  { width:500px;height:500px;background:#bfdbfe;opacity:.35;top:-120px;right:-80px; }
+  .blob-orange{ width:380px;height:380px;background:#fed7aa;opacity:.4;bottom:-60px;left:5%; }
+  .blob-green { width:260px;height:260px;background:#bbf7d0;opacity:.3;top:40%;right:20%; }
+
+  @media(max-width:768px){
+    .hero-content-grid { grid-template-columns: 1fr !important; }
+  }
+  .hero-eyebrow {
+    font-size: .75rem; font-weight: 700;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--sun); margin-bottom: .6rem;
+    opacity: 0; animation: reveal .6s .15s forwards;
+  }
+  .hero h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 400; font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+    letter-spacing: -0.02em; line-height: 1.1;
+    color: var(--ink); max-width: 36rem; margin-bottom: .9rem;
+    opacity: 0; animation: reveal .7s .3s forwards;
+  }
+  .hero h1 .blue { color: var(--sky); }
+  .hero h1 .orange { color: var(--sun); }
+  .hero-sub {
+    font-size: 1rem; font-weight: 300; line-height: 1.7;
+    color: var(--ink-70); max-width: 32rem; margin-bottom: 1.25rem;
+    opacity: 0; animation: reveal .7s .45s forwards;
+  }
+  .hero-btns {
+    display: flex; gap: .75rem; flex-wrap: wrap;
+    opacity: 0; animation: reveal .7s .6s forwards;
+  }
+  .btn-sun {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .75rem 1.5rem; border-radius: 9999px;
+    font-size: .875rem; font-weight: 600;
+    background: var(--sun); color: white; text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    transition: filter .15s, transform .15s;
+  }
+  .btn-sun:hover { filter: brightness(.95); transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .75rem 1.5rem; border-radius: 9999px;
+    font-size: .875rem; font-weight: 600;
+    background: transparent; color: var(--ink); text-decoration: none;
+    transition: background .15s;
+  }
+  .btn-ghost:hover { background: rgba(0,0,0,.05); }
+
+  /* hero stats strip */
+  .hero-stats {
+    display: flex; gap: 2.5rem; flex-wrap: wrap;
+    margin-top: 3rem; padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    opacity: 0; animation: reveal .7s .8s forwards;
+  }
+
+
+  /* ── SECTIONS ── */
+  .sec { padding: 1.75rem 1rem; }
+  @media(min-width:640px){ .sec { padding: 3rem 1.5rem; } }
+  .sec-inner { max-width: 72rem; margin: 0 auto; }
+  .sec-center { max-width: 56rem; margin: 0 auto; }
+  .sec-mist { background: var(--mist); }
+  .sec-white { background: var(--white); }
+  .sec-warm { background: #fdfaf7; }
+
+  /* section heading pattern — sun divider bar + serif h2 */
+  .sec-head { margin-bottom: 1.75rem; }
+  .sun-bar {
+    height: .25rem; width: 2.5rem; border-radius: 9999px;
+    background: var(--sun); margin-bottom: .6rem;
+  }
+  .sec-head h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 400; letter-spacing: -0.02em;
+    color: var(--ink); line-height: 1.2; margin-bottom: .75rem;
+  }
+  .sec-head p {
+    font-size: 1rem; line-height: 1.7; color: var(--ink-60); max-width: 40rem; margin-bottom: 0;
+  }
+  .sec-head.center { text-align: center; }
+  .sec-head.center .sun-bar { margin-left: auto; margin-right: auto; }
+  .sec-head.center p { margin: 0 auto; }
+
+  /* reveal animation */
+  .rv { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
+  .rv.in { opacity: 1; transform: translateY(0); }
+
+  /* ── CARDS — rounded-2xl border bg-white shadow-sm ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    padding: 1.25rem;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); transform: translateY(-2px); }
+
+  /* step card — top color bar */
+  .step-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .step-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.08); transform: translateY(-3px); }
+  .step-card-bar { height: 3px; }
+  .step-card-body { padding: 1.25rem; }
+  .step-n {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.75rem; font-weight: 400;
+    color: #e5e7eb; line-height: 1; margin-bottom: .5rem;
+  }
+  .step-t { font-size: .9375rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem; }
+  .step-b { font-size: .875rem; font-weight: 300; color: var(--ink-60); line-height: 1.7; }
+
+  /* stat card with serif number */
+  .stat-n {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(1.25rem, 2vw, 1.625rem);
+    font-weight: 400; letter-spacing: -0.02em;
+    line-height: 1; margin-bottom: .75rem;
+  }
+  .stat-lbl { font-size: .9375rem; font-weight: 500; color: var(--ink-60); }
+
+  /* grids */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 1rem; }
+
+  /* donate tiers */
+  .tier {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--white); border: 1px solid var(--border);
+    border-left: 3px solid var(--sky);
+    border-radius: .75rem; padding: 1rem 1.25rem;
+    text-decoration: none;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+  }
+  .tier:hover { border-color: var(--sky); box-shadow: 0 3px 12px rgba(46,157,247,.12); transform: translateX(3px); }
+  .tier-amt {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.25rem; font-weight: 500; color: var(--sky);
+    margin-bottom: .2rem;
+  }
+  .tier-lbl { font-size: .8125rem; font-weight: 400; color: var(--ink-60); }
+  .tier-arr { color: #93c5fd; font-size: .875rem; transition: color .15s; }
+  .tier:hover .tier-arr { color: var(--sky); }
+
+  /* blockquote — site style */
+  blockquote {
+    border-left: 4px solid var(--sun);
+    padding: 1rem 0 1rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  blockquote p {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    font-weight: 400; font-style: italic;
+    line-height: 1.65; color: var(--ink);
+  }
+
+  /* CTA block — exact site style */
+  .cta-block {
+    background: var(--cta-bg);
+    border-radius: 1.5rem;
+    padding: 1.75rem; text-align: center;
+  }
+  .cta-block h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.625rem);
+    font-weight: 400; letter-spacing: -0.02em;
+    color: var(--ink); max-width: 32rem; margin: 0 auto 1.5rem;
+    line-height: 1.25;
+  }
+  .cta-block p { font-size: 1rem; color: var(--ink-70); max-width: 28rem; margin: 0 auto 2rem; line-height: 1.7; }
+
+  /* teal/green partner box */
+  .partner-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-top: 3px solid #22c55e;
+    border-radius: 1rem; padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .partner-box-t { font-size: 1.0625rem; font-weight: 600; color: var(--ink); margin-bottom: .75rem; }
+  .partner-box-b { font-size: .9375rem; font-weight: 300; color: var(--ink-60); line-height: 1.75; margin-bottom: 1.5rem; }
+
+  /* product tags */
+  .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
+  .tag {
+    font-size: .75rem; font-weight: 500; color: var(--ink-60);
+    background: var(--white); border: 1px solid var(--border);
+    padding: .3rem .875rem; border-radius: 9999px;
+    transition: border-color .15s, color .15s;
+  }
+  .tag:hover { border-color: var(--sun); color: var(--ink); }
+
+  /* corp tier styling */
+  .ctier { margin-bottom: 1.25rem; }
+  .ctier-n { font-size: .875rem; font-weight: 600; color: #16a34a; margin-bottom: .2rem; }
+  .ctier-d { font-size: .8125rem; font-weight: 300; color: var(--ink-60); line-height: 1.65; }
+
+  /* launch bar */
+  .launch-bar {
+    background: #eff6ff;
+    border-bottom: 1px solid #bfdbfe;
+    padding: .625rem 1rem;
+    display: flex; align-items: center; justify-content: center; gap: .625rem;
+  }
+  .pulse-dot {
+    width: .4375rem; height: .4375rem; border-radius: 50%;
+    background: #22c55e; flex-shrink: 0;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .launch-bar p { font-size: .8125rem; font-weight: 400; color: var(--ink-60); }
+  .launch-bar strong { font-weight: 600; color: var(--sky); }
+
+  /* funding tag pill */
+  .fpill {
+    display: inline-block; font-size: .625rem; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--sky); background: #eff6ff;
+    border: 1px solid #bfdbfe; padding: .2rem .625rem; border-radius: 9999px;
+  }
+
+  /* donate grid */
+  .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
+  @media(max-width:768px){ .donate-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+  /* about stats */
+  .arow {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: .75rem; padding: .7rem 1rem;
+    margin-bottom: .5rem;
+  }
+  .anum {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.375rem; font-weight: 500;
+    color: var(--sky); min-width: 4rem; line-height: 1;
+  }
+  .albl { font-size: .8125rem; font-weight: 300; color: var(--ink-60); line-height: 1.5; }
+
+  /* about grid */
+  .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: start; }
+  @media(max-width:768px){ .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* footer — site exact */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--white);
+  }
+  .footer-inner {
+    max-width: 72rem; margin: 0 auto; padding: 1.75rem 1rem;
+  }
+  .footer-top { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2.5rem; }
+  @media(min-width:768px){ .footer-top { flex-direction: row; align-items: flex-start; justify-content: space-between; } }
+  .footer-brand { font-size: .875rem; font-weight: 900; letter-spacing: -0.02em; color: var(--ink); margin-bottom: .75rem; }
+  .footer-desc { font-size: .875rem; line-height: 1.65; color: var(--ink-70); max-width: 24rem; }
+  .footer-ein { font-size: .75rem; color: var(--ink-60); margin-top: 1rem; }
+  .footer-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; font-size: .875rem; }
+  .footer-links-head { font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-60); margin-bottom: .5rem; }
+  .footer-links-group { display: flex; flex-direction: column; gap: .5rem; }
+  .footer-links-group a { color: var(--ink-60); text-decoration: none; transition: color .15s; }
+  .footer-links-group a:hover { color: var(--ink); }
+  .footer-bottom {
+    display: flex; flex-direction: column; gap: .5rem;
+    border-top: 1px solid var(--border); padding-top: 1.5rem;
+    font-size: .75rem; color: var(--ink-60);
+  }
+  @media(min-width:640px){ .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; } }
+
+  /* animations */
+  @keyframes reveal { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+
+  @media(max-width:768px){ [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;} }
+  @media(max-width:640px){ .grid-3,.grid-4{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<!-- HEADER — exact site pattern -->
+<header>
+  <div class="nav-inner">
+    <a href="https://teenhealth.us" class="nav-logo">
+      <span class="nav-logo-text">Teen Health</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How It Works</a>
+      <a href="#calaim">Why Now</a>
+      <a href="#partners">Partner With Us</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#donate" class="nav-donate">Support the Program</a>
+  </div>
+</header>
+
+<!-- LAUNCH BAR -->
+<div class="launch-bar">
+  <div class="pulse-dot"></div>
+  <p><strong>Now launching</strong> — Teen Health is enrolling community partners and accepting product donations and financial contributions</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-blob blob-blue"></div>
+  <div class="hero-blob blob-orange"></div>
+  <div class="hero-blob blob-green"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:72rem;margin:0 auto;padding:2.5rem 1.5rem 3rem;width:100%;position:relative;z-index:1;">
+    <div>
+      <p class="hero-eyebrow">Food as Medicine Initiative</p>
+      <h1>Food is <span class="blue">medicine.</span><br>We <span class="orange">deliver</span> both.</h1>
+      <p class="hero-sub">Teen Health is launching a Medically Tailored Groceries (MTG) program — assembling clinically validated food boxes and delivering them to Medi-Cal members, homeless youth, and young adults managing chronic illness across Southern California.</p>
+      <div class="hero-btns">
+        <a href="#donate" class="btn-sun">Support This Program</a>
+        <a href="#how" class="btn-ghost">How It Works</a>
+      </div>
+    </div>
+    <div style="opacity:0;animation:reveal .8s .5s forwards;">
+      <div style="background:rgba(255,255,255,0.78);border:1px solid #e5e7eb;border-radius:1.25rem;padding:.875rem;backdrop-filter:blur(8px);">
+        <p style="font-size:.6875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);margin-bottom:1.25rem;">Food Insecurity in California</p>
+        <div style="display:flex;flex-direction:column;gap:.75rem;">
+          <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
+            <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:.2rem;">1 in 5</p>
+            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians experience food insecurity — over 8 million people</p>
+          </div>
+          <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
+            <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--sky);line-height:1;margin-bottom:.2rem;">2.4M</p>
+            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians live in food deserts — low-income areas with limited access to healthy food</p>
+          </div>
+          <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
+            <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:.2rem;">32%</p>
+            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Of food-insecure Californians are children — disproportionately in communities of color</p>
+          </div>
+          <div>
+            <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:#16a34a;line-height:1;margin-bottom:.2rem;">58 counties</p>
+            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Every California county has communities where nutritious food is inaccessible or unaffordable</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec sec-white" id="how">
+  <div class="sec-inner">
+    <div class="sec-head rv">
+      <div class="sun-bar"></div>
+      <h2>How the MTG Program Works</h2>
+      <p>We partner with natural products companies to source clinically validated food, build medically tailored grocery boxes, and deliver them through Teen Health's established Southern California network.</p>
+    </div>
+    <div class="grid-4 rv">
+      <div class="step-card">
+        <div class="step-card-bar" style="background:var(--sky);"></div>
+        <div class="step-card-body">
+          <div class="step-n">01</div>
+          <div class="step-t">Source the products</div>
+          <div class="step-b">We partner with natural products industry companies to acquire clinically relevant food — anti-inflammatory oils, high-protein snacks, functional bars, and whole food staples.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-card-bar" style="background:var(--sun);"></div>
+        <div class="step-card-body">
+          <div class="step-n">02</div>
+          <div class="step-t">Build the boxes</div>
+          <div class="step-b">Each box is assembled for a specific chronic condition — diabetes, cardiovascular disease, or metabolic syndrome — with guidance from registered dietitians reviewing every inclusion.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-card-bar" style="background:#22c55e;"></div>
+        <div class="step-card-body">
+          <div class="step-n">03</div>
+          <div class="step-t">Deliver to the community</div>
+          <div class="step-b">Boxes reach recipients through Teen Health's existing network: assisted living centers, shelters, outreach programs, and managed care partnerships across San Diego and Los Angeles.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-card-bar" style="background:#8b5cf6;"></div>
+        <div class="step-card-body">
+          <div class="step-n">04</div>
+          <div class="step-t">Build the evidence</div>
+          <div class="step-b">Every delivery is logged and every recipient tracked. We build the real-world outcomes data that demonstrates food as medicine works — and positions Teen Health for government reimbursement funding.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOX CONTENTS -->
+<section class="sec sec-mist" id="box">
+  <div class="sec-inner">
+    <div class="sec-head rv">
+      <div class="sun-bar"></div>
+      <h2>What Goes in the Box</h2>
+      <p>Every product is shelf-stable, clinically formulated, and sourced from mission-aligned natural products companies. No cold chain required.</p>
+    </div>
+    <div class="grid-3 rv">
+      <div class="card"><div class="step-t">Cold-Pressed California Oils</div><div class="step-b">California-grown extra virgin olive oil and pure avocado oil — anti-inflammatory, heart-healthy, and diabetic-friendly.</div></div>
+      <div class="card"><div class="step-t">Functional Snacks</div><div class="step-b">High-protein, low-sugar snacks for food-insecure environments. Micronutrient-fortified and clinically validated.</div></div>
+      <div class="card"><div class="step-t">Meal Replacement</div><div class="step-b">Premium functional bars with adaptogens and clean macros — designed for chronic condition management.</div></div>
+      <div class="card"><div class="step-t">Whole Grains &amp; Seeds</div><div class="step-b">Hemp hearts, quinoa, and ancient grains sourced from natural products partners. High fiber, high protein, and clinically relevant for metabolic health.</div></div>
+      <div class="card"><div class="step-t">Plant-Based Essentials</div><div class="step-b">Nut butters, legumes, dried fruits, and plant proteins for glycemic and cardiovascular support.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALAIM — mist bg -->
+<section class="sec sec-white" id="calaim">
+  <div class="sec-inner">
+    <div class="sec-head rv">
+      <div class="sun-bar"></div>
+      <h2>California Has Committed the Funding. We're Building the Delivery.</h2>
+      <p>CalAIM — California's Medicaid reform — now pays health plans to deliver medically tailored food as a covered health intervention. Teen Health is positioning to participate as a community partner. Your contributions build the program infrastructure that makes this possible.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUOTE — site blockquote style -->
+<section class="sec sec-mist">
+  <div class="sec-inner">
+    <div class="sec-center rv">
+      <blockquote>
+        <p>"Food is not a supplement to healthcare. For millions of Californians, it is the healthcare."</p>
+      </blockquote>
+      <p style="font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-50);">Teen Health, Inc. — Food as Medicine Program</p>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="sec sec-white" id="donate">
+  <div class="sec-inner">
+    <div class="donate-grid">
+      <div>
+        <div class="sec-head rv">
+          <div class="sun-bar"></div>
+          <h2>Every dollar feeds a medically tailored box.</h2>
+          <p>Teen Health is a California 501(c)3 nonprofit. All donations are fully tax-deductible. Your contribution directly funds product purchasing, box assembly, and distribution across Southern California.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.75rem;" class="rv">
+          <a href="mailto:info@teenhealth.us?subject=Donation - $50" class="tier"><div><div class="tier-amt">$50</div><div class="tier-lbl">Funds one MTG box — 2 weeks of clinically tailored nutrition</div></div><span class="tier-arr">→</span></a>
+          <a href="mailto:info@teenhealth.us?subject=Donation - $250" class="tier"><div><div class="tier-amt">$250</div><div class="tier-lbl">Funds five boxes — one month of nutrition for a family</div></div><span class="tier-arr">→</span></a>
+          <a href="mailto:info@teenhealth.us?subject=Donation - $1,000" class="tier"><div><div class="tier-amt">$1,000</div><div class="tier-lbl">Sponsors a full month of MTG delivery for 20 individuals</div></div><span class="tier-arr">→</span></a>
+          <a href="mailto:info@teenhealth.us?subject=Custom Donation" class="tier"><div><div class="tier-amt">Custom</div><div class="tier-lbl">Name your contribution — every amount advances the mission</div></div><span class="tier-arr">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="sec-head rv">
+          <div class="sun-bar"></div>
+          <h2>Partner with purpose.</h2>
+          <p>Corporate partnerships fund program infrastructure and outcomes research — and align your brand with the fastest-growing category in preventive healthcare.</p>
+        </div>
+        <div class="partner-box rv">
+          <div class="partner-box-t">Corporate Partnership Levels</div>
+          <div class="ctier"><div class="ctier-n">Founding Partner — $25,000+</div><div class="ctier-d">Named program sponsor · logo on all materials · co-branded impact report · board advisory seat invitation · priority product placement in MTG boxes</div></div>
+          <div class="ctier"><div class="ctier-n">Program Partner — $10,000</div><div class="ctier-d">Co-branded materials · quarterly impact reporting · recognition across Teen Health digital and print channels</div></div>
+          <div class="ctier" style="margin-bottom:1.5rem;"><div class="ctier-n">Product Partner — In-kind donation</div><div class="ctier-d">Donate product for inclusion in MTG boxes · tax-deductible at fair market value · co-marketed as a clinical nutrition partner</div></div>
+          <a href="mailto:info@teenhealth.us?subject=Corporate Partnership Inquiry" class="btn-sun" style="font-size:.8125rem;padding:.625rem 1.25rem;">Get Partnership Details →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT PARTNERS -->
+<section class="sec sec-mist" id="partners">
+  <div class="sec-inner">
+    <div class="sec-head rv">
+      <div class="sun-bar"></div>
+      <h2>We're Looking for Product Partners</h2>
+      <p>We source products from natural products industry companies that align with our clinical mission. If your company makes shelf-stable, clinically relevant food — we want to put it in our boxes and co-market you as a clinical nutrition partner.</p>
+    </div>
+    <div class="card rv" style="max-width:52rem;border-top:3px solid var(--sun);">
+      <div class="partner-box-t">Product supply partnership — what we're looking for</div>
+      <div class="partner-box-b">We work with food companies as product partners. Products are distributed to Medi-Cal members and food-insecure individuals across Southern California, with full distribution documentation and recognition as a clinical nutrition partner. Priority: California-grown, clean-label, shelf-stable, and clinically validated.</div>
+      <a href="mailto:info@teenhealth.us?subject=Product Partnership Inquiry" class="btn-sun" style="font-size:.8125rem;padding:.625rem 1.25rem;">Inquire About Product Partnership →</a>
+      <div class="tags">
+        <span class="tag">Extra virgin olive oil</span><span class="tag">Avocado oil</span><span class="tag">Protein bars &amp; snacks</span><span class="tag">Hemp hearts &amp; seeds</span><span class="tag">Functional beverages</span><span class="tag">Whole grains</span><span class="tag">Canned wild salmon &amp; sardines</span><span class="tag">Nut butters</span><span class="tag">Plant-based proteins</span><span class="tag">Dried fruits &amp; legumes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec-white" id="about">
+  <div class="sec-inner">
+    <div class="about-grid">
+      <div>
+        <div class="sec-head rv">
+          <div class="sun-bar"></div>
+          <h2>Five years of serving those who need it most.</h2>
+        </div>
+        <p class="rv" style="font-size:1.125rem;line-height:1.75;color:var(--ink-70);margin-bottom:1.5rem;">Teen Health, Inc. is a California 501(c)3 nonprofit with over five years of direct service to homeless and at-risk youth across San Diego and Los Angeles. We run dignity kit programs, outreach teams, and wraparound services for the populations most overlooked by the healthcare system.</p>
+        <p class="rv" style="font-size:1.125rem;line-height:1.75;color:var(--ink-70);margin-bottom:2rem;">The Food as Medicine program is a natural extension of that mission — applying clinical nutrition science to the communities we already serve, through the distribution infrastructure we have already built.</p>
+      </div>
+      <div class="rv">
+        <div class="arow"><div class="anum">5+</div><div class="albl">Years of direct service to homeless and at-risk youth across Southern California</div></div>
+        <div class="arow"><div class="anum">SD+LA</div><div class="albl">San Diego and Los Angeles — shelters, assisted living, and outreach programs</div></div>
+        <div class="arow"><div class="anum">501c3</div><div class="albl">All donations are tax-deductible. Registered nonprofit in California. EIN: 87-4628884.</div></div>
+        <div class="arow" style="border-left:3px solid var(--sun);"><div class="anum" style="color:var(--sun);">MTG</div><div class="albl">Launching California's next medically tailored grocery program under an established nonprofit structure — now</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA — exact site pattern -->
+<section class="sec sec-mist">
+  <div class="sec-inner">
+    <div class="cta-block rv">
+      <h2>Help Us Launch This Program</h2>
+      <p>Every contribution helps us reach more Californians<br>with the medically tailored nutrition they need to thrive.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;">
+        <a href="mailto:info@teenhealth.us?subject=Donation" class="btn-sun">Donate</a>
+        <a href="#partners" class="btn-ghost">Get Involved</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER — exact site structure -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Teen Health</div>
+        <p class="footer-desc">A focused, scalable approach to getting healthy essentials to vulnerable youth — fast, practical, and with dignity.</p>
+        <p class="footer-ein">Teen Health is a 501(c)(3) nonprofit. EIN: 87-4628884.</p>
+      </div>
+      <div class="footer-links-grid">
+        <div>
+          <div class="footer-links-head">Explore</div>
+          <div class="footer-links-group">
+            <a href="#how">How It Works</a>
+            <a href="#calaim">Why Now</a>
+            <a href="#about">About</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-links-head">Help</div>
+          <div class="footer-links-group">
+            <a href="mailto:info@teenhealth.us?subject=Donation">Donate</a>
+            <a href="mailto:info@teenhealth.us?subject=Product Partnership Inquiry">Partner</a>
+            <a href="https://teenhealth.us">teenhealth.us</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-links-head">Contact</div>
+          <div class="footer-links-group">
+            <a href="mailto:info@teenhealth.us">info@teenhealth.us</a>
+            <a href="https://teenhealth.us/privacy">Privacy</a>
+            <a href="https://teenhealth.us/terms">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Teen Health. All rights reserved.</div>
+      <div>Food as Medicine · A Teen Health, Inc. Initiative</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>

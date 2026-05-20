@@ -3,7 +3,6 @@ import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
-import { LandInitiativeCard } from "./LandInitiativeCard";
 
 
 export const metadata = {
@@ -60,68 +59,110 @@ export default function ProgramsPage() {
             </p>
           </Reveal>
 
-          <div className="mt-10 flex flex-col gap-6">
-            {/* Top row — two smaller campaigns side by side */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              {/* Campaign 0 — The Dignity Kit Program */}
-              <Reveal delay={0.08}>
-                <Card className="flex h-full flex-col p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
-                    Campaign
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                    The Dignity Kit Program
-                  </h3>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                    We are delivering 500 backpacks filled with healthy
-                    snacks, hydration, and essential supplies to young people
-                    experiencing homelessness across Los Angeles. Each backpack
-                    costs just $25 to assemble but delivers $50 in retail value —
-                    doubling every dollar you give. It&apos;s immediate
-                    nourishment, dignity, and stability for the youth who
-                    need it the most.
-                  </p>
-                  <div className="mt-6">
-                    <Button href="/program-sponsor/dignity-kit-program" variant="primary" style={{ color: 'white' }}>
-                      Learn More
-                    </Button>
-                  </div>
-                </Card>
-              </Reveal>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {/* Campaign 0 — The Dignity Kit Program */}
+            <Reveal delay={0.08}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  The Dignity Kit Program
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  We are delivering 500 backpacks filled with healthy
+                  snacks, hydration, and essential supplies to young people
+                  experiencing homelessness across Los Angeles. Each backpack
+                  costs just $25 to assemble but delivers $50 in retail value —
+                  doubling every dollar you give. It&apos;s immediate
+                  nourishment, dignity, and stability for the youth who
+                  need it the most.
+                </p>
+                <div className="mt-6">
+                  <Button href="/program-sponsor/dignity-kit-program" variant="primary" style={{ color: 'white' }}>
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
 
-              {/* Campaign 1 — Youth Nutrition Initiative */}
-              <Reveal delay={0.08}>
-                <Card className="flex h-full flex-col p-8">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
-                    Campaign
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
-                    Youth Nutrition Initiative
-                  </h3>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
-                    Food insecurity undermines the programs youth depend on for
-                    education, job training, and housing support. We partner with
-                    youth-serving organizations to provide consistent, allergen-friendly
-                    snacks that keep energy up and engagement strong throughout the
-                    day. The initiative is designed to scale rapidly through
-                    corporate sponsors and community partners — delivering reliable
-                    nutrition across multiple cities to the youth who need it most.
-                  </p>
-                  <div className="mt-6">
-                    <Button href="/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
-                      Learn More
-                    </Button>
-                  </div>
-                </Card>
-              </Reveal>
-            </div>{/* end top 2-col grid */}
+            {/* Campaign 1 — Youth Nutrition Initiative */}
+            <Reveal delay={0.08}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  Youth Nutrition Initiative
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  Food insecurity undermines the programs youth depend on for
+                  education, job training, and housing support. We partner with
+                  youth-serving organizations to provide consistent, allergen-friendly
+                  snacks that keep energy up and engagement strong throughout the
+                  day. The initiative is designed to scale rapidly through
+                  corporate sponsors and community partners — delivering reliable
+                  nutrition across multiple cities to the youth who need it most.
+                </p>
+                <div className="mt-6">
+                  <Button href="/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
 
             {/* Campaign 2 — California Regenerative Youth Land Initiative */}
-            <div id="land-initiative">
-              <Reveal delay={0.16}>
-                <LandInitiativeCard />
-              </Reveal>
-            </div>
+            <Reveal delay={0.16}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  California Regenerative Youth Land Initiative
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  We are acquiring two working ranch properties in Southern
+                  California where unhoused young adults ages 18–29 live on-site,
+                  earn wages, build real skills, and prepare for permanent
+                  housing — at their own pace, with real support behind them.
+                  Regenerative agriculture, paid apprenticeships, enterprise
+                  revenue, and a clear path to graduation when each youth is
+                  genuinely ready.
+                </p>
+                <div className="mt-6">
+                  <Button href="/program-sponsor/land-initiative" variant="primary" style={{ color: 'white' }}>
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
+
+            {/* Campaign 3 — Food as Medicine (MTG) */}
+            <Reveal delay={0.16}>
+              <Card className="flex h-full flex-col p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-eyebrow">
+                  Campaign
+                </p>
+                <h3 className="mt-3 font-serif text-2xl font-normal tracking-tight text-ink">
+                  Food as Medicine
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
+                  We&rsquo;re launching a Medically Tailored Groceries (MTG)
+                  program — assembling clinically validated food boxes and
+                  delivering them to Medi-Cal members, homeless youth, and
+                  seniors managing chronic illness across Southern California.
+                  Sourced from natural products partners, built with registered
+                  dietitians, and positioned to participate in CalAIM&rsquo;s
+                  food-as-medicine benefit.
+                </p>
+                <div className="mt-6">
+                  <Button href="/food-as-medicine.html" variant="primary" style={{ color: 'white' }}>
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            </Reveal>
           </div>
         </div>
 

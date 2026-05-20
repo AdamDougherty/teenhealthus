@@ -98,8 +98,7 @@ export default function AboutPage() {
             },
             {
               title: "Transparency",
-              body: "Teen Health is a 501(c)(3) nonprofit organization. EIN: 87-4628884.",
-              foot: (
+              body: (
                 <>
                   At Teen Health, we believe trust starts with transparency. You can learn more about our organization and impact on{" "}
                   <a
@@ -122,6 +121,7 @@ export default function AboutPage() {
                   — two trusted platforms dedicated to nonprofit accountability.
                 </>
               ),
+              foot: "",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>

@@ -530,10 +530,10 @@ export default function YouthNutritionInitiativeLandingPage() {
                     Daron Stetner
                   </h4>
                   <a
-                    href="mailto:daron@nuifoundation.org"
+                    href="mailto:info@nuifoundation.org"
                     className="mt-1 block text-sm font-medium text-ink/80 hover:underline"
                   >
-                    daron@nuifoundation.org
+                    info@nuifoundation.org
                   </a>
                   <a
                     href="https://nuifoundation.org"
@@ -558,13 +558,13 @@ export default function YouthNutritionInitiativeLandingPage() {
                   >
                     Sponsor on Benevity
                   </Button>
-                  <div className="relative h-9 w-36 sm:h-10 sm:w-40">
+                  <div className="relative h-10 w-40 sm:h-12 sm:w-48">
                     <Image
                       src="/images/shared/benevity-logo.png"
                       alt="Benevity"
                       fill
                       className="object-contain"
-                      sizes="160px"
+                      sizes="224px"
                     />
                   </div>
                 </div>
@@ -577,15 +577,21 @@ export default function YouthNutritionInitiativeLandingPage() {
                   >
                     Donate Now
                   </Button>
-                  <div className="relative h-9 w-12 sm:h-10 sm:w-14">
+                  <a
+                    href="https://nuifoundation.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative -mt-2 h-14 w-14 sm:h-16 sm:w-16"
+                    aria-label="Visit NUI Foundation"
+                  >
                     <Image
-                      src="/images/shared/nui-company-logo.png"
-                      alt="NUI Company"
+                      src="/images/shared/nui-foundation-logo.png"
+                      alt="NUI Foundation"
                       fill
                       className="object-contain"
                       sizes="56px"
                     />
-                  </div>
+                  </a>
                 </div>
               </div>
             </Reveal>

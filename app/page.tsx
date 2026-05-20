@@ -22,8 +22,10 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Why it matters"
               title="Because access changes everything"
-              description="When at-risk youth have stable access to nutritious food, hydration, hygiene, and mental health support, they can focus on school, work, safety, and long‑term health — instead of surviving day to day."
             />
+            <p className="mt-4 max-w-4xl text-base leading-relaxed text-ink/70 sm:text-lg">
+              When at-risk youth have stable access to nutritious food, hydration, hygiene, and mental health support, they can focus on school, work, safety, and long-term health — instead of surviving day to day. Across California, more than 1 in 6 children live in households facing food insecurity, and access to fresh, nutrient-dense food is even harder to come by for the teens who need it most. We&rsquo;re working to change that.
+            </p>
           </Reveal>
 
           <Reveal delay={0.05}>
