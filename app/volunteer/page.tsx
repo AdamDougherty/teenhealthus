@@ -41,14 +41,46 @@ export default function VolunteerPage() {
   const inputClass =
     "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sun focus:ring-2 focus:ring-sun/20";
 
+  const volunteerJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Teen Health",
+    url: "https://teenhealth.us",
+    areaServed: [
+      { "@type": "City", name: "Los Angeles", containedInPlace: { "@type": "State", name: "California" } },
+      { "@type": "AdministrativeArea", name: "Southern California" },
+    ],
+    potentialAction: {
+      "@type": "VolunteerAction",
+      name: "Volunteer with Teen Health in Los Angeles",
+      description:
+        "Help distribute essential nutrition and wellness kits to at-risk youth across Los Angeles and Southern California. Warehouse packing, logistics, skills-based, events, and group/corporate volunteer opportunities available. Community service hours available for high school and college students.",
+      target: "https://teenhealth.us/volunteer#volunteer-form",
+      location: {
+        "@type": "Place",
+        name: "Skid Row, Los Angeles, CA",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Los Angeles",
+          addressRegion: "CA",
+          addressCountry: "US",
+        },
+      },
+    },
+  };
+
   return (
     <div className="bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(volunteerJsonLd) }}
+      />
       {/* ─── HERO ─── */}
       <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]" style={{ backgroundColor: '#111' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/shared/volunteer-giving-products.jpg"
-            alt="Teen Health volunteers giving products"
+            alt="Teen Health volunteers distributing nutrition and wellness kits to youth on Skid Row, Los Angeles"
             fill
             className="object-cover object-right sm:object-center"
             sizes="100vw"
@@ -74,16 +106,22 @@ export default function VolunteerPage() {
         </div>
 
         <div className="relative z-10 pl-6 sm:pl-10 lg:pl-16 min-h-[50vh] flex items-center sm:min-h-[70vh]">
-          <div className="max-w-lg">
+          <div className="max-w-xl">
             <Reveal>
               <p className="text-xs font-bold uppercase tracking-[0.22em]" style={{ color: "#FDCF6A" }}>
                 Volunteer
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.1 }}>
-                Your Time Makes a{" "}
-                <br /><span className="hero-highlight" style={{ color: "#FDCF6A" }}>Real Difference</span>
+              <h1 className="mt-6 font-serif font-normal tracking-tight text-white" style={{ lineHeight: 1.1 }}>
+                <span className="block text-xl font-sans font-medium tracking-wide text-white/90 sm:text-2xl">
+                  Volunteer in Los Angeles
+                </span>
+                <span className="mt-3 block text-3xl sm:text-4xl lg:text-5xl">
+                  Your Time Makes a
+                  <br />
+                  <span className="hero-highlight" style={{ color: "#FDCF6A" }}>Real Difference</span>
+                </span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
@@ -103,14 +141,16 @@ export default function VolunteerPage() {
           <Reveal>
             <div className="text-center">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                Ways to help
+                Ways to help in the Los Angeles community
               </p>
               <h2 className="mx-auto mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                Find a role that fits your strengths.
+                Find a role that fits your strengths
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-balance text-lg leading-relaxed text-ink/80">
-                We welcome volunteers of all backgrounds and skill levels. Here
-                are some of the ways you can contribute.
+                Join Teen Health to help distribute essential nutrition and
+                wellness kits to youth in need across Southern California. We
+                welcome volunteers of all backgrounds and skill levels. Here
+                are some of the ways you can contribute:
               </p>
             </div>
           </Reveal>
@@ -170,7 +210,7 @@ export default function VolunteerPage() {
               How it works
             </p>
             <h2 className="mt-4 max-w-xl font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-              From sign-up to impact.
+              From sign-up to impact
             </h2>
           </Reveal>
 
@@ -181,14 +221,14 @@ export default function VolunteerPage() {
                 title: "Tell us about yourself",
                 desc: "Fill out the interest form with your availability, skills, and the type of work you're drawn to.",
                 image: "/images/team/IMG_5150.jpeg",
-                imageAlt: "Volunteer team member",
+                imageAlt: "Teen Health volunteer team member preparing community hygiene kits in Los Angeles",
               },
               {
                 num: "02",
                 title: "We'll match you",
                 desc: "Our team reaches out with opportunities that fit your schedule and interests.",
                 image: "/images/shared/dream-center-volunteers.jpeg",
-                imageAlt: "Volunteers at the Dream Center",
+                imageAlt: "Teen Health volunteers serving youth at the Dream Center in Los Angeles",
                 imagePosition: "center 100%",
               },
               {
@@ -196,7 +236,7 @@ export default function VolunteerPage() {
                 title: "Show up & make an impact",
                 desc: "Join a packing session, delivery, or project — and see how your time helps youth.",
                 image: "/images/shared/nav-center-2.jpeg",
-                imageAlt: "Teen Health navigation center distribution",
+                imageAlt: "Teen Health volunteers distributing nutrition and wellness products at an LA navigation center",
                 imagePosition: "center 42%",
               },
             ].map((step) => (
@@ -241,26 +281,30 @@ export default function VolunteerPage() {
                   Why volunteer
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  It's more than service — it's connection.
+                  It's more than service — it's connection
                 </h2>
                 <p className="mt-6 text-lg leading-relaxed text-ink/80">
                   Volunteers are the backbone of our operation. You'll work
                   alongside a passionate team, learn about the natural products
-                  industry, and directly impact the lives of young people in
-                  your community.
+                  industry, and directly impact the lives of at-risk youth
+                  across Los Angeles and Southern California.
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
-                    "Flexible scheduling — mornings, evenings, weekends",
-                    "Great for individuals, families, and corporate groups",
-                    "No experience required — we'll train you",
-                    "Community service hours available for students",
+                    { label: "Flexible scheduling", text: "Mornings, evenings, weekends" },
+                    { label: "Great for groups", text: "Individuals, families, and corporate team-building days in LA" },
+                    { label: "No experience required", text: "We'll train you" },
+                    { label: "Student volunteer hours", text: "Certified community service hours for local high school and college students" },
                   ].map((item) => (
-                    <div key={item} className="flex items-start gap-3">
+                    <div key={item.label} className="flex items-start gap-3">
                       <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sun/15 text-xs text-sun">
                         ✓
                       </span>
-                      <span className="text-lg text-ink/80">{item}</span>
+                      <span className="text-lg text-ink/80">
+                        <strong className="font-semibold text-ink">{item.label}:</strong>
+                        {" "}
+                        {item.text}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -270,7 +314,7 @@ export default function VolunteerPage() {
               <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "1/1" }}>
                 <Image
                   src="/images/shared/humanity-heroes-booth-2.jpeg"
-                  alt="Humanity Heroes booth at a volunteer event"
+                  alt="Teen Health volunteers staffing the Humanity Heroes outreach booth at a Los Angeles community event"
                   fill
                   className="object-cover" style={{ objectPosition: 'center bottom' }}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -289,15 +333,15 @@ export default function VolunteerPage() {
             <div>
               <Reveal>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                  Get started
+                  Start making an impact
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Volunteer interest form.
+                  Volunteer interest form
                 </h2>
                 <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/80">
                   Tell us a bit about yourself and how you'd like to help. We'll
-                  reach out with opportunities that match your interests and
-                  availability.
+                  reach out with opportunities across Los Angeles and Southern
+                  California that match your interests and availability.
                 </p>
               </Reveal>
 
