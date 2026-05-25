@@ -92,7 +92,7 @@ const faqs = [
     },
     {
         q: "Can I cancel or change my monthly amount?",
-        a: "Yes — you can cancel or change your monthly amount anytime. There are no commitments. Manage your recurring gift through the donation portal whenever you need.",
+        a: "Yes — you can cancel, pause, or change your monthly amount anytime, with no fees and no commitments. Manage everything through our Classy donation portal — update your card, adjust your amount, or stop your contribution in a few clicks.",
     },
     {
         q: "Where does my monthly donation go?",
