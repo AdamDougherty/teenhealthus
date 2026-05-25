@@ -6,9 +6,9 @@ import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 
 export const metadata = {
-    title: "Give Monthly — Teen Health",
+    title: "Transparent Monthly Charity Donations",
     description:
-        "Your monthly gift keeps essentials kits moving to vulnerable youth year-round. Join the community of monthly supporters powering Teen Health.",
+        "Set up a transparent recurring donation to a direct-impact youth non-profit serving Southern California. 100% of every dollar funds nutrition and hygiene essentials for vulnerable youth.",
 };
 
 const impactTiers = [
@@ -16,26 +16,30 @@ const impactTiers = [
         amount: "$500",
         value: 500,
         label: "/month",
+        theme: "Sustaining Partnership",
         impact:
-            "Sponsors a full month of kits for an agency — reaching dozens of youth, consistently.",
+            "Sustains a full month of dignified care for an entire partner agency — reaching dozens of youth, consistently.",
     },
     {
         amount: "$100",
         value: 100,
         label: "/month",
-        impact: "Funds bulk distribution to an entire partner agency every month.",
+        theme: "Predictable Stability",
+        impact: "Fuels continuous monthly distribution to a partner agency serving Southern California youth.",
     },
     {
         amount: "$50",
         value: 50,
         label: "/month",
-        impact: "Covers kit assembly, shipping, and partner coordination for two youth monthly.",
+        theme: "Direct Impact",
+        impact: "Delivers a reliable month of nutrition and hygiene essentials to two youth in need.",
     },
     {
         amount: "$25",
         value: 25,
         label: "/month",
-        impact: "Assembles and ships a full essentials kit to a youth in need every month.",
+        theme: "Fuel Continuous Care",
+        impact: "Assembles and ships a monthly kit of nutrition and hygiene dignity to one youth.",
     },
 ];
 
@@ -77,15 +81,48 @@ const testimonials = [
     },
 ];
 
+const faqs = [
+    {
+        q: "Why give monthly instead of a one-time donation?",
+        a: "Monthly gifts let us plan ahead — pre-ordering products, scheduling shipments, and keeping shelves stocked at partner agencies across Southern California year-round. Reliable funding also means we can commit to long-term distribution partnerships and respond faster when urgent needs arise.",
+    },
+    {
+        q: "How does Teen Health send 100% of every dollar to the mission?",
+        a: "Our 100% model is sustained by corporate brand partners who donate inventory and cover operational overhead. Because partners absorb those costs, every dollar donors give goes directly into the nutrition and hygiene essentials that fill our monthly kits for youth.",
+    },
+    {
+        q: "Can I cancel or change my monthly amount?",
+        a: "Yes — you can cancel or change your monthly amount anytime. There are no commitments. Manage your recurring gift through the donation portal whenever you need.",
+    },
+    {
+        q: "Where does my monthly donation go?",
+        a: "Funds go directly toward sourcing healthy food, hydration, and personal care products; assembling them into essentials kits; and distributing those kits through 30+ partner agencies serving vulnerable youth across Southern California.",
+    },
+];
+
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+};
+
 export default function GiveMonthlyPage() {
     return (
         <div className="bg-transparent">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             {/* Hero */}
             <section className="relative min-h-[50vh] overflow-hidden sm:min-h-[70vh]" style={{ backgroundColor: '#111' }}>
                 <div className="absolute inset-0">
                     <Image
                         src="/images/shared/give-monthly-hero-banner-powerpaks.jpeg"
-                        alt="Volunteers preparing essentials kits"
+                        alt="Donated nutritious snacks from brand partners being prepared for Teen Health monthly essentials kits"
                         fill
                         priority
                         className="object-cover object-[center_65%] opacity-80"
@@ -119,8 +156,8 @@ export default function GiveMonthlyPage() {
                         </Reveal>
                         <Reveal delay={0.1}>
                             <h1 className="mt-6 font-serif text-3xl font-normal tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ lineHeight: 1.0 }}>
-                                Give Essentials to Youth{" "}
-                                <span className="whitespace-nowrap" style={{ color: "#FFA10A" }}>Every Month</span>
+                                Fuel Continuous Support{" "}
+                                <span style={{ color: "#FFA10A" }}>for <span className="whitespace-nowrap">Vulnerable Youth</span></span>
                             </h1>
                         </Reveal>
                         <Reveal delay={0.2}>
@@ -130,8 +167,11 @@ export default function GiveMonthlyPage() {
                                     variant="primary"
                                     style={{ backgroundColor: '#FF8005', color: 'white' }}
                                 >
-                                    Start giving monthly
+                                    Join the Monthly Giving Community
                                 </Button>
+                                <p className="mt-3 text-xs font-medium text-white/80">
+                                    Secure checkout via Classy &amp; Stripe
+                                </p>
                             </div>
                         </Reveal>
                     </div>
@@ -155,17 +195,26 @@ export default function GiveMonthlyPage() {
                             </Reveal>
                         ))}
                     </div>
+                    <p className="pb-8 text-center text-xs leading-relaxed text-ink/50 sm:pb-10">
+                        Our 100% model is sustained by corporate brand partners who donate inventory and cover operational overhead, so every dollar you give goes directly into kits for youth.
+                    </p>
                 </Container>
             </section>
 
             {/* Why monthly */}
             <Container className="py-16 sm:py-20">
                 <Reveal>
-                    <SectionHeading
-                        eyebrow="Why monthly?"
-                        title="Recurring gifts change the game"
-                        description={<>One-time donations help in the moment. Monthly gifts keep essentials<br className="hidden md:inline" /> kits moving to vulnerable youth — consistently, reliably, and with dignity.</>}
-                    />
+                    <div>
+                        <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+                            Why monthly?
+                        </p>
+                        <h2 className="text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+                            Why sustainable, recurring giving changes the game
+                        </h2>
+                        <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
+                            One-time donations help in the moment. Recurring, direct-impact monthly gifts keep essentials kits moving to vulnerable youth across Southern California — consistently, reliably, and with dignity.
+                        </p>
+                    </div>
                 </Reveal>
 
                 <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -188,27 +237,25 @@ export default function GiveMonthlyPage() {
             <section style={{ backgroundColor: '#FAF3EB' }}>
                 <Container className="py-16 sm:py-20">
                     <Reveal>
-                        <div className="max-w-2xl">
+                        <div>
                             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                                Choose your impact
+                                Pick your impact
                             </p>
                             <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                                Every dollar funds essentials
+                                100% of every dollar directly funds youth essentials
                             </h2>
-                            <p className="mt-4 text-base leading-relaxed text-ink/70 sm:text-lg">
-                                Pick a monthly amount that works for you. Every gift,<br className="hidden md:inline" />
-                                {" "}no matter the size, goes directly toward assembling,<br className="hidden md:inline" />
-                                {" "}shipping, and distributing kits to youth who need them.
+                            <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
+                                Pick a monthly amount that works for you. Every gift, no matter the size, goes directly toward assembling, shipping, and distributing kits to youth who need them.
                             </p>
                         </div>
                     </Reveal>
 
                     <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                         {impactTiers.map((tier, i) => (
-                            <Reveal key={tier.amount} delay={i * 0.08}>
+                            <Reveal key={tier.amount} delay={i * 0.08} className="h-full">
                                 <a
                                     href={`https://www.classy.org/give/665776/#!/donation/checkout?recurring=1&amount=${tier.value}`}
-                                    className="group block rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
+                                    className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
                                         <span className="font-serif text-3xl font-normal tracking-tight text-ink">
@@ -216,7 +263,10 @@ export default function GiveMonthlyPage() {
                                         </span>
                                         <span className="text-sm text-ink/50">{tier.label}</span>
                                     </div>
-                                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                                    <div className="mt-3 text-sm font-semibold text-ink">
+                                        {tier.theme}
+                                    </div>
+                                    <p className="mt-1.5 text-sm leading-relaxed text-ink/70">
                                         {tier.impact}
                                     </p>
                                     <div className="mt-4 text-sm font-semibold opacity-0 transition-opacity group-hover:opacity-100" style={{ color: '#FF8005' }}>
@@ -227,17 +277,23 @@ export default function GiveMonthlyPage() {
                         ))}
                     </div>
 
+                    <Reveal delay={0.35}>
+                        <p className="mt-5 text-center text-xs font-medium text-ink/50">
+                            Cancel or change your amount anytime. No commitments.
+                        </p>
+                    </Reveal>
+
                     <Reveal delay={0.4}>
-                        <div className="mt-10 text-center">
+                        <div className="mt-8 text-center">
                             <Button
                                 href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
-                                Start giving monthly
+                                Join the Monthly Giving Community
                             </Button>
-                            <p className="mt-4 text-xs text-ink/40">
-                                Cancel or change your amount anytime. No commitments.
+                            <p className="mt-3 text-xs font-medium text-ink/50">
+                                Secure checkout via Classy &amp; Stripe
                             </p>
                         </div>
                     </Reveal>
@@ -268,7 +324,7 @@ export default function GiveMonthlyPage() {
                         {
                             step: "03",
                             title: "Youth receive essentials",
-                            desc: "Kits are distributed through our 30+ partner agencies to vulnerable youth and young adults who need them most.",
+                            desc: "Kits are distributed through our 30+ partner agencies across Southern California to vulnerable youth and young adults who need them most.",
                         },
                     ].map((item, i) => (
                         <Reveal key={item.step} delay={i * 0.1}>
@@ -338,6 +394,43 @@ export default function GiveMonthlyPage() {
                 </Container>
             </section>
 
+            {/* FAQ */}
+            <section className="border-y border-border bg-white/40">
+                <Container className="py-16 sm:py-20">
+                    <Reveal>
+                        <SectionHeading
+                            eyebrow="Common questions"
+                            title="What monthly donors ask"
+                        />
+                    </Reveal>
+
+                    <div className="mt-12 space-y-3">
+                        {faqs.map((faq, i) => (
+                            <Reveal key={faq.q} delay={i * 0.05}>
+                                <details className="group rounded-2xl border border-ink/10 bg-white/60 p-5 transition-colors open:border-ink/20 hover:border-ink/20">
+                                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-ink">
+                                        <span>{faq.q}</span>
+                                        <svg
+                                            className="h-5 w-5 shrink-0 text-ink/40 transition-transform group-open:rotate-180"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth={2}
+                                            aria-hidden
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </summary>
+                                    <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                                        {faq.a}
+                                    </p>
+                                </details>
+                            </Reveal>
+                        ))}
+                    </div>
+                </Container>
+            </section>
+
             {/* Final CTA */}
             <Container className="py-16 sm:py-20">
                 <Reveal>
@@ -348,10 +441,7 @@ export default function GiveMonthlyPage() {
                             <span>Help us change that.</span>
                         </h2>
                         <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70">
-                            Join the community of monthly supporters keeping essentials kits
-                            flowing to youth who need them —
-                            <br className="sm:hidden" />
-                            every single month.
+                            Join the community of monthly supporters keeping essentials kits flowing to youth who need them — every single month.
                         </p>
                         <div className="mt-8">
                             <Button
@@ -359,8 +449,11 @@ export default function GiveMonthlyPage() {
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
-                                Give monthly now
+                                Join the Monthly Giving Community
                             </Button>
+                            <p className="mt-3 text-xs font-medium text-ink/50">
+                                Secure checkout via Classy &amp; Stripe
+                            </p>
                         </div>
                     </div>
                 </Reveal>
