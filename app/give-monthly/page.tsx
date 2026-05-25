@@ -162,16 +162,18 @@ export default function GiveMonthlyPage() {
                         </Reveal>
                         <Reveal delay={0.2}>
                             <div className="mt-10">
-                                <Button
-                                    href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
-                                    variant="primary"
-                                    style={{ backgroundColor: '#FF8005', color: 'white' }}
-                                >
-                                    Join the Monthly Giving Community
-                                </Button>
-                                <p className="mt-3 text-xs font-medium text-white/80">
-                                    Secure checkout via Classy &amp; Stripe
-                                </p>
+                                <div className="inline-flex flex-col items-center">
+                                    <Button
+                                        href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
+                                        variant="primary"
+                                        style={{ backgroundColor: '#FF8005', color: 'white' }}
+                                    >
+                                        Join the Monthly Giving Community
+                                    </Button>
+                                    <p className="mt-3 text-xs font-medium text-white/80">
+                                        Secure checkout via Classy &amp; Stripe
+                                    </p>
+                                </div>
                             </div>
                         </Reveal>
                     </div>
