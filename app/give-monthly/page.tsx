@@ -96,7 +96,7 @@ const faqs = [
     },
     {
         q: "Where does my monthly donation go?",
-        a: "Funds go directly toward sourcing healthy food, hydration, and personal care products; assembling them into essentials kits; and distributing those kits through 30+ partner agencies serving vulnerable youth across Southern California.",
+        a: "Funds go toward food, hydration, and personal care products; assembling them into kits; and distributing through 30+ partner agencies serving vulnerable youth from Skid Row in Los Angeles to downtown San Diego.",
     },
 ];
 
@@ -214,7 +214,7 @@ export default function GiveMonthlyPage() {
                             Why sustainable, recurring giving changes the game
                         </h2>
                         <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/70 sm:text-lg">
-                            One-time donations help in the moment. Recurring, direct-impact monthly gifts keep essentials kits moving to vulnerable youth across Southern California — consistently, reliably, and with dignity.
+                            One-time donations help in the moment. Recurring, direct-impact monthly gifts keep essentials kits moving to vulnerable youth across Southern California — from Skid Row in Los Angeles to downtown San Diego — consistently, reliably, and with dignity.
                         </p>
                     </div>
                 </Reveal>
