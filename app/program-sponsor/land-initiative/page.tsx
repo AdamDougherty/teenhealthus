@@ -665,8 +665,6 @@ const pageStyles = `
 const inlineScript = `
   (function() {
     function init() {
-      var fill = document.getElementById('liProgressFill');
-      if (fill) { setTimeout(function(){ fill.style.width = '18%'; }, 600); }
       var els = document.querySelectorAll('.li-fade-in');
       if (!('IntersectionObserver' in window)) {
         els.forEach(function(el){ el.classList.add('visible'); });
@@ -753,19 +751,6 @@ export default function LandInitiativePage() {
                 <div className="li-hero-card-title">Land Initiative Campaign</div>
                 <div className="li-hero-card-sub">
                   Fundraising in progress · Teen Health
-                </div>
-              </div>
-              <div className="li-hero-progress">
-                <div className="li-progress-label">
-                  <span className="li-progress-raised">Help us get there</span>
-                  <span className="li-progress-goal">Land acquisition goal</span>
-                </div>
-                <div className="li-progress-track">
-                  <div className="li-progress-fill" id="liProgressFill" />
-                </div>
-                <div className="li-progress-meta">
-                  <span>Every gift moves us closer to the land</span>
-                  <span>Donate today</span>
                 </div>
               </div>
               <div className="li-hero-stats">
