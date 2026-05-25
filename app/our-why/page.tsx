@@ -7,10 +7,24 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { articles } from "@/content/articles";
 
 export const metadata = {
-  title: "Our Why",
+  title: "Why Nutrition Matters",
 };
 
 const categoryOrder = ["Context", "Programs", "Partnerships"] as const;
+
+function FootnoteRef({ n }: { n: number }) {
+  return (
+    <sup>
+      <a
+        href={`#source-${n}`}
+        className="ml-0.5 text-[0.7em] font-semibold text-sun hover:underline"
+        aria-label={`Source ${n}`}
+      >
+        [{n}]
+      </a>
+    </sup>
+  );
+}
 
 export default function LearnPage() {
   const byCategory = categoryOrder.map((cat) => ({
@@ -43,6 +57,9 @@ export default function LearnPage() {
                 Survive{" "}
                 <span className="mx-2 inline-block sm:mx-4" style={{ color: "#FF8005" }}>→</span>{" "}
                 <span style={{ color: "#FFA10A" }}>Thrive</span>
+                <span className="mt-3 block font-sans text-base font-normal tracking-normal text-white/90 sm:text-lg lg:text-xl">
+                  Bridging the Systemic Gap in Youth Nutrition
+                </span>
               </h1>
             </Reveal>
           </div>
@@ -82,7 +99,7 @@ export default function LearnPage() {
       <Container className="pb-14 pt-4 text-center sm:pb-16 sm:pt-6">
         <Reveal>
           <h2 className="mx-auto max-w-5xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
-            The Systemic Gap
+            The Post-Pandemic Cliff: California Youth Poverty &amp; Food Insecurity
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
@@ -111,9 +128,12 @@ export default function LearnPage() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Persistent Poverty
               </h3>
-              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
-                18.6% of California&rsquo;s children&mdash;1.6 million&mdash;now
-                live in poverty, more than double the 2021 rate.
+              <p className="mt-2 font-serif text-2xl font-bold leading-none tracking-tight sm:text-3xl" style={{ color: "#FF8005" }}>
+                18.6%
+              </p>
+              <p className="mx-auto mt-2 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                of California&rsquo;s children &mdash; 1.6&nbsp;million &mdash;
+                now live in poverty, more than double the 2021 rate.<FootnoteRef n={7} />
               </p>
             </div>
             {/* Photo 2 */}
@@ -133,9 +153,12 @@ export default function LearnPage() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Housing &amp; Foster Care
               </h3>
-              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
-                Over 44,000 youth are in foster care, and 40% face homelessness
-                or incarceration within 3 years of aging out.
+              <p className="mt-2 font-serif text-2xl font-bold leading-none tracking-tight sm:text-3xl" style={{ color: "#FF8005" }}>
+                43,095
+              </p>
+              <p className="mx-auto mt-2 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                California children are in foster care<FootnoteRef n={9} /> &mdash;
+                nearly 1 in 3 face homelessness after aging out.<FootnoteRef n={10} />
               </p>
             </div>
             {/* Photo 3 */}
@@ -155,9 +178,12 @@ export default function LearnPage() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Mental Health
               </h3>
-              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
-                Transition-age youth (TAY) suffer higher rates of untreated
-                anxiety and depression, often worsened by system involvement.
+              <p className="mt-2 font-serif text-2xl font-bold leading-none tracking-tight sm:text-3xl" style={{ color: "#FF8005" }}>
+                1 in 5
+              </p>
+              <p className="mx-auto mt-2 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                U.S. adolescents experienced a major depressive episode in the
+                past year, and transition-age youth (TAY) often go untreated.<FootnoteRef n={6} />
               </p>
             </div>
             {/* Photo 4 */}
@@ -177,9 +203,12 @@ export default function LearnPage() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight text-ink">
                 Food Insecurity
               </h3>
-              <p className="mx-auto mt-1 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
-                Over 1 in 4 California households with children (27%) are food
-                insecure, hindering educational and developmental outcomes.
+              <p className="mt-2 font-serif text-2xl font-bold leading-none tracking-tight sm:text-3xl" style={{ color: "#FF8005" }}>
+                27%
+              </p>
+              <p className="mx-auto mt-2 max-w-[17rem] text-center text-sm leading-relaxed text-ink/70">
+                of California households with children are food insecure,
+                hindering educational and developmental outcomes.<FootnoteRef n={8} />
               </p>
             </div>
           </div>
@@ -191,20 +220,22 @@ export default function LearnPage() {
         <Container className="py-16 text-center sm:py-20">
           <Reveal>
             <h2 className="mx-auto max-w-3xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
-              The Brain&ndash;Body Connection
+              The Nutritional Psychiatry of Youth Trauma: The Brain&ndash;Body Connection
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-ink/80 sm:text-lg sm:leading-relaxed">
-              For young people, consistent nutrition is key to brain function.
-              The brain relies on essential nutrients to regulate mood, manage
-              stress, control impulses, and make sound decisions. Housing
-              instability and food insecurity lead to nutrient-poor diets,
-              weakening the brain&rsquo;s ability to cope under pressure. When
-              undernourishment combines with trauma, anxiety, depression, and
-              emotional dysregulation become more likely&mdash;making it harder
-              for youth to stay safe, focused, and hopeful.
-            </p>
+            <blockquote className="mx-auto mt-8 max-w-3xl border-l-4 border-sun bg-white/40 px-6 py-6 text-left sm:px-8 sm:py-8">
+              <p className="font-serif text-lg italic leading-relaxed text-ink/85 sm:text-xl sm:leading-relaxed">
+                For young people, consistent nutrition is key to brain function.
+                The brain relies on essential nutrients to regulate mood, manage
+                stress, control impulses, and make sound decisions.<FootnoteRef n={1} />{" "}
+                Housing instability and food insecurity lead to nutrient-poor
+                diets, weakening the brain&rsquo;s ability to cope under pressure.
+                When undernourishment combines with trauma, anxiety, depression,
+                and emotional dysregulation become more likely&mdash;making it
+                harder for youth to stay safe, focused, and hopeful.
+              </p>
+            </blockquote>
           </Reveal>
         </Container>
       </div>
@@ -227,9 +258,9 @@ export default function LearnPage() {
               </div>
               <p className="text-sm leading-relaxed text-ink/80">
                 Chronic stress puts the body in survival mode, elevating
-                cortisol levels and disrupting metabolism. Over time, this raises
-                the risk of obesity, hypertension, and insulin resistance, making
-                it harder for youth to thrive.
+                cortisol levels and disrupting metabolism.<FootnoteRef n={2} />{" "}
+                Over time, this raises the risk of obesity, hypertension, and
+                insulin resistance, making it harder for youth to thrive.<FootnoteRef n={12} />
               </p>
             </div>
           </Reveal>
@@ -245,7 +276,7 @@ export default function LearnPage() {
                 Food insecurity weakens immune function. Deficiencies in key
                 nutrients like vitamins C, D, and protein lower the
                 body&rsquo;s defenses, increasing young people&rsquo;s
-                vulnerability to illness.
+                vulnerability to illness.<FootnoteRef n={3} />
               </p>
             </div>
           </Reveal>
@@ -262,7 +293,7 @@ export default function LearnPage() {
                 Poor nutrition impacts brain health. Diets high in
                 ultra-processed foods fuel inflammation and oxidative stress,
                 impairing cognitive function and increasing the risk of
-                depression and other mental health challenges.
+                depression and other mental health challenges.<FootnoteRef n={11} />
               </p>
             </div>
           </Reveal>
@@ -313,10 +344,11 @@ export default function LearnPage() {
                   Unmet biological and emotional needs have lasting effects on life
                   outcomes. Deficiencies in nutrients like vitamin B12, B6, and
                   omega-3 fatty acids can impair cognition, emotional regulation,
-                  and mental health. Youth exposed to Adverse Childhood Experiences
-                  (ACEs)&mdash;including poverty and trauma&mdash;face elevated
-                  risks of depression and anxiety, often struggling with focus,
-                  school performance, and resilience. Without a stable biological
+                  and mental health.<FootnoteRef n={4} /> Youth exposed to Adverse
+                  Childhood Experiences (ACEs)&mdash;including poverty and
+                  trauma&mdash;face elevated risks of depression and anxiety,
+                  often struggling with focus, school performance, and
+                  resilience.<FootnoteRef n={5} /> Without a stable biological
                   foundation, these challenges compound into higher rates of
                   dropout, unemployment, and housing instability.
                 </p>
@@ -325,7 +357,7 @@ export default function LearnPage() {
             <Reveal delay={0.2}>
               <div className="h-full border-t-2 border-ink/20 pt-8 sm:border-l-2 sm:border-t-0 sm:pl-8 sm:pt-0">
                 <h3 className="mb-3 text-lg font-semibold tracking-tight text-ink">
-                  The Pull of the Streets
+                  Reaching Transition-Age Youth (TAY) Before Systemic Crisis
                 </h3>
                 <p className="text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed">
                   When basic needs go unmet, young people often seek safety and
@@ -375,7 +407,7 @@ export default function LearnPage() {
       <Container className="py-16 text-center sm:py-20">
         <Reveal>
           <h2 className="mx-auto max-w-3xl font-serif text-2xl font-normal leading-snug tracking-tight text-ink">
-            Why This Matters to Society
+            Why This Matters to Southern California Communities
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
@@ -434,11 +466,154 @@ export default function LearnPage() {
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
                 style={{ backgroundColor: '#FF8005' }}
               >
-                Donate →
+                Fund a Stable Foundation — Donate Today
               </Link>
             </div>
           </div>
         </Reveal>
+      </Container>
+
+      {/* Sources */}
+      <Container className="border-t border-border/60 pb-12 pt-10 sm:pb-16 sm:pt-12">
+        <div className="mx-auto max-w-3xl">
+          <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-ink/60">
+            Sources
+          </h3>
+          <ol className="mt-4 space-y-2 text-xs leading-relaxed text-ink/65 sm:text-sm">
+            <li id="source-1">
+              <span className="font-semibold text-ink/80">[1]</span>{" "}
+              <a
+                href="https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Harvard Health Publishing &mdash; Nutritional psychiatry: Your brain on food
+              </a>
+            </li>
+            <li id="source-2">
+              <span className="font-semibold text-ink/80">[2]</span>{" "}
+              <a
+                href="https://www.apa.org/topics/stress/body"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                American Psychological Association &mdash; Stress effects on the body
+              </a>
+            </li>
+            <li id="source-3">
+              <span className="font-semibold text-ink/80">[3]</span>{" "}
+              <a
+                href="https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NIH Office of Dietary Supplements &mdash; Vitamin C Fact Sheet for Health Professionals
+              </a>
+            </li>
+            <li id="source-4">
+              <span className="font-semibold text-ink/80">[4]</span>{" "}
+              <a
+                href="https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NIH Office of Dietary Supplements &mdash; Omega-3 Fatty Acids Fact Sheet for Health Professionals
+              </a>
+            </li>
+            <li id="source-5">
+              <span className="font-semibold text-ink/80">[5]</span>{" "}
+              <a
+                href="https://www.cdc.gov/aces/about/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                U.S. Centers for Disease Control and Prevention &mdash; About Adverse Childhood Experiences (ACEs)
+              </a>
+            </li>
+            <li id="source-6">
+              <span className="font-semibold text-ink/80">[6]</span>{" "}
+              <a
+                href="https://www.nimh.nih.gov/health/statistics/major-depression"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                National Institute of Mental Health &mdash; Major Depression statistics (adolescents 12&ndash;17, past year)
+              </a>
+            </li>
+            <li id="source-7">
+              <span className="font-semibold text-ink/80">[7]</span>{" "}
+              <a
+                href="https://calbudgetcenter.org/resources/californias-persistent-poverty-crisis-2024-rates-remain-alarmingly-high/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                California Budget &amp; Policy Center &mdash; California&rsquo;s Persistent Poverty Crisis: 2024 Rates Remain Alarmingly High
+              </a>
+            </li>
+            <li id="source-8">
+              <span className="font-semibold text-ink/80">[8]</span>{" "}
+              <a
+                href="https://www.cafoodbanks.org/hunger-data-reports/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                California Association of Food Banks &mdash; Hunger Data &amp; Research (Census Pulse data)
+              </a>
+            </li>
+            <li id="source-9">
+              <span className="font-semibold text-ink/80">[9]</span>{" "}
+              <a
+                href="https://acf.gov/cb/map/afcars-state-reports"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Administration for Children &amp; Families &mdash; AFCARS State Reports (California, FY2023)
+              </a>
+            </li>
+            <li id="source-10">
+              <span className="font-semibold text-ink/80">[10]</span>{" "}
+              <a
+                href="https://www.chapinhall.org/research/calyouth/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chapin Hall at the University of Chicago &mdash; California Youth Transitions to Adulthood Study (CalYOUTH)
+              </a>
+            </li>
+            <li id="source-11">
+              <span className="font-semibold text-ink/80">[11]</span>{" "}
+              <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9268228/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lane et&nbsp;al. &mdash; Ultra-Processed Food Consumption and Mental Health: A Systematic Review and Meta-Analysis of Observational Studies (<em>Nutrients</em>, 2022)
+              </a>
+            </li>
+            <li id="source-12">
+              <span className="font-semibold text-ink/80">[12]</span>{" "}
+              <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11907100/"
+                className="underline decoration-ink/30 hover:text-sun hover:decoration-sun"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Glucocorticoids and HPA axis regulation in the stress&ndash;obesity connection (<em>Clinical Obesity</em>, 2025)
+              </a>
+            </li>
+          </ol>
+        </div>
       </Container>
     </div>
   );
