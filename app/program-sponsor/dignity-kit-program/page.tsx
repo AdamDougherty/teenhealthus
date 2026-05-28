@@ -216,7 +216,7 @@ const pageStyles = `
     grid-template-columns: 1fr 1fr;
     gap: 72px;
     align-items: start;
-    margin-top: 56px;
+    margin-top: 32px;
   }
   @media (max-width: 760px) {
     .dk-two-col { grid-template-columns: 1fr; gap: 40px; }
@@ -674,7 +674,7 @@ export default function DignityKitProgramPage() {
               <div className="dk-stat-card dk-fade-in">
                 <div className="dk-stat-card-num dk-num-teal">1 in 5</div>
                 <div className="dk-stat-card-heading">
-                  Youth Face Food Insecurity
+                  Youth Lack Food Security
                 </div>
                 <p className="dk-stat-card-body">
                   Millions of young people lack reliable access to nutritious
@@ -684,7 +684,7 @@ export default function DignityKitProgramPage() {
               <div className="dk-stat-card dk-fade-in">
                 <div className="dk-stat-card-num dk-num-blue">4,000+</div>
                 <div className="dk-stat-card-heading">
-                  Youth Experiencing Homelessness in LA
+                  Youth Facing Homelessness in LA
                 </div>
                 <p className="dk-stat-card-body">
                   Los Angeles has one of the highest concentrations of youth
@@ -725,8 +725,8 @@ export default function DignityKitProgramPage() {
               <div className="dk-fade-in">
                 <p className="dk-col-body">
                   Each backpack is filled with healthy snacks, hydration, and
-                  essential supplies — everything needed to face the day with a
-                  little more stability. These aren&apos;t generic care packages.
+                  essential supplies — everything needed to face the day with
+                  more stability. These aren&apos;t generic care packages.
                   They&apos;re thoughtfully curated kits to meet real, immediate
                   needs.
                 </p>
@@ -816,7 +816,7 @@ export default function DignityKitProgramPage() {
                 <h4>Healthy snacks</h4>
                 <p>
                   Nutritious, shelf-stable food items for immediate energy and
-                  nourishment
+                  nourishment.
                 </p>
               </div>
 
@@ -837,7 +837,7 @@ export default function DignityKitProgramPage() {
                 <h4>Hydration</h4>
                 <p>
                   Water and hydration essentials — a basic need that&apos;s often
-                  hardest to access
+                  hardest to access.
                 </p>
               </div>
 
@@ -867,7 +867,7 @@ export default function DignityKitProgramPage() {
                   </svg>
                 </div>
                 <h4>Personal care</h4>
-                <p>Hygiene essentials that support dignity and daily wellbeing</p>
+                <p>Hygiene essentials that support dignity and daily wellbeing.</p>
               </div>
 
               <div className="dk-content-card dk-fade-in">
@@ -883,7 +883,7 @@ export default function DignityKitProgramPage() {
                   </svg>
                 </div>
                 <h4>Essential supplies</h4>
-                <p>Practical items for safety, stability, and daily life on the go</p>
+                <p>Practical items for safety, stability, and daily life on the go.</p>
               </div>
 
               <div className="dk-content-card dk-featured-content dk-fade-in">
@@ -911,7 +911,7 @@ export default function DignityKitProgramPage() {
                 <h4>$50 retail value</h4>
                 <p>
                   Sourced through donations and partnerships to maximize every
-                  dollar given
+                  dollar given.
                 </p>
               </div>
             </div>
@@ -936,7 +936,7 @@ export default function DignityKitProgramPage() {
                 <div className="dk-impact-amt">$25</div>
                 <p className="dk-impact-desc">
                   1 fully stocked backpack with nutritious food, hydration, and
-                  essential supplies
+                  essential supplies.
                 </p>
               </div>
               <div className="dk-impact-card dk-fade-in">
@@ -944,7 +944,7 @@ export default function DignityKitProgramPage() {
                 <div className="dk-impact-amt">$250</div>
                 <p className="dk-impact-desc">
                   10 young people receive complete dignity kits with everything
-                  they need
+                  they need.
                 </p>
               </div>
               <div className="dk-impact-card dk-fade-in">
@@ -952,7 +952,7 @@ export default function DignityKitProgramPage() {
                 <div className="dk-impact-amt">$2,500</div>
                 <p className="dk-impact-desc">
                   100 backpacks distributed to youth experiencing homelessness
-                  across Los Angeles
+                  across Los Angeles.
                 </p>
               </div>
               <div className="dk-impact-card dk-featured dk-fade-in">
@@ -960,7 +960,7 @@ export default function DignityKitProgramPage() {
                 <div className="dk-impact-amt">$12,500</div>
                 <p className="dk-impact-desc">
                   Fully funds the entire program — 500 backpacks, 500 young
-                  people, all across LA
+                  people, all across Los Angeles.
                 </p>
               </div>
             </div>
