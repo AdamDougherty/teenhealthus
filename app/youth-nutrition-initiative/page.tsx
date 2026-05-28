@@ -558,7 +558,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                   >
                     Sponsor on Benevity
                   </Button>
-                  <div className="relative h-10 w-40 sm:h-12 sm:w-48">
+                  <div className="relative h-10 w-40 self-center sm:h-12 sm:w-48">
                     <Image
                       src="/images/shared/benevity-logo.png"
                       alt="Benevity"
@@ -581,7 +581,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     href="https://nuifoundation.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative -mt-2 h-14 w-14 sm:h-16 sm:w-16"
+                    className="relative -mt-2 h-14 w-14 self-center sm:h-16 sm:w-16"
                     aria-label="Visit NUI Foundation"
                   >
                     <Image

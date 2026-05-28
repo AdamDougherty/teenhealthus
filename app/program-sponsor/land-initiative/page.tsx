@@ -913,7 +913,7 @@ export default function LandInitiativePage() {
 
           <div
             className="li-why-grid"
-            style={{ gridTemplateColumns: "repeat(3,1fr)", marginTop: 48 }}
+            style={{ marginTop: 48 }}
           >
             <div
               className="li-why-card li-fade-in"
