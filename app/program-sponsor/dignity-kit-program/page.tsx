@@ -94,6 +94,13 @@ const pageStyles = `
     gap: 40px;
     flex-wrap: wrap;
   }
+  @media (max-width: 600px) {
+    .dk-hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+  }
   .dk-stat-num {
     font-family: var(--dk-serif);
     font-size: 38px;
@@ -190,6 +197,10 @@ const pageStyles = `
     letter-spacing: -0.02em;
     margin-bottom: 14px;
   }
+  .dk-br-mobile { display: none; }
+  @media (max-width: 600px) {
+    .dk-br-mobile { display: inline; }
+  }
   .dk-section-sub {
     font-size: 17px;
     color: var(--dk-text-mid);
@@ -207,7 +218,18 @@ const pageStyles = `
     align-items: start;
     margin-top: 56px;
   }
-  @media (max-width: 760px) { .dk-two-col { grid-template-columns: 1fr; gap: 40px; } }
+  @media (max-width: 760px) {
+    .dk-two-col { grid-template-columns: 1fr; gap: 40px; }
+    .dk-two-col > .dk-fade-in + .dk-fade-in::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--dk-navy);
+      opacity: 0.25;
+      margin: 0 auto 32px;
+    }
+  }
   .dk-col-body {
     font-size: 16px;
     color: var(--dk-text-mid);
@@ -415,7 +437,7 @@ const pageStyles = `
   .dk-button-col {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 14px;
   }
   .dk-btn-benevity, .dk-btn-donate {
@@ -558,7 +580,7 @@ export default function DignityKitProgramPage() {
               </div>
               <p>
                 <b>Nourishment</b> through nutritious snacks and hydration for
-                youth who often go without meals
+                youth who often go without meals.
               </p>
             </div>
 
@@ -583,7 +605,7 @@ export default function DignityKitProgramPage() {
               </div>
               <p>
                 <b>Dignity</b> and a tangible message that every young person is
-                seen and valued
+                seen and valued.
               </p>
             </div>
 
@@ -598,7 +620,7 @@ export default function DignityKitProgramPage() {
               </div>
               <p>
                 <b>Stability</b> through essential supplies for youth without
-                consistent access to basics
+                consistent access to basics.
               </p>
             </div>
 
@@ -625,7 +647,7 @@ export default function DignityKitProgramPage() {
               </div>
               <p>
                 <b>$50 retail value</b> delivered for every $25 donation — your
-                dollar goes twice as far
+                dollar goes twice as far.
               </p>
             </div>
           </div>
@@ -688,7 +710,8 @@ export default function DignityKitProgramPage() {
           <div className="dk-container">
             <div className="dk-section-label dk-fade-in">About the Program</div>
             <h2 className="dk-section-h dk-fade-in">
-              500 Backpacks. 500 Young People.
+              500 Backpacks.
+              <br className="dk-br-mobile" /> 500 Young People.
               <br />
               One Powerful Message.
             </h2>
@@ -704,8 +727,8 @@ export default function DignityKitProgramPage() {
                   Each backpack is filled with healthy snacks, hydration, and
                   essential supplies — everything needed to face the day with a
                   little more stability. These aren&apos;t generic care packages.
-                  They&apos;re thoughtfully curated kits designed to meet real,
-                  immediate needs.
+                  They&apos;re thoughtfully curated kits to meet real, immediate
+                  needs.
                 </p>
                 <div className="dk-highlight-box">
                   Each backpack costs just <b>$25 to assemble</b> but delivers{" "}
@@ -719,14 +742,15 @@ export default function DignityKitProgramPage() {
                 </p>
               </div>
               <div className="dk-fade-in">
-                <p className="dk-col-body" style={{ marginBottom: 22 }}>
+                <p className="dk-col-body">
                   This program is part of Teen Health&apos;s broader commitment to
                   meeting young people where they are — providing tangible,
                   immediate support that creates the stability needed to engage
                   with longer-term services and resources.
                 </p>
                 <div className="dk-highlight-box">
-                  Eligible for <b>corporate matching gifts</b>. Supports{" "}
+                  This program is eligible for{" "}
+                  <b>corporate matching gifts</b>. It supports{" "}
                   <b>youth development</b>, <b>homelessness services</b>, and{" "}
                   <b>food security</b> initiatives.
                 </div>
