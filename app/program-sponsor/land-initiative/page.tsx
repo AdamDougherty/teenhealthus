@@ -144,6 +144,7 @@ const pageStyles = `
     position: relative;
     height: 36px;
     width: 144px;
+    align-self: center;
   }
   @media (min-width: 640px) {
     .li-benevity-logo { height: 40px; width: 160px; }
@@ -763,7 +764,7 @@ export default function LandInitiativePage() {
                   <div className="li-hero-stat-label">Ages served</div>
                 </div>
                 <div className="li-hero-stat">
-                  <div className="li-hero-stat-value">Year 5</div>
+                  <div className="li-hero-stat-value">5 Year</div>
                   <div className="li-hero-stat-label">Self-sustaining target</div>
                 </div>
                 <div className="li-hero-stat">

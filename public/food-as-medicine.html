@@ -256,6 +256,9 @@
     font-weight: 400; font-style: italic;
     line-height: 1.65; color: var(--ink);
   }
+  @media (min-width: 1024px) {
+    blockquote p.quote-nowrap { white-space: nowrap; font-size: 1.25rem; }
+  }
 
   /* CTA block — exact site style */
   .cta-block {
@@ -271,6 +274,8 @@
     line-height: 1.25;
   }
   .cta-block p { font-size: 1rem; color: var(--ink-70); max-width: 28rem; margin: 0 auto 2rem; line-height: 1.7; }
+  .br-md { display: none; }
+  @media (min-width: 768px) { .br-md { display: inline; } }
 
   /* teal/green partner box */
   .partner-box {
@@ -422,19 +427,19 @@
         <div style="display:flex;flex-direction:column;gap:.75rem;">
           <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
             <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:.2rem;">1 in 5</p>
-            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians experience food insecurity — over 8 million people</p>
+            <p style="font-size:.9375rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians experience food insecurity — over 8 million people.</p>
           </div>
           <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
             <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--sky);line-height:1;margin-bottom:.2rem;">2.4M</p>
-            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians live in food deserts — low-income areas with limited access to healthy food</p>
+            <p style="font-size:.9375rem;color:rgba(26,26,46,0.65);line-height:1.45;">Californians live in food deserts — low-income areas with limited access to healthy food.</p>
           </div>
           <div style="padding-bottom:.5rem;border-bottom:1px solid #e5e7eb;">
             <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:.2rem;">32%</p>
-            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Of food-insecure Californians are children — disproportionately in communities of color</p>
+            <p style="font-size:.9375rem;color:rgba(26,26,46,0.65);line-height:1.45;">Of food-insecure Californians are children — disproportionately in communities of color.</p>
           </div>
           <div>
             <p style="font-family:'Lora',Georgia,serif;font-size:1.125rem;font-weight:400;color:#16a34a;line-height:1;margin-bottom:.2rem;">58 counties</p>
-            <p style="font-size:.75rem;color:rgba(26,26,46,0.65);line-height:1.45;">Every California county has communities where nutritious food is inaccessible or unaffordable</p>
+            <p style="font-size:.9375rem;color:rgba(26,26,46,0.65);line-height:1.45;">Every California county has communities where nutritious food is inaccessible or unaffordable.</p>
           </div>
         </div>
       </div>
@@ -520,9 +525,9 @@
 <!-- QUOTE — site blockquote style -->
 <section class="sec sec-mist">
   <div class="sec-inner">
-    <div class="sec-center rv">
+    <div class="sec-inner rv">
       <blockquote>
-        <p>"Food is not a supplement to healthcare. For millions of Californians, it is the healthcare."</p>
+        <p class="quote-nowrap">"Food is not a supplement to healthcare. For millions of Californians, it is the healthcare."</p>
       </blockquote>
       <p style="font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-50);">Teen Health, Inc. — Food as Medicine Program</p>
     </div>
@@ -610,7 +615,7 @@
   <div class="sec-inner">
     <div class="cta-block rv">
       <h2>Help Us Launch This Program</h2>
-      <p>Every contribution helps us reach more Californians<br>with the medically tailored nutrition they need to thrive.</p>
+      <p>Every contribution helps us reach more Californians<br class="br-md">with the medically tailored nutrition they need to thrive.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;">
         <a href="mailto:info@teenhealth.us?subject=Donation" class="btn-sun">Donate</a>
         <a href="#partners" class="btn-ghost">Get Involved</a>

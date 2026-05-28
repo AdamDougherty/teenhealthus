@@ -111,10 +111,10 @@ export default function YouthNutritionInitiativeLandingPage() {
 
               <div className="mt-6 space-y-0 divide-y divide-border">
                 {[
-                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Sustained energy</strong> throughout program hours</> },
-                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Mid-day crashes</strong> and hunger-related disruptions</> },
-                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Focus, participation</strong> and cognitive engagement</> },
-                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Long-term diabetes risk</strong> through metabolic stability</> },
+                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Sustained energy</strong> throughout program hours.</> },
+                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Mid-day crashes</strong> and hunger-related disruptions.</> },
+                  { icon: "↑", color: "mintDark", text: <><strong className="text-ink">Focus, participation</strong> and cognitive engagement.</> },
+                  { icon: "↓", color: "sky", text: <><strong className="text-ink">Long-term diabetes risk</strong> through metabolic stability.</> },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center gap-4 py-4">
                     <span
@@ -549,7 +549,7 @@ export default function YouthNutritionInitiativeLandingPage() {
 
             <Reveal delay={0.15}>
               <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-start gap-4 sm:items-center">
                   <Button
                     href="https://mygoodness.benevity.org/community/cause/840-874628884"
                     variant="primary"
@@ -568,7 +568,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-start gap-4 sm:items-center">
                   <Button
                     href="https://www.classy.org/give/665776/#!/donation/checkout"
                     variant="primary"
