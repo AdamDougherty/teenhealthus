@@ -74,26 +74,16 @@ export default function GetInvolvedPage() {
                 className="object-cover" style={{ objectPosition: "center 15%" }}
                 sizes="(max-width: 768px) 100vw, 1200px"
               />
-              <div className="absolute bottom-4 right-4 z-10 hidden sm:bottom-6 sm:right-6 sm:block">
-                <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                  YMCA TAY Center of San Diego County, Escondido, CA
-                </span>
-              </div>
             </div>
-            <div className="mt-4 mb-8 flex justify-center sm:hidden">
-              <span className="rounded-full bg-black/5 px-3 py-1 text-center text-xs font-medium tracking-wide text-ink/50">
-                <svg className="mr-1 inline-block h-3.5 w-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="mt-4 mb-8 flex justify-center">
+              <span className="flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1 text-center text-xs font-medium tracking-wide text-white">
+                <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                 YMCA TAY Center of San Diego County, Escondido,&nbsp;CA
               </span>
             </div>
-            <div className="hidden sm:block sm:mb-8" />
           </Reveal>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -215,7 +205,7 @@ export default function GetInvolvedPage() {
           </div>
 
           <Reveal delay={0.12}>
-            <div className="mt-6 rounded-3xl border border-border p-8 shadow-soft sm:p-10" style={{ backgroundColor: '#E5EEFB', color: '#000000' }}>
+            <div className="mt-6 rounded-3xl border border-border p-8 shadow-soft sm:p-10" style={{ backgroundColor: '#FAF4EC', color: '#000000' }}>
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: '#000000', opacity: 0.6 }}>
                   Corporate partnerships
@@ -236,6 +226,66 @@ export default function GetInvolvedPage() {
               </div>
             </div>
           </Reveal>
+        </section>
+
+        {/* Supply pipeline — intake to distribution */}
+        <section className="mt-14 scroll-mt-24">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Where supplies land"
+              title="Many partners, one mission"
+              description={<span className="text-pretty">Across Southern California, supplies reach the youth who need them most.</span>}
+            />
+          </Reveal>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2 md:gap-8">
+            <Reveal>
+              <figure>
+                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-sm">
+                  <Image
+                    src="/images/shared/nordic-naturals-teen-health.jpeg"
+                    alt="Nordic Naturals products stacked at Project Kinship, Santa Ana, CA"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+                    quality={90}
+                  />
+                </div>
+                <figcaption className="mt-4 flex justify-center">
+                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white">
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    Project Kinship, Santa Ana, CA
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <figure>
+                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-sm">
+                  <Image
+                    src="/images/shared/dream-center-los-angeles.jpeg"
+                    alt="Dream Center staff with pallet of distribution cases"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+                    quality={90}
+                  />
+                </div>
+                <figcaption className="mt-4 flex justify-center">
+                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white">
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    Dream Center, Los Angeles, CA
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
         </section>
 
         {/* Donate */}

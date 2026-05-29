@@ -93,6 +93,35 @@ export default function OurStoryPage() {
                 </Container>
             </section>
 
+            {/* ─── PARTNER SPOTLIGHT — JUST IN TIME FOR FOSTER YOUTH ─── */}
+            <section className="pt-12 sm:pt-16">
+                <Container>
+                    <div className="mx-auto max-w-3xl">
+                        <Reveal>
+                            <div className="overflow-hidden rounded-2xl shadow-sm">
+                                <Image
+                                    src="/images/shared/just-in-time-foster-youth-nordic-naturals-focus-support.jpeg"
+                                    alt="Just in Time for Foster Youth team receiving Nordic Naturals Focus Support from Teen Health"
+                                    width={3000}
+                                    height={2250}
+                                    className="w-full object-cover"
+                                    style={{ aspectRatio: "4/3", objectPosition: "center 30%" }}
+                                />
+                            </div>
+                            <div className="mt-4 flex justify-center">
+                                <span className="flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-xs font-medium tracking-wide text-ink/50">
+                                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                    </svg>
+                                    Just in Time for Foster Youth, San Diego, CA
+                                </span>
+                            </div>
+                        </Reveal>
+                    </div>
+                </Container>
+            </section>
+
             {/* ─── WHERE IT STARTED ─── */}
             <section className="py-12 sm:py-16">
                 <Container>

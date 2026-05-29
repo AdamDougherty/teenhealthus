@@ -98,7 +98,7 @@ export default function BrandPartnerPage() {
 
         {/* Location label */}
         <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
-          <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+          <span className="flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
@@ -189,7 +189,7 @@ export default function BrandPartnerPage() {
           quality={85}
         />
         <div className="absolute bottom-4 right-4 z-10 sm:bottom-6 sm:right-6">
-          <span className="flex items-center gap-1.5 rounded-full bg-black/40 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
+          <span className="flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white backdrop-blur-sm">
             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
@@ -214,6 +214,60 @@ export default function BrandPartnerPage() {
               </figcaption>
             </figure>
           </Reveal>
+        </Container>
+      </section>
+
+      {/* ——— PARTNERSHIP PHOTO — UCI Health Autism Center / Nordic Naturals ——— */}
+      <section className="bg-[#f8f7f4] pt-16 sm:pt-20">
+        <Container>
+          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 md:gap-8">
+            <Reveal>
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src="/images/shared/uci-health-autism-center-nordic-naturals-teen-health.jpeg"
+                    alt="Teen Health partnership with UCI Health Center for Autism, featuring Nordic Naturals Focus and Prebiotic products"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 560px"
+                    quality={85}
+                  />
+                </div>
+                <figcaption className="mt-4 flex justify-center">
+                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white">
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    UCI Health Center for Autism &amp; Neurodevelopmental Disorders, Irvine, CA
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src="/images/shared/project-kinship-nordic-naturals-teen-health.jpeg"
+                    alt="Teen Health partnership with Project Kinship, featuring Nordic Naturals Focus and Prebiotic products"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 560px"
+                    quality={85}
+                  />
+                </div>
+                <figcaption className="mt-4 flex justify-center">
+                  <span className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-black/50 px-3 py-1 text-xs font-medium tracking-wide text-white">
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    Project Kinship, Santa Ana, CA
+                  </span>
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
