@@ -151,7 +151,7 @@ export default function ProgramsPage() {
                   We&rsquo;re launching a Medically Tailored Groceries (MTG)
                   program — assembling clinically validated food boxes and
                   delivering them to Medi-Cal members, homeless youth, and
-                  seniors managing chronic illness across Southern California.
+                  young adults managing chronic illness across Southern California.
                   Sourced from natural products partners, built with registered
                   dietitians, and positioned to participate in CalAIM&rsquo;s
                   food-as-medicine benefit.

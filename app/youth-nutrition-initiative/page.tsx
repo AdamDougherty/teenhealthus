@@ -159,7 +159,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             {[
               { stat: "1 in 5", color: "text-mintDark", title: "Youth Face Food Insecurity", desc: "Millions of young people lack reliable access to nutritious meals, creating a foundation for poor health outcomes." },
               { stat: "1 in 3", color: "text-sky", title: "Youth Face Metabolic Risk", desc: "High-sugar, low-fiber environments lead to blood sugar spikes, energy crashes, and reduced cognitive performance." },
-              { stat: "100K+", color: "text-navy", title: "At Elevated Risk in San Diego", desc: "Over 500,000 students in the county, ~60% qualify for Free & Reduced Lunch, and 30%+ face overweight or obesity risk." },
+              { stat: "500K+", color: "text-navy", title: "At Elevated Risk in Southern California", desc: "Over 3 million students across the region, ~60% qualify for Free & Reduced Lunch, and 35%+ face overweight or obesity risk." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
