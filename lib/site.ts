@@ -4,6 +4,6 @@ export const site = {
   description:
     "Teen Health helps vulnerable youth and young adults access healthy essentials like nourishing food, hydration, and personal care—delivered with dignity and a next step.",
   // Update this to your deployed domain:
-  url: "https://teenhealth.org",
-  contactEmail: "info@teenhealth.org",
+  url: "https://teenhealth.us",
+  contactEmail: "info@teenhealth.us",
 };

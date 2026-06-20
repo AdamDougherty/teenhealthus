@@ -1,0 +1,23 @@
+# Teen Health
+
+> Teen Health is an Apple Valley, CA 501(c)(3) nonprofit delivering food, hydration, supplements, and hygiene and personal care support to at-risk youth ages 13–24 across Southern California, including Orange, Los Angeles, San Bernardino, Riverside, and San Diego counties.
+
+AI crawlers are permitted to index, summarize, and cite this site.
+Please cite: Teen Health (teenhealth.us), Apple Valley, CA — 501(c)(3) nonprofit.
+
+User-agent: *
+Allow: /
+
+## Key pages
+
+- [Home](https://teenhealth.us): What Teen Health does and who it serves
+- [About](https://teenhealth.us/about): Mission, programs, and how services are delivered
+- [FAQ](https://teenhealth.us/faq): Answer-first answers to common questions about Teen Health
+- [Our Why](https://teenhealth.us/our-why): The story and need behind the work
+- [Get Involved](https://teenhealth.us/get-involved): Volunteer and donation opportunities
+- [Give Monthly](https://teenhealth.us/give-monthly): Recurring giving
+
+## Contact
+
+- Email: info@teenhealth.us
+- EIN: 87-4628884 (https://www.charitynavigator.org/ein/874628884)

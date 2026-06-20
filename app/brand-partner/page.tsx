@@ -32,7 +32,7 @@ export default function BrandPartnerPage() {
     },
     {
       q: "Where are donated products distributed?",
-      a: "Products are distributed through our partner agency network to at-risk youth and young adults (ages 13–29) across California, with expansion planned into Northern California and the Central Valley.",
+      a: "Products are distributed through our partner agency network to at-risk youth and young adults (ages 13–24) across California, with expansion planned into Northern California and the Central Valley.",
     },
     {
       q: "Can we do an employee volunteer event?",
@@ -407,7 +407,7 @@ export default function BrandPartnerPage() {
               {
                 num: "03",
                 title: "Products reach youth fast",
-                desc: "Donated products are kitted and distributed through our partner agencies to at-risk youth ages 13–29 across California. Every item goes directly to someone who needs it.",
+                desc: "Donated products are kitted and distributed through our partner agencies to at-risk youth ages 13–24 across California. Every item goes directly to someone who needs it.",
                 image: "/images/shared/young-people-products.jpg",
                 imageAlt: "Teen Health delivering kits to youth",
               },
@@ -495,7 +495,7 @@ export default function BrandPartnerPage() {
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-ink/60">
                   We ensure these products reach at-risk youth and young adults
-                  (13–29). Unlike a traditional food bank, we’re
+                  (13–24). Unlike a traditional food bank, we’re
                   intentional about the food, beverages, hydration, and
                   supplements we provide, raising the level of health and
                   wellness for those we support.

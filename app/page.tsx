@@ -9,6 +9,15 @@ import { Stat } from "@/components/Stat";
 import { HeroSection } from "@/components/HeroSection";
 import { programs } from "@/content/programs";
 
+export const metadata = {
+  title: {
+    absolute:
+      "Teen Health | Food & Support for At-Risk Youth Ages 13–24 | Apple Valley, CA",
+  },
+  description:
+    "Teen Health is an Apple Valley, CA nonprofit serving at-risk youth ages 13–24 with food, hydration, supplements, and hygiene products across Southern California, including Orange, Los Angeles, San Bernardino, Riverside, and San Diego counties.",
+};
+
 export default function HomePage() {
   return (
     <>

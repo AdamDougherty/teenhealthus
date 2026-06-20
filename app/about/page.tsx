@@ -57,6 +57,52 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ─── ANSWER-FIRST OVERVIEW (built for AI Overviews / featured snippets) ─── */}
+      <section className="border-b border-ink/10 bg-transparent">
+        <Container className="py-14 sm:py-16">
+          <Reveal>
+            <h2 className="font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
+              Food &amp; support for at-risk youth in Southern California
+            </h2>
+          </Reveal>
+          <dl className="mt-10 border-t border-ink/10">
+            {[
+              {
+                h: "Who we serve",
+                p: "Teen Health serves teens and young adults ages 13–24 across Southern California — including those facing homelessness, food insecurity, and poverty.",
+              },
+              {
+                h: "What we provide",
+                p: "We deliver nourishing food, hydration, supplements where appropriate, and hygiene and personal care products — assembled into dignity kits and distributed through trusted local partners.",
+              },
+              {
+                h: "Where we operate",
+                p: "Based in Apple Valley, California, we serve communities across Southern California — including San Diego, Riverside, San Bernardino, Los Angeles, and Orange counties — through partner schools, shelters, churches, and community outreach organizations.",
+              },
+              {
+                h: "How to access services",
+                p: "At-risk youth reach Teen Health through partner agencies that distribute our kits directly. Teens, caregivers, and partner organizations can email info@teenhealth.us to connect with support nearby.",
+              },
+              {
+                h: "How to get involved",
+                p: "You can help by donating food and hygiene products, volunteering, giving monthly, or partnering as a brand. Visit our Get Involved page or email info@teenhealth.us to start.",
+              },
+            ].map((item, index) => (
+              <Reveal key={item.h} delay={Math.min(index * 0.05, 0.2)}>
+                <div className="grid gap-1.5 border-b border-ink/10 py-6 sm:grid-cols-[180px_1fr] sm:gap-8">
+                  <dt className="text-sm font-bold uppercase tracking-[0.14em] text-ink/60 sm:pt-1">
+                    {item.h}
+                  </dt>
+                  <dd className="text-base leading-relaxed text-ink/80">
+                    {item.p}
+                  </dd>
+                </div>
+              </Reveal>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
       <Container className="py-14 sm:py-16">
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/11" }}>
@@ -180,7 +226,7 @@ export default function AboutPage() {
                 resilience, and begin to see a path forward.
               </p>
               <p className="text-base leading-relaxed text-ink/80">
-                We serve youth ages 13–29 including those experiencing food insecurity,
+                We serve youth ages 13–24 including those experiencing food insecurity,
                 homelessness, foster care transitions, justice system involvement, and
                 mental health challenges. Many are navigating circumstances they
                 didn&apos;t choose, without the support systems they need. We believe

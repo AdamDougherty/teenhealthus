@@ -23,13 +23,37 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "NGO",
+  "@type": ["NGO", "NonprofitOrganization", "LocalBusiness"],
   name: site.name,
   url: site.url,
   logo: `${site.url}/teenhealthlogohoriz.png`,
-  description: site.description,
+  description:
+    "Teen Health is an Apple Valley, CA nonprofit delivering food, hydration, supplements, and hygiene and personal care support to at-risk youth ages 13–24 across Southern California, including Orange, Los Angeles, San Bernardino, Riverside, and San Diego counties.",
+  email: site.contactEmail,
   nonprofitStatus: "Nonprofit501c3",
-  areaServed: [{ "@type": "Country", name: "United States" }],
+  // Mailing address: street, ZIP, and phone pending verification from Teen Health.
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Apple Valley",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Orange County" },
+    { "@type": "AdministrativeArea", name: "Los Angeles County" },
+    { "@type": "AdministrativeArea", name: "San Bernardino County" },
+    { "@type": "AdministrativeArea", name: "Riverside County" },
+    { "@type": "AdministrativeArea", name: "San Diego County" },
+    { "@type": "AdministrativeArea", name: "Southern California" },
+    { "@type": "Country", name: "United States" },
+  ],
+  // After Yelp, Bing Places, Idealist, GreatNonprofits, and Google Business
+  // Profile listings go live, add each verified URL to this array.
+  sameAs: [
+    "https://www.charitynavigator.org/ein/874628884",
+    "https://app.candid.org/profile/14074133/teen-health-inc/",
+    "https://mygoodness.benevity.org/community/cause/840-874628884",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",

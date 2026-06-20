@@ -217,7 +217,7 @@ export default function HowWeWorkPage() {
                                     <tr className="border-b border-border">
                                         <td className="px-6 py-5 font-semibold text-ink">Who It Serves</td>
                                         <td className="px-6 py-5 text-ink/80">
-                                            Youth and young adults (ages 13–29) exiting foster care or juvenile detention
+                                            Youth and young adults (ages 13–24) exiting foster care or juvenile detention
                                         </td>
                                         <td className="px-6 py-5 text-ink/80">
                                             High-need households in Orange, San Diego, and Los Angeles Counties; expanding to Fresno and the Bay Area
@@ -256,7 +256,7 @@ export default function HowWeWorkPage() {
                                             Immediate reduction in material hardship and an increased sense of self-worth during critical life transitions
                                         </td>
                                         <td className="px-6 py-5 text-ink/80">
-                                            Consistent access to nutritious meals and stabilized physical health for 13–29 year-olds
+                                            Consistent access to nutritious meals and stabilized physical health for 13–24 year-olds
                                         </td>
                                         <td className="px-6 py-5 text-ink/80">
                                             Increased utilization of mental health services and reduced rates of crisis-level psychological distress
@@ -278,7 +278,7 @@ export default function HowWeWorkPage() {
                                 <dl className="mt-4 space-y-4 text-sm">
                                     <div>
                                         <dt className="font-semibold text-ink">Who It Serves</dt>
-                                        <dd className="mt-1 text-ink/80">Youth and young adults (ages 13–29) exiting foster care or juvenile detention</dd>
+                                        <dd className="mt-1 text-ink/80">Youth and young adults (ages 13–24) exiting foster care or juvenile detention</dd>
                                     </div>
                                     <div>
                                         <dt className="font-semibold text-ink">Problem Addressed</dt>
@@ -317,7 +317,7 @@ export default function HowWeWorkPage() {
                                     </div>
                                     <div>
                                         <dt className="font-semibold text-ink">Intended Outcomes</dt>
-                                        <dd className="mt-1 text-ink/80">Consistent access to nutritious meals and stabilized physical health for 13–29 year-olds</dd>
+                                        <dd className="mt-1 text-ink/80">Consistent access to nutritious meals and stabilized physical health for 13–24 year-olds</dd>
                                     </div>
                                 </dl>
                             </div>
