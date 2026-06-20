@@ -2,6 +2,8 @@ import Image from "next/image";
 
 export const metadata = {
   title: "The Dignity Kit Program",
+  description:
+    "The Dignity Kit Program assembles hygiene and personal care essentials into kits distributed with dignity to at-risk youth ages 13–24 across Southern California through Teen Health's partner network.",
 };
 
 const pageStyles = `

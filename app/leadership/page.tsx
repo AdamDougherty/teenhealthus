@@ -4,6 +4,8 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata = {
     title: "Leadership & Advisors",
+    description:
+        "Meet the leadership team and advisors behind Teen Health, the Apple Valley, CA nonprofit delivering food, hydration, supplements, and hygiene to at-risk youth across Southern California.",
 };
 
 export default function LeadershipPage() {

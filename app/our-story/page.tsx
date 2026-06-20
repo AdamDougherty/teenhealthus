@@ -5,6 +5,8 @@ import { Button } from "@/components/Button";
 
 export const metadata = {
     title: "Our Story",
+    description:
+        "The story behind Teen Health — why this Apple Valley, CA nonprofit set out to get nourishing food, hydration, and hygiene to at-risk teens and young adults across Southern California.",
 };
 
 export default function OurStoryPage() {

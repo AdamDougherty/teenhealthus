@@ -7,6 +7,8 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
   title: "About",
+  description:
+    "Teen Health is an Apple Valley, CA nonprofit delivering food, hydration, supplements, and hygiene to at-risk youth ages 13–24 across Southern California — with dignity and a next step.",
 };
 
 export default function AboutPage() {

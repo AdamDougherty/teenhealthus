@@ -7,6 +7,8 @@ import { Button } from "@/components/Button";
 
 export const metadata = {
   title: "Get involved",
+  description:
+    "Get involved with Teen Health — donate funds, food, or hygiene products, volunteer, or partner as a brand to support at-risk youth ages 13–24 across Southern California.",
 };
 
 export default function GetInvolvedPage() {

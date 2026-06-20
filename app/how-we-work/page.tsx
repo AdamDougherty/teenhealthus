@@ -4,6 +4,8 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata = {
     title: "How We Work",
+    description:
+        "See how Teen Health turns rescued food and donated products into dignity kits and care navigation for at-risk youth ages 13–24 across Southern California, delivered through local partner agencies.",
 };
 
 export default function HowWeWorkPage() {

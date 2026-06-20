@@ -2,6 +2,8 @@ import Image from "next/image";
 
 export const metadata = {
   title: "The California Regenerative Youth Land Initiative",
+  description:
+    "The California Regenerative Youth Land Initiative connects at-risk youth to regenerative land and fresh food — building nourishment and stability for young people across Southern California.",
 };
 
 const pageStyles = `

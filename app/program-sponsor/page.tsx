@@ -7,6 +7,8 @@ import { Button } from "@/components/Button";
 
 export const metadata = {
   title: "Programs",
+  description:
+    "Explore Teen Health's programs — the Dignity Kit Program, Youth Nutrition Initiative, and California Regenerative Youth Land Initiative — and how sponsors can fund food and essentials for at-risk youth.",
 };
 
 export default function ProgramsPage() {

@@ -5,6 +5,8 @@ import { Button } from "@/components/Button";
 
 export const metadata = {
     title: "Our Work",
+    description:
+        "Teen Health's impact: nourishing food, hydration, supplements, and hygiene delivered to 50,000+ vulnerable youth and young adults across Southern California through a network of partner agencies.",
 };
 
 export default function OurWorkPage() {
