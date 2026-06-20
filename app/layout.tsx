@@ -31,11 +31,12 @@ const organizationSchema = {
     "Teen Health is an Apple Valley, CA nonprofit delivering food, hydration, supplements, and hygiene and personal care support to at-risk youth ages 13–24 across Southern California, including Orange, Los Angeles, San Bernardino, Riverside, and San Diego counties.",
   email: site.contactEmail,
   nonprofitStatus: "Nonprofit501c3",
-  // Mailing address: street, ZIP, and phone pending verification from Teen Health.
+  // Mailing address: street + phone still pending verification from Teen Health.
   address: {
     "@type": "PostalAddress",
     addressLocality: "Apple Valley",
     addressRegion: "CA",
+    postalCode: "92307",
     addressCountry: "US",
   },
   areaServed: [
