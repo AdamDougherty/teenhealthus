@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
@@ -10,6 +11,9 @@ export const metadata = {
   description:
     "Teen Health is an Apple Valley, CA nonprofit delivering food, hydration, supplements, and hygiene to at-risk youth ages 13–24 across Southern California — with dignity and a next step.",
 };
+
+const linkClass =
+  "font-medium text-ink underline decoration-ink/40 underline-offset-2 transition hover:decoration-ink";
 
 export default function AboutPage() {
   return (
@@ -83,11 +87,35 @@ export default function AboutPage() {
               },
               {
                 h: "How to access services",
-                p: "At-risk youth reach Teen Health through partner agencies that distribute our kits directly. Teens, caregivers, and partner organizations can email info@teenhealth.us to connect with support nearby.",
+                p: (
+                  <>
+                    At-risk youth reach Teen Health through partner agencies that
+                    distribute our kits directly. Teens, caregivers, and partner
+                    organizations can email{" "}
+                    <a href="mailto:info@teenhealth.us" className={linkClass}>
+                      info@teenhealth.us
+                    </a>{" "}
+                    to connect with support nearby.
+                  </>
+                ),
               },
               {
                 h: "How to get involved",
-                p: "You can help by donating food and hygiene products, volunteering, giving monthly, or partnering as a brand. Visit our Get Involved page or email info@teenhealth.us to start.",
+                p: (
+                  <>
+                    You can help by donating food and hygiene products,
+                    volunteering, giving monthly, or partnering as a brand. Visit
+                    our{" "}
+                    <Link href="/get-involved" className={linkClass}>
+                      Get Involved
+                    </Link>{" "}
+                    page or email{" "}
+                    <a href="mailto:info@teenhealth.us" className={linkClass}>
+                      info@teenhealth.us
+                    </a>{" "}
+                    to start.
+                  </>
+                ),
               },
             ].map((item, index) => (
               <Reveal key={item.h} delay={Math.min(index * 0.05, 0.2)}>
