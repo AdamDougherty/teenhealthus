@@ -125,7 +125,7 @@ export default function ProgramsPage() {
                 </h3>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/70">
                   We are acquiring two working ranch properties in Southern
-                  California where unhoused young adults ages 18–29 live on-site,
+                  California where unhoused young adults ages 18–24 live on-site,
                   earn wages, build real skills, and prepare for permanent
                   housing — at their own pace, with real support behind them.
                   Regenerative agriculture, paid apprenticeships, enterprise

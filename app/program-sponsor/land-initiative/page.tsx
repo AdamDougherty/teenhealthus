@@ -709,7 +709,7 @@ export default function LandInitiativePage() {
             </h1>
             <p className="li-hero-sub">
               We&apos;re raising funds to acquire working farm properties in Southern
-              California where unhoused young adults ages 18–29 can{" "}
+              California where unhoused young adults ages 18–24 can{" "}
               <strong>
                 live on-site, earn wages, build real skills, and prepare for
                 permanent housing
@@ -762,7 +762,7 @@ export default function LandInitiativePage() {
                   <div className="li-hero-stat-label">Acres planned</div>
                 </div>
                 <div className="li-hero-stat">
-                  <div className="li-hero-stat-value">18–28</div>
+                  <div className="li-hero-stat-value">18–24</div>
                   <div className="li-hero-stat-label">Ages served</div>
                 </div>
                 <div className="li-hero-stat">
@@ -797,7 +797,7 @@ export default function LandInitiativePage() {
               <p className="li-col-body">
                 Youth experiencing homelessness need more than a bed — they need
                 structure, skills, income, and community. Housing instability among
-                ages 18–29 is frequently cyclical. Transitional shelters address
+                ages 18–24 is frequently cyclical. Transitional shelters address
                 the symptom, not the root cause.
               </p>
               <div className="li-callout li-callout-green">

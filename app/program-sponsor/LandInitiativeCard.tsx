@@ -18,7 +18,7 @@ export function LandInitiativeCard() {
                     The California Regenerative Youth Land&nbsp;Initiative
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                    We are acquiring two working ranch properties in Southern California where unhoused young adults ages 18–29 live on-site,<br className="hidden sm:inline" />{" "}
+                    We are acquiring two working ranch properties in Southern California where unhoused young adults ages 18–24 live on-site,<br className="hidden sm:inline" />{" "}
                     earn wages, build real skills, and prepare for permanent housing — at their own pace, with real support behind them.
                 </p>
             </div>
