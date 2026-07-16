@@ -16,10 +16,28 @@ export default function VolunteerPage() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formEl = e.currentTarget;
+    const formData = new FormData(formEl);
+
+    // Require at least one area of interest (matches the checkbox group above).
+    if (formData.getAll("interests").length === 0) {
+      setStatus("error");
+      setMessage("Please select at least one area you're interested in.");
+      return;
+    }
+
     setStatus("sending");
     setMessage("");
 
-    const payload = Object.fromEntries(new FormData(formEl).entries());
+    // Collapse multi-value checkbox groups (interests, availability) into a
+    // single comma-separated string per field so the email renders cleanly.
+    const payload: Record<string, string> = {};
+    for (const key of new Set(formData.keys())) {
+      const values = formData
+        .getAll(key)
+        .map((v) => String(v).trim())
+        .filter(Boolean);
+      if (values.length) payload[key] = values.join(", ");
+    }
 
     try {
       const res = await fetch("/api/contact", {
@@ -40,6 +58,25 @@ export default function VolunteerPage() {
 
   const inputClass =
     "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sun focus:ring-2 focus:ring-sun/20";
+
+  const tileClass =
+    "flex cursor-pointer items-center gap-3 rounded-xl border border-border px-4 py-3 text-sm text-ink transition-colors hover:border-sun has-[:checked]:border-sun has-[:checked]:bg-sun/5";
+
+  const interestOptions = [
+    "Warehouse & Packing",
+    "Logistics & Delivery",
+    "Skills-Based (Design, Dev, Marketing, etc.)",
+    "Events & Outreach",
+    "Group Volunteering",
+    "Administrative Support",
+  ];
+
+  const availabilityOptions = [
+    "Weekday (morning)",
+    "Weekday (evening)",
+    "Weekends",
+    "Flexible",
+  ];
 
   const volunteerJsonLd = {
     "@context": "https://schema.org",
@@ -328,20 +365,21 @@ export default function VolunteerPage() {
       {/* ─── VOLUNTEER FORM ─── */}
       <section id="volunteer-form" className="scroll-mt-24 py-20 sm:py-28">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
-            {/* Left — Text */}
+          <div className="grid items-start gap-16 lg:grid-cols-[360px_1fr]">
+            {/* Left — Intro & steps */}
             <div>
               <Reveal>
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                  Start making an impact
+                  Join us
                 </p>
                 <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
-                  Volunteer interest form
+                  Become a volunteer
                 </h2>
-                <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/80">
-                  Tell us a bit about yourself and how you'd like to help. We'll
-                  reach out with opportunities across Los Angeles and Southern
-                  California that match your interests and availability.
+                <p className="mt-6 text-lg leading-relaxed text-ink/80">
+                  Thanks for your interest in volunteering with Teen Health.
+                  Share your skills and availability, and we'll follow up with
+                  matching opportunities across Los Angeles and Southern
+                  California.
                 </p>
               </Reveal>
 
@@ -350,18 +388,18 @@ export default function VolunteerPage() {
                   {[
                     {
                       num: "01",
-                      title: "Share your interests",
-                      desc: "Tell us what kind of volunteer work excites you most.",
+                      title: "Tell us about you",
+                      desc: "Share your interests, skills, and availability.",
                     },
                     {
                       num: "02",
-                      title: "We'll reach out",
-                      desc: "Our team connects you with upcoming opportunities.",
+                      title: "We'll find your fit",
+                      desc: "Our team reaches out with opportunities that match what you're looking for.",
                     },
                     {
                       num: "03",
-                      title: "Start volunteering",
-                      desc: "Show up, contribute, and see the impact firsthand.",
+                      title: "Show up & make a difference",
+                      desc: "Join us for a shift, event, or project — and see your impact firsthand.",
                     },
                   ].map((step) => (
                     <div key={step.num}>
@@ -374,6 +412,18 @@ export default function VolunteerPage() {
                       </p>
                     </div>
                   ))}
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.15}>
+                <div className="mt-8 rounded-2xl border border-sky/15 bg-sky/5 p-5">
+                  <p className="text-base leading-relaxed text-ink/80">
+                    <strong className="mb-1 block font-semibold text-ink">
+                      Your time makes a real difference.
+                    </strong>
+                    Together we can support at-risk youth and young adults across
+                    our community.
+                  </p>
                 </div>
               </Reveal>
             </div>
@@ -399,88 +449,129 @@ export default function VolunteerPage() {
                   </div>
                 </Card>
               ) : (
-                <Card className="bg-white text-ink">
-                  <form onSubmit={onSubmit} className="space-y-5">
+                <Card className="bg-white p-8 text-ink sm:p-10">
+                  <form onSubmit={onSubmit} className="space-y-8" noValidate>
                     <input type="hidden" name="formType" value="volunteer" />
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                          First name <span className="text-sky">*</span>
-                        </span>
-                        <input required name="firstName" className={inputClass} placeholder="First name" />
-                      </label>
-                      <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                          Last name <span className="text-sky">*</span>
-                        </span>
-                        <input required name="lastName" className={inputClass} placeholder="Last name" />
-                      </label>
+
+                    {/* 1. Contact Information */}
+                    <div>
+                      <h3 className="text-base font-semibold text-ink">
+                        1. Contact information
+                      </h3>
+                      <hr className="mt-3 mb-5 border-t border-border" />
+                      <div className="space-y-5">
+                        <div className="grid gap-5 sm:grid-cols-2">
+                          <label className="block">
+                            <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                              First name <span className="text-sky">*</span>
+                            </span>
+                            <input required name="firstName" className={inputClass} placeholder="First name" />
+                          </label>
+                          <label className="block">
+                            <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                              Last name <span className="text-sky">*</span>
+                            </span>
+                            <input required name="lastName" className={inputClass} placeholder="Last name" />
+                          </label>
+                        </div>
+                        <div className="grid gap-5 sm:grid-cols-2">
+                          <label className="block">
+                            <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                              Email <span className="text-sky">*</span>
+                            </span>
+                            <input required type="email" name="email" className={inputClass} placeholder="you@example.com" />
+                          </label>
+                          <label className="block">
+                            <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                              City
+                            </span>
+                            <input name="city" className={inputClass} placeholder="City" />
+                          </label>
+                        </div>
+                      </div>
                     </div>
 
-                    <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                        Email <span className="text-sky">*</span>
-                      </span>
-                      <input required type="email" name="email" className={inputClass} placeholder="you@example.com" />
-                    </label>
-
-                    <fieldset>
-                      <legend className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                    {/* 2. Volunteer Interests */}
+                    <div>
+                      <h3 className="text-base font-semibold text-ink">
+                        2. Volunteer interests
+                      </h3>
+                      <hr className="mt-3 mb-5 border-t border-border" />
+                      <span className="mb-3 block text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
                         I'm interested in <span className="text-sky">*</span>
-                      </legend>
-                      <div className="mt-2 space-y-2">
-                        {[
-                          "Warehouse & Packing",
-                          "Logistics & Delivery",
-                          "Skills-Based (Design, Dev, Marketing, etc.)",
-                          "Events & Outreach",
-                          "Group Volunteering",
-                          "Whatever's Needed!",
-                        ].map((type) => (
-                          <label
-                            key={type}
-                            className="flex cursor-pointer items-center gap-3 rounded-xl border border-border px-4 py-2.5 text-sm text-ink transition-colors hover:border-sun has-[:checked]:border-sun has-[:checked]:bg-sun/5"
-                          >
+                      </span>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {interestOptions.map((type) => (
+                          <label key={type} className={tileClass}>
                             <input
-                              type="radio"
-                              name="volunteerInterest"
+                              type="checkbox"
+                              name="interests"
                               value={type}
-                              required
                               className="h-4 w-4 accent-sun"
                             />
                             {type}
                           </label>
                         ))}
                       </div>
-                    </fieldset>
+                    </div>
 
-                    <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
-                        Anything else?
+                    {/* 3. Availability */}
+                    <div>
+                      <h3 className="text-base font-semibold text-ink">
+                        3. Availability
+                      </h3>
+                      <hr className="mt-3 mb-5 border-t border-border" />
+                      <span className="mb-3 block text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                        When are you available?
                       </span>
-                      <textarea
-                        name="message"
-                        rows={3}
-                        className={inputClass}
-                        placeholder="Availability, experience, questions…"
-                      />
-                    </label>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {availabilityOptions.map((slot) => (
+                          <label key={slot} className={tileClass}>
+                            <input
+                              type="checkbox"
+                              name="availability"
+                              value={slot}
+                              className="h-4 w-4 accent-sun"
+                            />
+                            {slot}
+                          </label>
+                        ))}
+                      </div>
+                    </div>
 
-                    <input type="hidden" name="formType" value="volunteer" />
+                    {/* 4. Additional Information */}
+                    <div>
+                      <h3 className="text-base font-semibold text-ink">
+                        4. Additional information
+                      </h3>
+                      <hr className="mt-3 mb-5 border-t border-border" />
+                      <label className="block">
+                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+                          Anything else?
+                        </span>
+                        <textarea
+                          name="message"
+                          rows={4}
+                          className={inputClass}
+                          placeholder="Anything else you'd like us to know?"
+                        />
+                      </label>
+                    </div>
 
-                    <Button
-                      variant="primary"
-                      type="submit"
-                      disabled={status === "sending"}
-                      className="w-full"
-                      style={{ color: 'white' }}
-                    >
-                      {status === "sending" ? "Sending…" : "Submit interest form"}
-                    </Button>
-
-                    {status === "error" && (
-                      <p className="text-sm text-red-500">{message}</p>
-                    )}
+                    <div>
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        disabled={status === "sending"}
+                        className="w-full"
+                        style={{ color: "white" }}
+                      >
+                        {status === "sending" ? "Sending…" : "Join the volunteer community"}
+                      </Button>
+                      {status === "error" && (
+                        <p className="mt-3 text-center text-sm text-red-500">{message}</p>
+                      )}
+                    </div>
                   </form>
                 </Card>
               )}

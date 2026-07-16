@@ -703,7 +703,7 @@ export default function BrandPartnerPage() {
               #donate-product-form .dpf-field label, #donate-product-form .dpf-group > .dpf-group-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--navy-dark); margin-bottom: 8px; }
               #donate-product-form .dpf-required { color: var(--orange); }
               #donate-product-form .dpf-hint { font-size: 12.5px; color: var(--text-muted); margin: -3px 0 8px; }
-              #donate-product-form .dpf-field input[type="text"], #donate-product-form .dpf-field input[type="email"], #donate-product-form .dpf-field select, #donate-product-form .dpf-field textarea { width: 100%; font-size: 14.5px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s; }
+              #donate-product-form .dpf-field input[type="text"], #donate-product-form .dpf-field input[type="email"], #donate-product-form .dpf-field input[type="tel"], #donate-product-form .dpf-field select, #donate-product-form .dpf-field textarea { width: 100%; font-size: 14.5px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s; }
               #donate-product-form .dpf-field input:focus, #donate-product-form .dpf-field select:focus, #donate-product-form .dpf-field textarea:focus { outline: none; border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(47, 93, 179, 0.15); }
               #donate-product-form .dpf-field textarea { resize: vertical; min-height: 100px; }
               #donate-product-form .dpf-select-wrap { position: relative; }
@@ -801,10 +801,14 @@ export default function BrandPartnerPage() {
                     <input type="text" id="dpfCompany" name="company" placeholder="Company name" required />
                   </div>
                 </div>
-                <div className="dpf-row" style={{ gridTemplateColumns: "1fr" }}>
+                <div className="dpf-row">
                   <div className="dpf-field">
                     <label htmlFor="dpfEmail">Email <span className="dpf-required">*</span></label>
                     <input type="email" id="dpfEmail" name="email" placeholder="you@example.com" required />
+                  </div>
+                  <div className="dpf-field">
+                    <label htmlFor="dpfPhone">Phone number</label>
+                    <input type="tel" id="dpfPhone" name="phone" placeholder="(555) 123-4567" />
                   </div>
                 </div>
 
@@ -872,7 +876,7 @@ export default function BrandPartnerPage() {
                     <span className="dpf-group-label">Food storage type <span className="dpf-required">*</span></span>
                     <p className="dpf-hint">What is the storage condition of the food?</p>
                     <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
-                      {["Dry Goods", "Refrigerated", "Frozen"].map((type, i) => (
+                      {["Dry Goods", "Refrigerated", "Frozen", "N/A"].map((type, i) => (
                         <label className="dpf-tile" key={type}>
                           <input type="radio" name="storageType" value={type} required={i === 0} />
                           <span className="dpf-radio" />
@@ -886,7 +890,7 @@ export default function BrandPartnerPage() {
                     <span className="dpf-group-label">Donor type <span className="dpf-required">*</span></span>
                     <p className="dpf-hint">Are you donating as a business or individual?</p>
                     <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
-                      {["Business / Farm", "Individual"].map((type, i) => (
+                      {["Business", "Farm", "Individual"].map((type, i) => (
                         <label className="dpf-tile" key={type}>
                           <input type="radio" name="donorType" value={type} required={i === 0} />
                           <span className="dpf-radio" />
