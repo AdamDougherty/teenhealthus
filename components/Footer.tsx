@@ -69,6 +69,9 @@ export function Footer() {
                 <Link href="/get-involved#partner" className="block hover:text-ink">
                   Partner
                 </Link>
+                <a href="mailto:info@teenhealth.us" className="block hover:text-ink">
+                  Contact
+                </a>
               </div>
             </div>
 

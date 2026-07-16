@@ -48,11 +48,11 @@ export function HeroSection() {
               Give today
             </Button>
             <Button
-              href="/program-sponsor"
+              href="/volunteer"
               variant="ghost"
               className="text-white hover:bg-white/10"
             >
-              Explore programs
+              Volunteer
             </Button>
           </div>
         </Reveal>

@@ -24,6 +24,26 @@ export default function HomePage() {
       {/* Hero */}
       <HeroSection />
 
+      {/* Quick ways to get involved */}
+      <section className="border-b border-border bg-[#f8f7f4]">
+        <Container className="py-6 sm:py-8">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-ink/50">
+            More ways to get involved
+          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <Button href="/brand-partner" variant="ghost" className="border border-border hover:border-ink/30">
+              Become a Partner
+            </Button>
+            <Button href="/program-sponsor" variant="ghost" className="border border-border hover:border-ink/30">
+              Sponsor a Program
+            </Button>
+            <Button href="/give-monthly" variant="ghost" className="border border-border hover:border-ink/30">
+              Give Monthly
+            </Button>
+          </div>
+        </Container>
+      </section>
+
       {/* Why */}
       <section className="bg-transparent py-16 sm:py-20">
         <Container>
