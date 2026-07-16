@@ -195,40 +195,33 @@ export default function VolunteerPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: "📦",
                 label: "Warehouse & packing",
                 desc: "Sort donated products, assemble essential kits, and prep shipments for partner agencies.",
               },
               {
-                icon: "🚚",
                 label: "Logistics & delivery",
                 desc: "Help coordinate pickups, manage inventory, and deliver kits to distribution partners.",
               },
               {
-                icon: "💡",
                 label: "Skills-based",
                 desc: "Lend expertise in design, development, fundraising, grant writing, marketing, or operations.",
               },
               {
-                icon: "📸",
                 label: "Events & outreach",
                 desc: "Support community events, capture photos and video, and help spread the word in your community.",
               },
               {
-                icon: "📋",
                 label: "Admin & data",
                 desc: "Assist with data entry, donor outreach, scheduling, filing, and behind-the-scenes organizational support.",
               },
               {
-                icon: "🤝",
                 label: "Group volunteering",
                 desc: "Organize a team from your company, school, or community group for a packing day.",
               },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.05}>
                 <Card className="h-full">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
+                  <div className="text-sm font-semibold tracking-tight text-ink">
                     {item.label}
                   </div>
                   <p className="mt-2 text-base leading-relaxed text-pretty text-ink/80">{item.desc}</p>

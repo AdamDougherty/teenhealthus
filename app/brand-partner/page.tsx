@@ -348,19 +348,18 @@ export default function BrandPartnerPage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "🍎", label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
-              { icon: "💧", label: "Beverages", desc: "Water, electrolyte drinks, and functional beverages." },
-              { icon: "⚡", label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
-              { icon: "🧴", label: "Natural personal care", desc: "Natural hygiene products, skincare, and dental care." },
-              { icon: "💦", label: "Hydration mixes", desc: "Electrolyte powders, hydration packets, and drink mixes." },
-              { icon: "👕", label: "Apparel & clothing", desc: "Clothing, outerwear, and accessories for youth in need." },
-              { icon: "🎒", label: "Backpacks", desc: "Everyday carry essentials for youth on the move." },
-              { icon: "⛺", label: "Tents & sleeping bags", desc: "Shelter essentials for homeless and at-risk youth." },
+              { label: "Healthy foods", desc: "Snacks, bars, cereals, and shelf-stable meals." },
+              { label: "Beverages", desc: "Water, electrolyte drinks, and functional beverages." },
+              { label: "Supplements", desc: "Vitamins, minerals, and wellness products." },
+              { label: "Natural personal care", desc: "Natural hygiene products, skincare, and dental care." },
+              { label: "Hydration mixes", desc: "Electrolyte powders, hydration packets, and drink mixes." },
+              { label: "Apparel & clothing", desc: "Clothing, outerwear, and accessories for youth in need." },
+              { label: "Backpacks", desc: "Everyday carry essentials for youth on the move." },
+              { label: "Tents & sleeping bags", desc: "Shelter essentials for homeless and at-risk youth." },
             ].map((item, i) => (
               <Reveal key={item.label} delay={i * 0.06}>
                 <Card className="text-center">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div className="mt-3 text-sm font-semibold tracking-tight text-ink">
+                  <div className="text-sm font-semibold tracking-tight text-ink">
                     {item.label}
                   </div>
                   <p className="mt-2 text-sm leading-relaxed text-ink text-pretty">{item.desc}</p>
