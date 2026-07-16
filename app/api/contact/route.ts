@@ -3,7 +3,7 @@ import sgMail from "@sendgrid/mail";
 
 const FORM_LABELS: Record<string, string> = {
   volunteer: "Volunteer signup",
-  "brand-partner": "Brand partner inquiry",
+  "product-donation": "Brand partner inquiry",
   contact: "Contact form",
 };
 
