@@ -69,9 +69,6 @@ export default function BrandPartnerPage() {
     }
   }
 
-  const inputClass =
-    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sun focus:ring-2 focus:ring-sun/20";
-
   return (
     <div className="bg-white">
       {/* ——— HERO ——— */}
@@ -662,194 +659,262 @@ export default function BrandPartnerPage() {
       </section>
 
       {/* â”€â”€â”€ PRODUCT DONATION FORM â”€â”€â”€ */}
-      <section id="donate-product-form" className="scroll-mt-24 py-20 sm:py-28">
-        <Container>
-          <div className="grid gap-16 lg:grid-cols-[1fr_420px]">
-            {/* Left â€” Text */}
-            <div>
-              <Reveal>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink/50">
-                  Get started
-                </p>
-                <h2 className="mt-4 font-serif text-3xl font-normal tracking-tight sm:text-4xl">
-                  Start a product donation.
-                </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-ink/80">
-                  Tell us about your product and our team will follow up within a
-                  few business days to coordinate logistics.
-                </p>
-              </Reveal>
+      <section id="donate-product-form" className="scroll-mt-24">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              #donate-product-form {
+                --navy: #1c3a6e;
+                --navy-dark: #14294f;
+                --blue-accent: #2f5db3;
+                --orange: #f0781f;
+                --orange-dark: #d9660f;
+                --bg: #f7f6f3;
+                --card-bg: #ffffff;
+                --border: #dfe2e7;
+                --text: #1f2430;
+                --text-muted: #5b6270;
+                padding: 64px 24px;
+                background: var(--bg);
+                color: var(--text);
+              }
+              #donate-product-form .dpf-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: start; }
+              @media (max-width: 900px) { #donate-product-form .dpf-wrap { grid-template-columns: 1fr; } }
+              #donate-product-form .dpf-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--blue-accent); margin-bottom: 12px; }
+              #donate-product-form .dpf-heading { font-family: Georgia, "Times New Roman", serif; font-size: 36px; font-weight: 400; letter-spacing: -0.01em; line-height: 1.15; color: var(--navy-dark); margin: 0 0 18px; }
+              #donate-product-form .dpf-sub { font-size: 16px; line-height: 1.6; color: var(--text-muted); margin: 0 0 36px; }
+              #donate-product-form .dpf-step { display: flex; gap: 18px; padding: 22px 0; border-top: 1px solid var(--border); }
+              #donate-product-form .dpf-step:first-of-type { border-top: none; padding-top: 0; }
+              #donate-product-form .dpf-step-num { font-family: Georgia, serif; font-size: 24px; color: rgba(28, 58, 110, 0.65); font-weight: 400; margin: 0 0 4px; }
+              #donate-product-form .dpf-step-title { font-size: 17px; font-weight: 600; color: var(--text); margin: 0 0 6px; }
+              #donate-product-form .dpf-step-desc { font-size: 14px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+              #donate-product-form .dpf-callout { margin-top: 28px; background: #e7edf9; border-radius: 12px; padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
+              #donate-product-form .dpf-callout p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--navy-dark); }
+              #donate-product-form .dpf-callout strong { display: block; margin-bottom: 2px; }
+              #donate-product-form .dpf-card { background: var(--card-bg); border-radius: 16px; box-shadow: 0 10px 40px rgba(20, 41, 79, 0.08); padding: 40px; }
+              @media (max-width: 560px) { #donate-product-form .dpf-card { padding: 24px; } }
+              #donate-product-form .dpf-section-head { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+              #donate-product-form .dpf-section-head:not(:first-child) { margin-top: 34px; }
+              #donate-product-form .dpf-section-head h3 { font-size: 18px; font-weight: 600; color: var(--navy-dark); margin: 0; }
+              #donate-product-form .dpf-section-sub { font-size: 13px; color: var(--text-muted); margin: 0 0 16px; }
+              #donate-product-form .dpf-hr { border: none; border-top: 1px solid var(--border); margin: 0 0 20px; }
+              #donate-product-form .dpf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 18px; }
+              @media (max-width: 700px) { #donate-product-form .dpf-row { grid-template-columns: 1fr; } }
+              #donate-product-form .dpf-field label, #donate-product-form .dpf-group > .dpf-group-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--navy-dark); margin-bottom: 8px; }
+              #donate-product-form .dpf-required { color: var(--orange); }
+              #donate-product-form .dpf-hint { font-size: 12.5px; color: var(--text-muted); margin: -3px 0 8px; }
+              #donate-product-form .dpf-field input[type="text"], #donate-product-form .dpf-field input[type="email"], #donate-product-form .dpf-field select, #donate-product-form .dpf-field textarea { width: 100%; font-size: 14.5px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); font-family: inherit; transition: border-color 0.15s, box-shadow 0.15s; }
+              #donate-product-form .dpf-field input:focus, #donate-product-form .dpf-field select:focus, #donate-product-form .dpf-field textarea:focus { outline: none; border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(47, 93, 179, 0.15); }
+              #donate-product-form .dpf-field textarea { resize: vertical; min-height: 100px; }
+              #donate-product-form .dpf-select-wrap { position: relative; }
+              #donate-product-form .dpf-select-wrap select { appearance: none; -webkit-appearance: none; padding-right: 36px; }
+              #donate-product-form .dpf-select-wrap::after { content: ""; position: absolute; right: 14px; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--text-muted); border-bottom: 2px solid var(--text-muted); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+              #donate-product-form .dpf-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+              @media (max-width: 560px) { #donate-product-form .dpf-tiles { grid-template-columns: 1fr; } }
+              #donate-product-form .dpf-tile { position: relative; display: flex; align-items: center; gap: 10px; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; cursor: pointer; font-size: 14px; color: var(--text); background: #fff; transition: border-color 0.15s, background 0.15s; }
+              #donate-product-form .dpf-tile:hover { border-color: var(--blue-accent); }
+              #donate-product-form .dpf-tile input { position: absolute; opacity: 0; pointer-events: none; }
+              #donate-product-form .dpf-tile .dpf-radio { flex: 0 0 auto; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #c6cbd3; display: inline-block; position: relative; }
+              #donate-product-form .dpf-tile input:checked ~ .dpf-radio { border-color: var(--blue-accent); }
+              #donate-product-form .dpf-tile input:checked ~ .dpf-radio::after { content: ""; position: absolute; inset: 2px; border-radius: 50%; background: var(--blue-accent); }
+              #donate-product-form .dpf-tile:has(input:checked) { border-color: var(--blue-accent); background: #eef3fc; }
+              #donate-product-form .dpf-submit { width: 100%; margin-top: 28px; background: var(--orange); color: #fff; border: none; border-radius: 10px; padding: 16px 20px; font-size: 15.5px; font-weight: 700; letter-spacing: 0.01em; cursor: pointer; transition: background 0.15s; }
+              #donate-product-form .dpf-submit:hover { background: var(--orange-dark); }
+              #donate-product-form .dpf-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+              #donate-product-form .dpf-status { margin-top: 14px; font-size: 13.5px; text-align: center; }
+              #donate-product-form .dpf-status.dpf-err { color: #b3261e; }
+              #donate-product-form .dpf-success { text-align: center; padding: 24px 0; }
+              #donate-product-form .dpf-success-icon { width: 48px; height: 48px; border-radius: 50%; background: #e7f6ec; color: #1b7a3d; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+              #donate-product-form .dpf-success h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; color: var(--navy-dark); margin: 0 0 8px; }
+              #donate-product-form .dpf-success p { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+            `,
+          }}
+        />
+        <div className="dpf-wrap">
+          {/* LEFT: intro / steps */}
+          <div className="dpf-intro">
+            <div className="dpf-eyebrow">GET STARTED</div>
+            <h2 className="dpf-heading">Start a product donation.</h2>
+            <p className="dpf-sub">
+              Tell us about your product and our team will follow up within a few
+              business days to coordinate logistics and connect you with the right
+              partners.
+            </p>
 
-              <Reveal delay={0.1}>
-                <div className="mt-12 grid gap-8">
-                  {[
-                    {
-                      num: "01",
-                      title: "Describe your product",
-                      desc: "Share details about the type, quantity, and condition of your inventory.",
-                    },
-                    {
-                      num: "02",
-                      title: "We'll review & connect",
-                      desc: "Our team evaluates the fit and reaches out to coordinate next steps.",
-                    },
-                    {
-                      num: "03",
-                      title: "Schedule pickup or ship",
-                      desc: "We arrange logistics so your product reaches youth quickly.",
-                    },
-                  ].map((step) => (
-                    <div key={step.num}>
-                      <div className="font-serif text-3xl font-normal text-navy/65">
-                        {step.num}
-                      </div>
-                      <div className="mt-3 text-lg font-semibold">{step.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/80">
-                        {step.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
+            <div className="dpf-step">
+              <div>
+                <p className="dpf-step-num">01</p>
+                <p className="dpf-step-title">Tell us about your donation</p>
+                <p className="dpf-step-desc">Share details about your product, storage type, quantity, and how you&rsquo;d like to donate.</p>
+              </div>
             </div>
 
-            {/* Right â€” Form Card */}
-            <Reveal delay={0.05}>
-              {status === "sent" ? (
-                <Card className="border-mint/20 bg-mint/10">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mint/20">
-                      <svg className="h-5 w-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-normal tracking-tight text-ink">
-                        We got your submission!
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                        {message}
-                      </p>
+            <div className="dpf-step">
+              <div>
+                <p className="dpf-step-num">02</p>
+                <p className="dpf-step-title">We&rsquo;ll review &amp; connect</p>
+                <p className="dpf-step-desc">Our team evaluates the fit and reaches out to coordinate next steps and find the best match.</p>
+              </div>
+            </div>
+
+            <div className="dpf-step">
+              <div>
+                <p className="dpf-step-num">03</p>
+                <p className="dpf-step-title">Schedule pickup or delivery</p>
+                <p className="dpf-step-desc">We arrange logistics so your donation reaches those who need it quickly and safely.</p>
+              </div>
+            </div>
+
+            <div className="dpf-callout">
+              <p><strong>Your donations make a real difference.</strong>Together we can fight hunger and strengthen our community.</p>
+            </div>
+          </div>
+
+          {/* RIGHT: form */}
+          <div className="dpf-card">
+            {status === "sent" ? (
+              <div className="dpf-success">
+                <div className="dpf-success-icon">
+                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3>We got your submission!</h3>
+                <p>{message}</p>
+              </div>
+            ) : (
+              <form onSubmit={onSubmit}>
+                <input type="hidden" name="formType" value="product-donation" />
+
+                <div className="dpf-section-head">
+                  <h3>1. Contact Information</h3>
+                </div>
+                <hr className="dpf-hr" />
+
+                <div className="dpf-row">
+                  <div className="dpf-field">
+                    <label htmlFor="dpfName">Contact name <span className="dpf-required">*</span></label>
+                    <input type="text" id="dpfName" name="contactName" placeholder="Your name" required />
+                  </div>
+                  <div className="dpf-field">
+                    <label htmlFor="dpfCompany">Company <span className="dpf-required">*</span></label>
+                    <input type="text" id="dpfCompany" name="company" placeholder="Company name" required />
+                  </div>
+                </div>
+                <div className="dpf-row" style={{ gridTemplateColumns: "1fr" }}>
+                  <div className="dpf-field">
+                    <label htmlFor="dpfEmail">Email <span className="dpf-required">*</span></label>
+                    <input type="email" id="dpfEmail" name="email" placeholder="you@example.com" required />
+                  </div>
+                </div>
+
+                <div className="dpf-section-head">
+                  <h3>2. Organization &amp; Interests</h3>
+                </div>
+                <hr className="dpf-hr" />
+
+                <div className="dpf-row">
+                  <div className="dpf-field">
+                    <label htmlFor="dpfIndustry">Industry <span className="dpf-required">*</span></label>
+                    <div className="dpf-select-wrap">
+                      <select id="dpfIndustry" name="industry" defaultValue="" required>
+                        <option value="" disabled>Select industry…</option>
+                        <option>Food &amp; Beverage</option>
+                        <option>Supplements &amp; Nutrition</option>
+                        <option>Personal Care / Hygiene</option>
+                        <option>Apparel / Lifestyle</option>
+                        <option>Other</option>
+                      </select>
                     </div>
                   </div>
-                </Card>
-              ) : (
-                <Card className="bg-white text-ink">
-                  <form onSubmit={onSubmit} className="space-y-5">
-                    <input type="hidden" name="formType" value="brand-partner" />
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                          Contact name <span className="text-navy">*</span>
-                        </span>
-                        <input required name="contactName" className={inputClass} placeholder="Your name" />
-                      </label>
-                      <label className="block">
-                        <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                          Company <span className="text-navy">*</span>
-                        </span>
-                        <input required name="company" className={inputClass} placeholder="Company name" />
-                      </label>
+                  <div className="dpf-field">
+                    <label htmlFor="dpfInterest">Partnership interest <span className="dpf-required">*</span></label>
+                    <div className="dpf-select-wrap">
+                      <select id="dpfInterest" name="partnershipInterest" defaultValue="" required>
+                        <option value="" disabled>Select interest…</option>
+                        <option>Product donation (excess inventory)</option>
+                        <option>Marketing &amp; brand integration</option>
+                        <option>ESG / CSR reporting sponsor</option>
+                        <option>Employee engagement / volunteer events</option>
+                        <option>Other / multiple</option>
+                      </select>
                     </div>
+                  </div>
+                </div>
 
-                    <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                        Email <span className="text-navy">*</span>
-                      </span>
-                      <input required type="email" name="email" className={inputClass} placeholder="you@example.com" />
-                    </label>
+                <div className="dpf-group" style={{ marginBottom: "18px" }}>
+                  <span className="dpf-group-label">Product type <span className="dpf-required">*</span></span>
+                  <div className="dpf-tiles">
+                    {[
+                      "Healthy Foods",
+                      "Beverages / Hydration",
+                      "Supplements",
+                      "Personal Care",
+                      "Mixed / Other",
+                    ].map((type, i) => (
+                      <label className="dpf-tile" key={type}>
+                        <input type="radio" name="productType" value={type} required={i === 0} />
+                        <span className="dpf-radio" />
+                        {type}
+                      </label>
+                    ))}
+                  </div>
+                </div>
 
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <label className="block">
-                        <span className="block min-h-[2lh] text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                          Industry <span className="text-navy">*</span>
-                        </span>
-                        <select required name="industry" className={inputClass} defaultValue="">
-                          <option value="" disabled>Select industry…</option>
-                          <option value="Food & Beverage">Food &amp; Beverage</option>
-                          <option value="Supplements & Nutrition">Supplements &amp; Nutrition</option>
-                          <option value="Personal Care / Hygiene">Personal Care / Hygiene</option>
-                          <option value="Apparel / Lifestyle">Apparel / Lifestyle</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </label>
-                      <label className="block">
-                        <span className="block min-h-[2lh] text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                          Partnership interest <span className="text-navy">*</span>
-                        </span>
-                        <select required name="partnershipInterest" className={inputClass} defaultValue="">
-                          <option value="" disabled>Select interest…</option>
-                          <option value="Product Donation">Product donation (excess inventory)</option>
-                          <option value="Marketing & Brand Integration">Marketing &amp; brand integration</option>
-                          <option value="ESG / CSR Sponsor">ESG / CSR reporting sponsor</option>
-                          <option value="Employee Engagement">Employee engagement / volunteer events</option>
-                          <option value="Other / Multiple">Other / multiple</option>
-                        </select>
-                      </label>
+                <div className="dpf-section-head">
+                  <h3>3. Donation Details</h3>
+                </div>
+                <p className="dpf-section-sub">This helps us plan handling and logistics.</p>
+                <hr className="dpf-hr" style={{ marginTop: "-10px" }} />
+
+                <div className="dpf-row">
+                  <div className="dpf-group">
+                    <span className="dpf-group-label">Food storage type <span className="dpf-required">*</span></span>
+                    <p className="dpf-hint">What is the storage condition of the food?</p>
+                    <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
+                      {["Dry Goods", "Refrigerated", "Frozen"].map((type, i) => (
+                        <label className="dpf-tile" key={type}>
+                          <input type="radio" name="storageType" value={type} required={i === 0} />
+                          <span className="dpf-radio" />
+                          {type}
+                        </label>
+                      ))}
                     </div>
+                  </div>
 
-                    <fieldset>
-                      <legend className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                        Product type <span className="text-navy">*</span>
-                      </legend>
-                      <div className="mt-2 space-y-2">
-                        {[
-                          "Healthy Foods",
-                          "Beverages / Hydration",
-                          "Supplements",
-                          "Personal Care",
-                          "Mixed / Other",
-                        ].map((type) => (
-                          <label
-                            key={type}
-                            className="flex cursor-pointer items-center gap-3 rounded-xl border border-border px-4 py-2.5 text-sm text-ink transition-colors hover:border-sun has-[:checked]:border-sun has-[:checked]:bg-sun/5"
-                          >
-                            <input
-                              type="radio"
-                              name="productType"
-                              value={type}
-                              required
-                              className="h-4 w-4 accent-sun"
-                            />
-                            {type}
-                          </label>
-                        ))}
-                      </div>
-                    </fieldset>
+                  <div className="dpf-group">
+                    <span className="dpf-group-label">Donor type <span className="dpf-required">*</span></span>
+                    <p className="dpf-hint">Are you donating as a business or individual?</p>
+                    <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
+                      {["Business / Farm", "Individual"].map((type, i) => (
+                        <label className="dpf-tile" key={type}>
+                          <input type="radio" name="donorType" value={type} required={i === 0} />
+                          <span className="dpf-radio" />
+                          {type}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
-                    <label className="block">
-                      <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/80">
-                        Tell us about the product
-                      </span>
-                      <textarea
-                        name="message"
-                        rows={3}
-                        className={inputClass}
-                        placeholder="Quantity, condition, timing, and any other details…"
-                      />
-                    </label>
+                <div className="dpf-section-head">
+                  <h3>4. Product Information</h3>
+                </div>
+                <hr className="dpf-hr" />
 
-                    <input type="hidden" name="formType" value="product-donation" />
+                <div className="dpf-field" style={{ marginBottom: "6px" }}>
+                  <label htmlFor="dpfDetails">Additional Information</label>
+                  <textarea id="dpfDetails" name="productDetails" placeholder="Quantity, condition, timing, and any other details that will help us understand your donation." />
+                </div>
 
-                    <Button
-                      variant="primary"
-                      type="submit"
-                      disabled={status === "sending"}
-                      className="w-full"
-                      style={{ backgroundColor: '#FF8005', color: 'white' }}
-                    >
-                      {status === "sending" ? "Sending…" : "Submit donation inquiry"}
-                    </Button>
-
-                    {status === "error" && (
-                      <p className="text-sm text-red-500">{message}</p>
-                    )}
-                  </form>
-                </Card>
-              )}
-            </Reveal>
+                <button type="submit" className="dpf-submit" disabled={status === "sending"}>
+                  {status === "sending" ? "Submitting…" : "Submit donation inquiry"}
+                </button>
+                {status === "error" && <p className="dpf-status dpf-err">{message}</p>}
+              </form>
+            )}
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* ——— FINAL CTA ——— */}
