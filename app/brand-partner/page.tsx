@@ -47,10 +47,20 @@ export default function BrandPartnerPage() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formEl = e.currentTarget;
+
+    const formData = new FormData(formEl);
+    const productTypes = formData.getAll("productType");
+    if (productTypes.length === 0) {
+      setStatus("error");
+      setMessage("Please select at least one product type.");
+      return;
+    }
+
     setStatus("sending");
     setMessage("");
 
-    const payload = Object.fromEntries(new FormData(formEl).entries());
+    const payload: Record<string, FormDataEntryValue> = Object.fromEntries(formData.entries());
+    payload.productType = productTypes.map(String).join(", ");
 
     try {
       const res = await fetch("/api/contact", {
@@ -716,6 +726,9 @@ export default function BrandPartnerPage() {
               #donate-product-form .dpf-tile .dpf-radio { flex: 0 0 auto; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #c6cbd3; display: inline-block; position: relative; }
               #donate-product-form .dpf-tile input:checked ~ .dpf-radio { border-color: var(--blue-accent); }
               #donate-product-form .dpf-tile input:checked ~ .dpf-radio::after { content: ""; position: absolute; inset: 2px; border-radius: 50%; background: var(--blue-accent); }
+              #donate-product-form .dpf-tile .dpf-check { flex: 0 0 auto; width: 16px; height: 16px; border-radius: 4px; border: 2px solid #c6cbd3; display: inline-block; position: relative; }
+              #donate-product-form .dpf-tile input:checked ~ .dpf-check { border-color: var(--blue-accent); background: var(--blue-accent); }
+              #donate-product-form .dpf-tile input:checked ~ .dpf-check::after { content: ""; position: absolute; left: 4px; top: 1px; width: 4px; height: 8px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); }
               #donate-product-form .dpf-tile:has(input:checked) { border-color: var(--blue-accent); background: #eef3fc; }
               #donate-product-form .dpf-submit { width: 100%; margin-top: 28px; background: var(--orange); color: #fff; border: none; border-radius: 10px; padding: 16px 20px; font-size: 15.5px; font-weight: 700; letter-spacing: 0.01em; cursor: pointer; transition: background 0.15s; }
               #donate-product-form .dpf-submit:hover { background: var(--orange-dark); }
@@ -854,10 +867,10 @@ export default function BrandPartnerPage() {
                       "Supplements",
                       "Personal Care",
                       "Mixed / Other",
-                    ].map((type, i) => (
+                    ].map((type) => (
                       <label className="dpf-tile" key={type}>
-                        <input type="radio" name="productType" value={type} required={i === 0} />
-                        <span className="dpf-radio" />
+                        <input type="checkbox" name="productType" value={type} />
+                        <span className="dpf-check" />
                         {type}
                       </label>
                     ))}
@@ -875,7 +888,7 @@ export default function BrandPartnerPage() {
                     <span className="dpf-group-label">Food storage type <span className="dpf-required">*</span></span>
                     <p className="dpf-hint">What is the storage condition of the food?</p>
                     <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
-                      {["Dry Goods", "Refrigerated", "Frozen", "N/A"].map((type, i) => (
+                      {["Dry Goods", "Refrigerated", "Frozen", "Not Applicable"].map((type, i) => (
                         <label className="dpf-tile" key={type}>
                           <input type="radio" name="storageType" value={type} required={i === 0} />
                           <span className="dpf-radio" />
