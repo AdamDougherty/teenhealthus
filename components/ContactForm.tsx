@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/Button";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -25,10 +25,10 @@ export function ContactForm() {
       });
 
       if (!res.ok) throw new Error("Request failed");
-      const data = (await res.json()) as { ok: boolean; message?: string };
-      setStatus("sent");
-      setMessage(data.message ?? "Thanks! We’ll be in touch.");
       formEl.reset();
+      // Full page load (not client-side nav) so the Google tag reliably
+      // records the /thank-you visit for conversion tracking.
+      window.location.assign("/thank-you");
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
@@ -84,7 +84,7 @@ export function ContactForm() {
         </Button>
 
         <p className="text-sm text-ink/70">
-          {status === "sent" ? "Sent." : status === "error" ? "Error." : null}
+          {status === "error" ? "Error." : null}
         </p>
       </div>
 

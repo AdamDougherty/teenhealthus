@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 import { PartnerLogoGrid } from "@/components/PartnerLogoGrid";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "error";
 
 
 
@@ -16,6 +16,16 @@ export default function BrandPartnerPage() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [storageTypes, setStorageTypes] = useState<string[]>([]);
+
+  function toggleStorageType(type: string, checked: boolean) {
+    setStorageTypes((prev) => {
+      if (!checked) return prev.filter((t) => t !== type);
+      // "Not Applicable" can't be combined with real storage conditions
+      if (type === "Not Applicable") return ["Not Applicable"];
+      return [...prev.filter((t) => t !== "Not Applicable"), type];
+    });
+  }
 
   const faqs = [
     {
@@ -55,12 +65,19 @@ export default function BrandPartnerPage() {
       setMessage("Please select at least one product type.");
       return;
     }
+    const selectedStorageTypes = formData.getAll("storageType");
+    if (selectedStorageTypes.length === 0) {
+      setStatus("error");
+      setMessage("Please select at least one food storage type.");
+      return;
+    }
 
     setStatus("sending");
     setMessage("");
 
     const payload: Record<string, FormDataEntryValue> = Object.fromEntries(formData.entries());
     payload.productType = productTypes.map(String).join(", ");
+    payload.storageType = selectedStorageTypes.map(String).join(", ");
 
     try {
       const res = await fetch("/api/contact", {
@@ -70,9 +87,10 @@ export default function BrandPartnerPage() {
       });
 
       if (!res.ok) throw new Error("Request failed");
-      setStatus("sent");
-      setMessage("Thanks for your interest in partnering with us! We'll be in touch soon.");
       formEl.reset();
+      // Full page load (not client-side nav) so the Google tag reliably
+      // records the /thank-you visit for conversion tracking.
+      window.location.assign("/thank-you");
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
@@ -784,18 +802,7 @@ export default function BrandPartnerPage() {
 
           {/* RIGHT: form */}
           <div className="dpf-card">
-            {status === "sent" ? (
-              <div className="dpf-success">
-                <div className="dpf-success-icon">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3>We got your submission!</h3>
-                <p>{message}</p>
-              </div>
-            ) : (
-              <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
                 <input type="hidden" name="formType" value="product-donation" />
 
                 <div className="dpf-section-head">
@@ -886,12 +893,18 @@ export default function BrandPartnerPage() {
                 <div className="dpf-row">
                   <div className="dpf-group">
                     <span className="dpf-group-label">Food storage type <span className="dpf-required">*</span></span>
-                    <p className="dpf-hint">What is the storage condition of the food?</p>
+                    <p className="dpf-hint">Select all storage conditions that apply.</p>
                     <div className="dpf-tiles" style={{ gridTemplateColumns: "1fr" }}>
-                      {["Dry Goods", "Refrigerated", "Frozen", "Not Applicable"].map((type, i) => (
+                      {["Dry Goods", "Refrigerated", "Frozen", "Not Applicable"].map((type) => (
                         <label className="dpf-tile" key={type}>
-                          <input type="radio" name="storageType" value={type} required={i === 0} />
-                          <span className="dpf-radio" />
+                          <input
+                            type="checkbox"
+                            name="storageType"
+                            value={type}
+                            checked={storageTypes.includes(type)}
+                            onChange={(e) => toggleStorageType(type, e.target.checked)}
+                          />
+                          <span className="dpf-check" />
                           {type}
                         </label>
                       ))}
@@ -928,7 +941,6 @@ export default function BrandPartnerPage() {
                 </button>
                 {status === "error" && <p className="dpf-status dpf-err">{message}</p>}
               </form>
-            )}
           </div>
         </div>
       </section>

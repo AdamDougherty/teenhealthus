@@ -7,7 +7,7 @@ import { Card } from "@/components/Card";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "error";
 
 export default function VolunteerPage() {
   const [status, setStatus] = useState<Status>("idle");
@@ -47,9 +47,10 @@ export default function VolunteerPage() {
       });
 
       if (!res.ok) throw new Error("Request failed");
-      setStatus("sent");
-      setMessage("Thanks for your interest in volunteering! We'll be in touch soon.");
       formEl.reset();
+      // Full page load (not client-side nav) so the Google tag reliably
+      // records the /thank-you visit for conversion tracking.
+      window.location.assign("/thank-you");
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
@@ -57,10 +58,10 @@ export default function VolunteerPage() {
   }
 
   const inputClass =
-    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-sun focus:ring-2 focus:ring-sun/20";
+    "mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-[#2f5db3] focus:ring-2 focus:ring-[#2f5db3]/20";
 
   const tileClass =
-    "flex cursor-pointer items-center gap-3 rounded-xl border border-border px-4 py-3 text-sm text-ink transition-colors hover:border-sun has-[:checked]:border-sun has-[:checked]:bg-sun/5";
+    "flex cursor-pointer items-center gap-3 rounded-xl border border-border px-4 py-3 text-sm text-ink transition-colors hover:border-[#2f5db3] has-[:checked]:border-[#2f5db3] has-[:checked]:bg-[#eef3fc]";
 
   const interestOptions = [
     "Warehouse & Packing",
@@ -72,8 +73,8 @@ export default function VolunteerPage() {
   ];
 
   const availabilityOptions = [
-    "Weekday (morning)",
-    "Weekday (evening)",
+    "Weekdays (mornings)",
+    "Weekdays (evenings)",
     "Weekends",
     "Flexible",
   ];
@@ -152,7 +153,7 @@ export default function VolunteerPage() {
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif font-normal tracking-tight text-white" style={{ lineHeight: 1.1 }}>
                 <span className="block text-xl font-sans font-medium tracking-wide text-white/90 sm:text-2xl">
-                  Volunteer in Los Angeles
+                  Volunteer in Southern California
                 </span>
                 <span className="mt-3 block text-3xl sm:text-4xl lg:text-5xl">
                   Your Time Makes a
@@ -423,25 +424,6 @@ export default function VolunteerPage() {
 
             {/* Right — Form Card */}
             <Reveal delay={0.05}>
-              {status === "sent" ? (
-                <Card className="border-mint/20 bg-mint/10">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mint/20">
-                      <svg className="h-5 w-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-normal tracking-tight text-ink">
-                        We got your submission!
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-ink/70">
-                        {message}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              ) : (
                 <Card className="bg-white p-8 text-ink sm:p-10">
                   <form onSubmit={onSubmit} className="space-y-8" noValidate>
                     <input type="hidden" name="formType" value="volunteer" />
@@ -500,7 +482,7 @@ export default function VolunteerPage() {
                               type="checkbox"
                               name="interests"
                               value={type}
-                              className="h-4 w-4 accent-sun"
+                              className="h-4 w-4 accent-[#2f5db3]"
                             />
                             {type}
                           </label>
@@ -524,7 +506,7 @@ export default function VolunteerPage() {
                               type="checkbox"
                               name="availability"
                               value={slot}
-                              className="h-4 w-4 accent-sun"
+                              className="h-4 w-4 accent-[#2f5db3]"
                             />
                             {slot}
                           </label>
@@ -567,7 +549,6 @@ export default function VolunteerPage() {
                     </div>
                   </form>
                 </Card>
-              )}
             </Reveal>
           </div>
         </Container>
