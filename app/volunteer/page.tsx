@@ -49,8 +49,8 @@ export default function VolunteerPage() {
       if (!res.ok) throw new Error("Request failed");
       formEl.reset();
       // Full page load (not client-side nav) so the Google tag reliably
-      // records the /thank-you visit for conversion tracking.
-      window.location.assign("/thank-you");
+      // records the thank-you visit for conversion tracking.
+      window.location.assign("/volunteer/thank-you");
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
