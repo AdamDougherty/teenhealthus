@@ -72,3 +72,4 @@ If a new top-level file or directory is added that needs to ship (rare), add it 
 - `mix-blend-multiply` on beige `#f5f0eb` background — no white card wrappers, no shadows, no rings
 - Uniform `max-h-[66px]` for standard logos; `size: "lg"` only for logos with excessive whitespace in their source image (Anthropic, Salesforce)
 - No `skipBlend` or `rounded` flags — all logos use `mix-blend-multiply`
+- Flex rows with fixed-width cells (`w-1/5` desktop, `w-1/3` mobile), NOT `grid-cols` — so a partial last page centers its logos instead of left-aligning them

@@ -54,7 +54,7 @@ const PARTNERS: Partner[] = [
   { name: "Hito Pak", logo: "/images/shared/hito-pak-logo.png", highQuality: true },
   { name: "Forager Project", logo: "/images/shared/forager-project-logo-v2.png" },
   { name: "Dr. Bronner's", logo: "/images/shared/dr-bronners-logo.png", size: "lg" },
-  { name: "Protein Puck", logo: "/images/shared/protein-puck-logo.jpg", highQuality: true },
+  { name: "Kanzen Meal", logo: "/images/shared/kanzen-meal-logo.png", size: "sm-md" },
   { name: "Goodstack", logo: "/images/shared/goodstack-logo.png", size: "md" },
   { name: "Salesforce", logo: "/partners/salesforce.png", size: "xl" },
   { name: "Google", logo: "/partners/google.svg" },
@@ -120,11 +120,11 @@ export function PartnerLogoGrid() {
               </svg>
             </button>
 
-            <div key={`m-${page}`} className="grid grid-cols-3 gap-x-2 gap-y-6 px-10">
+            <div key={`m-${page}`} className="flex flex-wrap justify-center gap-y-6 px-10">
               {pagePartners.map((partner) => (
                 <div
                   key={partner.name}
-                  className="flex h-20 items-center justify-center"
+                  className="flex h-20 w-1/3 items-center justify-center px-1"
                 >
                   <Image
                     src={partner.logo}
@@ -171,11 +171,11 @@ export function PartnerLogoGrid() {
                   </button>
                 )}
 
-                <div className="grid w-full grid-cols-5">
+                <div className="flex w-full justify-center">
                   {row.map((partner) => (
                     <div
                       key={partner.name}
-                      className="flex h-28 items-center justify-center px-4"
+                      className="flex h-28 w-1/5 items-center justify-center px-4"
                     >
                       <Image
                         src={partner.logo}
