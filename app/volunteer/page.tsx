@@ -574,7 +574,7 @@ export default function VolunteerPage() {
                         unsubscribe at any time using the link at the bottom of
                         any email. See our{" "}
                         <a
-                          href="/privacy"
+                          href="/privacy-policy"
                           className="font-medium underline decoration-ink/40 underline-offset-2 transition hover:decoration-ink"
                         >
                           Privacy Policy

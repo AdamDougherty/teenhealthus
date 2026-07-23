@@ -80,7 +80,7 @@ export function Footer() {
                 Legal
               </div>
               <div className="space-y-2">
-                <a href="/privacy" className="block hover:text-ink">
+                <a href="/privacy-policy" className="block hover:text-ink">
                   Privacy
                 </a>
                 <a href="/terms" className="block hover:text-ink">

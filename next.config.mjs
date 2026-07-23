@@ -24,6 +24,11 @@ const nextConfig = {
         destination: "/program-sponsor",
         permanent: true,
       },
+      {
+        source: "/privacy",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
     ];
   },
 
