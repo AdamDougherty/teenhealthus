@@ -21,6 +21,7 @@ const FIELD_LABELS: Record<string, string> = {
   message: "Message",
   interest: "Area of interest",
   availability: "Availability",
+  ageConfirmation: "Confirmed 18 or older",
   formType: "Form",
 };
 

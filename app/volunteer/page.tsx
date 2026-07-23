@@ -25,6 +25,13 @@ export default function VolunteerPage() {
       return;
     }
 
+    // The form is noValidate, so the required age checkbox is enforced here.
+    if (!formData.get("ageConfirmation")) {
+      setStatus("error");
+      setMessage("Please confirm that you are 18 years of age or older.");
+      return;
+    }
+
     setStatus("sending");
     setMessage("");
 
@@ -534,11 +541,24 @@ export default function VolunteerPage() {
                     </div>
 
                     <div>
+                      <label className="flex cursor-pointer items-start gap-3">
+                        <input
+                          type="checkbox"
+                          name="ageConfirmation"
+                          value="Yes"
+                          required
+                          className="mt-0.5 h-4 w-4 shrink-0 accent-[#2f5db3]"
+                        />
+                        <span className="text-sm leading-relaxed text-ink">
+                          I confirm that I am 18 years of age or older.{" "}
+                          <span className="text-sky">*</span>
+                        </span>
+                      </label>
                       <Button
                         variant="primary"
                         type="submit"
                         disabled={status === "sending"}
-                        className="w-full"
+                        className="mt-6 w-full"
                         style={{ color: "white" }}
                       >
                         {status === "sending" ? "Sending…" : "Join the volunteer community"}
@@ -546,6 +566,21 @@ export default function VolunteerPage() {
                       {status === "error" && (
                         <p className="mt-3 text-center text-sm text-red-500">{message}</p>
                       )}
+                      <p className="mt-4 text-xs leading-relaxed text-ink/60">
+                        By signing up to volunteer, you'll also receive our
+                        monthly newsletter. We use your email to coordinate
+                        volunteer opportunities and send you the newsletter. We
+                        never sell your personal information. You can
+                        unsubscribe at any time using the link at the bottom of
+                        any email. See our{" "}
+                        <a
+                          href="/privacy"
+                          className="font-medium underline decoration-ink/40 underline-offset-2 transition hover:decoration-ink"
+                        >
+                          Privacy Policy
+                        </a>{" "}
+                        for details.
+                      </p>
                     </div>
                   </form>
                 </Card>
