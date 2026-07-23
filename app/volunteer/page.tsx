@@ -567,12 +567,9 @@ export default function VolunteerPage() {
                         <p className="mt-3 text-center text-sm text-red-500">{message}</p>
                       )}
                       <p className="mt-4 text-xs leading-relaxed text-ink/60">
-                        By signing up to volunteer, you'll also receive our
-                        monthly newsletter. We use your email to coordinate
-                        volunteer opportunities and send you the newsletter. We
-                        never sell your personal information. You can
-                        unsubscribe at any time using the link at the bottom of
-                        any email. See our{" "}
+                        We use your email to coordinate volunteer
+                        opportunities. We never sell your personal information.
+                        See our{" "}
                         <a
                           href="/privacy-policy"
                           className="font-medium underline decoration-ink/40 underline-offset-2 transition hover:decoration-ink"
