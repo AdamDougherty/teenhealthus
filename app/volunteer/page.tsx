@@ -160,7 +160,7 @@ export default function VolunteerPage() {
             <Reveal delay={0.1}>
               <h1 className="mt-6 font-serif font-normal tracking-tight text-white" style={{ lineHeight: 1.1 }}>
                 <span className="block text-xl font-sans font-medium tracking-wide text-white/90 sm:text-2xl">
-                  Volunteer in Southern California
+                  Volunteer Opportunities <br className="sm:hidden" />in Southern California
                 </span>
                 <span className="mt-3 block text-3xl sm:text-4xl lg:text-5xl">
                   Your Time Makes a
