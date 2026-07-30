@@ -65,6 +65,23 @@ If a new top-level file or directory is added that needs to ship (rare), add it 
 - All forms POST to `/api/contact`
 - Image optimization: AVIF + WebP with 30-day cache configured in next.config.mjs
 
+## public/food-as-medicine.html (standalone page — check it on site-wide changes)
+
+The Food as Medicine page is a **hand-written HTML file in `public/`**, not a Next.js route. It is served at `/food-as-medicine.html` and linked from the "Learn More" button on `/program-sponsor`.
+
+Because it is not an app route, it does **not** use `components/Nav.tsx`, `components/Footer.tsx`, or `components/Button.tsx` — it carries its own copies of the nav, footer, donate buttons, and brand styling. Site-wide changes do not reach it automatically.
+
+**When making a site-wide change, check this file too.** It duplicates:
+- Donation links (4 amount tiers + a main Donate button + a footer Donate link)
+- Nav links and the footer link columns
+- Brand colors, which are redeclared as CSS variables at the top of the file rather than read from `tailwind.config.ts`
+
+This has already caused one silent drift: its donate buttons stayed `mailto:` links while the rest of the site moved to Classy, and were only caught during the Zeffy migration on 2026-07-30.
+
+It also must be listed **by hand** in `app/sitemap.ts` — the sitemap is generated from app routes, so a file in `public/` is invisible to it.
+
+Longer term this should become a real page at `app/food-as-medicine/page.tsx` (inherits Nav/Footer, cleaner URL, automatic sitemap and image optimization). That needs a redirect from `/food-as-medicine.html` so existing links keep working.
+
 ## PartnerLogoGrid (components/PartnerLogoGrid.tsx)
 
 **Do not revert this component during merge conflict resolution.** The correct version uses:

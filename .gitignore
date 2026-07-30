@@ -6,3 +6,13 @@ dist
 .DS_Store
 .claude/
 docs/recommendations/
+
+# TypeScript incremental-build cache — regenerates on every build
+tsconfig.tsbuildinfo
+
+# Local working artifacts. Kept out of git because the repo is PUBLIC and
+# these hold internal documents and large binaries.
+.screenshots-*/
+design-sources/
+our_why_unpacked/
+scripts/
