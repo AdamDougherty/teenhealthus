@@ -65,9 +65,9 @@ If a new top-level file or directory is added that needs to ship (rare), add it 
 - All forms POST to `/api/contact`
 - Image optimization: AVIF + WebP with 30-day cache configured in next.config.mjs
 
-## Food as Medicine (app/food-as-medicine/)
+## Food as Medicine (app/program-sponsor/food-as-medicine/)
 
-Converted on 2026-07-30 from a standalone `public/food-as-medicine.html` into a real route at `/food-as-medicine`. It now gets the shared Nav and Footer, appears in the sitemap, and `/food-as-medicine.html` permanently redirects to it (`next.config.mjs`).
+Converted on 2026-07-30 from a standalone `public/food-as-medicine.html` into a real route at `/program-sponsor/food-as-medicine`, alongside the other two program pages. It now gets the shared Nav and Footer, appears in the sitemap, and `/food-as-medicine.html` permanently redirects to it (`next.config.mjs`).
 
 It is still **styled differently from the rest of the site**, deliberately — the conversion preserved its original design rather than rebuilding it:
 - `food-as-medicine.css` holds its ~314 lines of custom CSS, every rule scoped under `.fam`. The page's outermost `<div>` carries that class; **do not remove it** or the reset (`.fam *`) and layout rules stop applying.

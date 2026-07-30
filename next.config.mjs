@@ -30,9 +30,10 @@ const nextConfig = {
         permanent: true,
       },
       {
-        // Was a standalone file in public/ until 2026-07-30; now a real route.
+        // Was a standalone file in public/ until 2026-07-30; now a real route
+        // living alongside the other program pages.
         source: "/food-as-medicine.html",
-        destination: "/food-as-medicine",
+        destination: "/program-sponsor/food-as-medicine",
         permanent: true,
       },
     ];

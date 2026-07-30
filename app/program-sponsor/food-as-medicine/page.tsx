@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Food as Medicine",
   description:
     "Teen Health's Food as Medicine initiative assembles clinically validated Medically Tailored Groceries (MTG) boxes and delivers them to Medi-Cal members, homeless youth, and young adults managing chronic illness across Southern California.",
-  alternates: { canonical: "/food-as-medicine" },
+  alternates: { canonical: "/program-sponsor/food-as-medicine" },
 };
 
 export default function FoodAsMedicinePage() {
