@@ -334,7 +334,7 @@ export default function AboutPage() {
               <div>
                 <div className="text-sm font-normal tracking-tight text-ink">Quick links</div>
                 <div className="mt-4 space-y-2 text-sm">
-                  <a href="https://www.classy.org/give/665776/#!/donation/checkout" className="block hover:text-ink">
+                  <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" className="block hover:text-ink">
                     Donate
                   </a>
                   <a href="/get-involved#volunteer" className="block hover:text-ink">

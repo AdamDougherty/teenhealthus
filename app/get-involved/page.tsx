@@ -305,7 +305,7 @@ export default function GetInvolvedPage() {
               </p>
 
               <div className="mt-7">
-                <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
+                <Button href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" variant="primary" style={{ backgroundColor: '#FF8005', color: '#fff' }}>
                   Donate now
                 </Button>
               </div>

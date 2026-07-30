@@ -81,7 +81,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   A clean, focused site should always make the next step obvious.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary">
+                  <Button href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" variant="primary">
                     Donate
                   </Button>
                   <Button

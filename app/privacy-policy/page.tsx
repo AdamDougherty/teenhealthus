@@ -63,8 +63,8 @@ export default function PrivacyPage() {
               <li>
                 <strong className="font-semibold text-ink">Donations.</strong>{" "}
                 Donations are processed by our third-party donation platform,
-                Classy. When you donate, your payment card details are entered on
-                and handled by Classy&rsquo;s secure platform &mdash; we do not
+                Zeffy. When you donate, your payment card details are entered on
+                and handled by Zeffy&rsquo;s secure platform &mdash; we do not
                 collect or store your full payment card information. We may
                 receive donation details such as your name, email address, and
                 donation amount so we can acknowledge your gift and provide tax
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
                 </strong>{" "}
                 We share information with trusted companies that help us operate
                 &mdash; for example, Twilio SendGrid (which delivers our form
-                submissions and email), Classy (which processes donations), and
+                submissions and email), Zeffy (which processes donations), and
                 Google (which provides advertising and measurement tools). These
                 providers may use your information only to perform services for
                 us.
@@ -183,9 +183,9 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc space-y-2 pl-6">
               <li>
-                Classy &mdash;{" "}
-                <ExternalLink href="https://www.classy.org/privacy-policy/">
-                  classy.org/privacy-policy
+                Zeffy &mdash;{" "}
+                <ExternalLink href="https://support.zeffy.com/data-privacy-policy">
+                  support.zeffy.com/data-privacy-policy
                 </ExternalLink>
               </li>
               <li>

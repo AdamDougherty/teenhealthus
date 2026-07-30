@@ -16,7 +16,7 @@ export default function NotFound() {
         <Button href="/our-why" variant="secondary">
           Learn
         </Button>
-        <Link href="https://www.classy.org/give/665776/#!/donation/checkout" className="text-sm font-semibold text-sky hover:underline">
+        <Link href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" className="text-sm font-semibold text-sky hover:underline">
           Donate →
         </Link>
       </div>

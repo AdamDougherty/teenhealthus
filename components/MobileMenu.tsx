@@ -158,7 +158,7 @@ export function MobileMenu() {
         </nav>
 
         <div className="mt-8">
-          <Button href="https://www.classy.org/give/665776/#!/donation/checkout" variant="primary" className="w-full" style={{ backgroundColor: '#FF6B00', color: 'white' }}>
+          <Button href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" variant="primary" className="w-full" style={{ backgroundColor: '#FF6B00', color: 'white' }}>
             Donate
           </Button>
         </div>

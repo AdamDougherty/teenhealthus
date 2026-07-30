@@ -67,7 +67,8 @@ export default function TermsPage() {
             </h2>
             <p>
               Donations made through the Site are processed by our third-party
-              donation platform, Classy, and are subject to Classy&rsquo;s terms.
+              donation platform, Zeffy, and are subject to Zeffy&rsquo;s
+              terms.
               Teen Health is a registered 501(c)(3) nonprofit (EIN 87-4628884),
               and donations are tax-deductible to the extent allowed by law;
               please consult your tax advisor. If you have a question about a
@@ -115,7 +116,7 @@ export default function TermsPage() {
             </h2>
             <p>
               The Site may link to or rely on third-party websites and services
-              (such as Classy). We do not control and are not responsible for the
+              (such as Zeffy). We do not control and are not responsible for the
               content, policies, or practices of those third parties. Your use of
               them is at your own risk and subject to their terms.
             </p>

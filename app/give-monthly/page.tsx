@@ -92,7 +92,7 @@ const faqs = [
     },
     {
         q: "Can I cancel or change my monthly amount?",
-        a: "Yes — you can cancel, pause, or change your monthly amount anytime, with no fees and no commitments. Manage everything through our Classy donation portal — update your card, adjust your amount, or stop your contribution in a few clicks.",
+        a: "Yes — you can cancel, pause, or change your monthly amount anytime, with no fees and no commitments. Manage everything through our Zeffy donation portal — update your card, adjust your amount, or stop your contribution in a few clicks.",
     },
     {
         q: "Where does my monthly donation go?",
@@ -164,14 +164,19 @@ export default function GiveMonthlyPage() {
                             <div className="mt-10">
                                 <div className="inline-flex flex-col items-center">
                                     <Button
-                                        href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
+                                        href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
                                         variant="primary"
                                         style={{ backgroundColor: '#FF8005', color: 'white' }}
                                     >
                                         Join the Monthly Giving Community
                                     </Button>
                                     <p className="mt-3 text-xs font-medium text-white/80">
-                                        Secure checkout via Classy &amp; Stripe
+                                        On the donation form, select{" "}
+                                        <span className="font-bold text-white">Monthly</span> to make
+                                        your gift recurring.
+                                    </p>
+                                    <p className="mt-1 text-xs font-medium text-white/60">
+                                        Secure checkout via Zeffy &amp; Stripe
                                     </p>
                                 </div>
                             </div>
@@ -256,7 +261,7 @@ export default function GiveMonthlyPage() {
                         {impactTiers.map((tier, i) => (
                             <Reveal key={tier.amount} delay={i * 0.08} className="h-full">
                                 <a
-                                    href={`https://www.classy.org/give/665776/#!/donation/checkout?recurring=1&amount=${tier.value}`}
+                                    href={`https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939?amount=${tier.value}`}
                                     className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
@@ -281,21 +286,23 @@ export default function GiveMonthlyPage() {
 
                     <Reveal delay={0.35}>
                         <p className="mt-5 text-center text-xs font-medium text-ink/50">
-                            Cancel or change your amount anytime. No commitments.
+                            On the donation form, select{" "}
+                            <span className="font-bold text-ink/70">Monthly</span> to make your gift
+                            recurring. Cancel or change your amount anytime. No commitments.
                         </p>
                     </Reveal>
 
                     <Reveal delay={0.4}>
                         <div className="mt-8 text-center">
                             <Button
-                                href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
+                                href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
                                 Join the Monthly Giving Community
                             </Button>
                             <p className="mt-3 text-xs font-medium text-ink/50">
-                                Secure checkout via Classy &amp; Stripe
+                                Secure checkout via Zeffy &amp; Stripe
                             </p>
                         </div>
                     </Reveal>
@@ -447,14 +454,19 @@ export default function GiveMonthlyPage() {
                         </p>
                         <div className="mt-8">
                             <Button
-                                href="https://www.classy.org/give/665776/#!/donation/checkout?recurring=1"
+                                href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
                                 Join the Monthly Giving Community
                             </Button>
                             <p className="mt-3 text-xs font-medium text-ink/50">
-                                Secure checkout via Classy &amp; Stripe
+                                On the donation form, select{" "}
+                                <span className="font-bold text-ink/70">Monthly</span> to make your
+                                gift recurring.
+                            </p>
+                            <p className="mt-1 text-xs font-medium text-ink/40">
+                                Secure checkout via Zeffy &amp; Stripe
                             </p>
                         </div>
                     </div>

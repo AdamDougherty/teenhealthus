@@ -1011,7 +1011,7 @@ export default function DignityKitProgramPage() {
                 </div>
                 <div className="dk-button-col">
                   <a
-                    href="https://www.classy.org/give/665776/#!/donation/checkout"
+                    href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
                     className="dk-btn-donate"
                     target="_blank"
                     rel="noopener noreferrer"
