@@ -584,7 +584,7 @@ export default function BrandPartnerPage() {
           </Reveal>
           <div className="mx-auto mt-12 max-w-4xl divide-y divide-border">
             {[
-              { num: "01", title: "Brand Integration", desc: <>Product sampling in youth nutrition packs across <a href="/youth-nutrition-initiative" className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink">the Youth Nutrition Initiative</a> — measurable reach with the audiences your purpose-driven marketing is built to serve.</> },
+              { num: "01", title: "Brand Integration", desc: <>Product sampling in youth nutrition packs across <a href="/program-sponsor/youth-nutrition-initiative" className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink">the Youth Nutrition Initiative</a> — measurable reach with the audiences your purpose-driven marketing is built to serve.</> },
               { num: "02", title: "Data Insights", desc: "Quarterly impact reports formatted for your ESG and CSR filings — units distributed, youth reached, and geographies served, ready to drop into your annual disclosures." },
               { num: "03", title: "Content Assets", desc: "Professional photography and “Social Impact” stories from the field, licensed for brand use across owned and earned channels." },
               { num: "04", title: "Tax-Deductible Contributions", desc: "Formal 501(c)(3) acknowledgment letter for every donation — a clean documentation trail for your corporate finance and accounting teams." },

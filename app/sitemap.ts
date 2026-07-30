@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/program-sponsor/dignity-kit-program",
     "/program-sponsor/land-initiative",
     "/program-sponsor/food-as-medicine",
-    "/youth-nutrition-initiative",
+    "/program-sponsor/youth-nutrition-initiative",
   ].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),

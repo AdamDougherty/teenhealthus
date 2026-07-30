@@ -107,7 +107,7 @@ export default function ProgramsPage() {
                   nutrition across multiple cities to the youth who need it most.
                 </p>
                 <div className="mt-6">
-                  <Button href="/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
+                  <Button href="/program-sponsor/youth-nutrition-initiative" variant="primary" style={{ color: 'white' }}>
                     Learn More
                   </Button>
                 </div>

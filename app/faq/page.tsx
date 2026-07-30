@@ -73,7 +73,7 @@ const faqs: { question: string; answer: string; body?: ReactNode }[] = [
         Teen Health distributes nourishing, nutrient-dense food and hydration —
         not just shelf-stable calories — to support health and focus. Through
         programs like our{" "}
-        <Link href="/youth-nutrition-initiative" className={linkClass}>
+        <Link href="/program-sponsor/youth-nutrition-initiative" className={linkClass}>
           Youth Nutrition Initiative
         </Link>
         , we prioritize fresh, healthy options.

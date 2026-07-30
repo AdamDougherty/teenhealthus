@@ -36,6 +36,13 @@ const nextConfig = {
         destination: "/program-sponsor/food-as-medicine",
         permanent: true,
       },
+      {
+        // Lived at the site root and was indexed there until 2026-07-30;
+        // moved under /program-sponsor to match the other programs.
+        source: "/youth-nutrition-initiative",
+        destination: "/program-sponsor/youth-nutrition-initiative",
+        permanent: true,
+      },
     ];
   },
 
