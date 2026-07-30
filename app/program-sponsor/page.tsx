@@ -159,7 +159,7 @@ export default function ProgramsPage() {
                   food-as-medicine benefit.
                 </p>
                 <div className="mt-6">
-                  <Button href="/food-as-medicine.html" variant="primary" style={{ color: 'white' }}>
+                  <Button href="/food-as-medicine" variant="primary" style={{ color: 'white' }}>
                     Learn More
                   </Button>
                 </div>

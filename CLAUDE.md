@@ -65,22 +65,20 @@ If a new top-level file or directory is added that needs to ship (rare), add it 
 - All forms POST to `/api/contact`
 - Image optimization: AVIF + WebP with 30-day cache configured in next.config.mjs
 
-## public/food-as-medicine.html (standalone page — check it on site-wide changes)
+## Food as Medicine (app/food-as-medicine/)
 
-The Food as Medicine page is a **hand-written HTML file in `public/`**, not a Next.js route. It is served at `/food-as-medicine.html` and linked from the "Learn More" button on `/program-sponsor`.
+Converted on 2026-07-30 from a standalone `public/food-as-medicine.html` into a real route at `/food-as-medicine`. It now gets the shared Nav and Footer, appears in the sitemap, and `/food-as-medicine.html` permanently redirects to it (`next.config.mjs`).
 
-Because it is not an app route, it does **not** use `components/Nav.tsx`, `components/Footer.tsx`, or `components/Button.tsx` — it carries its own copies of the nav, footer, donate buttons, and brand styling. Site-wide changes do not reach it automatically.
+It is still **styled differently from the rest of the site**, deliberately — the conversion preserved its original design rather than rebuilding it:
+- `food-as-medicine.css` holds its ~314 lines of custom CSS, every rule scoped under `.fam`. The page's outermost `<div>` carries that class; **do not remove it** or the reset (`.fam *`) and layout rules stop applying.
+- Its headings use **Lora**, not the site's `--font-serif` (Kazimir Text). Lora is loaded with `next/font` inside `page.tsx` and exposed as `--font-lora`.
+- It uses its own `.btn-sun` / `.card` / `.sec` classes rather than `components/Button.tsx` and `components/Card.tsx`, so shared-component changes do not reach it.
 
-**When making a site-wide change, check this file too.** It duplicates:
-- Donation links (4 amount tiers + a main Donate button + a footer Donate link)
-- Nav links and the footer link columns
-- Brand colors, which are redeclared as CSS variables at the top of the file rather than read from `tailwind.config.ts`
+`FamEffects.tsx` is a small client component reproducing the original inline script (scroll-reveal on `.rv` elements plus smooth anchor scrolling). The rest of the site uses `<Reveal>`; this page does not.
 
-This has already caused one silent drift: its donate buttons stayed `mailto:` links while the rest of the site moved to Classy, and were only caught during the Zeffy migration on 2026-07-30.
+**Still worth knowing:** its donate buttons silently stayed `mailto:` links throughout the entire Classy era and were only caught during the Zeffy migration. When changing donation links site-wide, grep this page too — it has 5 (four amount tiers plus a main Donate button).
 
-It also must be listed **by hand** in `app/sitemap.ts` — the sitemap is generated from app routes, so a file in `public/` is invisible to it.
-
-Longer term this should become a real page at `app/food-as-medicine/page.tsx` (inherits Nav/Footer, cleaner URL, automatic sitemap and image optimization). That needs a redirect from `/food-as-medicine.html` so existing links keep working.
+If it is ever restyled to use the shared components, delete `food-as-medicine.css`, the `.fam` wrapper, and the Lora import together.
 
 ## PartnerLogoGrid (components/PartnerLogoGrid.tsx)
 

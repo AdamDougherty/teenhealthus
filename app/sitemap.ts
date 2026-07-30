@@ -21,8 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/program-sponsor",
     "/program-sponsor/dignity-kit-program",
     "/program-sponsor/land-initiative",
-    // Static file in public/, not an app route — must be listed by hand.
-    "/food-as-medicine.html",
+    "/food-as-medicine",
     "/youth-nutrition-initiative",
   ].map((path) => ({
     url: `${base}${path}`,
