@@ -92,7 +92,7 @@ const faqs = [
     },
     {
         q: "Can I cancel or change my monthly amount?",
-        a: "Yes — you can cancel, pause, or change your monthly amount anytime, with no fees and no commitments. Manage everything through our Zeffy donation portal — update your card, adjust your amount, or stop your contribution in a few clicks.",
+        a: "Yes — you can cancel or change your monthly amount anytime, with no fees and no commitments. Sign in to your Zeffy donor account with the email address you used to give, and from the My transactions tab you can adjust your amount, update your card, or cancel your renewal in a few clicks.",
     },
     {
         q: "Where does my monthly donation go?",
