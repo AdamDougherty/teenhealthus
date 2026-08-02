@@ -164,7 +164,7 @@ export default function GiveMonthlyPage() {
                             <div className="mt-10">
                                 <div className="inline-flex flex-col items-center">
                                     <Button
-                                        href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                                        href="/donate"
                                         variant="primary"
                                         style={{ backgroundColor: '#FF8005', color: 'white' }}
                                     >
@@ -261,7 +261,7 @@ export default function GiveMonthlyPage() {
                         {impactTiers.map((tier, i) => (
                             <Reveal key={tier.amount} delay={i * 0.08} className="h-full">
                                 <a
-                                    href={`https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939?amount=${tier.value}`}
+                                    href={`/donate?amount=${tier.value}`}
                                     className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
@@ -295,7 +295,7 @@ export default function GiveMonthlyPage() {
                     <Reveal delay={0.4}>
                         <div className="mt-8 text-center">
                             <Button
-                                href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                                href="/donate"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
@@ -454,7 +454,7 @@ export default function GiveMonthlyPage() {
                         </p>
                         <div className="mt-8">
                             <Button
-                                href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                                href="/donate"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >

@@ -75,7 +75,7 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:block">
-            <Button href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" variant="primary" className="px-6 py-2.5 text-lg" style={{ backgroundColor: '#FF8005', color: 'white' }}>
+            <Button href="/donate" variant="primary" className="px-6 py-2.5 text-lg" style={{ backgroundColor: '#FF8005', color: 'white' }}>
               Donate
             </Button>
           </div>

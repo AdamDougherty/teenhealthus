@@ -462,7 +462,7 @@ export default function LearnPage() {
             </p>
             <div className="mt-8">
               <Link
-                href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                href="/donate"
                 className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white hover:opacity-90"
                 style={{ backgroundColor: '#FF8005' }}
               >

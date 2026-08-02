@@ -306,7 +306,7 @@ export default function OurStoryPage() {
                         <Reveal delay={0.20}>
                             <div className="mt-10 flex justify-center">
                                 <Button
-                                    href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                                    href="/donate"
                                     variant="primary"
                                     style={{ backgroundColor: '#FF8005', color: '#fff' }}
                                 >

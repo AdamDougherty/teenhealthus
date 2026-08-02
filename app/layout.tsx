@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { DonatePopup } from "@/components/DonatePopup";
 import { site } from "@/lib/site";
 
 const sans = Inter({
@@ -103,6 +104,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
+        <DonatePopup />
       </body>
     </html>
   );

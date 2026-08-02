@@ -737,12 +737,7 @@ export default function LandInitiativePage() {
                 </div>
               </div>
               <div className="li-button-col">
-                <a
-                  href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
-                  className="li-btn-donate"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/donate" className="li-btn-donate">
                   Donate Now
                 </a>
               </div>

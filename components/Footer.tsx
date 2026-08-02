@@ -60,7 +60,7 @@ export function Footer() {
                 Help
               </div>
               <div className="space-y-2">
-                <Link href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" className="block hover:text-ink">
+                <Link href="/donate" className="block hover:text-ink">
                   Donate
                 </Link>
                 <Link href="/get-involved#volunteer" className="block hover:text-ink">

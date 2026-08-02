@@ -248,7 +248,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
+                  <Button href="/donate" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
                     Give today
                   </Button>
                   <Button href="/volunteer" variant="ghost" className="text-ink hover:bg-ink/10">

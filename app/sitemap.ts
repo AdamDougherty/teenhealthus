@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/leadership",
     "/get-involved",
     "/volunteer",
+    "/donate",
     "/give-monthly",
     "/brand-partner",
     "/program-sponsor",

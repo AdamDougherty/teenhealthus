@@ -570,7 +570,7 @@ export default function YouthNutritionInitiativeLandingPage() {
                 </div>
                 <div className="flex w-56 flex-col items-center gap-4 sm:mx-auto">
                   <Button
-                    href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939"
+                    href="/donate"
                     variant="primary"
                     className="w-56"
                     style={{ backgroundColor: "#4D9D93", color: "#fff" }}

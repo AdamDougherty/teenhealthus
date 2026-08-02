@@ -177,10 +177,10 @@ export default function FoodAsMedicinePage() {
                 <p>Teen Health is a California 501(c)3 nonprofit. All donations are fully tax-deductible. Your contribution directly funds product purchasing, box assembly, and distribution across Southern California.</p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '.75rem' }} className="rv">
-                <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939?amount=50" target="_blank" rel="noopener noreferrer" className="tier"><div><div className="tier-amt">$50</div><div className="tier-lbl">Funds one MTG box — 2 weeks of clinically tailored nutrition</div></div><span className="tier-arr">→</span></a>
-                <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939?amount=250" target="_blank" rel="noopener noreferrer" className="tier"><div><div className="tier-amt">$250</div><div className="tier-lbl">Funds five boxes — one month of nutrition for a family</div></div><span className="tier-arr">→</span></a>
-                <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939?amount=1000" target="_blank" rel="noopener noreferrer" className="tier"><div><div className="tier-amt">$1,000</div><div className="tier-lbl">Sponsors a full month of MTG delivery for 20 individuals</div></div><span className="tier-arr">→</span></a>
-                <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" target="_blank" rel="noopener noreferrer" className="tier"><div><div className="tier-amt">Custom</div><div className="tier-lbl">Name your contribution — every amount advances the mission</div></div><span className="tier-arr">→</span></a>
+                <a href="/donate?amount=50" className="tier"><div><div className="tier-amt">$50</div><div className="tier-lbl">Funds one MTG box — 2 weeks of clinically tailored nutrition</div></div><span className="tier-arr">→</span></a>
+                <a href="/donate?amount=250" className="tier"><div><div className="tier-amt">$250</div><div className="tier-lbl">Funds five boxes — one month of nutrition for a family</div></div><span className="tier-arr">→</span></a>
+                <a href="/donate?amount=1000" className="tier"><div><div className="tier-amt">$1,000</div><div className="tier-lbl">Sponsors a full month of MTG delivery for 20 individuals</div></div><span className="tier-arr">→</span></a>
+                <a href="/donate" className="tier"><div><div className="tier-amt">Custom</div><div className="tier-lbl">Name your contribution — every amount advances the mission</div></div><span className="tier-arr">→</span></a>
               </div>
             </div>
             <div>
@@ -249,7 +249,7 @@ export default function FoodAsMedicinePage() {
             <h2>Help Us Launch This Program</h2>
             <p>Every contribution helps us reach more Californians<br className="br-md" />with the medically tailored nutrition they need to thrive.</p>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.75rem', flexWrap: 'wrap' }}>
-              <a href="https://www.zeffy.com/en-US/donation-form/c471ed6d-57e8-41bf-85a6-7afce185e939" target="_blank" rel="noopener noreferrer" className="btn-sun">Donate</a>
+              <a href="/donate" className="btn-sun">Donate</a>
               <a href="#partners" className="btn-ghost">Get Involved</a>
             </div>
           </div>
