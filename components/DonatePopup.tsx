@@ -132,7 +132,7 @@ export function DonatePopup() {
         onClick={close}
       >
         <div
-          className="relative flex h-full w-full flex-col overflow-hidden bg-white md:h-[88vh] md:max-w-5xl md:flex-row md:rounded-lg md:shadow-soft"
+          className="relative flex h-full w-full flex-col overflow-hidden bg-white md:h-[88vh] md:max-w-6xl md:flex-row md:rounded-lg md:shadow-soft"
           onClick={(event) => event.stopPropagation()}
         >
           {/* Zeffy strips the campaign description out of its embedded form,
@@ -140,8 +140,9 @@ export function DonatePopup() {
           {/* pr-14 on phones keeps the headline clear of the close button. */}
           <div className="shrink-0 bg-white pb-5 pl-6 pr-14 pt-6 md:w-[38%] md:overflow-y-auto md:px-8 md:py-10">
             <h2 className="font-serif text-xl font-normal leading-snug tracking-tight text-ink md:text-2xl">
+              {/* text-sun is #FF8005, the same orange as the Donate buttons. */}
               100% of your donation reaches a{" "}
-              <span className="hero-highlight">young person</span>.
+              <span className="text-sun">young person</span>.
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink/70 md:mt-5">
               More than 250 natural products companies donate what fills our
@@ -151,14 +152,16 @@ export function DonatePopup() {
             </p>
             {/* Held back on phones so the amount buttons stay above the fold. */}
             <div className="hidden md:block">
-              <p className="mt-4 text-sm leading-relaxed text-ink/70">
-                Nourishing food, hydration, and personal care items &mdash; the
-                things a young person needs to stay healthy and walk into a room
-                with dignity. We move them through our partner agencies across
-                Southern California, reaching more than 5,000 young people ages
-                13&ndash;24 every year.
+              <p className="mt-4 text-pretty text-sm leading-relaxed text-ink/70">
+                Here&rsquo;s what that buys: nourishing food, hydration, and
+                personal care items &mdash; the things a young person needs to
+                stay healthy and walk into a room with dignity. We move them
+                through our partner agencies across Southern California,
+                reaching more than 5,000 youth ages 13&ndash;24 every year.
               </p>
-              <p className="mt-4 text-sm font-semibold leading-relaxed text-ink">
+              {/* text-pretty keeps the last line from stranding a single word,
+                  whatever width the column ends up at. */}
+              <p className="mt-4 text-pretty text-sm font-semibold leading-relaxed text-ink">
                 You&rsquo;re not funding an organization. You&rsquo;re funding a
                 kit that a specific young person opens.
               </p>
