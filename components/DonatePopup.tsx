@@ -132,9 +132,39 @@ export function DonatePopup() {
         onClick={close}
       >
         <div
-          className="relative h-full w-full md:h-[90vh] md:max-w-2xl"
+          className="relative flex h-full w-full flex-col overflow-hidden bg-white md:h-[88vh] md:max-w-5xl md:flex-row md:rounded-lg md:shadow-soft"
           onClick={(event) => event.stopPropagation()}
         >
+          {/* Zeffy strips the campaign description out of its embedded form,
+              so the case for giving has to live on our side of the iframe. */}
+          {/* pr-14 on phones keeps the headline clear of the close button. */}
+          <div className="shrink-0 bg-white pb-5 pl-6 pr-14 pt-6 md:w-[38%] md:overflow-y-auto md:px-8 md:py-10">
+            <h2 className="font-serif text-xl font-normal leading-snug tracking-tight text-ink md:text-2xl">
+              100% of your donation reaches a{" "}
+              <span className="hero-highlight">young person</span>.
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink/70 md:mt-5">
+              More than 250 natural products companies donate what fills our
+              kits and cover the cost of running Teen Health. Your gift goes to
+              work assembling those kits and getting them into a young
+              person&rsquo;s hands.
+            </p>
+            {/* Held back on phones so the amount buttons stay above the fold. */}
+            <div className="hidden md:block">
+              <p className="mt-4 text-sm leading-relaxed text-ink/70">
+                Nourishing food, hydration, and personal care items &mdash; the
+                things a young person needs to stay healthy and walk into a room
+                with dignity. We move them through our partner agencies across
+                Southern California, reaching more than 5,000 young people ages
+                13&ndash;24 every year.
+              </p>
+              <p className="mt-4 text-sm font-semibold leading-relaxed text-ink">
+                You&rsquo;re not funding an organization. You&rsquo;re funding a
+                kit that a specific young person opens.
+              </p>
+            </div>
+          </div>
+
           <button
             ref={closeButtonRef}
             type="button"
@@ -155,19 +185,23 @@ export function DonatePopup() {
             </svg>
           </button>
 
-          <iframe
-            ref={iframeRef}
-            title="Donation form powered and secured by Zeffy"
-            src={formUrl}
-            allow="payment"
-            className="h-full w-full border-0 md:rounded-lg"
-            onLoad={() =>
-              iframeRef.current?.contentWindow?.postMessage(
-                { id: MESSAGE_ID, open: true },
-                "*"
-              )
-            }
-          />
+          {/* min-h-0 so the iframe takes the leftover height on phones
+              instead of pushing the panel past the bottom of the screen. */}
+          <div className="min-h-0 flex-1">
+            <iframe
+              ref={iframeRef}
+              title="Donation form powered and secured by Zeffy"
+              src={formUrl}
+              allow="payment"
+              className="h-full w-full border-0"
+              onLoad={() =>
+                iframeRef.current?.contentWindow?.postMessage(
+                  { id: MESSAGE_ID, open: true },
+                  "*"
+                )
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

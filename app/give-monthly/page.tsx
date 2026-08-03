@@ -96,7 +96,7 @@ const faqs = [
     },
     {
         q: "Where does my monthly donation go?",
-        a: "Funds go toward food, hydration, and personal care products; assembling them into kits; and distributing through 30+ partner agencies serving vulnerable youth from Skid Row in Los Angeles to downtown San Diego.",
+        a: "Funds go toward food, hydration, and personal care products; assembling them into kits; and distributing through partner agencies serving vulnerable youth from Skid Row in Los Angeles to downtown San Diego.",
     },
 ];
 
@@ -333,7 +333,7 @@ export default function GiveMonthlyPage() {
                         {
                             step: "03",
                             title: "Youth receive essentials",
-                            desc: "Kits are distributed through our 30+ partner agencies across Southern California to vulnerable youth and young adults who need them most.",
+                            desc: "Kits are distributed through our partner agencies across Southern California to vulnerable youth and young adults who need them most.",
                         },
                     ].map((item, i) => (
                         <Reveal key={item.step} delay={i * 0.1}>
