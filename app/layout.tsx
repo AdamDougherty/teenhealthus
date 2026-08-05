@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   },
   description: site.description,
   metadataBase: new URL(site.url),
+  // og:site_name is one of the two signals Google reads to decide what to show
+  // beside the favicon in search results. Without it (and the WebSite schema
+  // below) Google falls back to printing the bare domain, "teenhealth.us".
+  // Deliberately no title/description/url here — those are per-page, and a
+  // static value in the root layout would leak onto every child page.
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    locale: "en_US",
+  },
 };
 
 const organizationSchema = {
@@ -75,6 +85,16 @@ const organizationSchema = {
   ],
 };
 
+// Google populates the site name shown in search results from a separately
+// typed WebSite entry — the NGO/NonprofitOrganization/LocalBusiness schema
+// above does not feed that field. Additive: it does not replace any of it.
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: site.url,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -98,6 +118,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body>

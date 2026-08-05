@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { site } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -8,8 +9,15 @@ export function Footer() {
       <Container className="py-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
-            <div className="text-sm font-black tracking-tight text-ink">Teen Health</div>
-            <p className="mt-3 text-sm leading-relaxed text-ink/70">
+            {/* Plain <img> at the same src as the Nav logo, so the browser
+                reuses the file it already fetched for the header rather than
+                pulling a second, separately-optimized copy. */}
+            <img
+              src="/teenhealthlogohoriz.png"
+              alt={site.name}
+              className="h-7 w-auto"
+            />
+            <p className="mt-4 text-sm leading-relaxed text-ink/70">
               A focused, scalable approach to getting healthy essentials to vulnerable
               youth—fast, practical, and with dignity.
             </p>

@@ -1,4 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="28" fill="#FFC907"/>
-  <text x="64" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#231F20">TH</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Teen Health cross mark: three vertical bars woven behind three horizontal
+       bars. Geometry matches app/icon.png, traced from the mark in
+       public/teenhealthlogohoriz.png. Square viewBox — Google rejects
+       non-square favicons and falls back to a gray globe. -->
+  <g fill="#F3AA32">
+    <!-- Vertical bars, split above and below the horizontal band so the weave
+         reads correctly instead of showing through the gaps. -->
+    <rect x="180.15" y="48" width="39.6" height="132.15"/>
+    <rect x="239.55" y="48" width="39.6" height="132.15"/>
+    <rect x="298.95" y="48" width="39.6" height="132.15"/>
+    <rect x="180.15" y="343.3" width="39.6" height="120.7"/>
+    <rect x="239.55" y="343.3" width="39.6" height="120.7"/>
+    <rect x="298.95" y="343.3" width="39.6" height="120.7"/>
+    <!-- Horizontal bars, full width of the mark. -->
+    <rect x="48" y="180.15" width="416" height="39.6"/>
+    <rect x="48" y="239.55" width="416" height="39.6"/>
+    <rect x="48" y="298.95" width="416" height="39.6"/>
+  </g>
 </svg>
