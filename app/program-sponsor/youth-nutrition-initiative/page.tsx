@@ -6,7 +6,7 @@ import { Button } from "@/components/Button";
 export const metadata = {
   title: "Youth Nutrition Initiative",
   description:
-    "A 20-day daily intervention delivering low-glycemic, whole-food snacks to 50,000 at-risk youth across Southern California.",
+    "The Youth Nutrition Initiative provides nutritious, low-glycemic food to children and families through schools, youth programs, and nonprofit partners.",
 };
 
 const faqs = [
@@ -23,12 +23,16 @@ const faqs = [
     a: "$40 per youth for prevention versus $10,000+ annually per patient for ongoing Type 2 diabetes treatment — a roughly 250× cost differential.",
   },
   {
-    q: "How many youth does the Phase 1 program serve?",
-    a: "Phase 1 reaches 50,000 at-risk youth across Southern California through 10–30+ distribution sites over 20 days, with $2M in total funding.",
+    q: "How many youth does the Youth Nutrition Initiative reach?",
+    a: "The initiative is built to scale. Working through schools, youth programs, and nonprofit partners, the long-term goal is helping hundreds of thousands — and ultimately millions — of children gain access to nutritious food.",
   },
   {
     q: "What kinds of foods does the program provide?",
     a: "Plant-based, low-glycemic snacks designed for sustained energy and blood-sugar stability — all ADA Better Choices for Life designated and USDA Smart Snack compliant.",
+  },
+  {
+    q: "How can a company or foundation sponsor the Youth Nutrition Initiative?",
+    a: "Sponsorship opportunities are available for corporations, foundations, and community partners to expand the Youth Nutrition Initiative into additional communities. Contact Teen Health to discuss the level and locations that fit your goals.",
   },
 ];
 
@@ -71,34 +75,38 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <span className="text-mintDark">
                   Healthy Youth Nutrition
                 </span>
-                <br />
-                in Southern California
               </h1>
             </Reveal>
 
             <Reveal delay={0.15}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80">
-                A 20-day daily intervention delivering low-glycemic, whole-food
-                snacks to 50,000 at-risk youth across Southern California — through
-                schools, nonprofits, and community programs.
+                The Youth Nutrition Initiative provides nutritious food to
+                children and families through schools, youth programs, and
+                nonprofit partners — millions of low-glycemic, whole-food
+                servings delivered where young people already are.
               </p>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <div className="mt-10 flex gap-10">
-                <div>
-                  <p className="font-serif text-4xl font-normal text-mintDark">50K</p>
-                  <p className="mt-1 text-xs text-ink/70">At-Risk Youth Served</p>
-                </div>
-                <div>
-                  <p className="font-serif text-4xl font-normal text-sky">1M</p>
-                  <p className="mt-1 text-xs text-ink/70">Total Servings</p>
-                </div>
-                <div>
-                  <p className="font-serif text-4xl font-normal text-navy">20</p>
-                  <p className="mt-1 text-xs text-ink/70">Days of Daily Access</p>
-                </div>
-              </div>
+              <ul className="mt-10 space-y-3">
+                {[
+                  "National reach",
+                  "Schools & youth organizations",
+                  "Corporate sponsorships",
+                  "Measurable community impact",
+                  "Scalable across the U.S.",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5">
+                    <span
+                      className="h-1.5 w-1.5 shrink-0 rounded-full bg-mintDark"
+                      aria-hidden
+                    />
+                    <span className="text-sm font-semibold text-ink/80">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </Reveal>
           </div>
 
@@ -159,7 +167,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             {[
               { stat: "1 in 5", color: "text-mintDark", title: "Youth Face Food Insecurity", desc: "Millions of young people lack reliable access to nutritious meals, creating a foundation for poor health outcomes." },
               { stat: "1 in 3", color: "text-sky", title: "Youth Face Metabolic Risk", desc: "High-sugar, low-fiber environments lead to blood sugar spikes, energy crashes, and reduced cognitive performance." },
-              { stat: "500K+", color: "text-navy", title: "At Elevated Risk in Southern California", desc: "Over 3 million students across the region, ~60% qualify for Free & Reduced Lunch, and 35%+ face overweight or obesity risk." },
+              { stat: "14M+", color: "text-navy", title: "Children Across the U.S.", desc: "Millions live in food-insecure homes that cannot reliably afford enough nutritious food — the population this initiative is built to reach." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
@@ -334,16 +342,16 @@ export default function YouthNutritionInitiativeLandingPage() {
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
               Early intervention significantly reduces long-term cost burden.
-              Phase 1 collects reach, adherence, engagement, and health impact
-              metrics.
+              Every site collects reach, adherence, engagement, and health
+              impact metrics.
             </p>
           </Reveal>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-3">
             {[
               { num: "$40", color: "text-mintDark", title: "Per Child", desc: "Covers the full 20-day intervention — all-inclusive with no additional implementation costs." },
-              { num: "$2M", color: "text-sky", title: "Total Phase 1", desc: "Full funding for 50,000 youth across 10–30+ distribution sites over 20 days." },
-              { num: "20", color: "text-navy", title: "Daily Servings Per Youth", desc: "Consistent daily exposure — not one-time consumption. Consistency drives outcomes." },
+              { num: "20", color: "text-sky", title: "Daily Servings Per Youth", desc: "Consistent daily exposure — not one-time consumption. Consistency drives outcomes." },
+              { num: "250×", color: "text-navy", title: "Prevention vs. Treatment", desc: "The cost of preventing metabolic disease is a fraction of the cost of treating it for life." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
                 <div className="h-full rounded-2xl border border-border bg-white p-8 text-center shadow-sm">
@@ -385,6 +393,14 @@ export default function YouthNutritionInitiativeLandingPage() {
             </div>
           </Reveal>
 
+          <Reveal delay={0.18}>
+            <p className="mx-auto mt-10 max-w-2xl text-center text-base leading-relaxed text-ink/80">
+              Sponsorship opportunities are available for corporations,
+              foundations, and community partners to expand the Youth Nutrition
+              Initiative into additional communities.
+            </p>
+          </Reveal>
+
           <Reveal delay={0.2}>
             <div className="mx-auto mt-16 max-w-3xl">
               <h3 className="text-center font-serif text-2xl font-normal tracking-tight text-ink sm:text-3xl">
@@ -422,8 +438,9 @@ export default function YouthNutritionInitiativeLandingPage() {
               Scalable Prevention Model
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/80">
-              Phase 1 represents a repeatable intervention model designed to
-              scale through programs like Medi-Cal and managed care.
+              The initiative is a repeatable intervention model designed to
+              scale through schools, youth organizations, and programs like
+              Medi-Cal and managed care.
             </p>
           </Reveal>
 
@@ -431,15 +448,14 @@ export default function YouthNutritionInitiativeLandingPage() {
             <Reveal delay={0.05}>
               <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
                 <span className="inline-block rounded-full bg-mintDark/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-mintDark">
-                  Phase 1 — Now
+                  Today
                 </span>
                 <h4 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                   Community Deployment
                 </h4>
                 <p className="mt-3 text-sm leading-relaxed text-ink/80">
-                  50,000 at-risk youth across Southern California. Daily
-                  distribution through existing school and nonprofit partner
-                  sites.
+                  Daily distribution through schools, youth programs, and
+                  nonprofit partners already serving children and families.
                 </p>
               </div>
             </Reveal>
@@ -452,26 +468,28 @@ export default function YouthNutritionInitiativeLandingPage() {
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">
                 <span className="inline-block rounded-full bg-sky/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-sky">
-                  Phase 2 — Next
+                  Next
                 </span>
                 <h4 className="mt-5 font-serif text-xl font-normal tracking-tight text-ink">
                   Population Health Expansion
                 </h4>
                 <p className="mt-3 text-sm leading-relaxed text-ink/80">
                   Scale through Medi-Cal, managed care, and broader healthcare
-                  system integration across California.
+                  system integration — a model repeatable in any state.
                 </p>
               </div>
             </Reveal>
           </div>
 
           <Reveal delay={0.15}>
-            <div className="mx-auto mt-12 max-w-xl rounded-2xl bg-mint/40 p-8 text-center">
-              <p className="font-serif text-4xl font-normal tracking-tight text-ink">
-                2.5–3.5M+
+            <div className="mx-auto mt-12 max-w-2xl rounded-2xl bg-mint/40 p-8 text-center">
+              <p className="text-balance font-serif text-2xl font-normal leading-snug tracking-tight text-ink sm:text-[1.75rem]">
+                Helping hundreds of thousands — and ultimately millions — of
+                children gain access to nutritious food.
               </p>
-              <p className="mt-2 text-base text-ink">
-                Youth at elevated metabolic risk statewide in California
+              <p className="mt-4 text-balance text-base text-ink/80">
+                Millions of nutritious servings, delivered through community
+                partners across the country.
               </p>
             </div>
           </Reveal>
