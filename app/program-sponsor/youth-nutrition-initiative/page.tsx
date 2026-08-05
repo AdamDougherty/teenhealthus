@@ -167,7 +167,7 @@ export default function YouthNutritionInitiativeLandingPage() {
             {[
               { stat: "1 in 5", color: "text-mintDark", title: "Youth Face Food Insecurity", desc: "Millions of young people lack reliable access to nutritious meals, creating a foundation for poor health outcomes." },
               { stat: "1 in 3", color: "text-sky", title: "Youth Face Metabolic Risk", desc: "High-sugar, low-fiber environments lead to blood sugar spikes, energy crashes, and reduced cognitive performance." },
-              { stat: "14M+", color: "text-navy", title: "Children Across the U.S.", desc: "Millions live in food-insecure homes that cannot reliably afford enough nutritious food — the population this initiative is built to reach." },
+              { stat: "14M+", color: "text-navy", title: "Children Across the U.S.", desc: "In every state, children live in homes that cannot consistently afford nutritious food." },
             ].map((card) => (
               <Reveal key={card.title} delay={0.05}>
                 <div className="h-full rounded-2xl border border-border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
