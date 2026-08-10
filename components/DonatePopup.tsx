@@ -24,11 +24,16 @@ import { usePathname } from "next/navigation";
 const BASE_FORM_URL =
   "https://www.zeffy.com/embed/donation-form/donate-to-support-at-risk-youth-2";
 
+// The dedicated monthly campaign. Links with a `monthly` query param
+// (e.g. /donate?monthly=1&amount=25) open this form instead of the one-time one.
+const MONTHLY_FORM_URL =
+  "https://www.zeffy.com/embed/donation-form/give-monthly-to-support-at-risk-youth";
+
 // Zeffy's iframe uses this id to tell the parent page the donation is done.
 const MESSAGE_ID = "zeffy-iframe";
 
-function buildFormUrl(amount: string | null) {
-  const url = new URL(BASE_FORM_URL);
+function buildFormUrl(amount: string | null, monthly: boolean) {
+  const url = new URL(monthly ? MONTHLY_FORM_URL : BASE_FORM_URL);
   if (amount && /^\d{1,6}$/.test(amount) && Number(amount) > 0) {
     url.searchParams.set("amount", amount);
   }
@@ -37,14 +42,16 @@ function buildFormUrl(amount: string | null) {
   return url.toString();
 }
 
+type ActiveForm = { url: string; monthly: boolean };
+
 export function DonatePopup() {
   const pathname = usePathname();
-  const [formUrl, setFormUrl] = useState<string | null>(null);
+  const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const lastFocused = useRef<HTMLElement | null>(null);
 
-  const close = useCallback(() => setFormUrl(null), []);
+  const close = useCallback(() => setActiveForm(null), []);
 
   useEffect(() => {
     // /donate already renders the form inline — don't stack a popup on it.
@@ -61,7 +68,9 @@ export function DonatePopup() {
       if (link.target && link.target !== "_self") return;
 
       const query = (link.getAttribute("href") || "").split("?")[1] || "";
-      const amount = new URLSearchParams(query).get("amount");
+      const params = new URLSearchParams(query);
+      const amount = params.get("amount");
+      const monthly = params.has("monthly");
 
       // Preventing the default here, in the capture phase, is what stops the
       // navigation: next/link's own handler returns early when the default is
@@ -70,7 +79,7 @@ export function DonatePopup() {
       // (the mobile menu closing itself, for one) still get to run.
       event.preventDefault();
       lastFocused.current = document.activeElement as HTMLElement | null;
-      setFormUrl(buildFormUrl(amount));
+      setActiveForm({ url: buildFormUrl(amount, monthly), monthly });
     }
 
     // Capture phase: must run before next/link's onClick, which would otherwise
@@ -81,7 +90,7 @@ export function DonatePopup() {
 
   // Close on Escape, and lock the page behind the overlay.
   useEffect(() => {
-    if (!formUrl) return;
+    if (!activeForm) return;
 
     function handleKey(event: KeyboardEvent) {
       if (event.key === "Escape") close();
@@ -97,11 +106,11 @@ export function DonatePopup() {
       document.body.style.overflow = previousOverflow;
       lastFocused.current?.focus?.();
     };
-  }, [formUrl, close]);
+  }, [activeForm, close]);
 
   // Zeffy posts a close message when the donation finishes.
   useEffect(() => {
-    if (!formUrl) return;
+    if (!activeForm) return;
 
     function handleMessage(event: MessageEvent) {
       // Only trust the frame we opened, whatever origin Zeffy serves it from.
@@ -111,16 +120,16 @@ export function DonatePopup() {
 
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
-  }, [formUrl, close]);
+  }, [activeForm, close]);
 
-  if (!formUrl) return null;
+  if (!activeForm) return null;
 
   return (
     <div
       className="fixed inset-0 z-[10000]"
       role="dialog"
       aria-modal="true"
-      aria-label="Donate to Teen Health"
+      aria-label={activeForm.monthly ? "Give monthly to Teen Health" : "Donate to Teen Health"}
     >
       <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
@@ -139,33 +148,66 @@ export function DonatePopup() {
               so the case for giving has to live on our side of the iframe. */}
           {/* pr-14 on phones keeps the headline clear of the close button. */}
           <div className="shrink-0 bg-white pb-5 pl-6 pr-14 pt-6 md:w-[38%] md:overflow-y-auto md:px-8 md:py-10">
-            <h2 className="font-serif text-xl font-normal leading-snug tracking-tight text-ink md:text-2xl">
-              {/* text-sun is #FF8005, the same orange as the Donate buttons. */}
-              100% of your donation reaches a{" "}
-              <span className="text-sun">young person</span>.
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink/70 md:mt-5">
-              More than 250 natural products companies donate what fills our
-              kits and cover the cost of running Teen Health. Your gift goes to
-              work assembling those kits and getting them into a young
-              person&rsquo;s hands.
-            </p>
-            {/* Held back on phones so the amount buttons stay above the fold. */}
-            <div className="hidden md:block">
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-ink/70">
-                Here&rsquo;s what that buys: nourishing food, hydration, and
-                personal care items &mdash; the things a young person needs to
-                stay healthy and walk into a room with dignity. We move them
-                through our partner agencies across Southern California,
-                reaching more than 5,000 youth ages 13&ndash;24 every year.
-              </p>
-              {/* text-pretty keeps the last line from stranding a single word,
-                  whatever width the column ends up at. */}
-              <p className="mt-4 text-pretty text-sm font-semibold leading-relaxed text-ink">
-                You&rsquo;re not funding an organization. You&rsquo;re funding a
-                kit that a specific young person opens.
-              </p>
-            </div>
+            {activeForm.monthly ? (
+              <>
+                <h2 className="font-serif text-xl font-normal leading-snug tracking-tight text-ink md:text-2xl">
+                  {/* text-sun is #FF8005, the same orange as the Donate buttons. */}
+                  100% of your monthly gift reaches a{" "}
+                  <span className="text-sun">young person</span>.
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70 md:mt-5">
+                  Steady monthly support lets us plan ahead &mdash; keeping
+                  healthy food, hydration, and personal care essentials flowing
+                  to vulnerable youth every single month.
+                </p>
+                {/* Held back on phones so the amount buttons stay above the fold. */}
+                <div className="hidden md:block">
+                  <p className="mt-4 text-pretty text-sm leading-relaxed text-ink/70">
+                    Because brand partners cover our overhead, 100% of every
+                    dollar you give goes into the monthly kits we distribute
+                    through 100+ partner agencies. Change or cancel your
+                    monthly amount anytime &mdash; no fees, no commitments.
+                  </p>
+                  {/* text-pretty keeps the last line from stranding a single word,
+                      whatever width the column ends up at. */}
+                  <p className="mt-4 text-pretty text-sm font-semibold leading-relaxed text-ink">
+                    You&rsquo;re not funding an organization. You&rsquo;re
+                    funding a kit that a specific young person opens &mdash;
+                    every month.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 className="font-serif text-xl font-normal leading-snug tracking-tight text-ink md:text-2xl">
+                  {/* text-sun is #FF8005, the same orange as the Donate buttons. */}
+                  100% of your donation reaches a{" "}
+                  <span className="text-sun">young person</span>.
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-ink/70 md:mt-5">
+                  More than 250 natural products companies donate what fills our
+                  kits and cover the cost of running Teen Health. Your gift goes to
+                  work assembling those kits and getting them into a young
+                  person&rsquo;s hands.
+                </p>
+                {/* Held back on phones so the amount buttons stay above the fold. */}
+                <div className="hidden md:block">
+                  <p className="mt-4 text-pretty text-sm leading-relaxed text-ink/70">
+                    Here&rsquo;s what that buys: nourishing food, hydration, and
+                    personal care items &mdash; the things a young person needs to
+                    stay healthy and walk into a room with dignity. We move them
+                    through our partner agencies across Southern California,
+                    reaching more than 5,000 youth ages 13&ndash;24 every year.
+                  </p>
+                  {/* text-pretty keeps the last line from stranding a single word,
+                      whatever width the column ends up at. */}
+                  <p className="mt-4 text-pretty text-sm font-semibold leading-relaxed text-ink">
+                    You&rsquo;re not funding an organization. You&rsquo;re funding a
+                    kit that a specific young person opens.
+                  </p>
+                </div>
+              </>
+            )}
           </div>
 
           <button
@@ -194,7 +236,7 @@ export function DonatePopup() {
             <iframe
               ref={iframeRef}
               title="Donation form powered and secured by Zeffy"
-              src={formUrl}
+              src={activeForm.url}
               allow="payment"
               className="h-full w-full border-0"
               onLoad={() =>

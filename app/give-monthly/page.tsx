@@ -164,16 +164,14 @@ export default function GiveMonthlyPage() {
                             <div className="mt-10">
                                 <div className="inline-flex flex-col items-center">
                                     <Button
-                                        href="/donate"
+                                        href="/donate?monthly=1"
                                         variant="primary"
                                         style={{ backgroundColor: '#FF8005', color: 'white' }}
                                     >
                                         Join the Monthly Giving Community
                                     </Button>
                                     <p className="mt-3 text-xs font-medium text-white/80">
-                                        On the donation form, select{" "}
-                                        <span className="font-bold text-white">Monthly</span> to make
-                                        your gift recurring.
+                                        Cancel or change your amount anytime.
                                     </p>
                                     <p className="mt-1 text-xs font-medium text-white/60">
                                         Secure checkout via Zeffy &amp; Stripe
@@ -261,7 +259,7 @@ export default function GiveMonthlyPage() {
                         {impactTiers.map((tier, i) => (
                             <Reveal key={tier.amount} delay={i * 0.08} className="h-full">
                                 <a
-                                    href={`/donate?amount=${tier.value}`}
+                                    href={`/donate?monthly=1&amount=${tier.value}`}
                                     className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white/60 p-6 transition-all hover:-translate-y-1 hover:border-ink/20 hover:shadow-lg"
                                 >
                                     <div className="flex items-baseline gap-1">
@@ -286,16 +284,14 @@ export default function GiveMonthlyPage() {
 
                     <Reveal delay={0.35}>
                         <p className="mt-5 text-center text-xs font-medium text-ink/50">
-                            On the donation form, select{" "}
-                            <span className="font-bold text-ink/70">Monthly</span> to make your gift
-                            recurring. Cancel or change your amount anytime. No commitments.
+                            Cancel or change your amount anytime. No commitments.
                         </p>
                     </Reveal>
 
                     <Reveal delay={0.4}>
                         <div className="mt-8 text-center">
                             <Button
-                                href="/donate"
+                                href="/donate?monthly=1"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
@@ -454,16 +450,14 @@ export default function GiveMonthlyPage() {
                         </p>
                         <div className="mt-8">
                             <Button
-                                href="/donate"
+                                href="/donate?monthly=1"
                                 variant="primary"
                                 style={{ backgroundColor: '#FF8005', color: 'white' }}
                             >
                                 Join the Monthly Giving Community
                             </Button>
                             <p className="mt-3 text-xs font-medium text-ink/50">
-                                On the donation form, select{" "}
-                                <span className="font-bold text-ink/70">Monthly</span> to make your
-                                gift recurring.
+                                Cancel or change your amount anytime. No commitments.
                             </p>
                             <p className="mt-1 text-xs font-medium text-ink/40">
                                 Secure checkout via Zeffy &amp; Stripe
