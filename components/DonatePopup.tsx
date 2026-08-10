@@ -190,6 +190,17 @@ export function DonatePopup() {
                   work assembling those kits and getting them into a young
                   person&rsquo;s hands.
                 </p>
+                {/* Swaps the frame to the monthly campaign — the one-time Zeffy
+                    form no longer offers a monthly option itself. */}
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveForm({ url: buildFormUrl(null, true), monthly: true })
+                  }
+                  className="mt-3 text-sm font-semibold text-sun hover:underline"
+                >
+                  Prefer to give monthly instead? &rarr;
+                </button>
                 {/* Held back on phones so the amount buttons stay above the fold. */}
                 <div className="hidden md:block">
                   <p className="mt-4 text-pretty text-sm leading-relaxed text-ink/70">
