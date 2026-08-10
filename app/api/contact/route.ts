@@ -5,6 +5,7 @@ const FORM_LABELS: Record<string, string> = {
   volunteer: "Volunteer signup",
   "product-donation": "Brand partner inquiry",
   contact: "Contact form",
+  "yni-interest": "Youth Nutrition Initiative interest",
 };
 
 const FIELD_LABELS: Record<string, string> = {
@@ -20,6 +21,9 @@ const FIELD_LABELS: Record<string, string> = {
   website: "Website",
   message: "Message",
   interest: "Area of interest",
+  interests: "Interested in",
+  location: "Location(s) of interest",
+  additionalInfo: "Additional information",
   availability: "Availability",
   ageConfirmation: "Confirmed 18 or older",
   formType: "Form",

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
+import { InterestForm } from "./InterestForm";
 
 export const metadata = {
   title: "Youth Nutrition Initiative",
@@ -625,6 +626,9 @@ export default function YouthNutritionInitiativeLandingPage() {
           </Reveal>
         </Container>
       </section>
+
+      {/* ═══ INTEREST FORM ═══ */}
+      <InterestForm />
     </div>
   );
 }

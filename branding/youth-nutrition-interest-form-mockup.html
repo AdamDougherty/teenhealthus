@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Involved — Youth Nutrition Initiative — Teen Health</title>
+<style>
+  :root {
+    --navy: #1c3a6e;
+    --navy-dark: #14294f;
+    --blue-accent: #2f5db3;
+    --orange: #f0781f;
+    --orange-dark: #d9660f;
+    --bg: #f7f6f3;
+    --card-bg: #ffffff;
+    --border: #dfe2e7;
+    --text: #1f2430;
+    --text-muted: #5b6270;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  #yni-form {
+    padding: 64px 24px;
+  }
+
+  .yni-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .yni-wrap { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Left column ---------- */
+  .yni-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--blue-accent);
+    margin-bottom: 12px;
+  }
+
+  .yni-heading {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    color: var(--navy-dark);
+    margin: 0 0 18px;
+  }
+
+  .yni-sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0 0 36px;
+  }
+
+  .yni-step {
+    display: flex;
+    gap: 18px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+  }
+  .yni-step:first-of-type { border-top: none; padding-top: 0; }
+
+  .yni-step-num {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: rgba(28, 58, 110, 0.65);
+    font-weight: 400;
+    margin: 0 0 4px;
+  }
+
+  .yni-step-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+
+  .yni-step-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .yni-callout {
+    margin-top: 28px;
+    background: #e7edf9;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .yni-callout p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--navy-dark); }
+  .yni-callout strong { display: block; margin-bottom: 2px; }
+
+  /* ---------- Right column: form card ---------- */
+  .yni-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(20, 41, 79, 0.08);
+    padding: 40px;
+  }
+  @media (max-width: 560px) {
+    .yni-card { padding: 24px; }
+  }
+
+  .yni-section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 6px;
+  }
+  .yni-section-head:not(:first-child) { margin-top: 34px; }
+  .yni-section-head h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy-dark);
+    margin: 0;
+  }
+  .yni-section-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 0 16px;
+  }
+  .yni-hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 20px;
+  }
+
+  .yni-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 700px) {
+    .yni-row { grid-template-columns: 1fr; }
+  }
+
+  .yni-field label,
+  .yni-group > .yni-group-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+  }
+  .yni-required { color: var(--orange); }
+
+  .yni-hint {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin: -3px 0 8px;
+  }
+
+  .yni-field input[type="text"],
+  .yni-field input[type="email"],
+  .yni-field input[type="tel"],
+  .yni-field textarea {
+    width: 100%;
+    font-size: 14.5px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .yni-field input:focus,
+  .yni-field textarea:focus {
+    outline: none;
+    border-color: var(--blue-accent);
+    box-shadow: 0 0 0 3px rgba(47, 93, 179, 0.15);
+  }
+  .yni-field textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  /* Tile choice group (checkboxes) */
+  .yni-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 560px) {
+    .yni-tiles { grid-template-columns: 1fr; }
+  }
+
+  .yni-tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .yni-tile:hover { border-color: var(--blue-accent); }
+  .yni-tile input { position: absolute; opacity: 0; pointer-events: none; }
+  .yni-tile .yni-check {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 2px solid #c6cbd3;
+    display: inline-block;
+    position: relative;
+  }
+  .yni-tile input:checked ~ .yni-check {
+    border-color: var(--blue-accent);
+    background: var(--blue-accent);
+  }
+  .yni-tile input:checked ~ .yni-check::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+  }
+  .yni-tile:has(input:checked) {
+    border-color: var(--blue-accent);
+    background: #eef3fc;
+  }
+
+  .yni-submit {
+    width: 100%;
+    margin-top: 28px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 15.5px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .yni-submit:hover { background: var(--orange-dark); }
+  .yni-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .yni-status {
+    margin-top: 14px;
+    font-size: 13.5px;
+    text-align: center;
+    display: none;
+  }
+  .yni-status.yni-ok { color: #1b7a3d; display: block; }
+  .yni-status.yni-err { color: #b3261e; display: block; }
+</style>
+</head>
+<body>
+
+<section id="yni-form">
+  <div class="yni-wrap">
+
+    <!-- LEFT: intro / steps -->
+    <div class="yni-intro">
+      <div class="yni-eyebrow">GET INVOLVED</div>
+      <h2 class="yni-heading">Partner with the Youth Nutrition Initiative.</h2>
+      <p class="yni-sub">
+        Tell us a bit about your organization and how you'd like to be
+        involved. Together we can bring nutritious food and support to more
+        at-risk youth and young adults in need.
+      </p>
+
+      <div class="yni-step">
+        <div>
+          <p class="yni-step-num">01</p>
+          <p class="yni-step-title">Share your interest</p>
+          <p class="yni-step-desc">Tell us about your organization and what you're hoping to explore.</p>
+        </div>
+      </div>
+
+      <div class="yni-step">
+        <div>
+          <p class="yni-step-num">02</p>
+          <p class="yni-step-title">We'll connect</p>
+          <p class="yni-step-desc">Our team follows up to discuss next steps and opportunities to engage.</p>
+        </div>
+      </div>
+
+      <div class="yni-step">
+        <div>
+          <p class="yni-step-num">03</p>
+          <p class="yni-step-title">Launch the partnership</p>
+          <p class="yni-step-desc">Move forward with a sponsorship or program partnership that fits your goals.</p>
+        </div>
+      </div>
+
+      <div class="yni-callout">
+        <p><strong>Every partnership expands access.</strong>Together we can bring nutritious food to more youth across the country.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="yni-card">
+      <form id="yniForm" novalidate>
+
+        <div class="yni-section-head">
+          <h3>1. Contact Information</h3>
+        </div>
+        <hr class="yni-hr">
+
+        <div class="yni-row">
+          <div class="yni-field">
+            <label for="yniName">Name <span class="yni-required">*</span></label>
+            <input type="text" id="yniName" name="contactName" placeholder="Your name" required>
+          </div>
+          <div class="yni-field">
+            <label for="yniOrg">Organization / Company <span class="yni-required">*</span></label>
+            <input type="text" id="yniOrg" name="organization" placeholder="Organization name" required>
+          </div>
+        </div>
+        <div class="yni-row">
+          <div class="yni-field">
+            <label for="yniEmail">Email <span class="yni-required">*</span></label>
+            <input type="email" id="yniEmail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="yni-field">
+            <label for="yniPhone">Phone</label>
+            <input type="tel" id="yniPhone" name="phone" placeholder="(555) 555-5555">
+          </div>
+        </div>
+
+        <div class="yni-section-head">
+          <h3>2. Interest</h3>
+        </div>
+        <hr class="yni-hr">
+
+        <div class="yni-group" style="margin-bottom: 6px;">
+          <span class="yni-group-label">I'm interested in <span class="yni-required">*</span></span>
+          <div class="yni-tiles">
+            <label class="yni-tile">
+              <input type="checkbox" name="interests" value="Corporate Sponsorship">
+              <span class="yni-check"></span>
+              Corporate Sponsorship
+            </label>
+            <label class="yni-tile">
+              <input type="checkbox" name="interests" value="Foundation / Grant Funding">
+              <span class="yni-check"></span>
+              Foundation / Grant Funding
+            </label>
+            <label class="yni-tile">
+              <input type="checkbox" name="interests" value="School or Youth Program Partnership">
+              <span class="yni-check"></span>
+              School or Youth Program Partnership
+            </label>
+            <label class="yni-tile">
+              <input type="checkbox" name="interests" value="Individual Giving">
+              <span class="yni-check"></span>
+              Individual Giving
+            </label>
+            <label class="yni-tile">
+              <input type="checkbox" name="interests" value="Other">
+              <span class="yni-check"></span>
+              Other
+            </label>
+          </div>
+        </div>
+
+        <div class="yni-section-head">
+          <h3>3. Location</h3>
+        </div>
+        <hr class="yni-hr">
+
+        <div class="yni-field" style="margin-bottom: 18px;">
+          <label for="yniLocation">Location(s) of interest</label>
+          <p class="yni-hint">Region, city, or a specific school/organization you have in mind.</p>
+          <input type="text" id="yniLocation" name="location" placeholder="e.g. Los Angeles, CA or a specific school district">
+        </div>
+
+        <div class="yni-section-head">
+          <h3>4. Additional Information</h3>
+        </div>
+        <hr class="yni-hr">
+
+        <div class="yni-field" style="margin-bottom: 6px;">
+          <label for="yniDetails">Anything else?</label>
+          <textarea id="yniDetails" name="additionalInfo" placeholder="Anything else you'd like us to know?"></textarea>
+        </div>
+
+        <button type="submit" class="yni-submit" id="yniSubmitBtn">Submit interest form</button>
+        <p class="yni-status" id="yniStatus"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var form = document.getElementById('yniForm');
+  var status = document.getElementById('yniStatus');
+  var btn = document.getElementById('yniSubmitBtn');
+
+  // TODO: point this at your real submission endpoint (Salesforce Web-to-Lead,
+  // a serverless function, Zapier webhook, etc.)
+  var ENDPOINT_URL = '';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var interests = form.querySelectorAll('input[name="interests"]:checked');
+    if (interests.length === 0) {
+      status.className = 'yni-status yni-err';
+      status.textContent = "Please select at least one area you're interested in.";
+      return;
+    }
+
+    var data = new FormData(form);
+    var payload = {};
+    var multiValueFields = ['interests'];
+    data.forEach(function (value, key) {
+      if (multiValueFields.indexOf(key) !== -1) {
+        payload[key] = payload[key] || [];
+        payload[key].push(value);
+      } else {
+        payload[key] = value;
+      }
+    });
+
+    status.className = 'yni-status';
+    status.textContent = '';
+
+    if (!ENDPOINT_URL) {
+      // No endpoint configured yet — show the captured payload for testing.
+      console.log('Youth Nutrition Initiative interest form payload:', payload);
+      status.textContent = 'Form validated. Connect ENDPOINT_URL to submit for real.';
+      status.classList.add('yni-ok');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    fetch(ENDPOINT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Request failed');
+        status.textContent = "Thanks! We'll be in touch soon.";
+        status.classList.add('yni-ok');
+        form.reset();
+      })
+      .catch(function () {
+        status.textContent = 'Something went wrong. Please try again or email us directly.';
+        status.classList.add('yni-err');
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Submit interest form';
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
