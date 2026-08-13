@@ -39,13 +39,8 @@ const pageStyles = `
   .dk-hero-inner {
     max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 460px;
-    gap: 60px;
-    align-items: center;
   }
   @media (max-width: 900px) {
-    .dk-hero-inner { grid-template-columns: 1fr; }
     .dk-hero { padding: 60px 20px 64px; }
   }
 
@@ -87,7 +82,7 @@ const pageStyles = `
     color: rgba(255,255,255,0.92);
     font-weight: 400;
     line-height: 1.65;
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 40px;
   }
 
@@ -116,44 +111,6 @@ const pageStyles = `
     color: rgba(255,255,255,0.85);
     font-weight: 500;
   }
-
-  /* Hero card */
-  .dk-hero-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 30px 28px;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-  }
-  .dk-hero-card-title {
-    font-family: var(--dk-serif);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--dk-navy);
-    margin-bottom: 20px;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-  }
-  .dk-card-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(26,43,60,0.10);
-  }
-  .dk-card-row:first-of-type { padding-top: 0; }
-  .dk-card-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .dk-row-icon {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .dk-ri-teal   { background: var(--dk-teal-light); }
-  .dk-ri-blue   { background: var(--dk-blue-light); }
-  .dk-ri-orange { background: var(--dk-orange-light); }
-  .dk-row-icon svg { width: 14px; height: 14px; }
-  .dk-card-row p { font-size: 14px; color: var(--dk-text-mid); line-height: 1.55; font-weight: 400; }
-  .dk-card-row p b { color: var(--dk-navy); font-weight: 700; }
 
   /* ── GRADIENT BODY ── */
   .dk-gradient-body {
@@ -489,7 +446,6 @@ const pageStyles = `
     animation: dkFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   .dk-hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
-  .dk-hero-inner > *:nth-child(2) { animation-delay: 0.15s; }
   @keyframes dkFadeInFallback {
     to { opacity: 1; transform: none; }
   }
@@ -547,9 +503,10 @@ export default function DignityKitProgramPage() {
               <span className="dk-accent">a Lifeline</span>
             </h1>
             <p className="dk-hero-sub">
-              Delivering 500 backpacks filled with healthy snacks, hydration, and
-              essential supplies to young people experiencing homelessness across
-              Los Angeles.
+              Join our campaign to distribute 500 backpacks through the month
+              of September — each filled with healthy snacks, hydration, and
+              essential supplies for young people experiencing homelessness
+              across Los Angeles.
             </p>
             <div className="dk-hero-stats">
               <div>
@@ -567,92 +524,6 @@ export default function DignityKitProgramPage() {
             </div>
           </div>
 
-          <div className="dk-hero-card">
-            <p className="dk-hero-card-title">Designed for Immediate Impact</p>
-
-            <div className="dk-card-row">
-              <div className="dk-row-icon dk-ri-teal">
-                <svg viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M7.5 2C5 2 3 4 3 6.5C3 9.5 7.5 13 7.5 13S12 9.5 12 6.5C12 4 10 2 7.5 2Z"
-                    fill="#5a7ba8"
-                  />
-                  <circle cx="7.5" cy="6.5" r="1.5" fill="white" />
-                </svg>
-              </div>
-              <p>
-                <b>Nourishment</b> through nutritious snacks and hydration for
-                youth who often go without meals.
-              </p>
-            </div>
-
-            <div className="dk-card-row">
-              <div className="dk-row-icon dk-ri-blue">
-                <svg viewBox="0 0 15 15" fill="none">
-                  <circle
-                    cx="7.5"
-                    cy="7.5"
-                    r="5.5"
-                    stroke="#5a7ba8"
-                    strokeWidth={1.5}
-                  />
-                  <path
-                    d="M5 7.5l2 2 3-3"
-                    stroke="#5a7ba8"
-                    strokeWidth={1.5}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <p>
-                <b>Dignity</b> and a tangible message that every young person is
-                seen and valued.
-              </p>
-            </div>
-
-            <div className="dk-card-row">
-              <div className="dk-row-icon dk-ri-teal">
-                <svg viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M7.5 1.5L9.5 6H14L10.5 9 12 13.5 7.5 11 3 13.5 4.5 9 1 6H5.5L7.5 1.5Z"
-                    fill="#5a7ba8"
-                  />
-                </svg>
-              </div>
-              <p>
-                <b>Stability</b> through essential supplies for youth without
-                consistent access to basics.
-              </p>
-            </div>
-
-            <div className="dk-card-row">
-              <div className="dk-row-icon dk-ri-orange">
-                <svg viewBox="0 0 15 15" fill="none">
-                  <rect
-                    x="2"
-                    y="5.5"
-                    width="11"
-                    height="7.5"
-                    rx="1.5"
-                    stroke="#e87820"
-                    strokeWidth={1.5}
-                  />
-                  <path
-                    d="M5 5.5V4a2.5 2.5 0 015 0v1.5"
-                    stroke="#e87820"
-                    strokeWidth={1.5}
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-              <p>
-                <b>$50 retail value</b> delivered for every $25 donation — your
-                dollar goes twice as far.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -773,8 +644,7 @@ export default function DignityKitProgramPage() {
               </div>
               <div className="dk-doubling-copy">
                 <h3>
-                  Every dollar you give
-                  <br />
+                  Every dollar you give{" "}
                   <span className="dk-accent">goes twice as far</span>
                 </h3>
                 <p>
