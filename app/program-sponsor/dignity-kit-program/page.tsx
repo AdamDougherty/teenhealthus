@@ -74,8 +74,20 @@ const pageStyles = `
     line-height: 1.12;
     letter-spacing: -0.02em;
     margin-bottom: 22px;
+    text-wrap: balance;
   }
   .dk-hero h1 .dk-accent { color: rgba(255,255,255,0.88); }
+
+  .dk-hero-campaign {
+    font-size: clamp(20px, 2.6vw, 26px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    max-width: 520px;
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
 
   .dk-hero-sub {
     font-size: 17px;
@@ -84,6 +96,7 @@ const pageStyles = `
     line-height: 1.65;
     max-width: 600px;
     margin-bottom: 40px;
+    text-wrap: pretty;
   }
 
   .dk-hero-stats {
@@ -155,6 +168,7 @@ const pageStyles = `
     line-height: 1.18;
     letter-spacing: -0.02em;
     margin-bottom: 14px;
+    text-wrap: balance;
   }
   .dk-br-mobile { display: none; }
   @media (max-width: 600px) {
@@ -167,6 +181,7 @@ const pageStyles = `
     line-height: 1.7;
     max-width: 660px;
     margin-bottom: 0;
+    text-wrap: pretty;
   }
 
   /* ── 2-COL ── */
@@ -498,13 +513,14 @@ export default function DignityKitProgramPage() {
               Dignity Kit Program
             </div>
             <h1>
-              Every Backpack Is
-              <br />
-              <span className="dk-accent">a Lifeline</span>
+              Every Backpack Is <span className="dk-accent">a Lifeline</span>
             </h1>
+            <p className="dk-hero-campaign">
+              Join our campaign to distribute 500 backpacks through
+              September&nbsp;30, 2026.
+            </p>
             <p className="dk-hero-sub">
-              Join our campaign to distribute 500 backpacks through the month
-              of September — each filled with healthy snacks, hydration, and
+              Each backpack is filled with healthy snacks, hydration, and
               essential supplies for young people experiencing homelessness
               across Los Angeles.
             </p>
@@ -528,8 +544,57 @@ export default function DignityKitProgramPage() {
       </section>
 
       <div className="dk-gradient-body">
-        {/* ── PROBLEM ── */}
+        {/* ── IMPACT TIERS ── */}
         <section className="dk-section">
+          <div className="dk-container">
+            <div className="dk-section-label dk-fade-in">Your Impact</div>
+            <h2 className="dk-section-h dk-fade-in">
+              Choose How Many Lives You Reach
+            </h2>
+            <p className="dk-section-sub dk-fade-in">
+              Every dollar has a direct, measurable outcome. Here&apos;s exactly
+              what your gift delivers on the ground.
+            </p>
+
+            <div className="dk-impact-grid">
+              <div className="dk-impact-card dk-fade-in">
+                <span className="dk-impact-tag">1 Youth</span>
+                <div className="dk-impact-amt">$25</div>
+                <p className="dk-impact-desc">
+                  1 fully stocked backpack with nutritious food, hydration, and
+                  essential supplies.
+                </p>
+              </div>
+              <div className="dk-impact-card dk-fade-in">
+                <span className="dk-impact-tag">10 Youth</span>
+                <div className="dk-impact-amt">$250</div>
+                <p className="dk-impact-desc">
+                  10 young people receive complete dignity kits with everything
+                  they need.
+                </p>
+              </div>
+              <div className="dk-impact-card dk-fade-in">
+                <span className="dk-impact-tag">100 Youth</span>
+                <div className="dk-impact-amt">$2,500</div>
+                <p className="dk-impact-desc">
+                  100 backpacks distributed to youth experiencing homelessness
+                  across Los Angeles.
+                </p>
+              </div>
+              <div className="dk-impact-card dk-featured dk-fade-in">
+                <span className="dk-impact-tag">Full Program</span>
+                <div className="dk-impact-amt">$12,500</div>
+                <p className="dk-impact-desc">
+                  Fully funds the entire program — 500 backpacks, 500 young
+                  people, all across Los Angeles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PROBLEM ── */}
+        <section className="dk-section" style={{ paddingTop: 0 }}>
           <div className="dk-container">
             <div className="dk-section-label dk-fade-in">The Problem</div>
             <h2 className="dk-section-h dk-fade-in">
@@ -784,55 +849,6 @@ export default function DignityKitProgramPage() {
                 <p>
                   Sourced through donations and partnerships to maximize every
                   dollar given.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── IMPACT TIERS ── */}
-        <section className="dk-section" style={{ paddingTop: 0 }}>
-          <div className="dk-container">
-            <div className="dk-section-label dk-fade-in">Your Impact</div>
-            <h2 className="dk-section-h dk-fade-in">
-              Choose How Many Lives You Reach
-            </h2>
-            <p className="dk-section-sub dk-fade-in">
-              Every dollar has a direct, measurable outcome. Here&apos;s exactly
-              what your gift delivers on the ground.
-            </p>
-
-            <div className="dk-impact-grid">
-              <div className="dk-impact-card dk-fade-in">
-                <span className="dk-impact-tag">1 Youth</span>
-                <div className="dk-impact-amt">$25</div>
-                <p className="dk-impact-desc">
-                  1 fully stocked backpack with nutritious food, hydration, and
-                  essential supplies.
-                </p>
-              </div>
-              <div className="dk-impact-card dk-fade-in">
-                <span className="dk-impact-tag">10 Youth</span>
-                <div className="dk-impact-amt">$250</div>
-                <p className="dk-impact-desc">
-                  10 young people receive complete dignity kits with everything
-                  they need.
-                </p>
-              </div>
-              <div className="dk-impact-card dk-fade-in">
-                <span className="dk-impact-tag">100 Youth</span>
-                <div className="dk-impact-amt">$2,500</div>
-                <p className="dk-impact-desc">
-                  100 backpacks distributed to youth experiencing homelessness
-                  across Los Angeles.
-                </p>
-              </div>
-              <div className="dk-impact-card dk-featured dk-fade-in">
-                <span className="dk-impact-tag">Full Program</span>
-                <div className="dk-impact-amt">$12,500</div>
-                <p className="dk-impact-desc">
-                  Fully funds the entire program — 500 backpacks, 500 young
-                  people, all across Los Angeles.
                 </p>
               </div>
             </div>
