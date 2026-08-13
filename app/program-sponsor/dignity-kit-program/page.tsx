@@ -101,15 +101,24 @@ const pageStyles = `
 
   .dk-hero-stats {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
+  }
+  .dk-stat-box {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-align: left;
+    flex: 0 0 182px;
   }
   @media (max-width: 600px) {
     .dk-hero-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
+    .dk-stat-box { text-align: center; padding: 14px 10px; flex: none; }
   }
   .dk-stat-num {
     font-family: var(--dk-serif);
@@ -123,6 +132,12 @@ const pageStyles = `
     font-size: 13px;
     color: rgba(255,255,255,0.85);
     font-weight: 500;
+    text-wrap: pretty;
+  }
+  @media (max-width: 420px) {
+    .dk-stat-box { padding: 12px 8px; }
+    .dk-stat-num { font-size: 30px; }
+    .dk-stat-label { font-size: 12px; }
   }
 
   /* ── GRADIENT BODY ── */
@@ -525,15 +540,15 @@ export default function DignityKitProgramPage() {
               across Los Angeles.
             </p>
             <div className="dk-hero-stats">
-              <div>
+              <div className="dk-stat-box">
                 <div className="dk-stat-num">500</div>
                 <div className="dk-stat-label">Backpacks to Distribute</div>
               </div>
-              <div>
+              <div className="dk-stat-box">
                 <div className="dk-stat-num">$25</div>
                 <div className="dk-stat-label">Cost Per Kit</div>
               </div>
-              <div>
+              <div className="dk-stat-box">
                 <div className="dk-stat-num">2×</div>
                 <div className="dk-stat-label">Your Dollar, Doubled</div>
               </div>
