@@ -497,6 +497,9 @@ export default function YouthNutritionInitiativeLandingPage() {
         </Container>
       </section>
 
+      {/* ═══ INTEREST FORM ═══ */}
+      <InterestForm />
+
       {/* ═══ CTA ═══ */}
       <section className="py-16 sm:py-24">
         <Container>
@@ -506,10 +509,10 @@ export default function YouthNutritionInitiativeLandingPage() {
                 <span className="inline-block h-[2px] w-6 bg-sky" />
                 Get Involved
               </p>
-              <h2 className="font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
+              <h2 className="text-balance font-serif text-3xl font-normal tracking-tight text-ink sm:text-4xl">
                 A Unique Opportunity to Lead in Preventative Nutrition
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-ink/80">
+              <p className="mt-4 text-balance text-base leading-relaxed text-ink/80">
                 We&apos;re seeking mission-aligned partners to launch and scale
                 this initiative. We would welcome the opportunity to explore next
                 steps together.
@@ -626,9 +629,6 @@ export default function YouthNutritionInitiativeLandingPage() {
           </Reveal>
         </Container>
       </section>
-
-      {/* ═══ INTEREST FORM ═══ */}
-      <InterestForm />
     </div>
   );
 }

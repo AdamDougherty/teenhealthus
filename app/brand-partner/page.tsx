@@ -148,13 +148,19 @@ export default function BrandPartnerPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="mt-10 flex flex-row gap-3 sm:justify-start">
-                <Button href="#donate-product-form" variant="primary" style={{ backgroundColor: '#FF8005', color: 'white' }}>
-                  Partner with us
+                <Button
+                  href="#donate-product-form"
+                  variant="primary"
+                  className="whitespace-nowrap !px-3 !text-xs sm:!px-5 sm:!text-sm"
+                  style={{ backgroundColor: '#FF8005', color: 'white' }}
+                >
+                  Submit a product donation
                 </Button>
                 <Button
                   href="#how-it-works"
                   variant="ghost"
-                  className="text-white hover:bg-white/10"
+                  className="whitespace-nowrap !px-3 !text-xs text-white hover:bg-white/10 sm:!px-5 sm:!text-sm"
+                  style={{ textShadow: "0 1px 5px rgba(0,0,0,0.75)" }}
                 >
                   See how it works
                 </Button>
@@ -858,8 +864,6 @@ export default function BrandPartnerPage() {
                         <option>Product donation (excess inventory)</option>
                         <option>Marketing &amp; brand integration</option>
                         <option>ESG / CSR reporting sponsor</option>
-                        <option>Employee engagement / volunteer events</option>
-                        <option>Other / multiple</option>
                       </select>
                     </div>
                   </div>
